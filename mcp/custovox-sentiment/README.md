@@ -16,3 +16,19 @@ reviews, tickets, emails, chat messages.
 
 ## By CustoVox.ai
 https://custovox.ai
+---
+
+## Need more?
+
+This MCP is the free tier of CustoVox.ai.
+
+**custovox.ai** offers:
+- 5 native languages (EN/FR/DE/ES/PT-BR)
+- Voice + Text + Image analysis
+- PEACE™ Escalation Detection
+- Churn prediction
+- Full dashboard + reports
+
+**From €49/month — no credit card to start.**
+
+👉 [custovox.ai](https://custovox.ai)
