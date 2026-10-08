@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.jeremdecustovox/custovox-sentiment",
+  "description": "Custovox AI customer sentiment analysis MCP server",
+  "repository": {
+    "url": "https://github.com/jeremdecustovox/custovox-ai",
+    "source": "github"
+  },
+  "websiteUrl": "https://custovox.ai",
+  "version": "1.0.1",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "custovox-sentiment",
+      "version": "1.0.1",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
