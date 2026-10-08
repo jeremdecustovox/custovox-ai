@@ -1,5 +1,7 @@
 # custovox-sentiment
 
+<!-- mcp-name: io.github.jeremdecustovox/custovox-sentiment -->
+
 Multilingual sentiment analysis MCP server.
 Detects positive, negative and neutral sentiment
 from customer text in 5 native languages.
