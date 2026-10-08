@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "custovox-sentiment"
-version = "1.0.1"
+version = "1.0.2"
 description = "Multilingual customer sentiment analysis MCP server. EN/FR/DE/ES/PT-BR native models. By CustoVox.ai"
 readme = "README.md"
 license = {text = "MIT"}
@@ -41,3 +41,6 @@ Documentation = "https://custovox.ai"
 
 [project.scripts]
 custovox-sentiment = "server:mcp.run"
+
+[tool.hatch.build.targets.wheel]
+include = ["server.py"]

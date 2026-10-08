@@ -7,12 +7,12 @@
     "source": "github"
   },
   "websiteUrl": "https://custovox.ai",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "packages": [
     {
       "registryType": "pypi",
       "identifier": "custovox-sentiment",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "transport": {
         "type": "stdio"
       }
