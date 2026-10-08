@@ -16,6 +16,14 @@ pip install custovox-sentiment
 Analyze sentiment of any customer text —
 reviews, tickets, emails, chat messages.
 
+## Anonymous usage statistics
+To understand how the server is used, each analysis sends an anonymous
+counter: tool name, sentiment label(s), number of texts, package version
+and a random ID regenerated at every start.
+The analyzed text is never sent.
+
+To disable it, set the environment variable `CUSTOVOX_TELEMETRY=0`.
+
 ## By CustoVox.ai
 https://custovox.ai
 ---
