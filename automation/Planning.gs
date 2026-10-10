@@ -115,9 +115,15 @@ function syncCalendar() {
     if (created[task.id]) return;
     created[task.id] = createEvent_(cal, task.title, parse_(task.date), task.minutes, task.description).getId();
   });
-
-  const bufferDates = syncBufferPosts_(cal, created);
   props.setProperty('CALENDAR_EVENTS', JSON.stringify(created));
+
+  let bufferDates = [], bufferError = null;
+  try {
+    bufferDates = syncBufferPosts_(cal, created);
+    props.setProperty('CALENDAR_EVENTS', JSON.stringify(created));
+  } catch (e) {
+    bufferError = e;   // still create the "prévoir" alerts below
+  }
 
   const dates = item => parse_(item.date);
   gapAlerts_(cal, {
@@ -125,6 +131,7 @@ function syncCalendar() {
     mcp: TASKS.filter(t => t.id.indexOf('pypi-') === 0).map(dates),
     blog: PLANNING.filter(p => p.type === 'blog').map(dates)
   });
+  if (bufferError) throw bufferError;
 }
 
 /** One reminder per LinkedIn post scheduled in Buffer. Returns the scheduled dates. */
@@ -202,7 +209,11 @@ function dailyBlogBuild() {
 }
 
 function createEvent_(cal, title, start, minutes, description) {
-  const event = cal.createEvent(title, start, new Date(start.getTime() + minutes * 60000), { description: description });
+  const end = new Date(start.getTime() + minutes * 60000);
+  // Reuse an identical event (e.g. created by an interrupted run) instead of duplicating it.
+  const same = cal.getEvents(start, end).find(e => e.getTitle() === title && e.getStartTime().getTime() === start.getTime());
+  if (same) return same;
+  const event = cal.createEvent(title, start, end, { description: description });
   event.removeAllReminders();
   event.addPopupReminder(0);
   return event;
