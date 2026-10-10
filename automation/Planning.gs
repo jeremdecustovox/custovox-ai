@@ -29,25 +29,33 @@ const PLANNING = [
   { id: 'blog-2026-12-23', date: '2026-12-23 09:00', type: 'blog', title: '2026 CX Year in Review', link: BLOG + '2026-cx-nlp-year-in-review' }
 ];
 
-// Weekly routines until the end of Q4. weekday: MONDAY ... SUNDAY, time in Paris.
-const RECURRING = [
-  { id: 'weekly-monday-buffer', weekday: 'MONDAY', time: '09:00', minutes: 15,
-    title: '🗓️ Planning LinkedIn de la semaine (15 min)',
-    description: '→ Ouvrir l\'Excel Planning Q4\n→ Copier les 2 posts LinkedIn dans Buffer\n→ Programmer mardi 9h et vendredi 9h' },
-  { id: 'weekly-wednesday-content', weekday: 'WEDNESDAY', time: '10:00', minutes: 15,
-    title: '✍️ Générer le contenu de la semaine avec Claude',
-    description: '→ Ouvrir la conversation Claude Code\n→ Dire « c\'est la semaine X, génère le contenu »\n→ Récupérer posts + article' },
-  { id: 'weekly-friday-pypi', weekday: 'FRIDAY', time: '10:00', minutes: 10,
-    title: '📦 Publier le MCP de la semaine sur PyPI (10 min)',
-    description: '→ Ouvrir Claude Code\n→ Publier le MCP de la semaine sur PyPI' }
-];
+// Weekly routines (event series). Removing a line here and running syncCalendar
+// deletes that series from the calendar.
+const RECURRING = [];
 const RECURRING_UNTIL = '2026-12-31';
+
+const PYPI_STEPS = 'Dans Claude Code, dites : « publie {mcp} sur PyPI ».\n' +
+  'Claude prépare le paquet, vous l\'envoyez avec twine (jeton PyPI), puis Claude le publie dans le registre MCP.';
 
 // One-off reminders.
 const TASKS = [
   { id: 'task-2026-10-12-prospects', date: '2026-10-12 09:30', minutes: 30,
     title: '📧 Envoyer des mails à 10 nouveaux prospects',
-    description: 'Objectif : 10 nouveaux prospects contactés aujourd\'hui.' }
+    description: 'Objectif : 10 nouveaux prospects contactés aujourd\'hui.' },
+  { id: 'pypi-2026-10-16', date: '2026-10-16 10:00', minutes: 15,
+    title: '📦 Publier custovox-emotion sur PyPI', description: PYPI_STEPS.replace('{mcp}', 'custovox-emotion') },
+  { id: 'pypi-2026-10-23', date: '2026-10-23 10:00', minutes: 15,
+    title: '📦 Publier custovox-ticket-scorer sur PyPI', description: PYPI_STEPS.replace('{mcp}', 'custovox-ticket-scorer') },
+  { id: 'pypi-2026-10-30', date: '2026-10-30 10:00', minutes: 15,
+    title: '📦 Publier custovox-review-analyzer sur PyPI', description: PYPI_STEPS.replace('{mcp}', 'custovox-review-analyzer') },
+  { id: 'pypi-2026-11-06', date: '2026-11-06 10:00', minutes: 15,
+    title: '📦 Publier custovox-churn-signal sur PyPI', description: PYPI_STEPS.replace('{mcp}', 'custovox-churn-signal') },
+  { id: 'pypi-2026-11-13', date: '2026-11-13 10:00', minutes: 15,
+    title: '📦 Publier custovox-visual sur PyPI', description: PYPI_STEPS.replace('{mcp}', 'custovox-visual') },
+  { id: 'plan-2026-11-16', date: '2026-11-16 09:00', minutes: 30,
+    title: '🗓️ Préparer les posts LinkedIn après le 18/11',
+    description: 'Le dernier post programmé dans Buffer sort le 18/11.\n' +
+      'Dans Claude Code, dites : « prépare les posts LinkedIn des prochaines semaines et programme-les dans Buffer ».' }
 ];
 
 function setupPlanning() {
@@ -97,6 +105,14 @@ function syncCalendar() {
     event.addPopupReminder(0);
     created[task.id] = event.getId();
   });
+
+  // Delete series that were removed from RECURRING.
+  Object.keys(created).filter(id => id.indexOf('weekly-') === 0 && !RECURRING.some(r => r.id === id))
+    .forEach(id => {
+      const series = cal.getEventSeriesById(created[id]);
+      if (series) series.deleteEventSeries();
+      delete created[id];
+    });
 
   const until = Utilities.parseDate(RECURRING_UNTIL + ' 23:59', 'Europe/Paris', 'yyyy-MM-dd HH:mm');
   RECURRING.forEach(r => {
