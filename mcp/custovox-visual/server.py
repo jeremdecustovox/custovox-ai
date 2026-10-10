@@ -1,6 +1,7 @@
 from mcp.server.fastmcp import FastMCP
 from transformers import pipeline, BlipProcessor, BlipForConditionalGeneration
 import torch
+import sys
 from PIL import Image
 import requests
 from io import BytesIO
@@ -8,7 +9,7 @@ import base64
 
 mcp = FastMCP("custovox-visual")
 
-print("Loading visual models...")
+print("Loading visual models...", file=sys.stderr)
 processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
 blip_model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base")
 classifier = pipeline(
@@ -16,7 +17,7 @@ classifier = pipeline(
     model="facebook/bart-large-mnli",
     device=0 if torch.cuda.is_available() else -1
 )
-print("Models loaded.")
+print("Models loaded.", file=sys.stderr)
 
 ISSUE_LABELS = [
     "cleanliness issue", "damage or defect", "missing item",

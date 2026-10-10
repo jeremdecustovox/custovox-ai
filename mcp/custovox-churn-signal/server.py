@@ -1,10 +1,11 @@
 from mcp.server.fastmcp import FastMCP
 from transformers import pipeline
 import torch
+import sys
 
 mcp = FastMCP("custovox-churn-signal")
 
-print("Loading models...")
+print("Loading models...", file=sys.stderr)
 sentiment_model = pipeline(
     "text-classification",
     model="tabularisai/multilingual-sentiment-analysis",
@@ -15,7 +16,7 @@ classifier = pipeline(
     model="facebook/bart-large-mnli",
     device=0 if torch.cuda.is_available() else -1
 )
-print("Models loaded.")
+print("Models loaded.", file=sys.stderr)
 
 CHURN_SIGNALS = [
     "intent to cancel subscription",

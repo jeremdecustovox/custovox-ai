@@ -1,12 +1,13 @@
 from mcp.server.fastmcp import FastMCP
 from transformers import pipeline
 import torch
+import sys
 from collections import Counter
 import re
 
 mcp = FastMCP("custovox-review-analyzer")
 
-print("Loading models...")
+print("Loading models...", file=sys.stderr)
 sentiment_model = pipeline(
     "text-classification",
     model="tabularisai/multilingual-sentiment-analysis",
@@ -17,7 +18,7 @@ summarizer = pipeline(
     model="facebook/bart-large-cnn",
     device=0 if torch.cuda.is_available() else -1
 )
-print("Models loaded.")
+print("Models loaded.", file=sys.stderr)
 
 @mcp.tool()
 def analyze_reviews(reviews: list, product_name: str = "the product") -> dict:
