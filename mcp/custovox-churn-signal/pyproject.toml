@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "custovox-churn-signal"
+version = "1.0.0"
+description = "Churn risk detection MCP: score 0-100 from customer message sequences. Detects degradation patterns. By CustoVox.ai"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Jérémie Muselet", email = "jeremie@custovox.ai"}]
+keywords = ["mcp","churn-prediction","nlp","customer-success","retention","custovox"]
+requires-python = ">=3.10"
+dependencies = ["mcp>=1.0.0","transformers>=4.40.0","torch>=2.0.0"]
+
+[project.urls]
+Homepage = "https://custovox.ai"
+Repository = "https://github.com/jeremdecustovox/custovox-ai"
+
+[project.scripts]
+custovox-churn-signal = "server:mcp.run"
+
+[tool.hatch.build.targets.wheel]
+include = ["server.py"]

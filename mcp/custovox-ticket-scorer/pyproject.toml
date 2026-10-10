@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "custovox-ticket-scorer"
+version = "1.0.0"
+description = "Support ticket scoring MCP: priority + category + sentiment + escalation risk. Multilingual. By CustoVox.ai"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Jérémie Muselet", email = "jeremie@custovox.ai"}]
+keywords = ["mcp","ticket-scoring","nlp","customer-support","zero-shot","custovox"]
+requires-python = ">=3.10"
+dependencies = ["mcp>=1.0.0","transformers>=4.40.0","torch>=2.0.0"]
+
+[project.urls]
+Homepage = "https://custovox.ai"
+Repository = "https://github.com/jeremdecustovox/custovox-ai"
+
+[project.scripts]
+custovox-ticket-scorer = "server:mcp.run"
+
+[tool.hatch.build.targets.wheel]
+include = ["server.py"]

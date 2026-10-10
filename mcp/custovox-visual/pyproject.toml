@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "custovox-visual"
+version = "1.0.0"
+description = "Visual customer intelligence MCP: analyze hotel room photos, product returns, retail images. Detect issues automatically. By CustoVox.ai"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Jérémie Muselet", email = "jeremie@custovox.ai"}]
+keywords = ["mcp","visual-analysis","nlp","hospitality","ecommerce","image-analysis","custovox"]
+requires-python = ">=3.10"
+dependencies = ["mcp>=1.0.0","transformers>=4.40.0","torch>=2.0.0","Pillow>=10.0.0","requests>=2.31.0"]
+
+[project.urls]
+Homepage = "https://custovox.ai"
+Repository = "https://github.com/jeremdecustovox/custovox-ai"
+
+[project.scripts]
+custovox-visual = "server:mcp.run"
+
+[tool.hatch.build.targets.wheel]
+include = ["server.py"]
