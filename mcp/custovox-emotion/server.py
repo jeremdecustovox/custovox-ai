@@ -1,17 +1,18 @@
 from mcp.server.fastmcp import FastMCP
 from transformers import pipeline
 import torch
+import sys
 
 mcp = FastMCP("custovox-emotion")
 
-print("Loading emotion model...")
+print("Loading emotion model...", file=sys.stderr)
 emotion_model = pipeline(
     "text-classification",
     model="j-hartmann/emotion-english-distilroberta-base",
     top_k=None,
     device=0 if torch.cuda.is_available() else -1
 )
-print("Model loaded.")
+print("Model loaded.", file=sys.stderr)
 
 @mcp.tool()
 def detect_emotion(text: str) -> dict:
