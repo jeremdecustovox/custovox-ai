@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What NLP Reveals That Star Ratings Hide — CustoVox.ai</title>
+<meta name="description" content="We analyzed 200 G2 reviews with NLP. The #1 complaint isn't about the product — it's about onboarding, mentioned in 34% of negative reviews. Here's what aggregate scores miss.">
+<meta name="keywords" content="G2 reviews NLP analysis, sentiment analysis customer reviews, customer experience analytics, voice of customer NLP, star rating analysis">
+<meta name="author" content="CustoVox.ai">
+<link rel="canonical" href="https://custovox.ai/blog/g2-reviews-nlp-analysis">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://custovox.ai/blog/g2-reviews-nlp-analysis">
+<meta property="og:title" content="What NLP Reveals That Star Ratings Hide — Analyzing 200 G2 Reviews">
+<meta property="og:description" content="A 4.2/5 score can look solid while hiding 34% of customers frustrated by onboarding. Here's what happens when you read the actual words.">
+<meta property="og:site_name" content="CustoVox.ai">
+<meta property="article:published_time" content="2026-10-14">
+<meta property="article:tag" content="NLP">
+<meta property="article:tag" content="Customer Experience">
+<meta property="article:tag" content="G2 Reviews">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What NLP Reveals That Star Ratings Hide">
+<meta name="twitter:description" content="We analyzed 200 G2 reviews. The #1 complaint isn't about the product — it's onboarding, in 34% of negative reviews.">
+
+<!-- JSON-LD Article Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What NLP Reveals That Star Ratings Hide — Analyzing 200 G2 Reviews",
+  "description": "We analyzed 200 G2 reviews with NLP. The #1 complaint isn't about the product — it's about onboarding, mentioned in 34% of negative reviews.",
+  "datePublished": "2026-10-14",
+  "dateModified": "2026-10-14",
+  "author": {
+    "@type": "Organization",
+    "name": "CustoVox.ai",
+    "url": "https://custovox.ai"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CustoVox.ai",
+    "url": "https://custovox.ai"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://custovox.ai/blog/g2-reviews-nlp-analysis"
+  },
+  "keywords": ["NLP", "G2 reviews", "sentiment analysis", "customer experience", "voice of customer"],
+  "articleSection": "NLP Analysis"
+}
+</script>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #ffffff;
+    color: #0D2B6B;
+    line-height: 1.7;
+  }
+  nav {
+    padding: 1.25rem 2rem;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo { font-size: 22px; font-weight: 700; color: #00C48C; text-decoration: none; }
+  .nav-logo span { color: #0D2B6B; }
+  .nav-links { display: flex; gap: 1.5rem; }
+  .nav-links a { font-size: 14px; color: #475569; text-decoration: none; }
+  .nav-cta {
+    background: #0D2B6B; color: white; padding: 8px 16px;
+    border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none;
+  }
+  .article-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+  .article-meta {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  .tag {
+    background: #E0FAF4; color: #0E7C7B;
+    font-size: 11px; font-weight: 600;
+    padding: 3px 8px; border-radius: 4px;
+  }
+  .date { font-size: 12px; color: #94A3B8; }
+  .read-time { font-size: 12px; color: #94A3B8; }
+  h1 {
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 700;
+    line-height: 1.2;
+    color: #0D2B6B;
+    margin-bottom: 1rem;
+  }
+  .subtitle {
+    font-size: 18px;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #E2E8F0;
+  }
+  h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0D2B6B;
+    margin: 2.5rem 0 1rem;
+  }
+  h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #0D2B6B;
+    margin: 1.75rem 0 0.75rem;
+  }
+  p { font-size: 15px; color: #334155; margin-bottom: 1.25rem; }
+  strong { color: #0D2B6B; }
+  .highlight {
+    background: #F0F4FF;
+    border-left: 4px solid #00C48C;
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    font-size: 15px;
+    color: #1E293B;
+  }
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .stat-card {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    padding: 1.25rem;
+    text-align: center;
+  }
+  .stat-number { font-size: 32px; font-weight: 700; color: #00C48C; display: block; }
+  .stat-label { font-size: 12px; color: #64748B; margin-top: 4px; }
+  .comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .comp-card {
+    border-radius: 10px;
+    padding: 1.25rem;
+  }
+  .comp-card.before { background: #FEE2E2; border: 1px solid #FECACA; }
+  .comp-card.after { background: #DCFCE7; border: 1px solid #BBF7D0; }
+  .comp-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+  .comp-card.before .comp-label { color: #DC2626; }
+  .comp-card.after .comp-label { color: #16A34A; }
+  .comp-card p { font-size: 14px; margin: 0; }
+  ul { margin: 1rem 0 1.25rem 1.25rem; }
+  li { font-size: 15px; color: #334155; margin-bottom: 6px; }
+  .cta-box {
+    background: #0D2B6B;
+    border-radius: 14px;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+    color: white;
+  }
+  .cta-box h3 { color: white; font-size: 20px; margin-bottom: 0.5rem; }
+  .cta-box p { color: rgba(255,255,255,0.75); font-size: 14px; margin-bottom: 1.25rem; }
+  .cta-btn {
+    display: inline-block;
+    background: #00C48C;
+    color: #0D2B6B;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  .no-cc {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 8px;
+    display: block;
+  }
+  .breadcrumb {
+    font-size: 13px;
+    color: #94A3B8;
+    margin-bottom: 1.5rem;
+  }
+  .breadcrumb a { color: #00C48C; text-decoration: none; }
+  footer {
+    text-align: center;
+    padding: 2rem;
+    color: #94A3B8;
+    font-size: 13px;
+    border-top: 1px solid #F1F5F9;
+  }
+  @media(max-width:600px){
+    .comparison { grid-template-columns: 1fr; }
+    .stat-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">custovox<span>.ai</span></a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+  </div>
+  <a href="/" class="nav-cta">Get Early Access</a>
+</nav>
+
+<article class="article-wrap">
+
+  <nav class="breadcrumb" aria-label="breadcrumb">
+    <a href="/">Home</a> → <a href="/blog/">Blog</a> → What NLP Reveals That Star Ratings Hide
+  </nav>
+
+  <div class="article-meta">
+    <span class="tag">NLP Analysis</span>
+    <span class="date">October 14, 2026</span>
+    <span class="read-time">· 5 min read</span>
+  </div>
+
+  <h1>What NLP Reveals That Star Ratings Hide</h1>
+  <p class="subtitle">We analyzed 200 G2 reviews of a SaaS CX platform. The #1 complaint isn't about the product — it's about onboarding, mentioned in 34% of all negative reviews. Here's what happens when you read the actual words instead of counting the stars.</p>
+
+  <h2>The Problem With Aggregate Scores</h2>
+
+  <p>Most customer success teams rely on the same handful of metrics: NPS, CSAT, star ratings. These numbers are easy to track, easy to report, and remarkably good at hiding what's actually going wrong.</p>
+
+  <p>Take a typical G2 profile with a 4.2/5 overall rating. At a glance, it looks solid. The product is well-received. Customers are broadly satisfied. Time to move on.</p>
+
+  <p>Except 34% of the negative reviews mention the exact same problem — onboarding confusion in week one. A problem the aggregate score never surfaces. A problem the team never knew existed.</p>
+
+  <div class="highlight">
+    <strong>The insight:</strong> Aggregate satisfaction scores don't just simplify reality — they actively hide the patterns that matter most. NLP reads what customers actually write. Star ratings count how many gave four stars.
+  </div>
+
+  <h2>What We Did</h2>
+
+  <p>We ran a multilingual NLP analysis on 200 recent G2 reviews from a mid-market SaaS customer experience platform. The methodology was straightforward: extract sentiment at the sentence level, cluster recurring themes, and compare results against the aggregate score.</p>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <span class="stat-number">200</span>
+      <span class="stat-label">G2 reviews analyzed</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">4.2</span>
+      <span class="stat-label">Overall star rating</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">34%</span>
+      <span class="stat-label">Mention onboarding issues</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">3</span>
+      <span class="stat-label">Hidden problem themes</span>
+    </div>
+  </div>
+
+  <h2>What the Stars Said vs. What the Words Said</h2>
+
+  <div class="comparison">
+    <div class="comp-card before">
+      <div class="comp-label">❌ What star ratings show</div>
+      <p>4.2/5 overall · Customers are broadly satisfied · No major issues flagged · Strong product-market fit</p>
+    </div>
+    <div class="comp-card after">
+      <div class="comp-label">✅ What NLP reveals</div>
+      <p>34% frustrated by onboarding · 22% report slow support response · 18% confused by pricing structure · All 3 themes invisible in the aggregate score</p>
+    </div>
+  </div>
+
+  <h2>The 3 Hidden Themes</h2>
+
+  <h3>1. Onboarding confusion — 34% of negative reviews</h3>
+  <p>The most common complaint wasn't about the product itself — it was about the first week of using it. Customers mentioned terms like "steep learning curve," "unclear documentation," and "confusing setup process." None of these appear in a star rating. All of them drive churn.</p>
+
+  <h3>2. Support response time — 22% of negative reviews</h3>
+  <p>Customers weren't necessarily unhappy with the quality of support — they were unhappy with how long it took to get a response. This is a process issue, not a product issue. Entirely fixable. Entirely invisible without NLP.</p>
+
+  <h3>3. Pricing transparency — 18% of negative reviews</h3>
+  <p>A recurring theme around surprise charges, unclear tier differences, and invoice confusion. Customers didn't feel deceived — they felt poorly informed. Again, a fixable problem that aggregate scores never surface.</p>
+
+  <div class="highlight">
+    <strong>Key finding:</strong> The product is good. The journey isn't. And three highly actionable improvements — better onboarding docs, faster support SLAs, clearer pricing communication — could have been identified and fixed months earlier with NLP.
+  </div>
+
+  <h2>Why This Matters for Your CS Team</h2>
+
+  <p>The gap between what customers feel and what metrics show is where churn lives. A customer who rates you 3/5 because of an onboarding problem isn't unhappy with your product — they're unhappy with a specific, fixable process that nobody on your team knows about.</p>
+
+  <p>NLP doesn't replace your existing metrics. It reads underneath them. It tells you:</p>
+  <ul>
+    <li>Which specific moments in the customer journey generate negative sentiment</li>
+    <li>Which complaints are isolated and which are systemic patterns</li>
+    <li>Which themes are growing over time vs. declining</li>
+    <li>Where the gap between expectation and reality is widest</li>
+  </ul>
+
+  <h2>Running This Analysis on Your Own Reviews</h2>
+
+  <p>This analysis took 48 hours and required no data team, no IT project, and no custom model training. The process was:</p>
+  <ul>
+    <li>Collect the 200 most recent G2 reviews in text format</li>
+    <li>Run sentence-level sentiment analysis using multilingual NLP models</li>
+    <li>Cluster themes using semantic similarity across languages</li>
+    <li>Compare theme frequency against aggregate star distributions</li>
+  </ul>
+
+  <p>CustoVox.ai does this automatically — for G2 reviews, Trustpilot, Google Reviews, support tickets and call transcriptions. In any language. Without a data team.</p>
+
+  <div class="cta-box">
+    <h3>Run this analysis on your customer data</h3>
+    <p>Send us your last 100 reviews or tickets. We send back a full NLP analysis in 48h. Free, no strings attached.</p>
+    <a href="/" class="cta-btn">Get your free audit →</a>
+    <span class="no-cc">No credit card required — ever, until you decide to subscribe</span>
+  </div>
+
+</article>
+
+<footer>
+  © 2026 CustoVox.ai — <a href="/" style="color:#00C48C;text-decoration:none;">custovox.ai</a> · 
+  <a href="/blog/" style="color:#00C48C;text-decoration:none;">Blog</a>
+</footer>
+
+</body>
+</html>
