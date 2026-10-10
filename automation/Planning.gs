@@ -29,6 +29,27 @@ const PLANNING = [
   { id: 'blog-2026-12-23', date: '2026-12-23 09:00', type: 'blog', title: '2026 CX Year in Review', link: BLOG + '2026-cx-nlp-year-in-review' }
 ];
 
+// Weekly routines until the end of Q4. weekday: MONDAY ... SUNDAY, time in Paris.
+const RECURRING = [
+  { id: 'weekly-monday-buffer', weekday: 'MONDAY', time: '09:00', minutes: 15,
+    title: '🗓️ Planning LinkedIn de la semaine (15 min)',
+    description: '→ Ouvrir l\'Excel Planning Q4\n→ Copier les 2 posts LinkedIn dans Buffer\n→ Programmer mardi 9h et vendredi 9h' },
+  { id: 'weekly-wednesday-content', weekday: 'WEDNESDAY', time: '10:00', minutes: 15,
+    title: '✍️ Générer le contenu de la semaine avec Claude',
+    description: '→ Ouvrir la conversation Claude Code\n→ Dire « c\'est la semaine X, génère le contenu »\n→ Récupérer posts + article' },
+  { id: 'weekly-friday-pypi', weekday: 'FRIDAY', time: '10:00', minutes: 10,
+    title: '📦 Publier le MCP de la semaine sur PyPI (10 min)',
+    description: '→ Ouvrir Claude Code\n→ Publier le MCP de la semaine sur PyPI' }
+];
+const RECURRING_UNTIL = '2026-12-31';
+
+// One-off reminders.
+const TASKS = [
+  { id: 'task-2026-10-12-prospects', date: '2026-10-12 09:30', minutes: 30,
+    title: '📧 Envoyer des mails à 10 nouveaux prospects',
+    description: 'Objectif : 10 nouveaux prospects contactés aujourd\'hui.' }
+];
+
 function setupPlanning() {
   ScriptApp.getProjectTriggers()
     .filter(t => t.getHandlerFunction() === 'dailyBlogBuild')
@@ -66,6 +87,34 @@ function syncCalendar() {
     if (item.type !== 'linkedin') event.addPopupReminder(60 * 24); // the day before
     created[item.id] = event.getId();
   });
+
+  TASKS.forEach(task => {
+    if (created[task.id]) return;
+    const start = Utilities.parseDate(task.date, 'Europe/Paris', 'yyyy-MM-dd HH:mm');
+    const event = cal.createEvent(task.title, start, new Date(start.getTime() + task.minutes * 60000),
+      { description: task.description });
+    event.removeAllReminders();
+    event.addPopupReminder(0);
+    created[task.id] = event.getId();
+  });
+
+  const until = Utilities.parseDate(RECURRING_UNTIL + ' 23:59', 'Europe/Paris', 'yyyy-MM-dd HH:mm');
+  RECURRING.forEach(r => {
+    if (created[r.id]) return;
+    // First occurrence: the next matching weekday from today.
+    const day = CalendarApp.Weekday[r.weekday];
+    const start = Utilities.parseDate(
+      Utilities.formatDate(new Date(), 'Europe/Paris', 'yyyy-MM-dd') + ' ' + r.time, 'Europe/Paris', 'yyyy-MM-dd HH:mm');
+    const jsDay = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'].indexOf(r.weekday);
+    while (start.getDay() !== jsDay || start < new Date()) start.setDate(start.getDate() + 1);
+    const recurrence = CalendarApp.newRecurrence().addWeeklyRule().onlyOnWeekday(day).until(until);
+    const series = cal.createEventSeries(r.title, start, new Date(start.getTime() + r.minutes * 60000),
+      recurrence, { description: r.description });
+    series.removeAllReminders();
+    series.addPopupReminder(0);
+    created[r.id] = series.getId();
+  });
+
   props.setProperty('CALENDAR_EVENTS', JSON.stringify(created));
 }
 
