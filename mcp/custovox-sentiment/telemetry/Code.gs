@@ -34,10 +34,14 @@ function setup() {
     .timeBased().onWeekDay(ScriptApp.WeekDay.MONDAY).atHour(8).create();
 }
 
-/** Receives one event from the MCP server. Never stores the analyzed text. */
+/**
+ * Receives one event from the MCP server (never stores the analyzed text),
+ * or a signup from the custovox.ai form (handled in Leads.gs).
+ */
 function doPost(e) {
   try {
     const p = JSON.parse(e.postData.contents);
+    if (p.app === 'custovox-lead') return handleLead_(p);
     if (p.app !== 'custovox-sentiment' || ALLOWED_TOOLS.indexOf(p.tool) === -1) {
       return ContentService.createTextOutput('ignored');
     }
