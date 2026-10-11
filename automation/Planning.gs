@@ -4,7 +4,7 @@
  * Every day at 7:00 (Paris) `syncCalendar`:
  *  - adds a reminder at publication time for EVERY LinkedIn post scheduled in Buffer
  *    ("add the link as first comment"), and moves it if the post is rescheduled;
- *  - adds the reminders listed in PLANNING and TASKS below;
+ *  - adds the reminders listed in automation/planning.json (GitHub);
  *  - adds a "⚠️ Attention : prévoir ..." alert when nothing is planned after a date
  *    (LinkedIn, MCP on PyPI, blog articles).
  *
@@ -13,52 +13,25 @@
  * Setup (once):
  * 1. Project Settings > Script Properties: NETLIFY_BUILD_HOOK and BUFFER_TOKEN.
  * 2. Run `setupPlanning` and accept the permissions.
- * To add an item later: add a line to PLANNING or TASKS, then run `syncCalendar`.
+ * To add an item later: edit automation/planning.json on GitHub (picked up the next morning,
+ * or run `syncCalendar` to apply it now).
  */
 
 const BLOG = 'https://custovox.ai/blog/';
 const ALERT_DAYS_BEFORE = 7;   // "prévoir" alert this many days before the last planned item
 const TZ = 'Europe/Paris';
 
-// type: linkedin = scheduled in Buffer (comment to add) | linkedin-fr = not scheduled, to post by hand
-//       blog = goes live automatically that morning (just check it)
-const PLANNING = [
-  { id: 'li-2026-10-12', date: '2026-10-12 18:00', type: 'linkedin', title: 'G2 reviews (EN)', link: BLOG + 'g2-reviews-nlp-analysis' },
-  { id: 'li-2026-10-21', date: '2026-10-21 18:00', type: 'linkedin', title: 'Churn — 3 conversations (EN)', link: BLOG + 'how-nlp-reduces-customer-churn' },
-  { id: 'li-2026-10-25', date: '2026-10-25 18:00', type: 'linkedin-fr', title: 'Churn — 3 conversations (FR)', link: BLOG + 'how-nlp-reduces-customer-churn' },
-  { id: 'li-2026-10-28', date: '2026-10-28 18:00', type: 'linkedin', title: 'Ratings hide (EN)', link: BLOG + 'g2-reviews-nlp-analysis' },
-  { id: 'li-2026-11-01', date: '2026-11-01 18:00', type: 'linkedin-fr', title: 'Les notes cachent (FR)', link: BLOG + 'g2-reviews-nlp-analysis' },
-  { id: 'li-2026-11-04', date: '2026-11-04 18:00', type: 'linkedin', title: 'TripAdvisor hotels (EN)', link: BLOG + 'g2-reviews-nlp-analysis' },
-  { id: 'li-2026-11-08', date: '2026-11-08 18:00', type: 'linkedin-fr', title: 'Avis hôteliers (FR)', link: BLOG + 'g2-reviews-nlp-analysis' },
-  { id: 'li-2026-11-11', date: '2026-11-11 18:00', type: 'linkedin', title: '5 churn signals (EN)', link: BLOG + 'how-nlp-reduces-customer-churn' },
-  { id: 'li-2026-11-15', date: '2026-11-15 18:00', type: 'linkedin-fr', title: '5 signaux de churn (FR)', link: BLOG + 'how-nlp-reduces-customer-churn' },
-  { id: 'li-2026-11-18', date: '2026-11-18 18:00', type: 'linkedin', title: '5 languages (EN)', link: BLOG + 'top-5-sentiment-analysis-tools' },
-  { id: 'li-2026-11-22', date: '2026-11-22 18:00', type: 'linkedin-fr', title: '5 langues (FR)', link: BLOG + 'top-5-sentiment-analysis-tools' },
-  { id: 'blog-2026-10-21', date: '2026-10-21 09:00', type: 'blog', title: 'How NLP Reduces Customer Churn', link: BLOG + 'how-nlp-reduces-customer-churn' },
-  { id: 'blog-2026-11-11', date: '2026-11-11 09:00', type: 'blog', title: 'Top 5 Sentiment Analysis Tools', link: BLOG + 'top-5-sentiment-analysis-tools' },
-  { id: 'blog-2026-12-09', date: '2026-12-09 09:00', type: 'blog', title: 'What Is an MCP Server', link: BLOG + 'what-is-mcp-server-cx-teams' },
-  { id: 'blog-2026-12-23', date: '2026-12-23 09:00', type: 'blog', title: '2026 CX Year in Review', link: BLOG + '2026-cx-nlp-year-in-review' }
-];
+// The list of reminders lives in automation/planning.json on GitHub, so it can be
+// updated without pasting this script again:
+//  planning: { id, date 'yyyy-MM-dd HH:mm', type linkedin | linkedin-fr | blog, title, link }
+//  tasks:    { id, date, minutes, title, description }   (ids "pypi-..." = planned MCP publications)
+const PLANNING_URL = 'https://raw.githubusercontent.com/jeremdecustovox/custovox-ai/main/automation/planning.json';
 
-const PYPI_STEPS = 'Dans Claude Code, dites : « publie {mcp} sur PyPI ».\n' +
-  'Claude prépare le paquet, vous l\'envoyez avec twine (jeton PyPI), puis Claude le publie dans le registre MCP.';
-
-// One-off reminders. Ids starting with "pypi-" count as planned MCP publications.
-const TASKS = [
-  { id: 'task-2026-10-12-prospects', date: '2026-10-12 09:30', minutes: 30,
-    title: '📧 Envoyer des mails à 10 nouveaux prospects',
-    description: 'Objectif : 10 nouveaux prospects contactés aujourd\'hui.' },
-  { id: 'pypi-2026-10-16', date: '2026-10-16 10:00', minutes: 15,
-    title: '📦 Publier custovox-emotion sur PyPI', description: PYPI_STEPS.replace('{mcp}', 'custovox-emotion') },
-  { id: 'pypi-2026-10-23', date: '2026-10-23 10:00', minutes: 15,
-    title: '📦 Publier custovox-ticket-scorer sur PyPI', description: PYPI_STEPS.replace('{mcp}', 'custovox-ticket-scorer') },
-  { id: 'pypi-2026-10-30', date: '2026-10-30 10:00', minutes: 15,
-    title: '📦 Publier custovox-review-analyzer sur PyPI', description: PYPI_STEPS.replace('{mcp}', 'custovox-review-analyzer') },
-  { id: 'pypi-2026-11-06', date: '2026-11-06 10:00', minutes: 15,
-    title: '📦 Publier custovox-churn-signal sur PyPI', description: PYPI_STEPS.replace('{mcp}', 'custovox-churn-signal') },
-  { id: 'pypi-2026-11-13', date: '2026-11-13 10:00', minutes: 15,
-    title: '📦 Publier custovox-visual sur PyPI', description: PYPI_STEPS.replace('{mcp}', 'custovox-visual') }
-];
+function loadPlanning_() {
+  const res = UrlFetchApp.fetch(PLANNING_URL + '?t=' + Date.now(), { muteHttpExceptions: true });
+  if (res.getResponseCode() !== 200) throw new Error('planning.json unreachable: HTTP ' + res.getResponseCode());
+  return JSON.parse(res.getContentText());
+}
 
 const GAP_KINDS = {
   linkedin: { label: 'LinkedIn', todo: 'Préparez de nouveaux posts et programmez-les dans Buffer.\n' +
@@ -83,6 +56,9 @@ function syncCalendar() {
   const cal = CalendarApp.getDefaultCalendar();
   const props = PropertiesService.getScriptProperties();
   const created = JSON.parse(props.getProperty('CALENDAR_EVENTS') || '{}');
+  const data = loadPlanning_();
+  const PLANNING = data.planning || [];
+  const TASKS = data.tasks || [];
 
   // Old weekly series from a previous version of this script.
   Object.keys(created).filter(id => id.indexOf('weekly-') === 0).forEach(id => {
@@ -119,7 +95,7 @@ function syncCalendar() {
 
   let bufferDates = [], bufferError = null;
   try {
-    bufferDates = syncBufferPosts_(cal, created);
+    bufferDates = syncBufferPosts_(cal, created, PLANNING);
     props.setProperty('CALENDAR_EVENTS', JSON.stringify(created));
   } catch (e) {
     bufferError = e;   // still create the "prévoir" alerts below
@@ -135,7 +111,7 @@ function syncCalendar() {
 }
 
 /** One reminder per LinkedIn post scheduled in Buffer. Returns the scheduled dates. */
-function syncBufferPosts_(cal, created) {
+function syncBufferPosts_(cal, created, PLANNING) {
   const token = PropertiesService.getScriptProperties().getProperty('BUFFER_TOKEN');
   if (!token) return [];
   const query = '{ posts(input:{organizationId:"' + BUFFER_ORG_ID + '", filter:{channelIds:["' +

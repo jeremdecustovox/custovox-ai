@@ -1,0 +1,160 @@
+{
+ "planning": [
+  {
+   "id": "li-2026-10-12",
+   "date": "2026-10-12 18:00",
+   "type": "linkedin",
+   "title": "G2 reviews (EN)",
+   "link": "https://custovox.ai/blog/g2-reviews-nlp-analysis"
+  },
+  {
+   "id": "li-2026-10-21",
+   "date": "2026-10-21 18:00",
+   "type": "linkedin",
+   "title": "Churn — 3 conversations (EN)",
+   "link": "https://custovox.ai/blog/how-nlp-reduces-customer-churn"
+  },
+  {
+   "id": "li-2026-10-25",
+   "date": "2026-10-25 18:00",
+   "type": "linkedin-fr",
+   "title": "Churn — 3 conversations (FR)",
+   "link": "https://custovox.ai/blog/how-nlp-reduces-customer-churn"
+  },
+  {
+   "id": "li-2026-10-28",
+   "date": "2026-10-28 18:00",
+   "type": "linkedin",
+   "title": "Ratings hide (EN)",
+   "link": "https://custovox.ai/blog/g2-reviews-nlp-analysis"
+  },
+  {
+   "id": "li-2026-11-01",
+   "date": "2026-11-01 18:00",
+   "type": "linkedin-fr",
+   "title": "Les notes cachent (FR)",
+   "link": "https://custovox.ai/blog/g2-reviews-nlp-analysis"
+  },
+  {
+   "id": "li-2026-11-04",
+   "date": "2026-11-04 18:00",
+   "type": "linkedin",
+   "title": "TripAdvisor hotels (EN)",
+   "link": "https://custovox.ai/blog/g2-reviews-nlp-analysis"
+  },
+  {
+   "id": "li-2026-11-08",
+   "date": "2026-11-08 18:00",
+   "type": "linkedin-fr",
+   "title": "Avis hôteliers (FR)",
+   "link": "https://custovox.ai/blog/g2-reviews-nlp-analysis"
+  },
+  {
+   "id": "li-2026-11-11",
+   "date": "2026-11-11 18:00",
+   "type": "linkedin",
+   "title": "5 churn signals (EN)",
+   "link": "https://custovox.ai/blog/how-nlp-reduces-customer-churn"
+  },
+  {
+   "id": "li-2026-11-15",
+   "date": "2026-11-15 18:00",
+   "type": "linkedin-fr",
+   "title": "5 signaux de churn (FR)",
+   "link": "https://custovox.ai/blog/how-nlp-reduces-customer-churn"
+  },
+  {
+   "id": "li-2026-11-18",
+   "date": "2026-11-18 18:00",
+   "type": "linkedin",
+   "title": "5 languages (EN)",
+   "link": "https://custovox.ai/blog/top-5-sentiment-analysis-tools"
+  },
+  {
+   "id": "li-2026-11-22",
+   "date": "2026-11-22 18:00",
+   "type": "linkedin-fr",
+   "title": "5 langues (FR)",
+   "link": "https://custovox.ai/blog/top-5-sentiment-analysis-tools"
+  },
+  {
+   "id": "blog-2026-10-21",
+   "date": "2026-10-21 09:00",
+   "type": "blog",
+   "title": "How NLP Reduces Customer Churn",
+   "link": "https://custovox.ai/blog/how-nlp-reduces-customer-churn"
+  },
+  {
+   "id": "blog-2026-11-11",
+   "date": "2026-11-11 09:00",
+   "type": "blog",
+   "title": "Top 5 Sentiment Analysis Tools",
+   "link": "https://custovox.ai/blog/top-5-sentiment-analysis-tools"
+  },
+  {
+   "id": "blog-2026-12-09",
+   "date": "2026-12-09 09:00",
+   "type": "blog",
+   "title": "What Is an MCP Server",
+   "link": "https://custovox.ai/blog/what-is-mcp-server-cx-teams"
+  },
+  {
+   "id": "blog-2026-12-23",
+   "date": "2026-12-23 09:00",
+   "type": "blog",
+   "title": "2026 CX Year in Review",
+   "link": "https://custovox.ai/blog/2026-cx-nlp-year-in-review"
+  }
+ ],
+ "tasks": [
+  {
+   "id": "task-2026-10-12-prospects",
+   "date": "2026-10-12 09:30",
+   "minutes": 30,
+   "title": "📧 Envoyer des mails à 10 nouveaux prospects",
+   "description": "Objectif : 10 nouveaux prospects contactés aujourd'hui."
+  },
+  {
+   "id": "pypi-2026-10-16",
+   "date": "2026-10-16 10:00",
+   "minutes": 15,
+   "title": "📦 Publier custovox-emotion sur PyPI",
+   "description": "Dans Claude Code, dites : « publie custovox-emotion sur PyPI ».\nClaude prépare le paquet, vous l'envoyez avec twine (jeton PyPI), puis Claude le publie dans le registre MCP."
+  },
+  {
+   "id": "pypi-2026-10-23",
+   "date": "2026-10-23 10:00",
+   "minutes": 15,
+   "title": "📦 Publier custovox-ticket-scorer sur PyPI",
+   "description": "Dans Claude Code, dites : « publie custovox-ticket-scorer sur PyPI ».\nClaude prépare le paquet, vous l'envoyez avec twine (jeton PyPI), puis Claude le publie dans le registre MCP."
+  },
+  {
+   "id": "pypi-2026-10-30",
+   "date": "2026-10-30 10:00",
+   "minutes": 15,
+   "title": "📦 Publier custovox-review-analyzer sur PyPI",
+   "description": "Dans Claude Code, dites : « publie custovox-review-analyzer sur PyPI ».\nClaude prépare le paquet, vous l'envoyez avec twine (jeton PyPI), puis Claude le publie dans le registre MCP."
+  },
+  {
+   "id": "pypi-2026-11-06",
+   "date": "2026-11-06 10:00",
+   "minutes": 15,
+   "title": "📦 Publier custovox-churn-signal sur PyPI",
+   "description": "Dans Claude Code, dites : « publie custovox-churn-signal sur PyPI ».\nClaude prépare le paquet, vous l'envoyez avec twine (jeton PyPI), puis Claude le publie dans le registre MCP."
+  },
+  {
+   "id": "pypi-2026-11-13",
+   "date": "2026-11-13 10:00",
+   "minutes": 15,
+   "title": "📦 Publier custovox-visual sur PyPI",
+   "description": "Dans Claude Code, dites : « publie custovox-visual sur PyPI ».\nClaude prépare le paquet, vous l'envoyez avec twine (jeton PyPI), puis Claude le publie dans le registre MCP."
+  },
+  {
+   "id": "task-2026-10-12-geo",
+   "date": "2026-10-12 10:00",
+   "minutes": 60,
+   "title": "🚀 Optimisation GEO du site custovox.ai avec Claude",
+   "description": "Ouvrez la conversation Claude Code et dites : « on lance l'optimisation GEO ».\n\nAu programme :\n→ Données chiffrées sourcées sur toutes les pages\n→ Page /faq avec 10 questions (5 langues)\n→ Schema SoftwareApplication\n→ Page /glossary (5 langues)\n→ Liste de 5 auteurs de comparatifs à contacter (mails à valider par vous)\n→ Cohérence du nom et de la description sur PyPI, registre MCP, GitHub, LinkedIn"
+  }
+ ]
+}
