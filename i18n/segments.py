@@ -4,7 +4,7 @@ import re
 
 SKIP_BLOCKS = re.compile(r"(?s)<(style|script)\b[^>]*>.*?</\1>")
 TEXT = re.compile(r">([^<>]*[A-Za-z][^<>]*)<")
-ATTR = re.compile(r'\b(content|alt|aria-label|title)="([^"]*[A-Za-z][^"]*)"')
+ATTR = re.compile(r'\b(content|alt|aria-label|title|placeholder)="([^"]*[A-Za-z][^"]*)"')
 META_NAMES = re.compile(r'<meta\s+(?:name|property)="(description|og:title|og:description|twitter:title|twitter:description|keywords)"\s+content="([^"]*)"')
 JSONLD = re.compile(r'(?s)<script type="application/ld\+json">(.*?)</script>')
 JSON_KEYS = ("headline", "description", "name", "articleSection")

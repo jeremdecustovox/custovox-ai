@@ -57,7 +57,7 @@ def translate(html: str, lang: str, words: dict, missing: set) -> str:
     parts = re.split(r"(?s)(<(?:style|script)\b[^>]*>.*?</(?:style|script)>)", html)
     for i in range(0, len(parts), 2):
         parts[i] = re.sub(r">([^<>]+)<", lambda m: ">" + tr(m.group(1)) + "<", parts[i])
-        parts[i] = re.sub(r'\b(alt|aria-label|title)="([^"]+)"',
+        parts[i] = re.sub(r'\b(alt|aria-label|title|placeholder)="([^"]+)"',
                           lambda m: '%s="%s"' % (m.group(1), tr(m.group(2))), parts[i])
     html = "".join(parts)
 
