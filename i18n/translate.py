@@ -7,6 +7,8 @@ segments.py). Run after changing an English page or a dictionary:
     python i18n/translate.py
 
 Segments missing from a dictionary stay in English and are listed.
+Article URLs are localized with i18n/slugs.json (English slug -> slug per language);
+an article without an entry keeps its English slug.
 """
 import json
 import re
@@ -18,6 +20,20 @@ LANGS = {"fr": "fr", "de": "de", "es": "es", "pt-br": "pt-BR"}
 JSON_KEYS = ("headline", "description", "name", "articleSection")
 META_NAMES = "description|og:title|og:description|twitter:title|twitter:description|keywords"
 NOT_PAGES = r"(?!images/|blog/images/)"
+
+
+def load_slugs() -> dict:
+    path = ROOT / "i18n" / "slugs.json"
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+
+
+def localize_links(html: str, lang: str, slugs: dict) -> str:
+    """/fr/blog/<english-slug> -> /fr/blog/<french-slug> (relative and absolute links)."""
+    for en, per_lang in slugs.items():
+        loc = per_lang.get(lang)
+        if loc and loc != en:
+            html = re.sub(r"(/%s/blog/)%s(?=[\"#?])" % (re.escape(lang), re.escape(en)), r"\g<1>" + loc, html)
+    return html
 
 
 def pages():
@@ -63,13 +79,20 @@ def translate(html: str, lang: str, words: dict, missing: set) -> str:
 
 def main():
     sys.stdout.reconfigure(encoding="utf-8")
+    slugs = load_slugs()
     for lang in LANGS:
         words = json.loads((ROOT / "i18n" / f"{lang}.json").read_text(encoding="utf-8"))
+        for old in (ROOT / lang).rglob("*.html") if (ROOT / lang).exists() else []:
+            old.unlink()   # regenerate from scratch (slugs may have changed)
         for page in pages():
             missing = set()
-            out = ROOT / lang / page.relative_to(ROOT)
+            rel = page.relative_to(ROOT)
+            if rel.parent.name == "blog" and page.stem in slugs and lang in slugs[page.stem]:
+                rel = rel.with_name(slugs[page.stem][lang] + ".html")
+            out = ROOT / lang / rel
             out.parent.mkdir(parents=True, exist_ok=True)
-            out.write_text(translate(page.read_text(encoding="utf-8"), lang, words, missing), encoding="utf-8")
+            html = translate(page.read_text(encoding="utf-8"), lang, words, missing)
+            out.write_text(localize_links(html, lang, slugs), encoding="utf-8")
             if missing:
                 print(f"[{lang}] {page.relative_to(ROOT)}: {len(missing)} untranslated")
                 for m in sorted(missing):

@@ -4,11 +4,13 @@ Only the website files are published (pages, blog, images and the translated
 copies in fr/, de/, es/, pt-br/), never the MCP servers or other repo content.
 Blog articles whose `article:published_time` is later than today (Paris time)
 are left out, and every link to them is removed, so each article goes live on
-its own date. Every page gets the language flags and hreflang links.
+its own date. Every page gets the language switcher (EN · FR · DE · ES · PT) and
+hreflang links; translated articles have localized URLs (i18n/slugs.json).
 
 Usage: python3 build.py [YYYY-MM-DD]   (optional date, for testing)
 """
 import datetime
+import json
 import re
 import shutil
 import sys
@@ -22,25 +24,33 @@ HREFLANG = {"en": "en", "fr": "fr", "de": "de", "es": "es", "pt-br": "pt-BR"}
 NAMES = {"en": "English", "fr": "Français", "de": "Deutsch", "es": "Español", "pt-br": "Português (Brasil)"}
 PUBLISHED = ["index.html", "robots.txt", "blog", "images", "fr", "de", "es", "pt-br"]
 
-FLAGS = {
-    "en": '<svg viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice"><clipPath id="uk-clip"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath>'
-          '<path d="M0,0v30h60v-30z" fill="#012169"/><path d="M0,0L60,30M60,0L0,30" stroke="#fff" stroke-width="6"/>'
-          '<path d="M0,0L60,30M60,0L0,30" clip-path="url(#uk-clip)" stroke="#C8102E" stroke-width="4"/>'
-          '<path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#C8102E" stroke-width="6"/></svg>',
-    "fr": '<svg viewBox="0 0 3 2" preserveAspectRatio="none"><path fill="#0055A4" d="M0,0h1v2H0z"/><path fill="#fff" d="M1,0h1v2H1z"/><path fill="#EF4135" d="M2,0h1v2H2z"/></svg>',
-    "de": '<svg viewBox="0 0 5 3" preserveAspectRatio="none"><path d="M0,0h5v1H0z"/><path fill="#DD0000" d="M0,1h5v1H0z"/><path fill="#FFCE00" d="M0,2h5v1H0z"/></svg>',
-    "es": '<svg viewBox="0 0 3 2" preserveAspectRatio="none"><path fill="#AA151B" d="M0,0h3v2H0z"/><path fill="#F1BF00" d="M0,.5h3v1H0z"/></svg>',
-    "pt-br": '<svg viewBox="0 0 720 504" preserveAspectRatio="none"><path fill="#009C3B" d="M0,0h720v504H0z"/><path fill="#FFDF00" d="M72,252L360,40L648,252L360,464z"/>'
-             '<circle cx="360" cy="252" r="126" fill="#002776"/><path d="M240,226Q360,196 478,272" stroke="#fff" stroke-width="16" fill="none"/></svg>',
-}
+CODES = {"en": "EN", "fr": "FR", "de": "DE", "es": "ES", "pt-br": "PT"}
 SWITCH_CSS = """<style>
-.lang-switch{display:inline-flex;gap:7px;align-items:center;margin-left:1rem;}
-.lang-switch a{display:inline-flex;border-radius:3px;overflow:hidden;opacity:.5;box-shadow:0 0 0 1px #E2E8F0;transition:opacity .15s;}
-.lang-switch a:hover,.lang-switch a.active{opacity:1;}
-.lang-switch svg{width:22px;height:15px;display:block;}
+.lang-switch{display:inline-flex;gap:10px;align-items:center;margin-left:1.25rem;}
+.lang-switch a{font-size:12px;font-weight:600;letter-spacing:.04em;color:#94A3B8;text-decoration:none;padding:2px 0;border-bottom:2px solid transparent;transition:color .15s;}
+.lang-switch a:hover{color:#0D2B6B;}
+.lang-switch a.active{color:#0D2B6B;border-bottom-color:#00C48C;}
 @media(max-width:600px){nav:has(.lang-switch){flex-wrap:wrap;row-gap:.6rem;}.lang-switch{margin-left:0;}}
 </style>
 """
+
+
+SLUGS_FILE = ROOT / "i18n" / "slugs.json"
+SLUGS = json.loads(SLUGS_FILE.read_text(encoding="utf-8")) if SLUGS_FILE.exists() else {}
+
+
+def slug_in(lang: str, en_slug: str) -> str:
+    return en_slug if lang == "en" else SLUGS.get(en_slug, {}).get(lang, en_slug)
+
+
+def to_english_rest(lang: str, rest: str) -> str:
+    """blog/<localized-slug>.html -> blog/<english-slug>.html"""
+    if lang != "en" and rest.startswith("blog/") and rest != "blog/index.html":
+        stem = rest[len("blog/"):-len(".html")]
+        for en, per_lang in SLUGS.items():
+            if per_lang.get(lang) == stem:
+                return f"blog/{en}.html"
+    return rest
 
 
 def today_paris() -> datetime.date:
@@ -63,9 +73,12 @@ def url_of(rel: str) -> str:
     return "/" + path
 
 
-def equivalent(rest: str, lang: str) -> str:
-    """dist-relative path of `rest` in `lang`, falling back to the blog or home page."""
+def equivalent(en_rest: str, lang: str) -> str:
+    """dist-relative path of a page in `lang`, falling back to the blog or home page."""
     prefix = "" if lang == "en" else lang + "/"
+    rest = en_rest
+    if en_rest.startswith("blog/") and en_rest != "blog/index.html":
+        rest = "blog/" + slug_in(lang, en_rest[len("blog/"):-len(".html")]) + ".html"
     for candidate in (rest, "blog/index.html" if rest.startswith("blog/") else "index.html"):
         if (DIST / (prefix + candidate)).exists():
             return prefix + candidate
@@ -75,16 +88,17 @@ def equivalent(rest: str, lang: str) -> str:
 def add_language_links(page: Path) -> None:
     rel = page.relative_to(DIST).as_posix()
     lang, rest = split_lang(rel)
+    en_rest = to_english_rest(lang, rest)
     links = []
     alternates = []
     for other in LANGS:
-        target = equivalent(rest, other)
+        target = equivalent(en_rest, other)
         active = ' class="active" aria-current="true"' if other == lang else ""
-        links.append(f'<a href="{url_of(target)}" hreflang="{HREFLANG[other]}" title="{NAMES[other]}"{active}>{FLAGS[other]}</a>')
-        if target.endswith(rest):
+        links.append(f'<a href="{url_of(target)}" hreflang="{HREFLANG[other]}" title="{NAMES[other]}"{active}>{CODES[other]}</a>')
+        if not target.endswith("index.html") or en_rest.endswith("index.html"):
             alternates.append(f'<link rel="alternate" hreflang="{HREFLANG[other]}" href="{SITE}{url_of(target)}">')
-    if equivalent(rest, "en") == rest:
-        alternates.append(f'<link rel="alternate" hreflang="x-default" href="{SITE}{url_of(rest)}">')
+    if equivalent(en_rest, "en") == en_rest:
+        alternates.append(f'<link rel="alternate" hreflang="x-default" href="{SITE}{url_of(en_rest)}">')
 
     html = page.read_text(encoding="utf-8")
     switch = '<div class="lang-switch" aria-label="Language">' + "".join(links) + "</div>"
@@ -130,6 +144,10 @@ def main() -> None:
     pages = sorted(p for p in DIST.rglob("*.html"))
     for page in pages:
         add_language_links(page)
+
+    redirects = [f"/{lang}/blog/{en} /{lang}/blog/{loc} 301"
+                 for en, per_lang in SLUGS.items() for lang, loc in per_lang.items() if loc != en]
+    (DIST / "_redirects").write_text("\n".join(redirects) + "\n", encoding="utf-8")
 
     urls = [SITE + url_of(p.relative_to(DIST).as_posix()) for p in pages]
     sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',

@@ -1,0 +1,32 @@
+{
+ "g2-reviews-nlp-analysis": {
+  "fr": "analyse-nlp-avis-g2",
+  "de": "nlp-analyse-g2-bewertungen",
+  "es": "analisis-nlp-resenas-g2",
+  "pt-br": "analise-nlp-avaliacoes-g2"
+ },
+ "how-nlp-reduces-customer-churn": {
+  "fr": "reduire-churn-client-nlp",
+  "de": "kundenabwanderung-senken-nlp",
+  "es": "reducir-churn-clientes-nlp",
+  "pt-br": "reduzir-churn-clientes-nlp"
+ },
+ "top-5-sentiment-analysis-tools": {
+  "fr": "meilleurs-outils-analyse-sentiment",
+  "de": "beste-tools-sentiment-analyse",
+  "es": "mejores-herramientas-analisis-sentimiento",
+  "pt-br": "melhores-ferramentas-analise-sentimento"
+ },
+ "what-is-mcp-server-cx-teams": {
+  "fr": "serveur-mcp-equipes-cx",
+  "de": "mcp-server-cx-teams",
+  "es": "servidor-mcp-equipos-cx",
+  "pt-br": "servidor-mcp-equipes-cx"
+ },
+ "2026-cx-nlp-year-in-review": {
+  "fr": "bilan-2026-experience-client-nlp",
+  "de": "jahresrueckblick-2026-customer-experience-nlp",
+  "es": "balance-2026-experiencia-cliente-nlp",
+  "pt-br": "balanco-2026-experiencia-cliente-nlp"
+ }
+}
