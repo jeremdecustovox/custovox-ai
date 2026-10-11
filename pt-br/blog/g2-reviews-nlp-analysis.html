@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O que o NLP revela e as estrelas escondem — CustoVox.ai</title>
+<meta name="description" content="Analisamos 200 avaliações do G2 com NLP. A reclamação nº 1 não é sobre o produto — é sobre o onboarding, citado em 34 % das avaliações negativas. Veja o que as notas agregadas não mostram.">
+<meta name="keywords" content="análise de NLP de avaliações do G2, análise de sentimento de avaliações de clientes, analytics de experiência do cliente, voz do cliente NLP, análise de notas">
+<meta name="author" content="CustoVox.ai">
+<link rel="canonical" href="https://custovox.ai/pt-br/blog/g2-reviews-nlp-analysis">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://custovox.ai/pt-br/blog/g2-reviews-nlp-analysis">
+<meta property="og:title" content="O que o NLP revela e as estrelas escondem — análise de 200 avaliações do G2">
+<meta property="og:description" content="Uma nota de 4,2/5 pode parecer sólida e ainda esconder 34 % de clientes frustrados com o onboarding. Veja o que acontece quando você lê as palavras de verdade.">
+<meta property="og:site_name" content="CustoVox.ai">
+<meta property="article:published_time" content="2026-10-10">
+<meta property="article:tag" content="NLP">
+<meta property="article:tag" content="Customer Experience">
+<meta property="article:tag" content="G2 Reviews">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="O que o NLP revela e as estrelas escondem">
+<meta name="twitter:description" content="Analisamos 200 avaliações do G2. A reclamação nº 1 não é sobre o produto — é o onboarding, em 34 % das avaliações negativas.">
+
+<!-- JSON-LD Article Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "O que o NLP revela e as estrelas escondem — análise de 200 avaliações do G2",
+  "description": "Analisamos 200 avaliações do G2 com NLP. A reclamação nº 1 não é sobre o produto — é sobre o onboarding, citado em 34 % das avaliações negativas.",
+  "datePublished": "2026-10-10",
+  "dateModified": "2026-10-10",
+  "author": {
+    "@type": "Organization",
+    "name": "CustoVox.ai",
+    "url": "https://custovox.ai"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CustoVox.ai",
+    "url": "https://custovox.ai"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://custovox.ai/pt-br/blog/g2-reviews-nlp-analysis"
+  },
+  "keywords": ["NLP", "G2 reviews", "sentiment analysis", "customer experience", "voice of customer"],
+  "articleSection": "Análise de NLP"
+}
+</script>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #ffffff;
+    color: #0D2B6B;
+    line-height: 1.7;
+  }
+  nav {
+    padding: 1.25rem 2rem;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo { font-size: 22px; font-weight: 700; color: #00C48C; text-decoration: none; }
+  .nav-logo span { color: #0D2B6B; }
+  .nav-links { display: flex; gap: 1.5rem; }
+  .nav-links a { font-size: 14px; color: #475569; text-decoration: none; }
+  .nav-cta {
+    background: #0D2B6B; color: white; padding: 8px 16px;
+    border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none;
+  }
+  .article-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+  .article-meta {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  .tag {
+    background: #E0FAF4; color: #0E7C7B;
+    font-size: 11px; font-weight: 600;
+    padding: 3px 8px; border-radius: 4px;
+  }
+  .date { font-size: 12px; color: #94A3B8; }
+  .read-time { font-size: 12px; color: #94A3B8; }
+  h1 {
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 700;
+    line-height: 1.2;
+    color: #0D2B6B;
+    margin-bottom: 1rem;
+  }
+  .subtitle {
+    font-size: 18px;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #E2E8F0;
+  }
+  h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0D2B6B;
+    margin: 2.5rem 0 1rem;
+  }
+  h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #0D2B6B;
+    margin: 1.75rem 0 0.75rem;
+  }
+  p { font-size: 15px; color: #334155; margin-bottom: 1.25rem; }
+  strong { color: #0D2B6B; }
+  .highlight {
+    background: #F0F4FF;
+    border-left: 4px solid #00C48C;
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    font-size: 15px;
+    color: #1E293B;
+  }
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .stat-card {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    padding: 1.25rem;
+    text-align: center;
+  }
+  .stat-number { font-size: 32px; font-weight: 700; color: #00C48C; display: block; }
+  .stat-label { font-size: 12px; color: #64748B; margin-top: 4px; }
+  .comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .comp-card {
+    border-radius: 10px;
+    padding: 1.25rem;
+  }
+  .comp-card.before { background: #FEE2E2; border: 1px solid #FECACA; }
+  .comp-card.after { background: #DCFCE7; border: 1px solid #BBF7D0; }
+  .comp-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+  .comp-card.before .comp-label { color: #DC2626; }
+  .comp-card.after .comp-label { color: #16A34A; }
+  .comp-card p { font-size: 14px; margin: 0; }
+  ul { margin: 1rem 0 1.25rem 1.25rem; }
+  li { font-size: 15px; color: #334155; margin-bottom: 6px; }
+  .cta-box {
+    background: #0D2B6B;
+    border-radius: 14px;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+    color: white;
+  }
+  .cta-box h3 { color: white; font-size: 20px; margin-bottom: 0.5rem; }
+  .cta-box p { color: rgba(255,255,255,0.75); font-size: 14px; margin-bottom: 1.25rem; }
+  .cta-btn {
+    display: inline-block;
+    background: #00C48C;
+    color: #0D2B6B;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  .no-cc {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 8px;
+    display: block;
+  }
+  .breadcrumb {
+    font-size: 13px;
+    color: #94A3B8;
+    margin-bottom: 1.5rem;
+  }
+  .breadcrumb a { color: #00C48C; text-decoration: none; }
+  footer {
+    text-align: center;
+    padding: 2rem;
+    color: #94A3B8;
+    font-size: 13px;
+    border-top: 1px solid #F1F5F9;
+  }
+  @media(max-width:600px){
+    .comparison { grid-template-columns: 1fr; }
+    .stat-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/pt-br/" class="nav-logo">custovox<span>.ai</span></a>
+  <div class="nav-links">
+    <a href="/pt-br/">Início</a>
+    <a href="/pt-br/blog/">Blog</a>
+  </div>
+  <a href="/pt-br/#audit" class="nav-cta">Acesso antecipado</a>
+</nav>
+
+<article class="article-wrap">
+
+  <nav class="breadcrumb" aria-label="trilha de navegação">
+    <a href="/pt-br/">Início</a> → <a href="/pt-br/blog/">Blog</a> → O que o NLP revela e as estrelas escondem
+  </nav>
+
+  <div class="article-meta">
+    <span class="tag">Análise de NLP</span>
+    <span class="date">10 de outubro de 2026</span>
+    <span class="read-time">· 5 min de leitura</span>
+  </div>
+
+  <h1>O que o NLP revela e as estrelas escondem</h1>
+  <p class="subtitle">Analisamos 200 avaliações do G2 de uma plataforma SaaS de CX. A reclamação nº 1 não é sobre o produto — é sobre o onboarding, citado em 34 % de todas as avaliações negativas. Veja o que acontece quando você lê as palavras em vez de contar estrelas.</p>
+
+  <h2>O problema das notas agregadas</h2>
+
+  <p>A maioria das equipes de customer success se apoia nos mesmos poucos indicadores: NPS, CSAT, notas em estrelas. Esses números são fáceis de acompanhar, fáceis de reportar — e muito eficientes em esconder o que realmente está dando errado.</p>
+
+  <p>Pense em um perfil típico no G2 com nota geral de 4,2/5. À primeira vista, parece sólido. O produto é bem recebido. Os clientes estão, em geral, satisfeitos. Próximo assunto.</p>
+
+  <p>Só que 34 % das avaliações negativas mencionam exatamente o mesmo problema — confusão na primeira semana de onboarding. Um problema que a nota agregada nunca mostra. Um problema que a equipe nem sabia que existia.</p>
+
+  <div class="highlight">
+    <strong>O insight:</strong> As notas de satisfação agregadas não apenas simplificam a realidade — elas escondem ativamente os padrões que mais importam. O NLP lê o que os clientes realmente escrevem. As estrelas contam quantos deram quatro.
+  </div>
+
+  <h2>O que fizemos</h2>
+
+  <p>Fizemos uma análise de NLP multilíngue de 200 avaliações recentes do G2 de uma plataforma SaaS de experiência do cliente de médio porte. O método foi simples: extrair o sentimento frase a frase, agrupar os temas recorrentes e comparar os resultados com a nota agregada.</p>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <span class="stat-number">200</span>
+      <span class="stat-label">Avaliações do G2 analisadas</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">4.2</span>
+      <span class="stat-label">Nota geral</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">34%</span>
+      <span class="stat-label">Citam problemas de onboarding</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">3</span>
+      <span class="stat-label">Temas de problemas ocultos</span>
+    </div>
+  </div>
+
+  <h2>O que as estrelas diziam vs. o que as palavras diziam</h2>
+
+  <div class="comparison">
+    <div class="comp-card before">
+      <div class="comp-label">❌ O que as estrelas mostram</div>
+      <p>4,2/5 no geral · Clientes satisfeitos em geral · Nenhum problema grave apontado · Bom fit produto-mercado</p>
+    </div>
+    <div class="comp-card after">
+      <div class="comp-label">✅ O que o NLP revela</div>
+      <p>34 % frustrados com o onboarding · 22 % relatam suporte lento · 18 % confusos com a estrutura de preços · Os 3 temas invisíveis na nota agregada</p>
+    </div>
+  </div>
+
+  <h2>Os 3 temas ocultos</h2>
+
+  <h3>1. Confusão no onboarding — 34 % das avaliações negativas</h3>
+  <p>A reclamação mais comum não era sobre o produto em si — mas sobre a primeira semana de uso. Os clientes falavam em “curva de aprendizado íngreme”, “documentação pouco clara” e “configuração confusa”. Nada disso aparece em uma nota em estrelas. Tudo isso alimenta o churn.</p>
+
+  <h3>2. Tempo de resposta do suporte — 22 % das avaliações negativas</h3>
+  <p>Os clientes não estavam necessariamente insatisfeitos com a qualidade do suporte — e sim com o tempo para receber uma resposta. É um problema de processo, não de produto. Totalmente corrigível. Totalmente invisível sem NLP.</p>
+
+  <h3>3. Transparência de preços — 18 % das avaliações negativas</h3>
+  <p>Um tema recorrente sobre cobranças inesperadas, diferenças pouco claras entre planos e faturas confusas. Os clientes não se sentiram enganados — e sim mal informados. De novo, um problema corrigível que as notas agregadas nunca mostram.</p>
+
+  <div class="highlight">
+    <strong>Principal conclusão:</strong> O produto é bom. A jornada não. E três melhorias bem concretas — documentação de onboarding melhor, SLAs de suporte mais rápidos, comunicação de preços mais clara — poderiam ter sido identificadas e corrigidas meses antes com NLP.
+  </div>
+
+  <h2>Por que isso importa para a sua equipe de CS</h2>
+
+  <p>É na distância entre o que os clientes sentem e o que os indicadores mostram que o churn nasce. Um cliente que dá 3/5 por causa de um problema de onboarding não está insatisfeito com o seu produto — está insatisfeito com um processo específico e corrigível que ninguém na sua equipe conhece.</p>
+
+  <p>O NLP não substitui seus indicadores atuais. Ele lê o que está por baixo deles. Ele mostra:</p>
+  <ul>
+    <li>Quais momentos específicos da jornada do cliente geram sentimento negativo</li>
+    <li>Quais reclamações são isoladas e quais são padrões sistêmicos</li>
+    <li>Quais temas crescem ou diminuem ao longo do tempo</li>
+    <li>Onde a distância entre expectativa e realidade é maior</li>
+  </ul>
+
+  <h2>Faça esta análise com as suas próprias avaliações</h2>
+
+  <p>Esta análise levou 48 horas e não exigiu equipe de dados, projeto de TI nem treinamento de modelo personalizado. O processo foi:</p>
+  <ul>
+    <li>Coletar as 200 avaliações mais recentes do G2 em formato de texto</li>
+    <li>Rodar análise de sentimento frase a frase com modelos de NLP multilíngues</li>
+    <li>Agrupar temas por similaridade semântica entre idiomas</li>
+    <li>Comparar a frequência dos temas com a distribuição das estrelas</li>
+  </ul>
+
+  <p>A CustoVox.ai faz isso automaticamente — para avaliações do G2, Trustpilot, Google, tickets de suporte e transcrições de ligações. Em qualquer idioma. Sem equipe de dados.</p>
+
+  <div class="cta-box">
+    <h3>Faça esta análise com os dados dos seus clientes</h3>
+    <p>Envie suas últimas 100 avaliações ou tickets. Devolvemos uma análise de NLP completa em 48 h. Grátis e sem compromisso.</p>
+    <a href="/pt-br/#audit" class="cta-btn">Receba seu estudo de caso gratuito →</a>
+    <span class="no-cc">Sem cartão de crédito — nunca, até você decidir assinar</span>
+  </div>
+
+</article>
+
+<footer>
+  © 2026 CustoVox.ai — <a href="/pt-br/" style="color:#00C48C;text-decoration:none;">custovox.ai</a> · 
+  <a href="/pt-br/blog/" style="color:#00C48C;text-decoration:none;">Blog</a>
+</footer>
+
+</body>
+</html>

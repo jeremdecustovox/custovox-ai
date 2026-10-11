@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CustoVox.ai — Acceso anticipado</title>
+<meta name="description" content="Los modelos de IA que usan Google, Amazon, Meta, Uber y Airbnb — ahora para tu empresa.">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #ffffff;
+    color: #0D2B6B;
+    min-height: 100vh;
+  }
+  .page {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  .top-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .top-nav a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #475569;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+  }
+  .top-nav a:hover { color: #0D2B6B; border-bottom-color: #00C48C; }
+  .top-nav a.active { color: #0D2B6B; border-bottom-color: #00C48C; }
+
+  .logo-wrap { margin-bottom: 1.75rem; }
+  .logo-wrap img {
+    height: 216px;
+    width: auto;
+    display: block;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: clamp(26px, 4.5vw, 38px);
+    font-weight: 700;
+    line-height: 1.18;
+    color: #0D2B6B;
+    margin-bottom: 0.5rem;
+  }
+  h1 span { color: #00C48C; }
+
+  .hook {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0D2B6B;
+    border-left: 3px solid #00C48C;
+    padding-left: 0.75rem;
+    margin: 1rem 0;
+    line-height: 1.55;
+  }
+
+  .desc {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+  }
+  .desc strong { color: #0D2B6B; font-weight: 600; }
+
+  .pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+  }
+  .pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #F8FAFC;
+    border: 1px solid #CBD5E1;
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #0D2B6B;
+  }
+  .pill::before {
+    content: '';
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #00C48C;
+    flex-shrink: 0;
+  }
+
+  .form-card {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    padding: 1.5rem;
+  }
+  .form-top-label {
+    font-size: 13px;
+    color: #64748B;
+    margin-bottom: 0.35rem;
+  }
+  .form-cta {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0D2B6B;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+  .form-cta span { color: #00C48C; }
+  .form-sub {
+    font-size: 13px;
+    color: #64748B;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+  }
+  .no-cc {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #ECFDF5;
+    border: 1px solid #A7F3D0;
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #065F46;
+    margin-bottom: 1rem;
+  }
+  .no-cc::before {
+    content: '✓';
+    font-size: 13px;
+    color: #059669;
+    font-weight: 900;
+  }
+
+  /* TALLY WRAPPER */
+  .tally-wrap {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .tally-wrap iframe {
+    width: 100%;
+    border: none;
+    display: block;
+    height: 500px;
+  }
+
+  /* Square mask — bottom RIGHT only, covers "Made with Tally" */
+  /* Does NOT touch the Submit button on the left */
+  .mask-tally {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 200px;
+    height: 44px;
+    background: #F8FAFC;
+    pointer-events: none;
+    z-index: 20;
+    border-radius: 0 0 8px 0;
+  }
+
+  .bottom {
+    margin-top: 2rem;
+    text-align: center;
+    color: #94A3B8;
+    font-size: 13px;
+    padding-top: 1.5rem;
+    border-top: 1px solid #F1F5F9;
+  }
+  .bottom strong {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #00C48C;
+    margin-bottom: 3px;
+  }
+
+  @media (max-width: 500px) {
+    .logo-wrap img { height: 140px; }
+    h1 { font-size: 24px; }
+    .form-cta { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <nav class="top-nav" aria-label="Principal">
+    <a href="/es/" class="active">Inicio</a>
+    <a href="/es/blog/">Blog</a>
+  </nav>
+
+  <div class="logo-wrap">
+    <img src="/images/logo.png" alt="CustoVox.ai — Escuchar más a fondo, actuar más rápido" />
+  </div>
+
+  <h1>
+    Los modelos de IA que usan Google,<br>
+    Amazon, Meta, Uber &amp; Airbnb —<br>
+    <span>ahora para tu empresa.</span>
+  </h1>
+
+  <p class="hook">
+    ¿Y si supieras exactamente por qué se van tus clientes — antes de que lo hagan?
+  </p>
+
+  <p class="desc">
+    Detecta <strong>emociones</strong>, anticipa <strong>riesgos de escalamiento</strong>, predice el <strong>churn</strong>y saca a la luz <strong>impulsores de satisfacción, puntos de fricción, necesidades no cubiertas y carencias del producto</strong> — a partir de cualquier llamada, reseña, ticket o correo. En cualquier idioma. Desde 49 €/mes.
+  </p>
+
+  <div class="pills">
+    <div class="pill">Detección de escalamiento</div>
+    <div class="pill">Voz + Texto + Imagen</div>
+    <div class="pill">NLP</div>
+    <div class="pill">Validación estadística</div>
+  </div>
+
+  <div class="form-card" id="audit">
+    <p class="form-top-label">Únete a la lista de espera</p>
+    <p class="form-cta">Obtén tu <span>caso de estudio NLP gratuito</span><br>en 48 h — sin compromiso</p>
+    <p class="form-sub">Envíanos tus últimas 100 reseñas o tickets. Te devolvemos un análisis completo. Gratis.</p>
+    <span class="no-cc">Sin tarjeta de crédito — nunca, hasta que decidas suscribirte</span>
+
+    <div class="tally-wrap">
+      <iframe
+        id="tally-frame"
+        data-tally-src="https://tally.so/embed/PdrPE5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+        loading="lazy"
+        width="100%"
+        height="500"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        title="Lista de espera de acceso anticipado de CustoVox">
+      </iframe>
+      <!-- Carré blanc ciblé uniquement sur "Made with Tally" en bas à droite -->
+      <div class="mask-tally"></div>
+    </div>
+
+  </div>
+
+  <div class="bottom">
+    <strong>83,724</strong>
+    comentarios ya analizados
+  </div>
+
+</div>
+
+<script>
+var d=document,w="https://tally.so/widgets/embed.js",
+v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("[data-tally-src]:not([src])").forEach(function(e){e.src=e.dataset.tallySrc})};
+if("undefined"!=typeof Tally){v()}
+else if(d.querySelector('script[src="'+w+'"]')==null){
+  var s=d.createElement("script");s.src=w;s.onload=v;s.onerror=v;d.body.appendChild(s);
+}
+
+/* Auto-resize iframe */
+window.addEventListener('message',function(e){
+  if(e.data && e.data.type==='tally-form-height'){
+    var f=document.getElementById('tally-frame');
+    if(f) f.style.height=(e.data.height+60)+'px';
+  }
+});
+</script>
+</body>
+</html>
