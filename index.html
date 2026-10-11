@@ -142,32 +142,32 @@
     font-weight: 900;
   }
 
-  /* TALLY WRAPPER */
-  .tally-wrap {
-    position: relative;
-    border-radius: 8px;
-    overflow: hidden;
+  /* SIGNUP FORM */
+  .lead-form { display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.75rem; }
+  .lead-form label { font-size: 14px; font-weight: 600; color: #0D2B6B; margin-top: 0.6rem; }
+  .lead-form input[type=email], .lead-form select {
+    width: 100%; padding: 11px 12px; border: 1px solid #CBD5E1; border-radius: 8px;
+    font: inherit; font-size: 15px; color: #0D2B6B; background: #fff;
   }
-  .tally-wrap iframe {
-    width: 100%;
-    border: none;
-    display: block;
-    height: 500px;
+  .lead-form input:focus, .lead-form select:focus { outline: 2px solid #00C48C; outline-offset: 1px; border-color: #00C48C; }
+  .lead-form .consent {
+    display: flex; gap: 8px; align-items: flex-start;
+    font-size: 12px; font-weight: 400; color: #64748B; line-height: 1.5;
   }
-
-  /* Square mask — bottom RIGHT only, covers "Made with Tally" */
-  /* Does NOT touch the Submit button on the left */
-  .mask-tally {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    width: 200px;
-    height: 44px;
-    background: #F8FAFC;
-    pointer-events: none;
-    z-index: 20;
-    border-radius: 0 0 8px 0;
+  .lead-form .consent input { margin-top: 3px; accent-color: #00C48C; flex-shrink: 0; }
+  .lead-form button {
+    margin-top: 0.75rem; background: #00C48C; color: #0D2B6B; font: inherit; font-size: 15px;
+    font-weight: 700; border: 0; border-radius: 8px; padding: 13px 18px; cursor: pointer;
   }
+  .lead-form button:hover { background: #00B07E; }
+  .lead-form button:disabled { opacity: 0.6; cursor: wait; }
+  .lead-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .lead-msg { font-size: 13px; color: #B91C1C; margin-top: 0.25rem; }
+  .lead-success {
+    margin-top: 0.75rem; background: #ECFDF5; border: 1px solid #A7F3D0; border-radius: 10px;
+    padding: 1.25rem; color: #065F46; font-size: 14px; line-height: 1.6;
+  }
+  .lead-success-title { font-size: 18px; font-weight: 700; margin-bottom: 0.25rem; }
 
   .bottom {
     margin-top: 2rem;
@@ -234,20 +234,58 @@
     <p class="form-sub">Send us your last 100 reviews or tickets. We send back a full analysis. Free.</p>
     <span class="no-cc">No credit card required — ever, until you decide to subscribe</span>
 
-    <div class="tally-wrap">
-      <iframe
-        id="tally-frame"
-        data-tally-src="https://tally.so/embed/PdrPE5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-        loading="lazy"
-        width="100%"
-        height="500"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0"
-        title="CustoVox Early Access Waitlist">
-      </iframe>
-      <!-- Carré blanc ciblé uniquement sur "Made with Tally" en bas à droite -->
-      <div class="mask-tally"></div>
+    <form class="lead-form" id="lead-form" novalidate>
+      <label for="lead-email">Your professional email</label>
+      <input type="email" id="lead-email" name="email" autocomplete="email" placeholder="name@company.com" required>
+
+      <label for="lead-industry">What's your industry?</label>
+      <select id="lead-industry" name="industry" required>
+        <option value="" selected disabled>Select your industry</option>
+        <option value="SaaS / Tech">SaaS / Tech</option>
+        <option value="E-commerce">E-commerce</option>
+        <option value="Retail">Retail</option>
+        <option value="Hospitality / Restaurant">Hospitality / Restaurant</option>
+        <option value="Call center">Call center</option>
+        <option value="Marketing Agency">Marketing Agency</option>
+        <option value="Healthcare / Medical">Healthcare / Medical</option>
+        <option value="Real Estate">Real Estate</option>
+        <option value="Legal / Law Firm">Legal / Law Firm</option>
+        <option value="Construction / Trades">Construction / Trades</option>
+        <option value="Financial Services">Financial Services</option>
+        <option value="Education / Training">Education / Training</option>
+        <option value="Logistics / Transport">Logistics / Transport</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="lead-volume">How many customer conversations per month?</label>
+      <select id="lead-volume" name="volume" required>
+        <option value="" selected disabled>Select a range</option>
+        <option value="0-50">Less than 50</option>
+        <option value="50-200">50 – 200</option>
+        <option value="200-500">200 – 500</option>
+        <option value="500-2000">500 – 2 000</option>
+        <option value="2000+">More than 2 000</option>
+      </select>
+
+      <div class="hp" aria-hidden="true">
+        <label for="lead-website">Website</label>
+        <input type="text" id="lead-website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+
+      <label class="consent">
+        <input type="checkbox" id="lead-consent" required>
+        <span>I agree that CustoVox.ai may use my email to send me my case study and news about CustoVox. Unsubscribe anytime.</span>
+      </label>
+
+      <button type="submit" id="lead-submit">Get my free case study →</button>
+      <p class="lead-msg" id="lead-invalid" hidden>Please enter a valid email, choose your industry and volume, and tick the consent box.</p>
+      <p class="lead-msg" id="lead-failed" hidden>Something went wrong. Please try again, or write to jeremie@custovox.ai.</p>
+    </form>
+
+    <div class="lead-success" id="lead-success" hidden>
+      <p class="lead-success-title">You're on the list 🎉</p>
+      <p>We'll reach out within 48h with your free NLP case study and early access details.</p>
+      <p>— The CustoVox.ai team</p>
     </div>
 
   </div>
@@ -260,20 +298,46 @@
 </div>
 
 <script>
-var d=document,w="https://tally.so/widgets/embed.js",
-v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("[data-tally-src]:not([src])").forEach(function(e){e.src=e.dataset.tallySrc})};
-if("undefined"!=typeof Tally){v()}
-else if(d.querySelector('script[src="'+w+'"]')==null){
-  var s=d.createElement("script");s.src=w;s.onload=v;s.onerror=v;d.body.appendChild(s);
-}
-
-/* Auto-resize iframe */
-window.addEventListener('message',function(e){
-  if(e.data && e.data.type==='tally-form-height'){
-    var f=document.getElementById('tally-frame');
-    if(f) f.style.height=(e.data.height+60)+'px';
-  }
-});
+/* Signup form: each signup is stored in the "Leads" Google Sheet (Apps Script web app). */
+(function () {
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbxPUmo8JdO6p0-ibBoAdM808dVJIWELBD3x5IN5SZCOX0wHYR3VZ2OvtYCvXLhMKVodxA/exec';
+  var form = document.getElementById('lead-form');
+  if (!form) return;
+  var $ = function (id) { return document.getElementById(id); };
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    $('lead-invalid').hidden = true;
+    $('lead-failed').hidden = true;
+    var email = $('lead-email').value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !$('lead-industry').value ||
+        !$('lead-volume').value || !$('lead-consent').checked) {
+      $('lead-invalid').hidden = false;
+      return;
+    }
+    $('lead-submit').disabled = true;
+    fetch(ENDPOINT, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify({
+        app: 'custovox-lead',
+        email: email,
+        industry: $('lead-industry').value,
+        volume: $('lead-volume').value,
+        lang: document.documentElement.lang,
+        page: location.pathname,
+        consent: true,
+        website: $('lead-website').value
+      })
+    }).then(function () {
+      form.hidden = true;
+      $('lead-success').hidden = false;
+    }).catch(function () {
+      $('lead-submit').disabled = false;
+      $('lead-failed').hidden = false;
+    });
+  });
+})();
 </script>
 </body>
 </html>
