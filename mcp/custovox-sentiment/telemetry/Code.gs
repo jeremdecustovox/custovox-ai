@@ -90,19 +90,66 @@ function weeklyReport() {
   ss.getSheetByName(REPORTS_SHEET).appendRow([fmt(start), fmt(end), calls, texts, sessions,
     prevTexts, change, byTool, bySentiment, byVersion]);
 
+  // Since launch: every recorded usage event (telemetry exists since version 1.0.2).
+  const allTexts = data.reduce((s, r) => s + Number(r[3]), 0);
+  const allCalls = new Set(data.map(r => r[5] + '|' + r[0].getTime())).size;
+  const allSessions = new Set(data.map(r => r[5])).size;
+  const firstEvent = data.length ? fmt(new Date(Math.min.apply(null, data.map(r => r[0].getTime())))) : '-';
+
   const body = [
     'Rapport hebdomadaire custovox-sentiment (MCP)',
     'Du ' + fmt(start) + ' au ' + fmt(end),
     '',
+    '— CETTE SEMAINE —',
     'Appels : ' + calls,
     'Textes analysés : ' + texts + ' (semaine précédente : ' + prevTexts + ', évolution : ' + change + ')',
     'Sessions distinctes : ' + sessions,
-    '',
     'Par outil : ' + byTool,
     'Par sentiment : ' + bySentiment,
     'Par version : ' + byVersion,
     '',
+    '— DEPUIS LE LANCEMENT —',
+    'Utilisation mesurée (versions 1.0.2 et suivantes, premier appel : ' + firstEvent + ') :',
+    '  Appels : ' + allCalls + ' · Textes analysés : ' + allTexts + ' · Sessions : ' + allSessions,
+    '',
+    'Téléchargements PyPI (hors miroirs, source pypistats.org) :'
+  ].concat(PYPI_PACKAGES.map(pypiLine_), [
+    '',
+    '— PROSPECTS (formulaire custovox.ai) —',
+    leadsLine_(start),
+    '',
     'Détail : ' + ss.getUrl()
-  ].join('\n');
+  ]).join('\n');
   MailApp.sendEmail(REPORT_EMAIL, 'custovox-sentiment : rapport du ' + fmt(end), body);
+}
+
+// MCP packages published on PyPI, listed in the report. Add a name once it is published.
+const PYPI_PACKAGES = ['custovox-sentiment'];
+
+/** "  custovox-sentiment : 412 au total depuis le 21/08/2026 · 37 ces 7 derniers jours" */
+function pypiLine_(pkg) {
+  try {
+    const res = UrlFetchApp.fetch('https://pypistats.org/api/packages/' + pkg + '/overall?mirrors=false',
+      { muteHttpExceptions: true });
+    if (res.getResponseCode() !== 200) return '  ' + pkg + ' : statistiques indisponibles (HTTP ' + res.getResponseCode() + ')';
+    const days = JSON.parse(res.getContentText()).data.filter(d => d.category === 'without_mirrors');
+    if (!days.length) return '  ' + pkg + ' : aucun téléchargement enregistré';
+    const total = days.reduce((s, d) => s + d.downloads, 0);
+    const weekAgo = Utilities.formatDate(new Date(Date.now() - 7 * 864e5), 'UTC', 'yyyy-MM-dd');
+    const week = days.filter(d => d.date > weekAgo).reduce((s, d) => s + d.downloads, 0);
+    const first = days.map(d => d.date).sort()[0].split('-').reverse().join('/');
+    return '  ' + pkg + ' : ' + total + ' au total depuis le ' + first + ' · ' + week + ' ces 7 derniers jours';
+  } catch (e) {
+    return '  ' + pkg + ' : statistiques indisponibles';
+  }
+}
+
+/** New signups this week and in total, from the "Leads" sheet (test rows excluded). */
+function leadsLine_(since) {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Leads');
+  if (!sheet || sheet.getLastRow() < 2) return 'Aucun prospect pour l\'instant.';
+  const rows = sheet.getRange(2, 1, sheet.getLastRow() - 1, 8).getValues()
+    .filter(r => r[7] === 'new' && String(r[1]).indexOf('test+') !== 0);
+  const week = rows.filter(r => r[0] >= since).length;
+  return 'Nouveaux cette semaine : ' + week + ' · Total : ' + rows.length;
 }
