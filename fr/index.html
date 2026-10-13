@@ -4,7 +4,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CustoVox.ai — Cas d'usage par secteur</title>
+<title>CustoVox.ai — Analyse IA de la voix du client : avis, appels, tickets</title>
+<link rel="canonical" href="https://custovox.ai/fr/">
+<meta name="description" content="CustoVox.ai analyse vos appels, avis clients, tickets et e-mails par IA (NLP) : émotions, risques d'escalade, churn, irritants. Étude de cas gratuite en 48 h, à partir de 49 €/mois.">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -228,10 +230,78 @@
   .empty-state .arrow-green { width: 34px; height: 34px; }
   .empty-state p { font-size: 15px; font-weight: 700; color: var(--teal); }
 
-  button.btn-audit, button.btn-contact { font-family: inherit; cursor: pointer; }
-  button.btn-audit { border: 0; }
+  footer {
+    text-align: center; padding: 2rem; color: var(--gray-400);
+    font-size: 13px; border-top: 1px solid var(--gray-200);
+  }
 
-  /* CONTACT FORM */
+  @media(max-width: 700px) {
+    nav { justify-content: center; }
+    .logo-word { font-size: 34px; }
+    .logo-tag { margin-left: 54px; font-size: 11px; letter-spacing: 2px; }
+    .cta-block { flex-direction: column; }
+    .results-count { display: none; }
+  }
+
+  /* FAQ */
+  .faq { background: var(--gray-50); border-top: 1px solid var(--gray-200); padding: 4rem 1.5rem; }
+  .faq-inner { max-width: 760px; margin: 0 auto; }
+  .faq-tag {
+    display: inline-block; background: #E0FAF4; color: var(--teal-dark);
+    font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 99px; margin-bottom: 1rem;
+  }
+  .faq h1, .faq h2.faq-title { font-size: clamp(24px, 3.4vw, 34px); font-weight: 800; margin-bottom: 0.75rem; }
+  .faq h1 span, .faq h2.faq-title span { color: var(--teal); }
+  .faq-lead { font-size: 15px; color: var(--gray-600); line-height: 1.7; margin-bottom: 2rem; }
+  .faq-group { font-size: 13px; font-weight: 700; color: var(--teal); letter-spacing: 0.5px; text-transform: uppercase; margin: 2.25rem 0 0.9rem; }
+  .faq-item {
+    background: white; border: 1px solid var(--gray-200); border-radius: 10px;
+    margin-bottom: 10px; transition: border-color 0.15s;
+  }
+  .faq-item:hover, .faq-item[open] { border-color: var(--teal); }
+  .faq-item summary {
+    cursor: pointer; list-style: none; padding: 16px 48px 16px 18px;
+    font-size: 15px; font-weight: 700; color: var(--navy); position: relative;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: "+"; position: absolute; right: 18px; top: 50%; transform: translateY(-50%);
+    font-size: 22px; font-weight: 700; color: var(--teal); line-height: 1;
+  }
+  .faq-item[open] summary::after { content: "–"; }
+  .faq-item p { padding: 0 18px 18px; font-size: 14px; line-height: 1.75; color: var(--gray-600); }
+  .faq-more { display: inline-block; margin-top: 1.25rem; font-weight: 700; color: var(--teal-dark); text-decoration: none; font-size: 15px; }
+  .faq-more:hover { text-decoration: underline; }
+  .faq-cta { margin-top: 3rem; }
+
+  /* CONTACT */
+  .contact { padding: 4rem 1.5rem; border-top: 1px solid var(--gray-200); }
+  .contact-inner { max-width: 620px; margin: 0 auto; }
+  .contact h2 { font-size: clamp(22px, 3vw, 28px); font-weight: 700; margin-bottom: 0.5rem; }
+  .contact h2 span { color: var(--teal); }
+  .contact-lead { font-size: 15px; color: var(--gray-600); margin-bottom: 1.75rem; line-height: 1.6; }
+  .contact-form { display: grid; gap: 14px; }
+  .contact-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .contact-form label { display: block; font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .contact-form input, .contact-form textarea {
+    width: 100%; font: inherit; font-size: 14px; color: var(--gray-800);
+    border: 1.5px solid var(--gray-200); border-radius: 8px; padding: 11px 12px; background: white;
+  }
+  .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(0,196,140,0.15); }
+  .contact-form textarea { min-height: 140px; resize: vertical; }
+  .contact-form button {
+    justify-self: start; background: var(--navy); color: white; border: 0; cursor: pointer;
+    font: inherit; font-weight: 700; font-size: 15px; padding: 13px 26px; border-radius: 8px;
+  }
+  .contact-form button:hover { background: #163b8a; }
+  .contact-note { font-size: 12px; color: var(--gray-400); }
+  .contact-msg { font-size: 13px; color: #B91C1C; }
+  .hp { position: absolute; left: -9999px; }
+  @media(max-width: 600px) { .contact-form .row { grid-template-columns: 1fr; } }
+  .contact-form button:disabled { opacity: 0.6; cursor: wait; }
+  .contact-note a { color: var(--teal-dark); }
+
+  /* CASE STUDY DIALOG */
   .contact-dialog {
     margin: auto; border: 0; border-radius: 14px; padding: 0; width: min(520px, calc(100% - 2rem));
     max-height: calc(100% - 2rem); overflow-y: auto;
@@ -245,48 +315,36 @@
     position: absolute; top: 10px; right: 12px; background: transparent; border: 0;
     color: white; font-size: 24px; line-height: 1; cursor: pointer; padding: 4px 8px;
   }
-  .contact-form { display: flex; flex-direction: column; gap: 0.35rem; padding: 1.25rem 1.5rem 1.5rem; }
-  .contact-form label { font-size: 13px; font-weight: 600; margin-top: 0.6rem; }
-  .contact-form .opt { font-weight: 400; color: var(--gray-400); }
-  .contact-form input, .contact-form textarea {
+  .contact-dialog .contact-form { display: flex; flex-direction: column; gap: 0.35rem; padding: 1.25rem 1.5rem 1.5rem; }
+  .contact-dialog .contact-form label { font-size: 13px; font-weight: 600; margin-top: 0.6rem; }
+  .contact-dialog .contact-form .opt { font-weight: 400; color: var(--gray-400); }
+  .contact-dialog .contact-form input, .contact-dialog .contact-form textarea {
     width: 100%; padding: 10px 12px; border: 1px solid var(--gray-200); border-radius: 8px;
     font: inherit; font-size: 14px; color: var(--navy); background: white;
   }
-  .contact-form textarea { min-height: 120px; resize: vertical; }
-  .contact-form input:focus, .contact-form textarea:focus { outline: 2px solid var(--teal); outline-offset: 1px; border-color: var(--teal); }
-  .contact-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-  .contact-submit {
+  .contact-dialog .contact-form textarea { min-height: 120px; resize: vertical; }
+  .contact-dialog .contact-form input:focus, .contact-dialog .contact-form textarea:focus { outline: 2px solid var(--teal); outline-offset: 1px; border-color: var(--teal); }
+  .contact-dialog .contact-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .contact-dialog .contact-submit {
     margin-top: 1rem; background: var(--teal); color: var(--navy); border: 0; border-radius: 8px;
     padding: 12px 18px; font: inherit; font-size: 15px; font-weight: 700; cursor: pointer;
   }
-  .contact-submit:hover { background: #00B07C; }
-  .contact-submit:disabled { opacity: 0.6; cursor: wait; }
-  .contact-form select {
+  .contact-dialog .contact-submit:hover { background: #00B07C; }
+  .contact-dialog .contact-submit:disabled { opacity: 0.6; cursor: wait; }
+  .contact-dialog .contact-form select {
     width: 100%; padding: 10px 12px; border: 1px solid var(--gray-200); border-radius: 8px;
     font: inherit; font-size: 14px; color: var(--navy); background: white;
   }
-  .contact-form select:focus { outline: 2px solid var(--teal); outline-offset: 1px; border-color: var(--teal); }
-  .contact-form .consent {
+  .contact-dialog .contact-form select:focus { outline: 2px solid var(--teal); outline-offset: 1px; border-color: var(--teal); }
+  .contact-dialog .contact-form .consent {
     display: flex; gap: 8px; align-items: flex-start; margin-top: 0.6rem;
     font-size: 12px; font-weight: 400; color: var(--gray-600); line-height: 1.5;
   }
-  .contact-form .consent input { width: auto; margin-top: 3px; accent-color: var(--teal); flex-shrink: 0; }
+  .contact-dialog .contact-form .consent input { width: auto; margin-top: 3px; accent-color: var(--teal); flex-shrink: 0; }
   .study-success { padding: 1.5rem; color: #065F46; background: #ECFDF5; font-size: 14px; line-height: 1.6; }
   .study-success strong { display: block; font-size: 18px; margin-bottom: 0.25rem; }
   .contact-msg { font-size: 13px; color: #B91C1C; margin-top: 0.5rem; }
 
-  footer {
-    text-align: center; padding: 2rem; color: var(--gray-400);
-    font-size: 13px; border-top: 1px solid var(--gray-200);
-  }
-
-  @media(max-width: 700px) {
-    nav { justify-content: center; }
-    .logo-word { font-size: 34px; }
-    .logo-tag { margin-left: 54px; font-size: 11px; letter-spacing: 2px; }
-    .cta-block { flex-direction: column; }
-    .results-count { display: none; }
-  }
 </style>
 </head>
 <body>
@@ -298,6 +356,7 @@
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-5h4v5"/></svg>
     </a>
     <a href="/fr/blog/" class="nav-link">Blog</a>
+    <a href="/fr/faq" class="nav-link">FAQ</a>
     <div class="lang">
       <a href="/" hreflang="en" title="English">EN</a>
       <a href="/fr/" hreflang="fr" title="Français" class="active" aria-current="true">FR</a>
@@ -370,7 +429,7 @@
           <span class="feature-tag">Support dédié</span>
           <span class="feature-tag">5 langues natives</span>
         </div>
-        <button type="button" class="btn-audit" data-open-contact>Contactez-nous via le formulaire →</button>
+        <a href="#contact" class="btn-audit">Contactez-nous via le formulaire →</a>
       </div>
     </div>
     <div class="solutions-list" id="solutionsList"></div>
@@ -381,11 +440,62 @@
       </div>
       <div class="cta-block-btns">
         <a href="#audit" class="btn-audit" data-open-study>Je veux mon étude de cas gratuite →</a>
-        <button type="button" class="btn-contact" data-open-contact>Nous contacter</button>
+        <a href="#contact" class="btn-contact">Nous contacter</a>
       </div>
     </div>
   </div>
 </div>
+
+
+<!-- FAQ (extrait) : le balisage FAQPage complet est sur /faq -->
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="faq-inner">
+    <span class="faq-tag">FAQ</span>
+    <h2 class="faq-title" id="faq-title">Questions fréquentes sur <span>CustoVox.ai</span></h2>
+    <details class="faq-item">
+      <summary>Qu'est-ce que CustoVox.ai ?</summary>
+      <p>CustoVox.ai est une plateforme française d'analyse de la voix du client (Voice of Customer) basée sur l'IA et le NLP. Elle analyse automatiquement les appels, avis clients, tickets de support et e-mails pour détecter les émotions, les risques d'escalade, le risque de churn et les points de friction, sans équipe data.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Comment fonctionne l'étude de cas gratuite CustoVox.ai ?</summary>
+      <p>CustoVox.ai analyse gratuitement vos 100 premiers avis clients ou tickets et vous remet les résultats en 48 heures. Vous n'avez besoin ni de carte bancaire, ni d'équipe data, et vous ne vous engagez à rien.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Combien coûte CustoVox.ai ?</summary>
+      <p>CustoVox.ai est disponible à partir de 49 € HT par mois, avec quatre formules allant de Starter à Enterprise (sur devis).</p>
+    </details>
+    <details class="faq-item">
+      <summary>CustoVox.ai utilise-t-il mes données pour entraîner ses modèles ?</summary>
+      <p>Non. Avec CustoVox.ai, vos données servent uniquement à produire vos analyses et ne sont jamais utilisées pour entraîner les modèles.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Où sont hébergées les données de CustoVox.ai ?</summary>
+      <p>CustoVox.ai est édité par une société française et héberge vos données en France. Certaines analyses font appel à des fournisseurs d'IA sélectionnés, qui ne réutilisent pas vos données pour entraîner leurs modèles.</p>
+    </details>
+    <a href="/fr/faq" class="faq-more">Voir toutes les questions →</a>
+  </div>
+</section>
+
+<!-- CONTACT (Google Sheets « CustoVox Leads » > onglet Contacts) -->
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="contact-inner">
+    <h2 id="contact-title">Nous <span>contacter</span></h2>
+    <p class="contact-lead">Une question, un projet, un partenariat ? Écrivez-nous, nous répondons sous 48 h ouvrées.</p>
+    <form class="contact-form" id="contactForm" novalidate>
+      <p class="hp" aria-hidden="true"><label>Ne pas remplir : <input name="website" id="c-website" tabindex="-1" autocomplete="off"></label></p>
+      <div class="row">
+        <div><label for="c-nom">Nom *</label><input id="c-nom" name="nom" type="text" autocomplete="name" required></div>
+        <div><label for="c-email">E-mail professionnel *</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
+      </div>
+      <div><label for="c-ent">Entreprise</label><input id="c-ent" name="entreprise" type="text" autocomplete="organization"></div>
+      <div><label for="c-msg">Message *</label><textarea id="c-msg" name="message" required></textarea></div>
+      <button type="submit" id="contactSubmit">Envoyer le message</button>
+      <p class="contact-msg" id="contactInvalid" hidden>Merci de renseigner votre nom, un e-mail valide et votre message.</p>
+      <p class="contact-msg" id="contactFailed" hidden>L'envoi a échoué. Vérifiez votre connexion et réessayez.</p>
+      <p class="contact-note">Vos informations servent uniquement à vous répondre (<a href="/fr/confidentialite.html">politique de confidentialité</a>).</p>
+    </form>
+  </div>
+</section>
 
 <!-- CASE STUDY REQUEST (Google Sheet "Leads") -->
 <dialog class="contact-dialog" id="studyDialog" aria-labelledby="studyTitle">
@@ -449,37 +559,6 @@
     <strong>Vous êtes inscrit(e) 🎉</strong>
     Nous vous recontactons sous 48 h avec votre étude de cas NLP gratuite.
   </div>
-</dialog>
-
-<!-- CONTACT FORM -->
-<dialog class="contact-dialog" id="contactDialog" aria-labelledby="contactTitle">
-  <div class="contact-head">
-    <h2 id="contactTitle">Nous contacter</h2>
-    <p>Une question, un projet, un partenariat ? Écrivez-nous, nous répondons sous 48 h.</p>
-    <button type="button" class="contact-close" data-close-dialog aria-label="Fermer">×</button>
-  </div>
-  <form class="contact-form" id="contactForm" novalidate>
-    <label for="contact-name">Nom</label>
-    <input type="text" id="contact-name" name="name" autocomplete="name" required>
-
-    <label for="contact-email">E-mail</label>
-    <input type="email" id="contact-email" name="email" autocomplete="email" required>
-
-    <label for="contact-company">Entreprise <span class="opt">(facultatif)</span></label>
-    <input type="text" id="contact-company" name="company" autocomplete="organization">
-
-    <label for="contact-message">Message</label>
-    <textarea id="contact-message" name="message" required></textarea>
-
-    <div class="hp" aria-hidden="true">
-      <label for="contact-website">Site web</label>
-      <input type="text" id="contact-website" name="website" tabindex="-1" autocomplete="off">
-    </div>
-
-    <button type="submit" class="contact-submit" id="contactSubmit">Envoyer le message</button>
-    <p class="contact-msg" id="contactInvalid" hidden>Merci de renseigner votre nom, un e-mail valide et votre message.</p>
-    <p class="contact-msg" id="contactFailed" hidden>L'envoi a échoué. Vérifiez votre connexion et réessayez.</p>
-  </form>
 </dialog>
 
 <footer>© 2026 CustoVox.ai — Listen deeper. Act faster. — <a href="https://custovox.ai" style="color:var(--teal);text-decoration:none;">custovox.ai</a></footer>
@@ -583,10 +662,10 @@ const data = {
   "Call center": {
     icon: "🎙️",
     solutions: [
-      ["Analysez vos conversations. Détectez les insatisfactions, anticipez les résiliations.", "VoiceIQ + PEACE™"],
+      ["Analysez vos conversations. Détectez les insatisfactions, anticipez les résiliations.", "VoiceIQ + PredictIQ"],
       ["Détectez les motifs d'appels récurrents automatiquement", "VoiceIQ + TextIQ"],
-      ["Analysez les émotions client en temps réel", "VoiceIQ + PEACE™"],
-      ["Identifiez les appels à risque d'escalade avant qu'il soit trop tard", "PEACE™"],
+      ["Analysez les émotions client en temps réel", "VoiceIQ + PredictIQ"],
+      ["Identifiez les appels à risque d'escalade avant qu'il soit trop tard", "VoiceIQ + PredictIQ"],
       ["Comparez les performances entre vos équipes agents", "VoiceIQ + TextIQ"],
     ]
   },
@@ -667,98 +746,50 @@ function showSector(sector) {
    case-study requests go to "Leads", contact messages to "Contacts" then /merci.html. */
 (function () {
   var ENDPOINT = 'https://script.google.com/macros/s/AKfycbzV1bYU4fHZHEC-gS-gjtY5debuPoBxyZVxvuED_m_YCKF2o52fHUaxNPrZaaeOrP2-/exec';
-  var dialog = document.getElementById('contactDialog');
-  var form = document.getElementById('contactForm');
   var $ = function (id) { return document.getElementById(id); };
+  var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  function post(data) {
+    return fetch(ENDPOINT, { method: 'POST', mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(data) });
+  }
 
-  var study = document.getElementById('studyDialog');
+  // Case-study request dialog.
+  var study = $('studyDialog');
   function openStudy() { study.showModal(); $('study-email').focus(); }
-
-  document.querySelectorAll('[data-open-contact]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      dialog.showModal();
-      $('contact-name').focus();
-    });
+  document.querySelectorAll('[data-open-study]').forEach(function (b) {
+    b.addEventListener('click', function (ev) { ev.preventDefault(); openStudy(); });
   });
-  document.querySelectorAll('[data-open-study]').forEach(function (btn) {
-    btn.addEventListener('click', function (ev) { ev.preventDefault(); openStudy(); });
+  if (location.hash === '#audit') openStudy();
+  study.addEventListener('click', function (ev) { if (ev.target === study) study.close(); });
+  study.querySelectorAll('[data-close-dialog]').forEach(function (b) {
+    b.addEventListener('click', function () { study.close(); });
   });
-  if (location.hash === '#audit') openStudy();   // links from the blog: /fr/#audit
-  document.querySelectorAll('dialog').forEach(function (d) {
-    d.addEventListener('click', function (ev) { if (ev.target === d) d.close(); });
-    d.querySelectorAll('[data-close-dialog]').forEach(function (b) {
-      b.addEventListener('click', function () { d.close(); });
-    });
-  });
-
-  // Case-study request -> Google Sheet "Leads".
   $('studyForm').addEventListener('submit', function (ev) {
     ev.preventDefault();
-    $('studyInvalid').hidden = true;
-    $('studyFailed').hidden = true;
+    $('studyInvalid').hidden = true; $('studyFailed').hidden = true;
     var email = $('study-email').value.trim();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !$('study-industry').value ||
-        !$('study-volume').value || !$('study-consent').checked) {
-      $('studyInvalid').hidden = false;
-      return;
+    if (!EMAIL.test(email) || !$('study-industry').value || !$('study-volume').value || !$('study-consent').checked) {
+      $('studyInvalid').hidden = false; return;
     }
     $('studySubmit').disabled = true;
-    fetch(ENDPOINT, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-      body: JSON.stringify({
-        app: 'custovox-lead',
-        email: email,
-        industry: $('study-industry').value,
-        volume: $('study-volume').value,
-        lang: document.documentElement.lang,
-        page: location.pathname,
-        consent: true,
-        newsletter: $('study-newsletter').checked,
-        website: $('study-website').value
-      })
-    }).then(function () {
-      $('studyForm').hidden = true;
-      $('studySuccess').hidden = false;
-    }).catch(function () {
-      $('studySubmit').disabled = false;
-      $('studyFailed').hidden = false;
-    });
+    post({ app: 'custovox-lead', email: email, industry: $('study-industry').value, volume: $('study-volume').value,
+           lang: document.documentElement.lang, page: location.pathname, consent: true,
+           newsletter: $('study-newsletter').checked, website: $('study-website').value })
+      .then(function () { $('studyForm').hidden = true; $('studySuccess').hidden = false; })
+      .catch(function () { $('studySubmit').disabled = false; $('studyFailed').hidden = false; });
   });
 
-  form.addEventListener('submit', function (ev) {
+  // Contact form (section #contact).
+  $('contactForm').addEventListener('submit', function (ev) {
     ev.preventDefault();
-    $('contactInvalid').hidden = true;
-    $('contactFailed').hidden = true;
-    var name = $('contact-name').value.trim();
-    var email = $('contact-email').value.trim();
-    var message = $('contact-message').value.trim();
-    if (!name || !message || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      $('contactInvalid').hidden = false;
-      return;
-    }
+    $('contactInvalid').hidden = true; $('contactFailed').hidden = true;
+    var name = $('c-nom').value.trim(), email = $('c-email').value.trim(), message = $('c-msg').value.trim();
+    if (!name || !message || !EMAIL.test(email)) { $('contactInvalid').hidden = false; return; }
     $('contactSubmit').disabled = true;
-    fetch(ENDPOINT, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-      body: JSON.stringify({
-        app: 'custovox-contact',
-        name: name,
-        email: email,
-        company: $('contact-company').value.trim(),
-        message: message,
-        lang: document.documentElement.lang,
-        page: location.pathname,
-        website: $('contact-website').value
-      })
-    }).then(function () {
-      location.href = '/merci.html';
-    }).catch(function () {
-      $('contactSubmit').disabled = false;
-      $('contactFailed').hidden = false;
-    });
+    post({ app: 'custovox-contact', name: name, email: email, company: $('c-ent').value.trim(), message: message,
+           lang: document.documentElement.lang, page: location.pathname, website: $('c-website').value })
+      .then(function () { location.href = '/merci.html'; })
+      .catch(function () { $('contactSubmit').disabled = false; $('contactFailed').hidden = false; });
   });
 })();
 </script>

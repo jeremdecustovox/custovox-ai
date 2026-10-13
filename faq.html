@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CustoVox.ai FAQ — AI Voice of Customer analysis, data, security, pricing</title>
+<meta name="description" content="Everything about CustoVox.ai: how AI analysis of calls, reviews and tickets works, the models used, data hosting in France, security, pricing and the free case study.">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #0D2B6B;
+    --teal: #00C48C;
+    --teal-dark: #009E72;
+    --white: #FFFFFF;
+    --gray-50: #F8FAFC;
+    --gray-100: #F1F5F9;
+    --gray-200: #E2E8F0;
+    --gray-400: #94A3B8;
+    --gray-600: #475569;
+    --gray-800: #1E293B;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--white);
+    color: var(--navy);
+  }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+
+  /* NAV */
+  nav {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .nav-links { display: flex; align-items: center; gap: 1.5rem; }
+  .nav-home { color: var(--navy); display: inline-flex; padding-bottom: 3px; border-bottom: 2px solid var(--teal); }
+  .nav-link { color: var(--navy); text-decoration: none; font-size: 14px; font-weight: 500; }
+  .nav-link:hover { color: var(--teal-dark); }
+  .lang { display: flex; gap: 10px; font-size: 12px; }
+  .lang a { color: var(--gray-400); text-decoration: none; font-weight: 500; }
+  .lang a.active { color: var(--navy); font-weight: 700; border-bottom: 2px solid var(--teal); }
+  .nav-cta {
+    background: var(--navy); color: white; padding: 10px 18px;
+    border-radius: 7px; font-size: 14px; font-weight: 700;
+    text-decoration: none; white-space: nowrap;
+    transition: background 0.15s;
+  }
+  .nav-cta:hover { background: #163b8a; }
+
+  /* LOGO */
+  .logo-wrap { max-width: 1080px; margin: 0 auto; padding: 1.5rem 2rem 0; }
+  .logo { display: inline-flex; flex-direction: column; text-decoration: none; }
+  .logo-row { display: flex; align-items: center; gap: 12px; }
+  .logo-word { font-size: 44px; font-weight: 700; color: var(--teal); letter-spacing: -0.5px; line-height: 1; }
+  .logo-tag { font-size: 13px; font-weight: 600; color: var(--navy); letter-spacing: 3px; margin-top: 6px; margin-left: 66px; }
+
+  /* HERO */
+  .hero {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 2.5rem;
+  }
+  .hero h1 {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--navy);
+    max-width: 720px;
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 .accent { color: var(--teal); }
+  .hero-quote {
+    border-left: 3px solid var(--teal);
+    padding-left: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 1.25rem;
+  }
+  .hero-quote strong { color: var(--teal-dark); }
+  .hero-desc {
+    font-size: 14px;
+    color: var(--gray-600);
+    line-height: 1.8;
+    max-width: 960px;
+  }
+  .hero-desc strong { color: var(--navy); }
+
+  /* TRANSITION */
+  .intro { text-align: center; padding: 2rem 1.5rem 1.5rem; max-width: 720px; margin: 0 auto; }
+  .intro h2 { font-size: clamp(22px, 3vw, 28px); font-weight: 700; margin-bottom: 1rem; }
+  .intro h2 span { color: var(--teal); }
+  .intro p { font-size: 15px; color: var(--gray-600); line-height: 1.7; }
+  .intro p strong { color: var(--teal); font-weight: 700; }
+
+  /* SECTORS */
+  .sectors-wrap {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 1.5rem 1.5rem;
+  }
+  .sectors-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--teal);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .arrow-green { width: 28px; height: 28px; color: var(--teal); }
+  .sectors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .btn-sector {
+    background: white;
+    color: var(--navy);
+    border: 1.5px solid var(--gray-200);
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .btn-sector:hover { background: var(--gray-50); border-color: var(--teal); }
+  .btn-sector.active {
+    background: var(--teal);
+    color: white;
+    border-color: var(--teal);
+    box-shadow: 0 4px 12px rgba(0,196,140,0.25);
+  }
+
+  /* RESULTS */
+  .results-wrap { max-width: 760px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+  .results-panel { display: none; animation: fadeIn 0.25s ease; }
+  .results-panel.visible { display: block; }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) { .results-panel { animation: none; } }
+
+  .results-header {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 1.25rem; padding-bottom: 1rem;
+    border-bottom: 2px solid var(--teal);
+  }
+  .results-header h2 { font-size: 18px; font-weight: 700; }
+  .results-count {
+    font-size: 12px; background: var(--gray-100); color: var(--gray-600);
+    padding: 2px 8px; border-radius: 99px; margin-left: auto;
+  }
+  .solutions-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 2rem; }
+  .solution-item {
+    display: flex; align-items: center; gap: 12px;
+    padding: 12px 16px; background: var(--gray-50);
+    border: 1px solid var(--gray-200); border-radius: 10px;
+    font-size: 14px; color: var(--gray-800);
+    transition: border-color 0.15s;
+  }
+  .solution-item:hover { border-color: var(--teal); }
+  .solution-check {
+    width: 22px; height: 22px; background: #E0FAF4; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; color: var(--teal-dark); font-weight: 700; flex-shrink: 0;
+  }
+  .solution-text { flex: 1; }
+  .solution-iq {
+    font-size: 11px; font-weight: 600; color: var(--teal-dark);
+    background: #E0FAF4; padding: 2px 7px; border-radius: 4px; flex-shrink: 0;
+  }
+
+  /* AGENCY */
+  .agency-msg {
+    background: var(--navy); border-radius: 12px; padding: 2rem;
+    text-align: center; margin-bottom: 2rem; color: white;
+  }
+  .agency-msg h3 { font-size: 18px; font-weight: 700; margin-bottom: 0.75rem; }
+  .agency-msg p { font-size: 14px; color: rgba(255,255,255,0.7); margin-bottom: 1.25rem; line-height: 1.6; }
+  .agency-msg .features { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 1.5rem; }
+  .agency-msg .feature-tag {
+    background: rgba(0,196,140,0.15); border: 1px solid rgba(0,196,140,0.3);
+    color: var(--teal); font-size: 12px; font-weight: 600;
+    padding: 4px 10px; border-radius: 6px;
+  }
+
+  /* CTA */
+  .cta-block {
+    background: var(--navy); border-radius: 14px; padding: 1.75rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1.5rem; flex-wrap: wrap;
+  }
+  .cta-block-text h3 { font-size: 17px; font-weight: 700; color: white; margin-bottom: 4px; }
+  .cta-block-text p { font-size: 13px; color: rgba(255,255,255,0.65); }
+  .cta-block-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn-audit {
+    background: var(--teal); color: var(--navy); font-weight: 700; font-size: 14px;
+    padding: 11px 22px; border-radius: 8px; text-decoration: none; white-space: nowrap;
+    transition: background 0.15s; display: inline-block;
+  }
+  .btn-audit:hover { background: #00B07C; }
+  .btn-contact {
+    background: transparent; color: white; font-weight: 600; font-size: 14px;
+    padding: 11px 22px; border-radius: 8px; text-decoration: none; white-space: nowrap;
+    border: 1.5px solid rgba(255,255,255,0.3); transition: border-color 0.15s;
+  }
+  .btn-contact:hover { border-color: white; }
+
+  /* EMPTY STATE */
+  .empty-state {
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    text-align: center; padding: 1.5rem 1.5rem 3.5rem;
+  }
+  .empty-state .arrow-green { width: 34px; height: 34px; }
+  .empty-state p { font-size: 15px; font-weight: 700; color: var(--teal); }
+
+  footer {
+    text-align: center; padding: 2rem; color: var(--gray-400);
+    font-size: 13px; border-top: 1px solid var(--gray-200);
+  }
+
+  @media(max-width: 700px) {
+    nav { justify-content: center; }
+    .logo-word { font-size: 34px; }
+    .logo-tag { margin-left: 54px; font-size: 11px; letter-spacing: 2px; }
+    .cta-block { flex-direction: column; }
+    .results-count { display: none; }
+  }
+
+  /* FAQ */
+  .faq { background: var(--gray-50); border-top: 1px solid var(--gray-200); padding: 4rem 1.5rem; }
+  .faq-inner { max-width: 760px; margin: 0 auto; }
+  .faq-tag {
+    display: inline-block; background: #E0FAF4; color: var(--teal-dark);
+    font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 99px; margin-bottom: 1rem;
+  }
+  .faq h1, .faq h2.faq-title { font-size: clamp(24px, 3.4vw, 34px); font-weight: 800; margin-bottom: 0.75rem; }
+  .faq h1 span, .faq h2.faq-title span { color: var(--teal); }
+  .faq-lead { font-size: 15px; color: var(--gray-600); line-height: 1.7; margin-bottom: 2rem; }
+  .faq-group { font-size: 13px; font-weight: 700; color: var(--teal); letter-spacing: 0.5px; text-transform: uppercase; margin: 2.25rem 0 0.9rem; }
+  .faq-item {
+    background: white; border: 1px solid var(--gray-200); border-radius: 10px;
+    margin-bottom: 10px; transition: border-color 0.15s;
+  }
+  .faq-item:hover, .faq-item[open] { border-color: var(--teal); }
+  .faq-item summary {
+    cursor: pointer; list-style: none; padding: 16px 48px 16px 18px;
+    font-size: 15px; font-weight: 700; color: var(--navy); position: relative;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: "+"; position: absolute; right: 18px; top: 50%; transform: translateY(-50%);
+    font-size: 22px; font-weight: 700; color: var(--teal); line-height: 1;
+  }
+  .faq-item[open] summary::after { content: "–"; }
+  .faq-item p { padding: 0 18px 18px; font-size: 14px; line-height: 1.75; color: var(--gray-600); }
+  .faq-more { display: inline-block; margin-top: 1.25rem; font-weight: 700; color: var(--teal-dark); text-decoration: none; font-size: 15px; }
+  .faq-more:hover { text-decoration: underline; }
+  .faq-cta { margin-top: 3rem; }
+</style>
+<link rel="canonical" href="https://custovox.ai/faq">
+<link rel="alternate" hreflang="fr" href="https://custovox.ai/fr/faq">
+<link rel="alternate" hreflang="en" href="https://custovox.ai/faq">
+<link rel="alternate" hreflang="x-default" href="https://custovox.ai/faq">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-links">
+    <a href="/" class="nav-home" aria-label="Home" title="Home">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-5h4v5"/></svg>
+    </a>
+    <a href="/blog/" class="nav-link">Blog</a>
+    <a href="/faq" class="nav-link" aria-current="page" style="color:var(--teal-dark);font-weight:700;">FAQ</a>
+    <div class="lang">
+      <a href="/faq" hreflang="en" title="English" class="active" aria-current="true">EN</a>
+      <a href="/fr/faq" hreflang="fr" title="Français">FR</a>
+    </div>
+  </div>
+  <a href="/#audit" class="nav-cta">Your free case study</a>
+</nav>
+
+<!-- LOGO -->
+<div class="logo-wrap">
+  <a href="/" class="logo" aria-label="CustoVox.ai">
+    <span class="logo-row">
+      <svg width="54" height="48" viewBox="0 0 54 48" fill="none" aria-hidden="true">
+        <path d="M8 3h38a5 5 0 0 1 5 5v24a5 5 0 0 1-5 5H20l-10 8v-8H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5z" stroke="#1E293B" stroke-width="3.5" stroke-linejoin="round"/>
+        <g stroke="#1E293B" stroke-width="3" stroke-linecap="round">
+          <line x1="14" y1="17" x2="14" y2="23"/>
+          <line x1="20" y1="12" x2="20" y2="28"/>
+          <line x1="26" y1="9" x2="26" y2="31"/>
+          <line x1="32" y1="13" x2="32" y2="27"/>
+          <line x1="38" y1="16" x2="38" y2="24"/>
+        </g>
+      </svg>
+      <span class="logo-word">custovox.ai</span>
+    </span>
+    <span class="logo-tag">LISTEN DEEPER, ACT FASTER</span>
+  </a>
+</div>
+
+<!-- FAQ -->
+<main class="faq" style="border-top:none;">
+  <div class="faq-inner">
+    <span class="faq-tag">FAQ</span>
+    <h1>Frequently asked questions about <span>CustoVox.ai</span></h1>
+    <p class="faq-lead">Everything you need to know about AI analysis of your calls, customer reviews, tickets and emails: how it works, data, security and pricing.</p>
+    <h2 class="faq-group">Understanding CustoVox.ai</h2>
+    <details class="faq-item">
+      <summary>What is CustoVox.ai?</summary>
+      <p>CustoVox.ai is a French Voice of Customer analysis platform based on AI and NLP. It automatically analyzes calls, customer reviews, support tickets and emails to detect emotions, escalation risks, churn risk and pain points, without a data team.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How is CustoVox.ai different from a standard sentiment analysis tool?</summary>
+      <p>A standard sentiment analysis tool tells you whether a review is positive or negative. CustoVox.ai goes further. It identifies the precise emotion, detects escalation risks and predicts churn. It analyzes voice and images as well as text, and statistically validates its results.</p>
+    </details>
+    <details class="faq-item">
+      <summary>What types of data can CustoVox.ai analyze?</summary>
+      <p>CustoVox.ai analyzes text (reviews, tickets, emails, survey verbatims), voice (calls, interviews, podcasts) and images (photos of products, claims, property inspections). These analyses are split into five modules: TextIQ, VoiceIQ, VisualIQ, PredictIQ and SearchIQ.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Which languages does CustoVox.ai support?</summary>
+      <p>CustoVox.ai natively analyzes five languages, and analysis remains possible in other languages. You can compare customer feedback from several countries with the same method.</p>
+    </details>
+    <h2 class="faq-group">How it works</h2>
+    <details class="faq-item">
+      <summary>How do you automatically analyze customer reviews with AI?</summary>
+      <p>With CustoVox.ai, you import your customer reviews, tickets or call transcripts. The TextIQ module then identifies recurring themes, emotions, pain points and unmet needs. Results are statistically validated, so you can tell a real recurring problem from an isolated case.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How do you detect customers who are about to leave (churn)?</summary>
+      <p>CustoVox.ai spots the signals in customer conversations that come before a departure. It combines language analysis (TextIQ, VoiceIQ) with predictive modeling (PredictIQ), so you can act before the customer cancels.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How do you detect calls at risk of escalation in a call center?</summary>
+      <p>CustoVox.ai relies on a proprietary escalation detection model, tested on real call center conversations. It identifies exchanges likely to turn into a complaint or a customer departure, so supervisors can step in in time.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Which AI models does CustoVox.ai use?</summary>
+      <p>Depending on the case, CustoVox.ai relies on well-known AI models such as Mistral, BERT, Llama, GPT or Claude. CustoVox.ai selects the best-suited model for each analysis and adapts it to customer relations using anonymized data.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Do I need a data team to use CustoVox.ai?</summary>
+      <p>No. CustoVox.ai is designed for customer service, marketing and quality teams with no technical skills. Analyses are delivered ready to use.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Can CustoVox.ai connect to my existing tools?</summary>
+      <p>Yes. CustoVox.ai offers an API with a single key and separate modules, so you can connect your existing customer service tools.</p>
+    </details>
+    <details class="faq-item">
+      <summary>In what format should I send my data to CustoVox.ai?</summary>
+      <p>CustoVox.ai accepts all customer data formats: text files and spreadsheets (CSV, Excel, TXT), exports from your support or CRM tools, emails, audio files (MP3, WAV…) and images (JPG, PNG…). You send your data as is, with no technical preparation.</p>
+    </details>
+    <h2 class="faq-group">Data, security and GDPR</h2>
+    <details class="faq-item">
+      <summary>Does CustoVox.ai use my data to train its models?</summary>
+      <p>No. With CustoVox.ai, your data is used only to produce your analyses and is never used to train models.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Where is CustoVox.ai data hosted?</summary>
+      <p>CustoVox.ai is published by a French company and hosts your data in France. Some analyses use selected AI providers, which do not reuse your data to train their models.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How does CustoVox.ai protect my data?</summary>
+      <p>CustoVox.ai protects your data at every step. It is hosted in France and encrypted both in transit (HTTPS/TLS) and at rest (AES-256 encryption). Access is restricted to authorized people only, with strong authentication and access logging. Personal data (names, phone numbers, email and postal addresses) is anonymized before analysis. Finally, your data is never used to train models.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How long does CustoVox.ai keep my data, and can I delete it?</summary>
+      <p>CustoVox.ai keeps your data only for the duration of your subscription. You can request its deletion at any time: it is carried out within 30 days. When your subscription ends, your data is deleted within 30 days. For the free case study, it is deleted 30 days after the results are delivered.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Does CustoVox.ai sign a data processing agreement (DPA)?</summary>
+      <p>Yes. CustoVox.ai signs a data processing agreement (DPA) with its customers, in line with Article 28 of the GDPR. This contract specifies how your data is processed, protected and deleted.</p>
+    </details>
+    <h2 class="faq-group">Pricing and getting started</h2>
+    <details class="faq-item">
+      <summary>How does the free CustoVox.ai case study work?</summary>
+      <p>CustoVox.ai analyzes your first 100 customer reviews or tickets for free and delivers the results within 48 hours. No credit card, no data team, and no commitment.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How much does CustoVox.ai cost?</summary>
+      <p>CustoVox.ai starts at €49 per month (excl. VAT), with four plans from Starter to Enterprise (custom quote).</p>
+    </details>
+    <details class="faq-item">
+      <summary>Can I cancel CustoVox.ai at any time?</summary>
+      <p>Yes. CustoVox.ai subscriptions have no commitment: you can cancel at any time.</p>
+    </details>
+    <h2 class="faq-group">Agencies and partners</h2>
+    <details class="faq-item">
+      <summary>Does CustoVox.ai offer a program for marketing agencies and consulting firms?</summary>
+      <p>Yes. The CustoVox.ai partner program lets agencies bring NLP analyses into their client work, white-label or co-branded. It includes multi-client access, a recurring commission and dedicated support.</p>
+    </details>
+
+
+    <div class="cta-block faq-cta">
+      <div class="cta-block-text">
+        <h3>Didn't find your answer?</h3>
+        <p>Free case study · 48h · No data team · No credit card</p>
+      </div>
+      <div class="cta-block-btns">
+        <a href="/#audit" class="btn-audit">I want my free case study →</a>
+        <a href="/#contact" class="btn-contact">Contact us</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is CustoVox.ai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CustoVox.ai is a French Voice of Customer analysis platform based on AI and NLP. It automatically analyzes calls, customer reviews, support tickets and emails to detect emotions, escalation risks, churn risk and pain points, without a data team."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is CustoVox.ai different from a standard sentiment analysis tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard sentiment analysis tool tells you whether a review is positive or negative. CustoVox.ai goes further. It identifies the precise emotion, detects escalation risks and predicts churn. It analyzes voice and images as well as text, and statistically validates its results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of data can CustoVox.ai analyze?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CustoVox.ai analyzes text (reviews, tickets, emails, survey verbatims), voice (calls, interviews, podcasts) and images (photos of products, claims, property inspections). These analyses are split into five modules: TextIQ, VoiceIQ, VisualIQ, PredictIQ and SearchIQ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which languages does CustoVox.ai support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CustoVox.ai natively analyzes five languages, and analysis remains possible in other languages. You can compare customer feedback from several countries with the same method."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you automatically analyze customer reviews with AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With CustoVox.ai, you import your customer reviews, tickets or call transcripts. The TextIQ module then identifies recurring themes, emotions, pain points and unmet needs. Results are statistically validated, so you can tell a real recurring problem from an isolated case."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you detect customers who are about to leave (churn)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CustoVox.ai spots the signals in customer conversations that come before a departure. It combines language analysis (TextIQ, VoiceIQ) with predictive modeling (PredictIQ), so you can act before the customer cancels."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you detect calls at risk of escalation in a call center?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CustoVox.ai relies on a proprietary escalation detection model, tested on real call center conversations. It identifies exchanges likely to turn into a complaint or a customer departure, so supervisors can step in in time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which AI models does CustoVox.ai use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depending on the case, CustoVox.ai relies on well-known AI models such as Mistral, BERT, Llama, GPT or Claude. CustoVox.ai selects the best-suited model for each analysis and adapts it to customer relations using anonymized data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a data team to use CustoVox.ai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. CustoVox.ai is designed for customer service, marketing and quality teams with no technical skills. Analyses are delivered ready to use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can CustoVox.ai connect to my existing tools?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. CustoVox.ai offers an API with a single key and separate modules, so you can connect your existing customer service tools."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "In what format should I send my data to CustoVox.ai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CustoVox.ai accepts all customer data formats: text files and spreadsheets (CSV, Excel, TXT), exports from your support or CRM tools, emails, audio files (MP3, WAV…) and images (JPG, PNG…). You send your data as is, with no technical preparation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does CustoVox.ai use my data to train its models?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. With CustoVox.ai, your data is used only to produce your analyses and is never used to train models."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is CustoVox.ai data hosted?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CustoVox.ai is published by a French company and hosts your data in France. Some analyses use selected AI providers, which do not reuse your data to train their models."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does CustoVox.ai protect my data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CustoVox.ai protects your data at every step. It is hosted in France and encrypted both in transit (HTTPS/TLS) and at rest (AES-256 encryption). Access is restricted to authorized people only, with strong authentication and access logging. Personal data (names, phone numbers, email and postal addresses) is anonymized before analysis. Finally, your data is never used to train models."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does CustoVox.ai keep my data, and can I delete it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CustoVox.ai keeps your data only for the duration of your subscription. You can request its deletion at any time: it is carried out within 30 days. When your subscription ends, your data is deleted within 30 days. For the free case study, it is deleted 30 days after the results are delivered."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does CustoVox.ai sign a data processing agreement (DPA)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. CustoVox.ai signs a data processing agreement (DPA) with its customers, in line with Article 28 of the GDPR. This contract specifies how your data is processed, protected and deleted."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the free CustoVox.ai case study work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CustoVox.ai analyzes your first 100 customer reviews or tickets for free and delivers the results within 48 hours. No credit card, no data team, and no commitment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does CustoVox.ai cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CustoVox.ai starts at €49 per month (excl. VAT), with four plans from Starter to Enterprise (custom quote)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I cancel CustoVox.ai at any time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. CustoVox.ai subscriptions have no commitment: you can cancel at any time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does CustoVox.ai offer a program for marketing agencies and consulting firms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The CustoVox.ai partner program lets agencies bring NLP analyses into their client work, white-label or co-branded. It includes multi-client access, a recurring commission and dedicated support."
+      }
+    }
+  ]
+}
+</script>
+
+<footer>© 2026 CustoVox.ai — Listen deeper. Act faster. — <a href="https://custovox.ai" style="color:var(--teal);text-decoration:none;">custovox.ai</a></footer>
+</body>
+</html>
