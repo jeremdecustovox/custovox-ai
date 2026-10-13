@@ -252,6 +252,7 @@
   .faq h1, .faq h2.faq-title { font-size: clamp(24px, 3.4vw, 34px); font-weight: 800; margin-bottom: 0.75rem; }
   .faq h1 span, .faq h2.faq-title span { color: var(--teal); }
   .faq-lead { font-size: 15px; color: var(--gray-600); line-height: 1.7; margin-bottom: 2rem; }
+  .faq-updated { font-size: 13px; color: var(--gray-400); margin: -1rem 0 1.5rem; }
   .faq-group { font-size: 13px; font-weight: 700; color: var(--teal); letter-spacing: 0.5px; text-transform: uppercase; margin: 2.25rem 0 0.9rem; }
   .faq-item {
     background: white; border: 1px solid var(--gray-200); border-radius: 10px;
@@ -262,6 +263,7 @@
     cursor: pointer; list-style: none; padding: 16px 48px 16px 18px;
     font-size: 15px; font-weight: 700; color: var(--navy); position: relative;
   }
+  .faq-item summary h3 { display: inline; font: inherit; color: inherit; margin: 0; }
   .faq-item summary::-webkit-details-marker { display: none; }
   .faq-item summary::after {
     content: "+"; position: absolute; right: 18px; top: 50%; transform: translateY(-50%);
@@ -269,6 +271,7 @@
   }
   .faq-item[open] summary::after { content: "–"; }
   .faq-item p { padding: 0 18px 18px; font-size: 14px; line-height: 1.75; color: var(--gray-600); }
+  .faq-item p a { color: var(--teal-dark); font-weight: 600; }
   .faq-more { display: inline-block; margin-top: 1.25rem; font-weight: 700; color: var(--teal-dark); text-decoration: none; font-size: 15px; }
   .faq-more:hover { text-decoration: underline; }
   .faq-cta { margin-top: 3rem; }
@@ -277,6 +280,60 @@
 <link rel="alternate" hreflang="fr" href="https://custovox.ai/fr/faq">
 <link rel="alternate" hreflang="en" href="https://custovox.ai/faq">
 <link rel="alternate" hreflang="x-default" href="https://custovox.ai/faq">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://custovox.ai/#organization",
+   "name": "CustoVox.ai",
+   "legalName": "Corpstxt",
+   "url": "https://custovox.ai/",
+   "logo": "https://custovox.ai/images/logo.png",
+   "slogan": "Listen deeper. Act faster.",
+   "foundingDate": "2024-06-11",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "238 route de Linselles",
+    "postalCode": "59118",
+    "addressLocality": "Wambrechies",
+    "addressCountry": "FR"
+   },
+   "sameAs": [
+    "https://github.com/jeremdecustovox/custovox-ai",
+    "https://pypi.org/project/custovox-sentiment/"
+   ]
+  },
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://custovox.ai/#software",
+   "name": "CustoVox.ai",
+   "url": "https://custovox.ai/fr/",
+   "applicationCategory": "BusinessApplication",
+   "applicationSubCategory": "Analyse de la voix du client",
+   "operatingSystem": "Web",
+   "description": "Analyse IA (NLP) des appels, avis clients, tickets et e-mails : émotions, risques d'escalade, churn, points de friction. Étude de cas gratuite en 48 h.",
+   "inLanguage": [
+    "en",
+    "fr",
+    "de",
+    "es",
+    "pt-BR"
+   ],
+   "publisher": {
+    "@id": "https://custovox.ai/#organization"
+   },
+   "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": "49",
+    "priceCurrency": "EUR",
+    "offerCount": "4"
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -322,90 +379,91 @@
     <span class="faq-tag">FAQ</span>
     <h1>Questions fréquentes sur <span>CustoVox.ai</span></h1>
     <p class="faq-lead">Tout ce qu'il faut savoir sur l'analyse IA de vos appels, avis clients, tickets et e-mails : fonctionnement, données, sécurité et prix.</p>
+    <p class="faq-updated">Dernière mise à jour : <time datetime="2026-10-13">13 octobre 2026</time></p>
     <h2 class="faq-group">Comprendre CustoVox.ai</h2>
     <details class="faq-item">
-      <summary>Qu'est-ce que CustoVox.ai ?</summary>
+      <summary><h3 class="faq-q">Qu'est-ce que CustoVox.ai ?</h3></summary>
       <p>CustoVox.ai est une plateforme française d'analyse de la voix du client (Voice of Customer) basée sur l'IA et le NLP. Elle analyse automatiquement les appels, avis clients, tickets de support et e-mails pour détecter les émotions, les risques d'escalade, le risque de churn et les points de friction, sans équipe data.</p>
     </details>
     <details class="faq-item">
-      <summary>Quelle différence entre CustoVox.ai et un outil d'analyse de sentiment classique ?</summary>
+      <summary><h3 class="faq-q">Quelle différence entre CustoVox.ai et un outil d'analyse de sentiment classique ?</h3></summary>
       <p>Un outil d'analyse de sentiment classique indique si un avis est positif ou négatif. CustoVox.ai va plus loin. Il identifie l'émotion précise, détecte les risques d'escalade et prédit le churn. Il analyse la voix et les images en plus du texte, et valide statistiquement ses résultats.</p>
     </details>
     <details class="faq-item">
-      <summary>Quels types de données CustoVox.ai peut-il analyser ?</summary>
+      <summary><h3 class="faq-q">Quels types de données CustoVox.ai peut-il analyser ?</h3></summary>
       <p>CustoVox.ai analyse le texte (avis, tickets, e-mails, verbatims d'enquêtes), la voix (appels, entretiens, podcasts) et les images (photos de produits, de sinistres, d'états des lieux). Ces analyses sont réparties en cinq modules : TextIQ, VoiceIQ, VisualIQ, PredictIQ et SearchIQ.</p>
     </details>
     <details class="faq-item">
-      <summary>Dans quelles langues fonctionne CustoVox.ai ?</summary>
+      <summary><h3 class="faq-q">Dans quelles langues fonctionne CustoVox.ai ?</h3></summary>
       <p>CustoVox.ai analyse nativement cinq langues, et l'analyse reste possible dans d'autres langues. Vous pouvez ainsi comparer les retours clients de plusieurs pays avec la même méthode.</p>
     </details>
     <h2 class="faq-group">Fonctionnement</h2>
     <details class="faq-item">
-      <summary>Comment analyser automatiquement les avis clients avec l'IA ?</summary>
-      <p>Avec CustoVox.ai, vous importez vos avis clients, tickets ou transcriptions d'appels. Le module TextIQ identifie alors les thèmes récurrents, les émotions, les irritants et les besoins non couverts. Les résultats sont validés statistiquement, ce qui permet de distinguer un vrai problème récurrent d'un cas isolé.</p>
+      <summary><h3 class="faq-q">Comment analyser automatiquement les avis clients avec l'IA ?</h3></summary>
+      <p>Avec CustoVox.ai, vous importez vos avis clients, tickets ou transcriptions d'appels. Le module TextIQ identifie alors les thèmes récurrents, les émotions, les irritants et les besoins non couverts. Les résultats sont validés statistiquement, ce qui permet de distinguer un vrai problème récurrent d'un cas isolé. Exemple concret : <a href="/fr/blog/analyse-nlp-avis-g2">ce que l'analyse de 200 avis G2 a révélé</a>.</p>
     </details>
     <details class="faq-item">
-      <summary>Comment détecter les clients sur le point de partir (churn) ?</summary>
+      <summary><h3 class="faq-q">Comment détecter les clients sur le point de partir (churn) ?</h3></summary>
       <p>CustoVox.ai repère dans les conversations clients les signaux qui précèdent un départ. Il combine pour cela l'analyse du langage (TextIQ, VoiceIQ) et la modélisation prédictive (PredictIQ). Vous pouvez ainsi agir avant que le client ne résilie.</p>
     </details>
     <details class="faq-item">
-      <summary>Comment détecter les appels à risque d'escalade dans un centre d'appels ?</summary>
+      <summary><h3 class="faq-q">Comment détecter les appels à risque d'escalade dans un centre d'appels ?</h3></summary>
       <p>CustoVox.ai s'appuie sur un modèle propriétaire de détection d'escalade, testé sur de vraies conversations de centres d'appels. Il identifie les échanges qui risquent de dégénérer en réclamation ou en départ du client, pour que les superviseurs interviennent à temps.</p>
     </details>
     <details class="faq-item">
-      <summary>Sur quels modèles d'IA repose CustoVox.ai ?</summary>
+      <summary><h3 class="faq-q">Sur quels modèles d'IA repose CustoVox.ai ?</h3></summary>
       <p>CustoVox.ai s'appuie sur ses propres modèles et scripts d'analyse, spécialisés dans la relation client et affinés à l'aide de données anonymisées. Pour chaque analyse, CustoVox.ai utilise le modèle le plus adapté.</p>
     </details>
     <details class="faq-item">
-      <summary>Faut-il une équipe data pour utiliser CustoVox.ai ?</summary>
+      <summary><h3 class="faq-q">Faut-il une équipe data pour utiliser CustoVox.ai ?</h3></summary>
       <p>Non. CustoVox.ai est conçu pour les équipes relation client, marketing et qualité sans compétences techniques. Les analyses sont livrées prêtes à l'emploi.</p>
     </details>
     <details class="faq-item">
-      <summary>CustoVox.ai peut-il se connecter à mes outils existants ?</summary>
+      <summary><h3 class="faq-q">CustoVox.ai peut-il se connecter à mes outils existants ?</h3></summary>
       <p>Oui. CustoVox.ai propose une API avec une clé unique et des modules séparés, qui permet de connecter vos outils de relation client existants.</p>
     </details>
     <details class="faq-item">
-      <summary>Sous quel format envoyer mes données à CustoVox.ai ?</summary>
+      <summary><h3 class="faq-q">Sous quel format envoyer mes données à CustoVox.ai ?</h3></summary>
       <p>CustoVox.ai accepte tous les formats de données clients : fichiers texte et tableurs (CSV, Excel, TXT), exports de vos outils de support ou de CRM, e-mails, fichiers audio (MP3, WAV…) et images (JPG, PNG…). Vous envoyez vos données telles quelles, sans préparation technique.</p>
     </details>
     <h2 class="faq-group">Données, sécurité et RGPD</h2>
     <details class="faq-item">
-      <summary>CustoVox.ai utilise-t-il mes données pour entraîner ses modèles ?</summary>
+      <summary><h3 class="faq-q">CustoVox.ai utilise-t-il mes données pour entraîner ses modèles ?</h3></summary>
       <p>Non. Avec CustoVox.ai, vos données servent uniquement à produire vos analyses et ne sont jamais utilisées pour entraîner les modèles.</p>
     </details>
     <details class="faq-item">
-      <summary>Où sont hébergées les données de CustoVox.ai ?</summary>
+      <summary><h3 class="faq-q">Où sont hébergées les données de CustoVox.ai ?</h3></summary>
       <p>CustoVox.ai est édité par une société française et héberge vos données en France. Les analyses sont réalisées avec ses propres scripts, sans transmettre vos données à des fournisseurs d'IA tiers.</p>
     </details>
     <details class="faq-item">
-      <summary>Comment CustoVox.ai protège-t-il mes données ?</summary>
-      <p>CustoVox.ai protège vos données à chaque étape. Elles sont hébergées en France et chiffrées pendant leur transfert (HTTPS/TLS) comme lors de leur stockage (chiffrement AES-256). L'accès est réservé aux seules personnes habilitées, avec authentification forte et journalisation des accès. Les données personnelles (noms, numéros de téléphone, adresses e-mail et postales) sont anonymisées avant analyse. Enfin, vos données ne servent jamais à entraîner les modèles.</p>
+      <summary><h3 class="faq-q">Comment CustoVox.ai protège-t-il mes données ?</h3></summary>
+      <p>CustoVox.ai protège vos données à chaque étape. Elles sont hébergées en France et chiffrées pendant leur transfert (HTTPS/TLS) comme lors de leur stockage (chiffrement AES-256). L'accès est réservé aux seules personnes habilitées, avec authentification forte et journalisation des accès. Les données personnelles (noms, numéros de téléphone, adresses e-mail et postales) sont anonymisées avant analyse. Enfin, vos données ne servent jamais à entraîner les modèles. Le détail figure dans notre <a href="/fr/confidentialite.html">politique de confidentialité</a>.</p>
     </details>
     <details class="faq-item">
-      <summary>Combien de temps CustoVox.ai conserve-t-il mes données, et puis-je les supprimer ?</summary>
+      <summary><h3 class="faq-q">Combien de temps CustoVox.ai conserve-t-il mes données, et puis-je les supprimer ?</h3></summary>
       <p>CustoVox.ai conserve vos données uniquement pendant la durée de votre abonnement. Vous pouvez demander leur suppression à tout moment : elle est effectuée sous 30 jours. À la fin de l'abonnement, vos données sont supprimées sous 30 jours. Pour l'étude de cas gratuite, elles sont supprimées 30 jours après la remise des résultats.</p>
     </details>
     <details class="faq-item">
-      <summary>CustoVox.ai signe-t-il un accord de traitement des données (DPA) ?</summary>
-      <p>Oui. CustoVox.ai signe avec ses clients un accord de traitement des données (DPA), conformément à l'article 28 du RGPD. Ce contrat précise comment vos données sont traitées, protégées et supprimées.</p>
+      <summary><h3 class="faq-q">CustoVox.ai signe-t-il un accord de traitement des données (DPA) ?</h3></summary>
+      <p>Oui. CustoVox.ai signe avec ses clients un accord de traitement des données (DPA), conformément à l'article 28 du RGPD. Ce contrat précise comment vos données sont traitées, protégées et supprimées. Pour en obtenir un, <a href="/fr/#contact">contactez-nous</a>.</p>
     </details>
     <h2 class="faq-group">Prix et démarrage</h2>
     <details class="faq-item">
-      <summary>Comment fonctionne l'étude de cas gratuite CustoVox.ai ?</summary>
-      <p>CustoVox.ai analyse gratuitement vos 100 premiers avis clients ou tickets et vous remet les résultats en 48 heures. Vous n'avez besoin ni de carte bancaire, ni d'équipe data, et vous ne vous engagez à rien.</p>
+      <summary><h3 class="faq-q">Comment fonctionne l'étude de cas gratuite CustoVox.ai ?</h3></summary>
+      <p>CustoVox.ai analyse gratuitement vos 100 premiers avis clients ou tickets et vous remet les résultats en 48 heures. Vous n'avez besoin ni de carte bancaire, ni d'équipe data, et vous ne vous engagez à rien. <a href="/fr/#audit">Demander mon étude de cas gratuite</a>.</p>
     </details>
     <details class="faq-item">
-      <summary>Combien coûte CustoVox.ai ?</summary>
+      <summary><h3 class="faq-q">Combien coûte CustoVox.ai ?</h3></summary>
       <p>CustoVox.ai est disponible à partir de 49 € HT par mois, avec quatre formules allant de Starter à Enterprise (sur devis).</p>
     </details>
     <details class="faq-item">
-      <summary>Peut-on résilier CustoVox.ai à tout moment ?</summary>
+      <summary><h3 class="faq-q">Peut-on résilier CustoVox.ai à tout moment ?</h3></summary>
       <p>Oui. Les abonnements CustoVox.ai sont sans engagement : vous pouvez les résilier à tout moment.</p>
     </details>
     <h2 class="faq-group">Agences et partenaires</h2>
     <details class="faq-item">
-      <summary>CustoVox.ai propose-t-il une offre pour les agences marketing et cabinets de conseil ?</summary>
-      <p>Oui. Le programme partenaire CustoVox.ai permet aux agences d'intégrer les analyses NLP à leurs missions clients, en marque blanche ou en co-branding. Il inclut l'accès multi-clients, une commission récurrente et un support dédié.</p>
+      <summary><h3 class="faq-q">CustoVox.ai propose-t-il une offre pour les agences marketing et cabinets de conseil ?</h3></summary>
+      <p>Oui. Le programme partenaire CustoVox.ai permet aux agences d'intégrer les analyses NLP à leurs missions clients, en marque blanche ou en co-branding. Il inclut l'accès multi-clients, une commission récurrente et un support dédié. <a href="/fr/#contact">Contactez-nous</a> pour en parler.</p>
     </details>
 
 
@@ -426,6 +484,7 @@
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "dateModified": "2026-10-13",
   "mainEntity": [
     {
       "@type": "Question",
