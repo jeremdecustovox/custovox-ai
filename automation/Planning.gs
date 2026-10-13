@@ -177,10 +177,13 @@ function gapAlerts_(cal, datesByKind) {
   props.setProperty('GAP_ALERTS', JSON.stringify(alerts));
 }
 
-/** Rebuilds the site every morning so scheduled articles go live on their date. */
+/** Rebuilds the site only on mornings when a blog article is due (saves Netlify credits). */
 function dailyBlogBuild() {
   const hook = PropertiesService.getScriptProperties().getProperty('NETLIFY_BUILD_HOOK');
   if (!hook) throw new Error('NETLIFY_BUILD_HOOK is missing in Script Properties');
+  const today = Utilities.formatDate(new Date(), TZ, 'yyyy-MM-dd');
+  const due = (loadPlanning_().planning || []).some(p => p.type === 'blog' && p.date.indexOf(today) === 0);
+  if (!due) return;
   UrlFetchApp.fetch(hook, { method: 'post', payload: '{}', contentType: 'application/json' });
 }
 
