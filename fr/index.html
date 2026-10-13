@@ -263,6 +263,7 @@
     cursor: pointer; list-style: none; padding: 16px 48px 16px 18px;
     font-size: 15px; font-weight: 700; color: var(--navy); position: relative;
   }
+  .faq-item summary h3 { display: inline; font: inherit; color: inherit; margin: 0; }
   .faq-item summary::-webkit-details-marker { display: none; }
   .faq-item summary::after {
     content: "+"; position: absolute; right: 18px; top: 50%; transform: translateY(-50%);
@@ -346,6 +347,60 @@
   .contact-msg { font-size: 13px; color: #B91C1C; margin-top: 0.5rem; }
 
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://custovox.ai/#organization",
+   "name": "CustoVox.ai",
+   "legalName": "Corpstxt",
+   "url": "https://custovox.ai/",
+   "logo": "https://custovox.ai/images/logo.png",
+   "slogan": "Listen deeper. Act faster.",
+   "foundingDate": "2024-06-11",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "238 route de Linselles",
+    "postalCode": "59118",
+    "addressLocality": "Wambrechies",
+    "addressCountry": "FR"
+   },
+   "sameAs": [
+    "https://github.com/jeremdecustovox/custovox-ai",
+    "https://pypi.org/project/custovox-sentiment/"
+   ]
+  },
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://custovox.ai/#software",
+   "name": "CustoVox.ai",
+   "url": "https://custovox.ai/fr/",
+   "applicationCategory": "BusinessApplication",
+   "applicationSubCategory": "Analyse de la voix du client",
+   "operatingSystem": "Web",
+   "description": "Analyse IA (NLP) des appels, avis clients, tickets et e-mails : émotions, risques d'escalade, churn, points de friction. Étude de cas gratuite en 48 h.",
+   "inLanguage": [
+    "en",
+    "fr",
+    "de",
+    "es",
+    "pt-BR"
+   ],
+   "publisher": {
+    "@id": "https://custovox.ai/#organization"
+   },
+   "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": "49",
+    "priceCurrency": "EUR",
+    "offerCount": "4"
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -453,23 +508,23 @@
     <span class="faq-tag">FAQ</span>
     <h2 class="faq-title" id="faq-title">Questions fréquentes sur <span>CustoVox.ai</span></h2>
     <details class="faq-item">
-      <summary>Qu'est-ce que CustoVox.ai ?</summary>
+      <summary><h3 class="faq-q">Qu'est-ce que CustoVox.ai ?</h3></summary>
       <p>CustoVox.ai est une plateforme française d'analyse de la voix du client (Voice of Customer) basée sur l'IA et le NLP. Elle analyse automatiquement les appels, avis clients, tickets de support et e-mails pour détecter les émotions, les risques d'escalade, le risque de churn et les points de friction, sans équipe data.</p>
     </details>
     <details class="faq-item">
-      <summary>Comment fonctionne l'étude de cas gratuite CustoVox.ai ?</summary>
+      <summary><h3 class="faq-q">Comment fonctionne l'étude de cas gratuite CustoVox.ai ?</h3></summary>
       <p>CustoVox.ai analyse gratuitement vos 100 premiers avis clients ou tickets et vous remet les résultats en 48 heures. Vous n'avez besoin ni de carte bancaire, ni d'équipe data, et vous ne vous engagez à rien.</p>
     </details>
     <details class="faq-item">
-      <summary>Combien coûte CustoVox.ai ?</summary>
+      <summary><h3 class="faq-q">Combien coûte CustoVox.ai ?</h3></summary>
       <p>CustoVox.ai est disponible à partir de 49 € HT par mois, avec quatre formules allant de Starter à Enterprise (sur devis).</p>
     </details>
     <details class="faq-item">
-      <summary>CustoVox.ai utilise-t-il mes données pour entraîner ses modèles ?</summary>
+      <summary><h3 class="faq-q">CustoVox.ai utilise-t-il mes données pour entraîner ses modèles ?</h3></summary>
       <p>Non. Avec CustoVox.ai, vos données servent uniquement à produire vos analyses et ne sont jamais utilisées pour entraîner les modèles.</p>
     </details>
     <details class="faq-item">
-      <summary>Où sont hébergées les données de CustoVox.ai ?</summary>
+      <summary><h3 class="faq-q">Où sont hébergées les données de CustoVox.ai ?</h3></summary>
       <p>CustoVox.ai est édité par une société française et héberge vos données en France. Les analyses sont réalisées avec ses propres scripts, sans transmettre vos données à des fournisseurs d'IA tiers.</p>
     </details>
     <a href="/fr/faq" class="faq-more">Voir toutes les questions →</a>

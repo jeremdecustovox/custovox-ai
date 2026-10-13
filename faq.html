@@ -251,6 +251,7 @@
   .faq h1, .faq h2.faq-title { font-size: clamp(24px, 3.4vw, 34px); font-weight: 800; margin-bottom: 0.75rem; }
   .faq h1 span, .faq h2.faq-title span { color: var(--teal); }
   .faq-lead { font-size: 15px; color: var(--gray-600); line-height: 1.7; margin-bottom: 2rem; }
+  .faq-updated { font-size: 13px; color: var(--gray-400); margin: -1rem 0 1.5rem; }
   .faq-group { font-size: 13px; font-weight: 700; color: var(--teal); letter-spacing: 0.5px; text-transform: uppercase; margin: 2.25rem 0 0.9rem; }
   .faq-item {
     background: white; border: 1px solid var(--gray-200); border-radius: 10px;
@@ -261,6 +262,7 @@
     cursor: pointer; list-style: none; padding: 16px 48px 16px 18px;
     font-size: 15px; font-weight: 700; color: var(--navy); position: relative;
   }
+  .faq-item summary h3 { display: inline; font: inherit; color: inherit; margin: 0; }
   .faq-item summary::-webkit-details-marker { display: none; }
   .faq-item summary::after {
     content: "+"; position: absolute; right: 18px; top: 50%; transform: translateY(-50%);
@@ -268,6 +270,7 @@
   }
   .faq-item[open] summary::after { content: "–"; }
   .faq-item p { padding: 0 18px 18px; font-size: 14px; line-height: 1.75; color: var(--gray-600); }
+  .faq-item p a { color: var(--teal-dark); font-weight: 600; }
   .faq-more { display: inline-block; margin-top: 1.25rem; font-weight: 700; color: var(--teal-dark); text-decoration: none; font-size: 15px; }
   .faq-more:hover { text-decoration: underline; }
   .faq-cta { margin-top: 3rem; }
@@ -276,6 +279,60 @@
 <link rel="alternate" hreflang="fr" href="https://custovox.ai/fr/faq">
 <link rel="alternate" hreflang="en" href="https://custovox.ai/faq">
 <link rel="alternate" hreflang="x-default" href="https://custovox.ai/faq">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://custovox.ai/#organization",
+   "name": "CustoVox.ai",
+   "legalName": "Corpstxt",
+   "url": "https://custovox.ai/",
+   "logo": "https://custovox.ai/images/logo.png",
+   "slogan": "Listen deeper. Act faster.",
+   "foundingDate": "2024-06-11",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "238 route de Linselles",
+    "postalCode": "59118",
+    "addressLocality": "Wambrechies",
+    "addressCountry": "FR"
+   },
+   "sameAs": [
+    "https://github.com/jeremdecustovox/custovox-ai",
+    "https://pypi.org/project/custovox-sentiment/"
+   ]
+  },
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://custovox.ai/#software",
+   "name": "CustoVox.ai",
+   "url": "https://custovox.ai/",
+   "applicationCategory": "BusinessApplication",
+   "applicationSubCategory": "Voice of Customer analytics",
+   "operatingSystem": "Web",
+   "description": "AI (NLP) analysis of calls, customer reviews, tickets and emails: emotions, escalation risks, churn, pain points. Free case study in 48h.",
+   "inLanguage": [
+    "en",
+    "fr",
+    "de",
+    "es",
+    "pt-BR"
+   ],
+   "publisher": {
+    "@id": "https://custovox.ai/#organization"
+   },
+   "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": "49",
+    "priceCurrency": "EUR",
+    "offerCount": "4"
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -321,90 +378,91 @@
     <span class="faq-tag">FAQ</span>
     <h1>Frequently asked questions about <span>CustoVox.ai</span></h1>
     <p class="faq-lead">Everything you need to know about AI analysis of your calls, customer reviews, tickets and emails: how it works, data, security and pricing.</p>
+    <p class="faq-updated">Last updated : <time datetime="2026-10-13">October 13, 2026</time></p>
     <h2 class="faq-group">Understanding CustoVox.ai</h2>
     <details class="faq-item">
-      <summary>What is CustoVox.ai?</summary>
+      <summary><h3 class="faq-q">What is CustoVox.ai?</h3></summary>
       <p>CustoVox.ai is a French Voice of Customer analysis platform based on AI and NLP. It automatically analyzes calls, customer reviews, support tickets and emails to detect emotions, escalation risks, churn risk and pain points, without a data team.</p>
     </details>
     <details class="faq-item">
-      <summary>How is CustoVox.ai different from a standard sentiment analysis tool?</summary>
+      <summary><h3 class="faq-q">How is CustoVox.ai different from a standard sentiment analysis tool?</h3></summary>
       <p>A standard sentiment analysis tool tells you whether a review is positive or negative. CustoVox.ai goes further. It identifies the precise emotion, detects escalation risks and predicts churn. It analyzes voice and images as well as text, and statistically validates its results.</p>
     </details>
     <details class="faq-item">
-      <summary>What types of data can CustoVox.ai analyze?</summary>
+      <summary><h3 class="faq-q">What types of data can CustoVox.ai analyze?</h3></summary>
       <p>CustoVox.ai analyzes text (reviews, tickets, emails, survey verbatims), voice (calls, interviews, podcasts) and images (photos of products, claims, property inspections). These analyses are split into five modules: TextIQ, VoiceIQ, VisualIQ, PredictIQ and SearchIQ.</p>
     </details>
     <details class="faq-item">
-      <summary>Which languages does CustoVox.ai support?</summary>
+      <summary><h3 class="faq-q">Which languages does CustoVox.ai support?</h3></summary>
       <p>CustoVox.ai natively analyzes five languages, and analysis remains possible in other languages. You can compare customer feedback from several countries with the same method.</p>
     </details>
     <h2 class="faq-group">How it works</h2>
     <details class="faq-item">
-      <summary>How do you automatically analyze customer reviews with AI?</summary>
-      <p>With CustoVox.ai, you import your customer reviews, tickets or call transcripts. The TextIQ module then identifies recurring themes, emotions, pain points and unmet needs. Results are statistically validated, so you can tell a real recurring problem from an isolated case.</p>
+      <summary><h3 class="faq-q">How do you automatically analyze customer reviews with AI?</h3></summary>
+      <p>With CustoVox.ai, you import your customer reviews, tickets or call transcripts. The TextIQ module then identifies recurring themes, emotions, pain points and unmet needs. Results are statistically validated, so you can tell a real recurring problem from an isolated case. A concrete example: <a href="/blog/g2-reviews-nlp-analysis">what analyzing 200 G2 reviews revealed</a>.</p>
     </details>
     <details class="faq-item">
-      <summary>How do you detect customers who are about to leave (churn)?</summary>
+      <summary><h3 class="faq-q">How do you detect customers who are about to leave (churn)?</h3></summary>
       <p>CustoVox.ai spots the signals in customer conversations that come before a departure. It combines language analysis (TextIQ, VoiceIQ) with predictive modeling (PredictIQ), so you can act before the customer cancels.</p>
     </details>
     <details class="faq-item">
-      <summary>How do you detect calls at risk of escalation in a call center?</summary>
+      <summary><h3 class="faq-q">How do you detect calls at risk of escalation in a call center?</h3></summary>
       <p>CustoVox.ai relies on a proprietary escalation detection model, tested on real call center conversations. It identifies exchanges likely to turn into a complaint or a customer departure, so supervisors can step in in time.</p>
     </details>
     <details class="faq-item">
-      <summary>Which AI models does CustoVox.ai use?</summary>
+      <summary><h3 class="faq-q">Which AI models does CustoVox.ai use?</h3></summary>
       <p>CustoVox.ai relies on its own analysis models and scripts, specialized in customer relations and fine-tuned with anonymized data. For each analysis, CustoVox.ai uses the best-suited model.</p>
     </details>
     <details class="faq-item">
-      <summary>Do I need a data team to use CustoVox.ai?</summary>
+      <summary><h3 class="faq-q">Do I need a data team to use CustoVox.ai?</h3></summary>
       <p>No. CustoVox.ai is designed for customer service, marketing and quality teams with no technical skills. Analyses are delivered ready to use.</p>
     </details>
     <details class="faq-item">
-      <summary>Can CustoVox.ai connect to my existing tools?</summary>
+      <summary><h3 class="faq-q">Can CustoVox.ai connect to my existing tools?</h3></summary>
       <p>Yes. CustoVox.ai offers an API with a single key and separate modules, so you can connect your existing customer service tools.</p>
     </details>
     <details class="faq-item">
-      <summary>In what format should I send my data to CustoVox.ai?</summary>
+      <summary><h3 class="faq-q">In what format should I send my data to CustoVox.ai?</h3></summary>
       <p>CustoVox.ai accepts all customer data formats: text files and spreadsheets (CSV, Excel, TXT), exports from your support or CRM tools, emails, audio files (MP3, WAV…) and images (JPG, PNG…). You send your data as is, with no technical preparation.</p>
     </details>
     <h2 class="faq-group">Data, security and GDPR</h2>
     <details class="faq-item">
-      <summary>Does CustoVox.ai use my data to train its models?</summary>
+      <summary><h3 class="faq-q">Does CustoVox.ai use my data to train its models?</h3></summary>
       <p>No. With CustoVox.ai, your data is used only to produce your analyses and is never used to train models.</p>
     </details>
     <details class="faq-item">
-      <summary>Where is CustoVox.ai data hosted?</summary>
+      <summary><h3 class="faq-q">Where is CustoVox.ai data hosted?</h3></summary>
       <p>CustoVox.ai is published by a French company and hosts your data in France. Analyses are run with its own scripts, without sending your data to third-party AI providers.</p>
     </details>
     <details class="faq-item">
-      <summary>How does CustoVox.ai protect my data?</summary>
-      <p>CustoVox.ai protects your data at every step. It is hosted in France and encrypted both in transit (HTTPS/TLS) and at rest (AES-256 encryption). Access is restricted to authorized people only, with strong authentication and access logging. Personal data (names, phone numbers, email and postal addresses) is anonymized before analysis. Finally, your data is never used to train models.</p>
+      <summary><h3 class="faq-q">How does CustoVox.ai protect my data?</h3></summary>
+      <p>CustoVox.ai protects your data at every step. It is hosted in France and encrypted both in transit (HTTPS/TLS) and at rest (AES-256 encryption). Access is restricted to authorized people only, with strong authentication and access logging. Personal data (names, phone numbers, email and postal addresses) is anonymized before analysis. Finally, your data is never used to train models. Details are in our <a href="/privacy.html">privacy policy</a>.</p>
     </details>
     <details class="faq-item">
-      <summary>How long does CustoVox.ai keep my data, and can I delete it?</summary>
+      <summary><h3 class="faq-q">How long does CustoVox.ai keep my data, and can I delete it?</h3></summary>
       <p>CustoVox.ai keeps your data only for the duration of your subscription. You can request its deletion at any time: it is carried out within 30 days. When your subscription ends, your data is deleted within 30 days. For the free case study, it is deleted 30 days after the results are delivered.</p>
     </details>
     <details class="faq-item">
-      <summary>Does CustoVox.ai sign a data processing agreement (DPA)?</summary>
-      <p>Yes. CustoVox.ai signs a data processing agreement (DPA) with its customers, in line with Article 28 of the GDPR. This contract specifies how your data is processed, protected and deleted.</p>
+      <summary><h3 class="faq-q">Does CustoVox.ai sign a data processing agreement (DPA)?</h3></summary>
+      <p>Yes. CustoVox.ai signs a data processing agreement (DPA) with its customers, in line with Article 28 of the GDPR. This contract specifies how your data is processed, protected and deleted. To get one, <a href="/#contact">contact us</a>.</p>
     </details>
     <h2 class="faq-group">Pricing and getting started</h2>
     <details class="faq-item">
-      <summary>How does the free CustoVox.ai case study work?</summary>
-      <p>CustoVox.ai analyzes your first 100 customer reviews or tickets for free and delivers the results within 48 hours. No credit card, no data team, and no commitment.</p>
+      <summary><h3 class="faq-q">How does the free CustoVox.ai case study work?</h3></summary>
+      <p>CustoVox.ai analyzes your first 100 customer reviews or tickets for free and delivers the results within 48 hours. No credit card, no data team, and no commitment. <a href="/#audit">Request my free case study</a>.</p>
     </details>
     <details class="faq-item">
-      <summary>How much does CustoVox.ai cost?</summary>
+      <summary><h3 class="faq-q">How much does CustoVox.ai cost?</h3></summary>
       <p>CustoVox.ai starts at €49 per month (excl. VAT), with four plans from Starter to Enterprise (custom quote).</p>
     </details>
     <details class="faq-item">
-      <summary>Can I cancel CustoVox.ai at any time?</summary>
+      <summary><h3 class="faq-q">Can I cancel CustoVox.ai at any time?</h3></summary>
       <p>Yes. CustoVox.ai subscriptions have no commitment: you can cancel at any time.</p>
     </details>
     <h2 class="faq-group">Agencies and partners</h2>
     <details class="faq-item">
-      <summary>Does CustoVox.ai offer a program for marketing agencies and consulting firms?</summary>
-      <p>Yes. The CustoVox.ai partner program lets agencies bring NLP analyses into their client work, white-label or co-branded. It includes multi-client access, a recurring commission and dedicated support.</p>
+      <summary><h3 class="faq-q">Does CustoVox.ai offer a program for marketing agencies and consulting firms?</h3></summary>
+      <p>Yes. The CustoVox.ai partner program lets agencies bring NLP analyses into their client work, white-label or co-branded. It includes multi-client access, a recurring commission and dedicated support. <a href="/#contact">Contact us</a> to discuss it.</p>
     </details>
 
 
@@ -425,6 +483,7 @@
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "dateModified": "2026-10-13",
   "mainEntity": [
     {
       "@type": "Question",

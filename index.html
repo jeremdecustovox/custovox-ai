@@ -262,6 +262,7 @@
     cursor: pointer; list-style: none; padding: 16px 48px 16px 18px;
     font-size: 15px; font-weight: 700; color: var(--navy); position: relative;
   }
+  .faq-item summary h3 { display: inline; font: inherit; color: inherit; margin: 0; }
   .faq-item summary::-webkit-details-marker { display: none; }
   .faq-item summary::after {
     content: "+"; position: absolute; right: 18px; top: 50%; transform: translateY(-50%);
@@ -345,6 +346,60 @@
   .contact-msg { font-size: 13px; color: #B91C1C; margin-top: 0.5rem; }
 
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://custovox.ai/#organization",
+   "name": "CustoVox.ai",
+   "legalName": "Corpstxt",
+   "url": "https://custovox.ai/",
+   "logo": "https://custovox.ai/images/logo.png",
+   "slogan": "Listen deeper. Act faster.",
+   "foundingDate": "2024-06-11",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "238 route de Linselles",
+    "postalCode": "59118",
+    "addressLocality": "Wambrechies",
+    "addressCountry": "FR"
+   },
+   "sameAs": [
+    "https://github.com/jeremdecustovox/custovox-ai",
+    "https://pypi.org/project/custovox-sentiment/"
+   ]
+  },
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://custovox.ai/#software",
+   "name": "CustoVox.ai",
+   "url": "https://custovox.ai/",
+   "applicationCategory": "BusinessApplication",
+   "applicationSubCategory": "Voice of Customer analytics",
+   "operatingSystem": "Web",
+   "description": "AI (NLP) analysis of calls, customer reviews, tickets and emails: emotions, escalation risks, churn, pain points. Free case study in 48h.",
+   "inLanguage": [
+    "en",
+    "fr",
+    "de",
+    "es",
+    "pt-BR"
+   ],
+   "publisher": {
+    "@id": "https://custovox.ai/#organization"
+   },
+   "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": "49",
+    "priceCurrency": "EUR",
+    "offerCount": "4"
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -452,23 +507,23 @@
     <span class="faq-tag">FAQ</span>
     <h2 class="faq-title" id="faq-title">Frequently asked questions about <span>CustoVox.ai</span></h2>
     <details class="faq-item">
-      <summary>What is CustoVox.ai?</summary>
+      <summary><h3 class="faq-q">What is CustoVox.ai?</h3></summary>
       <p>CustoVox.ai is a French Voice of Customer analysis platform based on AI and NLP. It automatically analyzes calls, customer reviews, support tickets and emails to detect emotions, escalation risks, churn risk and pain points, without a data team.</p>
     </details>
     <details class="faq-item">
-      <summary>How does the free CustoVox.ai case study work?</summary>
+      <summary><h3 class="faq-q">How does the free CustoVox.ai case study work?</h3></summary>
       <p>CustoVox.ai analyzes your first 100 customer reviews or tickets for free and delivers the results within 48 hours. No credit card, no data team, and no commitment.</p>
     </details>
     <details class="faq-item">
-      <summary>How much does CustoVox.ai cost?</summary>
+      <summary><h3 class="faq-q">How much does CustoVox.ai cost?</h3></summary>
       <p>CustoVox.ai starts at €49 per month (excl. VAT), with four plans from Starter to Enterprise (custom quote).</p>
     </details>
     <details class="faq-item">
-      <summary>Does CustoVox.ai use my data to train its models?</summary>
+      <summary><h3 class="faq-q">Does CustoVox.ai use my data to train its models?</h3></summary>
       <p>No. With CustoVox.ai, your data is used only to produce your analyses and is never used to train models.</p>
     </details>
     <details class="faq-item">
-      <summary>Where is CustoVox.ai data hosted?</summary>
+      <summary><h3 class="faq-q">Where is CustoVox.ai data hosted?</h3></summary>
       <p>CustoVox.ai is published by a French company and hosts your data in France. Analyses are run with its own scripts, without sending your data to third-party AI providers.</p>
     </details>
     <a href="/faq" class="faq-more">See all questions →</a>
