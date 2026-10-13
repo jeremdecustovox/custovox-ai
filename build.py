@@ -23,7 +23,8 @@ LANGS = ["en", "fr"]                                # published languages; "en" 
 HIDDEN_LANGS = ["de", "es", "pt-br"]               # kept in the repo, not published: redirected to English
 HREFLANG = {"en": "en", "fr": "fr", "de": "de", "es": "es", "pt-br": "pt-BR"}
 NAMES = {"en": "English", "fr": "Français", "de": "Deutsch", "es": "Español", "pt-br": "Português (Brasil)"}
-PUBLISHED = ["index.html", "merci.html", "thank-you.html", "robots.txt", "blog", "images", "fr"]
+PUBLISHED = ["index.html", "merci.html", "thank-you.html", "privacy.html", "consent.js",
+             "robots.txt", "blog", "images", "fr"]
 
 CODES = {"en": "EN", "fr": "FR", "de": "DE", "es": "ES", "pt-br": "PT"}
 SWITCH_CSS = """<style>
@@ -107,6 +108,8 @@ def add_language_links(page: Path) -> None:
     switch = '<div class="lang-switch" aria-label="Language">' + "".join(links) + "</div>"
     if links:
         html = html.replace("</nav>", switch + "</nav>", 1)
+    if 'rel="alternate"' in html:   # page already declares its language versions
+        alternates = []
     html = html.replace("</head>", "\n".join(alternates) + "\n" + SWITCH_CSS + "</head>", 1)
     page.write_text(html, encoding="utf-8")
 
@@ -146,6 +149,12 @@ def main() -> None:
                 html.write_text(new, encoding="utf-8")
 
     # noindex pages (e.g. /merci.html) get no language links and stay out of the sitemap.
+    # Cookie consent banner + footer legal links on every page (consent.js).
+    for page in DIST.rglob("*.html"):
+        html = page.read_text(encoding="utf-8")
+        if "/consent.js" not in html:
+            page.write_text(html.replace("</body>", '<script src="/consent.js" defer></script>\n</body>', 1), encoding="utf-8")
+
     pages = sorted(p for p in DIST.rglob("*.html") if 'name="robots" content="noindex"' not in p.read_text(encoding="utf-8"))
     for page in pages:
         add_language_links(page)
