@@ -19,7 +19,9 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-LANGS = {"fr": "fr", "de": "de", "es": "es", "pt-br": "pt-BR"}
+# Generated languages. de/, es/ and pt-br/ (and their dictionaries) are kept in the repo
+# but are no longer generated nor published; add them back here to revive them.
+LANGS = {"fr": "fr"}
 JSON_KEYS = ("headline", "description", "name", "articleSection")
 META_NAMES = "description|og:title|og:description|twitter:title|twitter:description|keywords"
 NOT_PAGES = r"(?!images/|blog/images/)"
