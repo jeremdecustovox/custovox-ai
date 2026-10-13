@@ -4,7 +4,7 @@ Only the website files are published (pages, blog, images and the translated
 copies in fr/, de/, es/, pt-br/), never the MCP servers or other repo content.
 Blog articles whose `article:published_time` is later than today (Paris time)
 are left out, and every link to them is removed, so each article goes live on
-its own date. Every page gets the language switcher (EN · FR · DE · ES · PT) and
+its own date. Every page gets the language switcher (EN · FR) and
 hreflang links; translated articles have localized URLs (i18n/slugs.json).
 
 Usage: python3 build.py [YYYY-MM-DD]   (optional date, for testing)
@@ -19,10 +19,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DIST = ROOT / "dist"
 SITE = "https://custovox.ai"
-LANGS = ["en", "fr", "de", "es", "pt-br"]           # "en" lives at the root
+LANGS = ["en", "fr"]                                # published languages; "en" lives at the root
+HIDDEN_LANGS = ["de", "es", "pt-br"]               # kept in the repo, not published: redirected to English
 HREFLANG = {"en": "en", "fr": "fr", "de": "de", "es": "es", "pt-br": "pt-BR"}
 NAMES = {"en": "English", "fr": "Français", "de": "Deutsch", "es": "Español", "pt-br": "Português (Brasil)"}
-PUBLISHED = ["index.html", "merci.html", "robots.txt", "blog", "images", "fr", "de", "es", "pt-br"]
+PUBLISHED = ["index.html", "merci.html", "thank-you.html", "robots.txt", "blog", "images", "fr"]
 
 CODES = {"en": "EN", "fr": "FR", "de": "DE", "es": "ES", "pt-br": "PT"}
 SWITCH_CSS = """<style>
@@ -150,7 +151,16 @@ def main() -> None:
         add_language_links(page)
 
     redirects = [f"/{lang}/blog/{en} /{lang}/blog/{loc} 301"
-                 for en, per_lang in SLUGS.items() for lang, loc in per_lang.items() if loc != en]
+                 for en, per_lang in SLUGS.items() for lang, loc in per_lang.items()
+                 if loc != en and lang in LANGS]
+    # Hidden languages and /en: old URLs go to the English version (no dead links).
+    redirects += ["/en / 301", "/en/ / 301", "/en/* /:splat 301", "/pt / 301", "/pt/* / 301"]
+    for lang in HIDDEN_LANGS:
+        for en, per_lang in SLUGS.items():
+            for slug in {en, per_lang.get(lang, en)}:
+                redirects.append(f"/{lang}/blog/{slug} /blog/{en} 301")
+        redirects += [f"/{lang}/blog /blog/ 301", f"/{lang}/blog/ /blog/ 301", f"/{lang}/blog/* /blog/ 301",
+                      f"/{lang} / 301", f"/{lang}/ / 301", f"/{lang}/* / 301"]
     (DIST / "_redirects").write_text("\n".join(redirects) + "\n", encoding="utf-8")
 
     urls = [SITE + url_of(p.relative_to(DIST).as_posix()) for p in pages]

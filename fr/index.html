@@ -261,6 +261,18 @@
   }
   .contact-submit:hover { background: #00B07C; }
   .contact-submit:disabled { opacity: 0.6; cursor: wait; }
+  .contact-form select {
+    width: 100%; padding: 10px 12px; border: 1px solid var(--gray-200); border-radius: 8px;
+    font: inherit; font-size: 14px; color: var(--navy); background: white;
+  }
+  .contact-form select:focus { outline: 2px solid var(--teal); outline-offset: 1px; border-color: var(--teal); }
+  .contact-form .consent {
+    display: flex; gap: 8px; align-items: flex-start; margin-top: 0.75rem;
+    font-size: 12px; font-weight: 400; color: var(--gray-600); line-height: 1.5;
+  }
+  .contact-form .consent input { width: auto; margin-top: 3px; accent-color: var(--teal); flex-shrink: 0; }
+  .study-success { padding: 1.5rem; color: #065F46; background: #ECFDF5; font-size: 14px; line-height: 1.6; }
+  .study-success strong { display: block; font-size: 18px; margin-bottom: 0.25rem; }
   .contact-msg { font-size: 13px; color: #B91C1C; margin-top: 0.5rem; }
 
   footer {
@@ -289,12 +301,9 @@
     <div class="lang">
       <a href="/" hreflang="en" title="English">EN</a>
       <a href="/fr/" hreflang="fr" title="Français" class="active" aria-current="true">FR</a>
-      <a href="/de/" hreflang="de" title="Deutsch">DE</a>
-      <a href="/es/" hreflang="es" title="Español">ES</a>
-      <a href="/pt-br/" hreflang="pt-BR" title="Português (Brasil)">PT</a>
     </div>
   </div>
-  <a href="https://tally.so/r/PdrPE5" class="nav-cta">Votre étude de cas gratuite</a>
+  <a href="#audit" class="nav-cta" data-open-study>Votre étude de cas gratuite</a>
 </nav>
 
 <!-- LOGO -->
@@ -371,19 +380,79 @@
         <p>Audit NLP gratuit · 48h · Sans équipe data · Sans carte bancaire</p>
       </div>
       <div class="cta-block-btns">
-        <a href="https://tally.so/r/PdrPE5" class="btn-audit">Je veux mon étude de cas gratuite →</a>
+        <a href="#audit" class="btn-audit" data-open-study>Je veux mon étude de cas gratuite →</a>
         <button type="button" class="btn-contact" data-open-contact>Nous contacter</button>
       </div>
     </div>
   </div>
 </div>
 
+<!-- CASE STUDY REQUEST (Google Sheet "Leads") -->
+<dialog class="contact-dialog" id="studyDialog" aria-labelledby="studyTitle">
+  <div class="contact-head">
+    <h2 id="studyTitle">Votre étude de cas gratuite</h2>
+    <p>Envoyez-nous vos 100 derniers avis ou tickets : nous vous renvoyons une analyse NLP complète sous 48 h. Gratuit, sans engagement, sans carte bancaire.</p>
+    <button type="button" class="contact-close" data-close-dialog aria-label="Fermer">×</button>
+  </div>
+  <form class="contact-form" id="studyForm" novalidate>
+    <label for="study-email">E-mail professionnel</label>
+    <input type="email" id="study-email" name="email" autocomplete="email" required>
+
+    <label for="study-industry">Votre secteur</label>
+    <select id="study-industry" name="industry" required>
+      <option value="" selected disabled>Choisissez votre secteur</option>
+      <option value="SaaS / Tech">SaaS / Tech</option>
+      <option value="E-commerce">E-commerce</option>
+      <option value="Retail">Commerce de détail</option>
+      <option value="Hospitality / Restaurant">Hôtellerie / Restauration</option>
+      <option value="Call center">Centre d'appels</option>
+      <option value="Marketing Agency">Agence marketing</option>
+      <option value="Healthcare / Medical">Santé / Médical</option>
+      <option value="Real Estate">Immobilier</option>
+      <option value="Legal / Law Firm">Juridique / Cabinet d'avocats</option>
+      <option value="Construction / Trades">BTP / Artisanat</option>
+      <option value="Financial Services">Services financiers</option>
+      <option value="Education / Training">Éducation / Formation</option>
+      <option value="Logistics / Transport">Logistique / Transport</option>
+      <option value="Other">Autre</option>
+    </select>
+
+    <label for="study-volume">Conversations clients par mois</label>
+    <select id="study-volume" name="volume" required>
+      <option value="" selected disabled>Choisissez une fourchette</option>
+      <option value="0-50">Moins de 50</option>
+      <option value="50-200">50 – 200</option>
+      <option value="200-500">200 – 500</option>
+      <option value="500-2000">500 – 2 000</option>
+      <option value="2000+">Plus de 2 000</option>
+    </select>
+
+    <div class="hp" aria-hidden="true">
+      <label for="study-website">Site web</label>
+      <input type="text" id="study-website" name="website" tabindex="-1" autocomplete="off">
+    </div>
+
+    <label class="consent">
+      <input type="checkbox" id="study-consent" required>
+      <span>J'accepte que CustoVox.ai utilise mon e-mail pour m'envoyer mon étude de cas et des nouvelles de CustoVox. Désinscription possible à tout moment.</span>
+    </label>
+
+    <button type="submit" class="contact-submit" id="studySubmit">Recevoir mon étude de cas gratuite →</button>
+    <p class="contact-msg" id="studyInvalid" hidden>Merci d'indiquer un e-mail valide, votre secteur, votre volume, et de cocher la case de consentement.</p>
+    <p class="contact-msg" id="studyFailed" hidden>L'envoi a échoué. Vérifiez votre connexion et réessayez.</p>
+  </form>
+  <div class="study-success" id="studySuccess" hidden>
+    <strong>Vous êtes inscrit(e) 🎉</strong>
+    Nous vous recontactons sous 48 h avec votre étude de cas NLP gratuite.
+  </div>
+</dialog>
+
 <!-- CONTACT FORM -->
 <dialog class="contact-dialog" id="contactDialog" aria-labelledby="contactTitle">
   <div class="contact-head">
     <h2 id="contactTitle">Nous contacter</h2>
     <p>Une question, un projet, un partenariat ? Écrivez-nous, nous répondons sous 48 h.</p>
-    <button type="button" class="contact-close" id="contactClose" aria-label="Fermer">×</button>
+    <button type="button" class="contact-close" data-close-dialog aria-label="Fermer">×</button>
   </div>
   <form class="contact-form" id="contactForm" novalidate>
     <label for="contact-name">Nom</label>
@@ -590,13 +659,16 @@ function showSector(sector) {
 }
 </script>
 <script>
-/* Contact form: messages are stored in the CustoVox Google Sheet (Apps Script web app),
-   then the visitor is sent to /merci.html. */
+/* Forms -> CustoVox Google Sheet (Apps Script web app):
+   case-study requests go to "Leads", contact messages to "Contacts" then /merci.html. */
 (function () {
   var ENDPOINT = 'https://script.google.com/macros/s/AKfycbxPUmo8JdO6p0-ibBoAdM808dVJIWELBD3x5IN5SZCOX0wHYR3VZ2OvtYCvXLhMKVodxA/exec';
   var dialog = document.getElementById('contactDialog');
   var form = document.getElementById('contactForm');
   var $ = function (id) { return document.getElementById(id); };
+
+  var study = document.getElementById('studyDialog');
+  function openStudy() { study.showModal(); $('study-email').focus(); }
 
   document.querySelectorAll('[data-open-contact]').forEach(function (btn) {
     btn.addEventListener('click', function () {
@@ -604,8 +676,51 @@ function showSector(sector) {
       $('contact-name').focus();
     });
   });
-  $('contactClose').addEventListener('click', function () { dialog.close(); });
-  dialog.addEventListener('click', function (ev) { if (ev.target === dialog) dialog.close(); });
+  document.querySelectorAll('[data-open-study]').forEach(function (btn) {
+    btn.addEventListener('click', function (ev) { ev.preventDefault(); openStudy(); });
+  });
+  if (location.hash === '#audit') openStudy();   // links from the blog: /fr/#audit
+  document.querySelectorAll('dialog').forEach(function (d) {
+    d.addEventListener('click', function (ev) { if (ev.target === d) d.close(); });
+    d.querySelectorAll('[data-close-dialog]').forEach(function (b) {
+      b.addEventListener('click', function () { d.close(); });
+    });
+  });
+
+  // Case-study request -> Google Sheet "Leads".
+  $('studyForm').addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    $('studyInvalid').hidden = true;
+    $('studyFailed').hidden = true;
+    var email = $('study-email').value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !$('study-industry').value ||
+        !$('study-volume').value || !$('study-consent').checked) {
+      $('studyInvalid').hidden = false;
+      return;
+    }
+    $('studySubmit').disabled = true;
+    fetch(ENDPOINT, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify({
+        app: 'custovox-lead',
+        email: email,
+        industry: $('study-industry').value,
+        volume: $('study-volume').value,
+        lang: document.documentElement.lang,
+        page: location.pathname,
+        consent: true,
+        website: $('study-website').value
+      })
+    }).then(function () {
+      $('studyForm').hidden = true;
+      $('studySuccess').hidden = false;
+    }).catch(function () {
+      $('studySubmit').disabled = false;
+      $('studyFailed').hidden = false;
+    });
+  });
 
   form.addEventListener('submit', function (ev) {
     ev.preventDefault();
