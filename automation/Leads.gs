@@ -55,7 +55,57 @@ function leadsSheet_() {
   return sheet;
 }
 
-/** Run once from the editor to create the "Leads" sheet and check the setup. */
+/** Run once from the editor to create the "Leads" and "Contacts" sheets. */
 function setupLeads() {
   leadsSheet_();
+  contactsSheet_();
+}
+
+// ---------------------------------------------------------------------------
+// Contact form ("Nous contacter" on the landing page): { app: 'custovox-contact',
+// name, email, company, message, lang, page, website }.
+// ---------------------------------------------------------------------------
+
+const CONTACTS_SHEET = 'Contacts';
+const CONTACT_HEADERS = ['date', 'name', 'email', 'company', 'message', 'language', 'page', 'status'];
+
+function handleContact_(p) {
+  const email = String(p.email || '').trim().toLowerCase().slice(0, 200);
+  const name = String(p.name || '').trim();
+  const message = String(p.message || '').trim();
+  if (p.website || !name || !message || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return ContentService.createTextOutput('ignored');
+  }
+  const clean = (v, max) => String(v || '').trim().replace(/^[=+\-@]/, "'").slice(0, max);
+  const row = [new Date(), clean(name, 100), email, clean(p.company, 100), clean(message, 5000),
+    clean(p.lang, 10), clean(p.page, 100), 'to answer'];
+  contactsSheet_().appendRow(row);
+
+  MailApp.sendEmail(NOTIFY_LEADS_TO, '✉️ Nouveau message de contact : ' + row[1], [
+    'Nouveau message via le formulaire de contact de custovox.ai :',
+    '',
+    'Nom : ' + row[1],
+    'E-mail : ' + email,
+    'Entreprise : ' + (row[3] || '-'),
+    'Page : https://custovox.ai' + row[6],
+    '',
+    'Message :',
+    row[4],
+    '',
+    'Promesse faite : réponse sous 48 h.',
+    'Tous les messages : ' + SpreadsheetApp.getActiveSpreadsheet().getUrl()
+  ].join('\n'), { replyTo: email });
+  return ContentService.createTextOutput('ok');
+}
+
+function contactsSheet_() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  let sheet = ss.getSheetByName(CONTACTS_SHEET);
+  if (!sheet) {
+    sheet = ss.insertSheet(CONTACTS_SHEET);
+    sheet.appendRow(CONTACT_HEADERS);
+    sheet.setFrozenRows(1);
+    sheet.getRange(1, 1, 1, CONTACT_HEADERS.length).setFontWeight('bold');
+  }
+  return sheet;
 }
