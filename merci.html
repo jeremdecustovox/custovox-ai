@@ -14,6 +14,14 @@
     min-height: 100vh; display: flex; flex-direction: column;
   }
   a:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+  .site-nav { width: 100%; max-width: 860px; margin: 0 auto; padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .site-nav .brand { font-size: 22px; font-weight: 700; color: var(--teal); text-decoration: none; }
+  .site-nav .brand span { color: var(--navy); }
+  .site-nav .right { display: flex; align-items: center; gap: 1.25rem; }
+  .site-nav .right > a { color: var(--navy); text-decoration: none; font-size: 14px; font-weight: 500; display: inline-flex; align-items: center; }
+  .lang { display: flex; gap: 10px; font-size: 12px; }
+  .lang a { color: var(--gray-400); text-decoration: none; font-weight: 500; }
+  .lang a.active { color: var(--navy); font-weight: 700; border-bottom: 2px solid var(--teal); }
   main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 3rem 1.5rem; }
   .card {
     max-width: 520px; width: 100%; text-align: center;
@@ -38,6 +46,18 @@
 </style>
 </head>
 <body>
+<nav class="site-nav">
+  <a href="/fr/" class="brand">custovox<span>.ai</span></a>
+  <div class="right">
+    <a href="/fr/" aria-label="Accueil" title="Accueil"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-5h4v5"/></svg></a>
+    <a href="/fr/blog/">Blog</a>
+    <a href="/fr/faq">FAQ</a>
+    <div class="lang">
+      <a href="/thank-you.html" hreflang="en" title="English">EN</a>
+      <a href="/merci.html" hreflang="fr" title="Français" class="active" aria-current="true">FR</a>
+    </div>
+  </div>
+</nav>
 <main>
   <div class="card">
     <div class="card-head">

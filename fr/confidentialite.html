@@ -20,7 +20,7 @@
   .brand { font-size: 22px; font-weight: 700; color: var(--teal); text-decoration: none; }
   .brand span { color: var(--navy); }
   .nav-right { display: flex; align-items: center; gap: 1.25rem; }
-  .nav-right > a { color: var(--navy); text-decoration: none; font-size: 14px; font-weight: 500; }
+  .nav-right > a { color: var(--navy); text-decoration: none; font-size: 14px; font-weight: 500; display: inline-flex; align-items: center; }
   .lang { display: flex; gap: 10px; font-size: 12px; }
   .lang a { color: var(--gray-400); text-decoration: none; font-weight: 500; }
   .lang a.active { color: var(--navy); font-weight: 700; border-bottom: 2px solid var(--teal); }
@@ -54,7 +54,9 @@
 <nav>
   <a href="/fr/" class="brand">custovox<span>.ai</span></a>
   <div class="nav-right">
+    <a href="/fr/" class="nav-home" aria-label="Accueil" title="Accueil"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-5h4v5"/></svg></a>
     <a href="/fr/blog/">Blog</a>
+    <a href="/fr/faq">FAQ</a>
     <div class="lang">
       <a href="/privacy.html" hreflang="en" title="English">EN</a>
       <a href="/fr/confidentialite.html" hreflang="fr" title="Français" class="active" aria-current="true">FR</a>
@@ -146,13 +148,14 @@
   <h2 id="destinataires">5. Destinataires</h2>
   <p>Vos données ne sont accessibles qu'aux membres de l'équipe Corpstxt qui en ont besoin, et à nos prestataires agissant pour notre compte :</p>
   <ul>
-    <li><strong>Google</strong> (Google Workspace : stockage des formulaires et des e-mails ; Google Analytics, uniquement avec votre consentement) ;</li>
-    <li><strong>Netlify, Inc.</strong> (hébergement du site et journaux techniques).</li>
+    <li>notre <strong>prestataire de suite bureautique et de messagerie</strong> (stockage des formulaires et des e-mails) ;</li>
+    <li>notre <strong>hébergeur web</strong> (hébergement du site et journaux techniques) ;</li>
+    <li><strong>Google Analytics</strong> (Google Ireland Limited / Google LLC), uniquement avec votre consentement.</li>
   </ul>
   <p>Nous ne <strong>vendons pas</strong> de données personnelles et ne les partageons pas avec des tiers pour leur propre prospection ni pour de la publicité ciblée. Nous pouvons les communiquer si la loi l'exige ou pour défendre nos droits.</p>
 
   <h2 id="transferts">6. Transferts hors de l'Union européenne</h2>
-  <p>Google et Netlify peuvent traiter des données aux États-Unis. Ces transferts s'appuient sur le <strong>Data Privacy Framework UE–États-Unis</strong> (les deux sociétés sont certifiées) et, le cas échéant, sur les <strong>clauses contractuelles types</strong> de la Commission européenne.</p>
+  <p>Certains de ces prestataires (notre hébergeur web, notre prestataire de suite bureautique et de messagerie, Google Analytics) peuvent traiter des données aux États-Unis. Ces transferts s'appuient sur le <strong>Data Privacy Framework UE–États-Unis</strong> (les prestataires concernés sont certifiés) et, le cas échéant, sur les <strong>clauses contractuelles types</strong> de la Commission européenne.</p>
 
   <h2 id="conservation">7. Durées de conservation</h2>
   <div class="table-wrap">
