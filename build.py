@@ -22,7 +22,7 @@ SITE = "https://custovox.ai"
 LANGS = ["en", "fr", "de", "es", "pt-br"]           # "en" lives at the root
 HREFLANG = {"en": "en", "fr": "fr", "de": "de", "es": "es", "pt-br": "pt-BR"}
 NAMES = {"en": "English", "fr": "Français", "de": "Deutsch", "es": "Español", "pt-br": "Português (Brasil)"}
-PUBLISHED = ["index.html", "robots.txt", "blog", "images", "fr", "de", "es", "pt-br"]
+PUBLISHED = ["index.html", "merci.html", "robots.txt", "blog", "images", "fr", "de", "es", "pt-br"]
 
 CODES = {"en": "EN", "fr": "FR", "de": "DE", "es": "ES", "pt-br": "PT"}
 SWITCH_CSS = """<style>
@@ -101,8 +101,11 @@ def add_language_links(page: Path) -> None:
         alternates.append(f'<link rel="alternate" hreflang="x-default" href="{SITE}{url_of(en_rest)}">')
 
     html = page.read_text(encoding="utf-8")
+    if 'class="lang"' in html:   # hand-written page with its own language switcher
+        links = []
     switch = '<div class="lang-switch" aria-label="Language">' + "".join(links) + "</div>"
-    html = html.replace("</nav>", switch + "</nav>", 1)
+    if links:
+        html = html.replace("</nav>", switch + "</nav>", 1)
     html = html.replace("</head>", "\n".join(alternates) + "\n" + SWITCH_CSS + "</head>", 1)
     page.write_text(html, encoding="utf-8")
 
@@ -141,7 +144,8 @@ def main() -> None:
             if new != text:
                 html.write_text(new, encoding="utf-8")
 
-    pages = sorted(p for p in DIST.rglob("*.html"))
+    # noindex pages (e.g. /merci.html) get no language links and stay out of the sitemap.
+    pages = sorted(p for p in DIST.rglob("*.html") if 'name="robots" content="noindex"' not in p.read_text(encoding="utf-8"))
     for page in pages:
         add_language_links(page)
 

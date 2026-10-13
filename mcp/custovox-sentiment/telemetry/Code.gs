@@ -42,6 +42,7 @@ function doPost(e) {
   try {
     const p = JSON.parse(e.postData.contents);
     if (p.app === 'custovox-lead') return handleLead_(p);
+    if (p.app === 'custovox-contact') return handleContact_(p);
     if (p.app !== 'custovox-sentiment' || ALLOWED_TOOLS.indexOf(p.tool) === -1) {
       return ContentService.createTextOutput('ignored');
     }
