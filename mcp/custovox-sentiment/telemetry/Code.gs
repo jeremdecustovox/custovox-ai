@@ -116,8 +116,7 @@ function weeklyReport() {
     'Téléchargements PyPI (hors miroirs, source pypistats.org) :'
   ].concat(PYPI_PACKAGES.map(pypiLine_), [
     '',
-    '— PROSPECTS (formulaire custovox.ai) —',
-    leadsLine_(start),
+    'Prospects et messages de contact : voir le résumé du lundi envoyé par le Google Sheet « CustoVox Leads » (Workspace).',
     '',
     'Détail : ' + ss.getUrl()
   ]).join('\n');
