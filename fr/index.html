@@ -267,7 +267,7 @@
   }
   .contact-form select:focus { outline: 2px solid var(--teal); outline-offset: 1px; border-color: var(--teal); }
   .contact-form .consent {
-    display: flex; gap: 8px; align-items: flex-start; margin-top: 0.75rem;
+    display: flex; gap: 8px; align-items: flex-start; margin-top: 0.6rem;
     font-size: 12px; font-weight: 400; color: var(--gray-600); line-height: 1.5;
   }
   .contact-form .consent input { width: auto; margin-top: 3px; accent-color: var(--teal); flex-shrink: 0; }
@@ -434,11 +434,15 @@
 
     <label class="consent">
       <input type="checkbox" id="study-consent" required>
-      <span>J'accepte que CustoVox.ai utilise mon e-mail pour m'envoyer mon étude de cas et des nouvelles de CustoVox. Désinscription possible à tout moment.</span>
+      <span>J'accepte que CustoVox.ai utilise ces informations pour préparer et m'envoyer mon étude de cas (<a href="/fr/confidentialite.html" target="_blank">politique de confidentialité</a>).</span>
+    </label>
+    <label class="consent">
+      <input type="checkbox" id="study-newsletter">
+      <span>Je souhaite recevoir les actualités de CustoVox.ai (facultatif, désinscription en un clic).</span>
     </label>
 
     <button type="submit" class="contact-submit" id="studySubmit">Recevoir mon étude de cas gratuite →</button>
-    <p class="contact-msg" id="studyInvalid" hidden>Merci d'indiquer un e-mail valide, votre secteur, votre volume, et de cocher la case de consentement.</p>
+    <p class="contact-msg" id="studyInvalid" hidden>Merci d'indiquer un e-mail valide, votre secteur et votre volume, et d'accepter le traitement de vos informations.</p>
     <p class="contact-msg" id="studyFailed" hidden>L'envoi a échoué. Vérifiez votre connexion et réessayez.</p>
   </form>
   <div class="study-success" id="studySuccess" hidden>
@@ -711,6 +715,7 @@ function showSector(sector) {
         lang: document.documentElement.lang,
         page: location.pathname,
         consent: true,
+        newsletter: $('study-newsletter').checked,
         website: $('study-website').value
       })
     }).then(function () {

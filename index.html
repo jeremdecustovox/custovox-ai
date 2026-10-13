@@ -267,7 +267,7 @@
   }
   .contact-form select:focus { outline: 2px solid var(--teal); outline-offset: 1px; border-color: var(--teal); }
   .contact-form .consent {
-    display: flex; gap: 8px; align-items: flex-start; margin-top: 0.75rem;
+    display: flex; gap: 8px; align-items: flex-start; margin-top: 0.6rem;
     font-size: 12px; font-weight: 400; color: var(--gray-600); line-height: 1.5;
   }
   .contact-form .consent input { width: auto; margin-top: 3px; accent-color: var(--teal); flex-shrink: 0; }
@@ -434,11 +434,15 @@
 
     <label class="consent">
       <input type="checkbox" id="study-consent" required>
-      <span>I agree that CustoVox.ai may use my email to send me my case study and news about CustoVox. Unsubscribe anytime.</span>
+      <span>I agree that CustoVox.ai uses this information to prepare and send me my case study (<a href="/privacy.html" target="_blank">privacy policy</a>).</span>
+    </label>
+    <label class="consent">
+      <input type="checkbox" id="study-newsletter">
+      <span>Keep me informed about CustoVox.ai news (optional, one-click unsubscribe).</span>
     </label>
 
     <button type="submit" class="contact-submit" id="studySubmit">Get my free case study →</button>
-    <p class="contact-msg" id="studyInvalid" hidden>Please enter a valid email, choose your industry and volume, and tick the consent box.</p>
+    <p class="contact-msg" id="studyInvalid" hidden>Please enter a valid email, choose your industry and volume, and accept the processing of your information.</p>
     <p class="contact-msg" id="studyFailed" hidden>Sending failed. Check your connection and try again.</p>
   </form>
   <div class="study-success" id="studySuccess" hidden>
@@ -711,6 +715,7 @@ function showSector(sector) {
         lang: document.documentElement.lang,
         page: location.pathname,
         consent: true,
+        newsletter: $('study-newsletter').checked,
         website: $('study-website').value
       })
     }).then(function () {
