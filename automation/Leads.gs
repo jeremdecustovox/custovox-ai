@@ -1,16 +1,16 @@
 /**
  * CustoVox - leads database: signups from the custovox.ai form (all languages).
  *
- * The website form posts { app: 'custovox-lead', email, industry, volume, lang, page,
- * consent, website } to the same web app URL as the usage statistics; doPost in Code.gs
- * hands it to handleLead_. Each valid signup becomes a row in the "Leads" sheet and an
- * email to NOTIFY_LEADS_TO.
+ * Lives in the Google Workspace spreadsheet "CustoVox Leads" (personal data), with Web.gs.
+ * The website case-study form posts { app: 'custovox-lead', email, industry, volume, lang,
+ * page, consent, newsletter, website }; doPost (Web.gs) hands it to handleLead_. Each valid
+ * signup becomes a row in the "Leads" sheet and an email to NOTIFY_LEADS_TO.
  */
 
 const LEADS_SHEET = 'Leads';
 const NOTIFY_LEADS_TO = 'jeremie@custovox.ai';
 const LEAD_HEADERS = ['date', 'email', 'industry', 'conversations / month', 'language', 'page',
-  'consent', 'status', 'notes'];
+  'consent', 'newsletter', 'status', 'notes'];
 
 function handleLead_(p) {
   const email = String(p.email || '').trim().toLowerCase().slice(0, 200);
@@ -23,7 +23,7 @@ function handleLead_(p) {
   const existing = sheet.getRange(2, 2, Math.max(sheet.getLastRow() - 1, 1), 1).getValues()
     .some(r => r[0] === email);
   const row = [new Date(), email, clean(p.industry), clean(p.volume), clean(p.lang), clean(p.page),
-    'yes', existing ? 'duplicate' : 'new', ''];
+    'yes', p.newsletter === true ? 'yes' : 'no', existing ? 'duplicate' : 'new', ''];
   sheet.appendRow(row);
 
   if (!existing) {
@@ -35,6 +35,7 @@ function handleLead_(p) {
       'Conversations / mois : ' + row[3],
       'Langue : ' + row[4],
       'Page : https://custovox.ai' + row[5],
+      'Actualités (newsletter) : ' + (row[7] === 'yes' ? 'oui' : 'non'),
       '',
       'Promesse faite : étude de cas NLP gratuite sous 48 h.',
       'Base de données : ' + SpreadsheetApp.getActiveSpreadsheet().getUrl()
