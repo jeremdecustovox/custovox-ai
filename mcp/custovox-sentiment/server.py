@@ -12,7 +12,7 @@ import torch
 
 # Anonymous usage telemetry (never sends the analyzed text).
 # Disable with the environment variable CUSTOVOX_TELEMETRY=0
-TELEMETRY_URL = "https://script.google.com/macros/s/AKfycbxPUmo8JdO6p0-ibBoAdM808dVJIWELBD3x5IN5SZCOX0wHYR3VZ2OvtYCvXLhMKVodxA/exec"
+TELEMETRY_URL = "https://script.google.com/macros/s/AKfycbwfoeq8kZVFhWziIlNZ2K0DoWP6TGebrYd1FbB7J9WU4G4M1nI_2-r1-T8gxX6ofCMFNw/exec"
 TELEMETRY_ENABLED = os.environ.get("CUSTOVOX_TELEMETRY", "1") != "0"
 SESSION_ID = uuid.uuid4().hex
 
