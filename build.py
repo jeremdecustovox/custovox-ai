@@ -6,6 +6,7 @@ Blog articles whose `article:published_time` is later than today (Paris time)
 are left out, and every link to them is removed, so each article goes live on
 its own date. Every page gets the language switcher (EN · FR) and
 hreflang links; translated articles have localized URLs (i18n/slugs.json).
+/llms.txt is regenerated at every build from llms-header.md + the pages published that day.
 
 Usage: python3 build.py [YYYY-MM-DD]   (optional date, for testing)
 """
@@ -23,7 +24,7 @@ LANGS = ["en", "fr"]                                # published languages; "en" 
 HIDDEN_LANGS = ["de", "es", "pt-br"]               # kept in the repo, not published: redirected to English
 HREFLANG = {"en": "en", "fr": "fr", "de": "de", "es": "es", "pt-br": "pt-BR"}
 NAMES = {"en": "English", "fr": "Français", "de": "Deutsch", "es": "Español", "pt-br": "Português (Brasil)"}
-PUBLISHED = ["index.html", "faq.html", "llms.txt", "merci.html", "thank-you.html", "privacy.html", "consent.js",
+PUBLISHED = ["index.html", "faq.html", "merci.html", "thank-you.html", "privacy.html", "consent.js",
              "robots.txt", "blog", "images", "fr"]
 
 CODES = {"en": "EN", "fr": "FR", "de": "DE", "es": "ES", "pt-br": "PT"}
@@ -114,6 +115,43 @@ def add_language_links(page: Path) -> None:
     page.write_text(html, encoding="utf-8")
 
 
+def page_info(page: Path):
+    """(title, description) of a published page, without the " — CustoVox.ai" suffix."""
+    html = page.read_text(encoding="utf-8")
+    title = re.search(r"<title>(.*?)</title>", html, re.S)
+    desc = re.search(r'<meta name="description" content="([^"]*)"', html)
+    title = re.sub(r"\s*[—|-]\s*CustoVox\.ai\s*$", "", title.group(1).strip()) if title else page.stem
+    return title, (desc.group(1).strip() if desc else "")
+
+
+def write_llms_txt(pages) -> None:
+    """dist/llms.txt = llms-header.md (fixed text) + the pages actually published today."""
+    src = ROOT / "llms-header.md"
+    if not src.exists():
+        return
+    text = re.sub(r"(?s)<!--(?! OPTIONAL).*?-->\n?", "", src.read_text(encoding="utf-8"))
+    head, _, optional = text.partition("<!-- OPTIONAL -->\n")
+    by_rel = {p.relative_to(DIST).as_posix(): p for p in pages}
+
+    def line(rel):
+        title, desc = page_info(by_rel[rel])
+        return f"- [{title}]({SITE}{url_of(rel)})" + (f": {desc}" if desc else "")
+
+    sections = {
+        "Main pages": ["index.html", "fr/index.html", "faq.html", "fr/faq.html"],
+        "Blog (English)": ["blog/index.html"] + sorted(r for r in by_rel if r.startswith("blog/") and r != "blog/index.html"),
+        "Blog (français)": ["fr/blog/index.html"] + sorted(r for r in by_rel if r.startswith("fr/blog/") and r != "fr/blog/index.html"),
+        "Legal": ["privacy.html", "fr/confidentialite.html"],
+    }
+    out = [head.rstrip(), ""]
+    for name, rels in sections.items():
+        rels = [r for r in rels if r in by_rel]
+        if rels:
+            out += [f"## {name}"] + [line(r) for r in rels] + [""]
+    out.append(optional.strip())
+    (DIST / "llms.txt").write_text("\n".join(out) + "\n", encoding="utf-8")
+
+
 def main() -> None:
     today = datetime.date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else today_paris()
 
@@ -178,6 +216,7 @@ def main() -> None:
     sitemap += [f"  <url><loc>{u}</loc></url>" for u in urls]
     sitemap.append("</urlset>")
     (DIST / "sitemap.xml").write_text("\n".join(sitemap) + "\n", encoding="utf-8")
+    write_llms_txt(pages)
 
     print(f"Build date {today}: {len(live)} article(s) live, {len(hidden)} scheduled, {len(pages)} pages")
     for slug in sorted(hidden):
