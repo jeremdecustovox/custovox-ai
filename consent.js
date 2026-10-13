@@ -4,10 +4,12 @@
  * - "Refuse" is as visible and easy as "Accept"; the choice is kept 6 months.
  * - Global Privacy Control (GPC) is treated as a refusal.
  * - Adds "Privacy policy" and "Cookie settings" links to the page footer.
- * Set GA_ID below to turn audience measurement on; empty = no banner, no Analytics.
+ * Audience measurement goes through Google Tag Manager (GTM_ID): the GA4 tag is configured
+ * inside the GTM container. GTM is loaded only after consent; empty IDs = no banner.
  */
 (function () {
-  var GA_ID = '';                            // e.g. 'G-XXXXXXXXXX'
+  var GTM_ID = 'GTM-NWDPP27H';              // Google Tag Manager container (contains the GA4 tag)
+  var GA_ID = '';                            // optional direct GA4 ID, only if GTM is not used
   var KEY = 'cvx-consent';
   var MAX_AGE = 182 * 24 * 3600 * 1000;      // 6 months
 
@@ -35,9 +37,17 @@
   }
 
   function loadAnalytics() {
-    if (!GA_ID || window.__cvxGa) return;
+    if (window.__cvxGa || (!GTM_ID && !GA_ID)) return;
     window.__cvxGa = true;
     window.dataLayer = window.dataLayer || [];
+    if (GTM_ID) {
+      window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js', analytics_consent: 'granted' });
+      var g = document.createElement('script');
+      g.async = true;
+      g.src = 'https://www.googletagmanager.com/gtm.js?id=' + GTM_ID;
+      document.head.appendChild(g);
+      return;
+    }
     window.gtag = function () { window.dataLayer.push(arguments); };
     window.gtag('js', new Date());
     window.gtag('config', GA_ID, {
@@ -115,7 +125,7 @@
     var span = document.createElement('span');
     span.className = 'cvx-legal';
     span.innerHTML = '<a href="' + T.policy + '">' + T.privacy + '</a>' +
-      (GA_ID ? ' · <button type="button" class="cvx-settings">' + T.settings + '</button>' : '');
+      (GTM_ID || GA_ID ? ' · <button type="button" class="cvx-settings">' + T.settings + '</button>' : '');
     footer.appendChild(span);
     var b = span.querySelector('.cvx-settings');
     if (b) b.addEventListener('click', showBanner);
@@ -124,7 +134,7 @@
   function init() {
     addStyles();
     addFooterLinks();
-    if (!GA_ID) return;
+    if (!GTM_ID && !GA_ID) return;
     var gpc = navigator.globalPrivacyControl === true;
     var choice = read();
     if (gpc && choice !== 'granted') return;   // GPC = refusal, no banner
