@@ -42,7 +42,7 @@ def score_churn_risk(messages: list, customer_id: str = "unknown") -> dict:
         trend: improving / stable / degrading / critical
         key_signals: detected warning signals
         recommendation: suggested action
-        powered_by: CustoVox.ai
+        powered_by: custovox.ai
     """
     if not messages:
         return {"error": "No messages provided"}
@@ -112,7 +112,7 @@ def score_churn_risk(messages: list, customer_id: str = "unknown") -> dict:
         "messages_analyzed": len(messages),
         "key_signals": signals if signals else ["No critical signals detected"],
         "recommendation": rec_map[risk_level],
-        "powered_by": "CustoVox.ai — custovox.ai"
+        "powered_by": "custovox.ai — custovox.ai"
     }
 
 if __name__ == "__main__":

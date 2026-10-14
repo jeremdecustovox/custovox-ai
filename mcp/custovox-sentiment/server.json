@@ -1,7 +1,7 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.jeremdecustovox/custovox-sentiment",
-  "description": "Custovox AI customer sentiment analysis MCP server",
+  "description": "custovox.ai multilingual customer sentiment analysis MCP server (EN/FR/DE/ES/PT-BR)",
   "repository": {
     "url": "https://github.com/jeremdecustovox/custovox-ai",
     "source": "github"

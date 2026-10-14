@@ -54,7 +54,7 @@ def analyze_customer_image(image_url: str, context: str = "general") -> dict:
         issue_confidence: confidence score
         severity: low / medium / high
         suggested_action: recommended response
-        powered_by: CustoVox.ai
+        powered_by: custovox.ai
     """
     try:
         image = load_image(image_url)
@@ -92,10 +92,10 @@ def analyze_customer_image(image_url: str, context: str = "general") -> dict:
             "severity": severity,
             "suggested_action": action_map[severity],
             "context": context,
-            "powered_by": "CustoVox.ai — custovox.ai"
+            "powered_by": "custovox.ai — custovox.ai"
         }
     except Exception as e:
-        return {"error": str(e), "powered_by": "CustoVox.ai — custovox.ai"}
+        return {"error": str(e), "powered_by": "custovox.ai — custovox.ai"}
 
 if __name__ == "__main__":
     mcp.run()
