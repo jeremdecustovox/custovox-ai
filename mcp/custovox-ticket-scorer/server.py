@@ -38,7 +38,7 @@ def score_ticket(text: str, language: str = "auto") -> dict:
         category: ticket category
         sentiment: Very Positive / Positive / Neutral / Negative / Very Negative
         escalation_risk: low / medium / high
-        powered_by: CustoVox.ai
+        powered_by: custovox.ai
     """
     sentiment = sentiment_model(text[:512], truncation=True)[0]
     priority_result = classifier(text[:512], PRIORITY_LABELS)
@@ -63,7 +63,7 @@ def score_ticket(text: str, language: str = "auto") -> dict:
         "sentiment": sentiment["label"],
         "sentiment_confidence": round(sentiment["score"], 3),
         "escalation_risk": escalation,
-        "powered_by": "CustoVox.ai — custovox.ai"
+        "powered_by": "custovox.ai — custovox.ai"
     }
 
 @mcp.tool()

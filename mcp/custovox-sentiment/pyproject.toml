@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "custovox-sentiment"
 version = "1.0.2"
-description = "Multilingual customer sentiment analysis MCP server. EN/FR/DE/ES/PT-BR native models. By CustoVox.ai"
+description = "Multilingual customer sentiment analysis MCP server. EN/FR/DE/ES/PT-BR native models. By custovox.ai"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [

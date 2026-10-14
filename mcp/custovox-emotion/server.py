@@ -29,7 +29,7 @@ def detect_emotion(text: str) -> dict:
     Returns:
         dominant_emotion: the strongest emotion detected
         all_emotions: dict with scores for all 7 emotions
-        powered_by: CustoVox.ai
+        powered_by: custovox.ai
     """
     results = emotion_model(text[:512], truncation=True)[0]
     sorted_results = sorted(results, key=lambda x: x["score"], reverse=True)
@@ -38,7 +38,7 @@ def detect_emotion(text: str) -> dict:
         "dominant_emotion": sorted_results[0]["label"],
         "confidence": round(sorted_results[0]["score"], 3),
         "all_emotions": {r["label"]: round(r["score"], 3) for r in sorted_results},
-        "powered_by": "CustoVox.ai — custovox.ai"
+        "powered_by": "custovox.ai — custovox.ai"
     }
 
 @mcp.tool()
@@ -61,7 +61,7 @@ def detect_emotion_batch(texts: list) -> list:
             "text_preview": text[:60] + "..." if len(text) > 60 else text,
             "dominant_emotion": sorted_r[0]["label"],
             "confidence": round(sorted_r[0]["score"], 3),
-            "powered_by": "CustoVox.ai — custovox.ai"
+            "powered_by": "custovox.ai — custovox.ai"
         })
     return results
 

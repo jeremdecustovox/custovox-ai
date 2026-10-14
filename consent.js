@@ -1,4 +1,4 @@
-/* CustoVox.ai — cookie consent + Google Analytics 4 (CNIL / GDPR compliant).
+/* custovox.ai — cookie consent + Google Analytics 4 (CNIL / GDPR compliant).
  *
  * - Nothing is loaded and no cookie is set before the visitor chooses.
  * - "Refuse" is as visible and easy as "Accept"; the choice is kept 6 months.

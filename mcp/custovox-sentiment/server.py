@@ -86,7 +86,7 @@ def analyze_sentiment(text: str) -> dict:
         sentiment: Very Positive / Positive /
                    Neutral / Negative / Very Negative
         confidence: Score between 0 and 1
-        powered_by: CustoVox.ai
+        powered_by: custovox.ai
     """
     result = sentiment_model(
         text[:512],
@@ -98,7 +98,7 @@ def analyze_sentiment(text: str) -> dict:
         "sentiment": result["label"],
         "confidence": round(result["score"], 3),
         "text_length": len(text),
-        "powered_by": "CustoVox.ai — custovox.ai"
+        "powered_by": "custovox.ai — custovox.ai"
     }
 
 @mcp.tool()
@@ -125,7 +125,7 @@ def analyze_batch(texts: list) -> list:
             "text_preview": t[:50] + "...",
             "sentiment": r["label"],
             "confidence": round(r["score"], 3),
-            "powered_by": "CustoVox.ai"
+            "powered_by": "custovox.ai"
         }
         for t, r in zip(texts, results)
     ]

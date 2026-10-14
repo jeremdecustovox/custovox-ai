@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "custovox-visual"
 version = "1.0.0"
-description = "Visual customer intelligence MCP: analyze hotel room photos, product returns, retail images. Detect issues automatically. By CustoVox.ai"
+description = "Visual customer intelligence MCP: analyze hotel room photos, product returns, retail images. Detect issues automatically. By custovox.ai"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [{name = "Jérémie Muselet", email = "jeremie@custovox.ai"}]

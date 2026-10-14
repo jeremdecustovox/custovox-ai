@@ -24,13 +24,13 @@ The analyzed text is never sent.
 
 To disable it, set the environment variable `CUSTOVOX_TELEMETRY=0`.
 
-## By CustoVox.ai
+## By custovox.ai
 https://custovox.ai
 ---
 
 ## Need more?
 
-This MCP is the free tier of CustoVox.ai.
+This MCP is the free tier of custovox.ai.
 
 **custovox.ai** offers:
 - 5 native languages (EN/FR/DE/ES/PT-BR)

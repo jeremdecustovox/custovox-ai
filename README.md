@@ -1,4 +1,4 @@
-# CustoVox.ai — Customer Intelligence MCPs
+# custovox.ai — Customer Intelligence MCPs
 
 > Listen deeper. Act faster.
 
@@ -8,9 +8,9 @@ Built for **retail**, **e-commerce**, **SaaS** and **marketing agencies**.
 
 ---
 
-## What is CustoVox.ai?
+## What is custovox.ai?
 
-CustoVox.ai turns customer conversations into actionable business intelligence — using the same AI models used by Google, Amazon, Meta, Uber and Airbnb. Now accessible to any business.
+custovox.ai turns customer conversations into actionable business intelligence — using the same AI models used by Google, Amazon, Meta, Uber and Airbnb. Now accessible to any business.
 
 Validated on **83,724 real customer conversations**. Academic research — LUMEN Lab / IAE Lille.
 
