@@ -1,6 +1,13 @@
 {
  "planning": [
   {
+   "id": "li-2026-10-14",
+   "date": "2026-10-14 18:00",
+   "type": "linkedin",
+   "title": "Top 8 sentiment analysis tools 2027 (EN)",
+   "link": "https://custovox.ai/blog/best-customer-sentiment-analysis-tools-2027"
+  },
+  {
    "id": "li-2026-10-12",
    "date": "2026-10-12 18:00",
    "type": "linkedin",
@@ -104,6 +111,13 @@
    "type": "blog",
    "title": "2026 CX Year in Review",
    "link": "https://custovox.ai/blog/2026-cx-nlp-year-in-review"
+  },
+  {
+   "id": "blog-2026-10-14",
+   "date": "2026-10-14 09:00",
+   "type": "blog",
+   "title": "The 8 Best Customer Sentiment Analysis Tools in 2027",
+   "link": "https://custovox.ai/blog/best-customer-sentiment-analysis-tools-2027"
   }
  ],
  "tasks": [
