@@ -93,6 +93,17 @@
   }
   .hero-desc strong { color: var(--navy); }
 
+  .hero-sub { font-size: 16px; color: var(--gray-600); max-width: 720px; margin-top: -0.5rem; }
+  .hero-cont { padding-top: 2rem; }
+
+  .stats { background: var(--gray-50); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200); padding: 2.5rem 1.25rem; }
+  .stats-grid { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 1rem; }
+  @media (min-width: 760px) { .stats-grid { grid-template-columns: repeat(3, 1fr); } }
+  .stat { background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; padding: 1.5rem; }
+  .stat-value { display: block; font-size: 32px; font-weight: 800; color: var(--navy); line-height: 1.15; font-variant-numeric: tabular-nums; }
+  .stat-label { display: block; font-size: 15px; font-weight: 700; color: var(--teal-dark); margin: .35rem 0 .6rem; }
+  .stat-note { font-size: 13px; color: var(--gray-600); line-height: 1.6; }
+
   /* TRANSITION */
   .intro { text-align: center; padding: 2rem 1.5rem 1.5rem; max-width: 720px; margin: 0 auto; }
   .intro h2 { font-size: clamp(22px, 3vw, 28px); font-weight: 700; margin-bottom: 1rem; }
@@ -415,6 +426,8 @@
     <a href="/fr/fonctionnalites/" class="nav-link">Fonctionnalités</a>
     <a href="/fr/tarifs" class="nav-link">Tarifs</a>
     <a href="/fr/comment-ca-marche" class="nav-link">Comment ça marche</a>
+    <a href="/fr/integrations" class="nav-link">Intégrations</a>
+    <a href="/fr/a-propos" class="nav-link">À propos</a>
     <div class="lang">
       <a href="/" hreflang="en" title="English">EN</a>
       <a href="/fr/" hreflang="fr" title="Français" class="active" aria-current="true">FR</a>
@@ -445,7 +458,20 @@
 
 <!-- HERO -->
 <section class="hero">
-  <h1>Les modèles d'IA utilisés par Google,<br>Amazon, Meta, Uber &amp; Airbnb —<br><span class="accent">désormais pour votre entreprise.</span></h1>
+  <h1>Les mêmes techniques d'analyse que les équipes data des plus grandes entreprises technologiques —<br><span class="accent">accessibles à la vôtre.</span></h1>
+  <p class="hero-sub">Les entreprises qui analysent leurs retours clients réduisent leur perte de clients de 15 à 30 %.</p>
+</section>
+
+<!-- FIGURES -->
+<section class="stats" aria-label="custovox.ai en chiffres">
+  <div class="stats-grid">
+    <div class="stat"><span class="stat-value" data-count="483724">483 724</span><span class="stat-label">conversations clients analysées</span><p class="stat-note">et ce chiffre augmente chaque semaine</p></div>
+    <div class="stat"><span class="stat-value">R² = 0,848</span><span class="stat-label">fiabilité du modèle</span><p class="stat-note">84,8 % des variations de satisfaction client sont correctement expliquées par notre modèle. Validé sur données de test indépendantes du corpus d'entraînement.</p></div>
+    <div class="stat"><span class="stat-value">Anti-overfitting</span><span class="stat-label">processus qualité</span><p class="stat-note">Chaque modèle est testé sur des données qu'il n'a jamais vues — pour garantir une fiabilité terrain, pas seulement statistique.</p></div>
+  </div>
+</section>
+
+<section class="hero hero-cont">
   <p class="hero-quote">Et si vous <strong>saviez</strong> exactement <strong>pourquoi</strong> vos clients partent — <strong>avant</strong> qu'ils ne le fassent ?</p>
   <p class="hero-desc">
     Détectez les <strong>émotions</strong>, anticipez les <strong>risques d'escalade</strong>, prédisez le <strong>churn</strong>, et faites émerger les <strong>leviers de satisfaction</strong>, <strong>points de friction</strong>, <strong>besoins non couverts</strong> et <strong>manques produit</strong> — à partir de n'importe quel appel, avis, ticket ou e-mail. Dans toutes les langues. À partir de 49 €/mois.
@@ -607,6 +633,10 @@
     <label class="consent">
       <input type="checkbox" id="study-newsletter">
       <span>Je souhaite recevoir les actualités de custovox.ai (facultatif, désinscription en un clic).</span>
+    </label>
+    <label class="consent">
+      <input type="checkbox" id="study-retention">
+      <span>J'accepte que custovox.ai conserve mes données analysées dans le temps, afin de suivre l'évolution de mes indicateurs clients d'une analyse à l'autre (facultatif — voir la <a href="/fr/confidentialite#conservation" target="_blank">politique de confidentialité</a>).</span>
     </label>
 
     <button type="submit" class="contact-submit" id="studySubmit">Recevoir mon étude de cas gratuite →</button>
@@ -832,7 +862,7 @@ function showSector(sector) {
     $('studySubmit').disabled = true;
     post({ app: 'custovox-lead', email: email, industry: $('study-industry').value, volume: $('study-volume').value,
            lang: document.documentElement.lang, page: location.pathname, consent: true,
-           newsletter: $('study-newsletter').checked, website: $('study-website').value })
+           newsletter: $('study-newsletter').checked, retention: $('study-retention').checked, website: $('study-website').value })
       .then(function () { $('studyForm').hidden = true; $('studySuccess').hidden = false; })
       .catch(function () { $('studySubmit').disabled = false; $('studyFailed').hidden = false; });
   });
@@ -849,6 +879,27 @@ function showSector(sector) {
       .then(function () { location.href = '/merci.html'; })
       .catch(function () { $('contactSubmit').disabled = false; $('contactFailed').hidden = false; });
   });
+})();
+</script>
+
+<script>
+/* Count-up of the first figure when it scrolls into view. */
+(function () {
+  var el = document.querySelector('[data-count]');
+  if (!el || !('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var target = +el.getAttribute('data-count'), final = el.textContent, fmt = new Intl.NumberFormat(document.documentElement.lang);
+  el.textContent = fmt.format(0);
+  new IntersectionObserver(function (entries, obs) {
+    if (!entries[0].isIntersecting) return;
+    obs.disconnect();
+    var start = null;
+    requestAnimationFrame(function step(ts) {
+      if (start === null) start = ts;
+      var p = Math.min((ts - start) / 2000, 1), eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = p < 1 ? fmt.format(Math.round(target * eased)) : final;
+      if (p < 1) requestAnimationFrame(step);
+    });
+  }, { threshold: 0.4 }).observe(el);
 })();
 </script>
 </body>

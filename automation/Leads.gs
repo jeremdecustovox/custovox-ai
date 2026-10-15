@@ -3,14 +3,14 @@
  *
  * Lives in the Google Workspace spreadsheet "CustoVox Leads" (personal data), with Web.gs.
  * The website case-study form posts { app: 'custovox-lead', email, industry, volume, lang,
- * page, consent, newsletter, website }; doPost (Web.gs) hands it to handleLead_. Each valid
+ * page, consent, newsletter, retention, website }; doPost (Web.gs) hands it to handleLead_. Each valid
  * signup becomes a row in the "Leads" sheet and an email to NOTIFY_LEADS_TO.
  */
 
 const LEADS_SHEET = 'Leads';
 const NOTIFY_LEADS_TO = 'jeremie@custovox.ai';
 const LEAD_HEADERS = ['date', 'email', 'industry', 'conversations / month', 'language', 'page',
-  'consent', 'newsletter', 'status', 'notes'];
+  'consent', 'newsletter', 'status', 'notes', 'data retention'];
 
 function handleLead_(p) {
   const email = String(p.email || '').trim().toLowerCase().slice(0, 200);
@@ -23,7 +23,8 @@ function handleLead_(p) {
   const existing = sheet.getRange(2, 2, Math.max(sheet.getLastRow() - 1, 1), 1).getValues()
     .some(r => r[0] === email);
   const row = [new Date(), email, clean(p.industry), clean(p.volume), clean(p.lang), clean(p.page),
-    'yes', p.newsletter === true ? 'yes' : 'no', existing ? 'duplicate' : 'new', ''];
+    'yes', p.newsletter === true ? 'yes' : 'no', existing ? 'duplicate' : 'new', '',
+    p.retention === true ? 'yes' : 'no'];
   sheet.appendRow(row);
 
   if (!existing) {
@@ -36,6 +37,7 @@ function handleLead_(p) {
       'Langue : ' + row[4],
       'Page : https://custovox.ai' + row[5],
       'Actualités (newsletter) : ' + (row[7] === 'yes' ? 'oui' : 'non'),
+      'Conservation des données analysées : ' + (row[10] === 'yes' ? 'oui' : 'non (suppression sous 30 jours)'),
       '',
       'Promesse faite : étude de cas NLP gratuite sous 48 h.',
       'Base de données : ' + SpreadsheetApp.getActiveSpreadsheet().getUrl()
@@ -52,6 +54,8 @@ function leadsSheet_() {
     sheet.appendRow(LEAD_HEADERS);
     sheet.setFrozenRows(1);
     sheet.getRange(1, 1, 1, LEAD_HEADERS.length).setFontWeight('bold');
+  } else if (sheet.getLastColumn() < LEAD_HEADERS.length) {   // columns added since the sheet was created
+    sheet.getRange(1, 1, 1, LEAD_HEADERS.length).setValues([LEAD_HEADERS]).setFontWeight('bold');
   }
   return sheet;
 }
