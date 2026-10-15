@@ -24,7 +24,7 @@ LANGS = ["en", "fr"]                                # published languages; "en" 
 HIDDEN_LANGS = ["de", "es", "pt-br"]               # kept in the repo, not published: redirected to English
 HREFLANG = {"en": "en", "fr": "fr", "de": "de", "es": "es", "pt-br": "pt-BR"}
 NAMES = {"en": "English", "fr": "Français", "de": "Deutsch", "es": "Español", "pt-br": "Português (Brasil)"}
-PUBLISHED = ["index.html", "faq.html", "pricing.html", "how-it-works.html", "features", "integrations.html", "about.html", "merci.html", "thank-you.html", "privacy.html", "consent.js",
+PUBLISHED = ["index.html", "faq.html", "pricing.html", "how-it-works.html", "features", "integrations.html", "about.html", "security-gdpr.html", "merci.html", "thank-you.html", "privacy.html", "consent.js",
              "robots.txt", "blog", "images", "fr"]
 
 CODES = {"en": "EN", "fr": "FR", "de": "DE", "es": "ES", "pt-br": "PT"}
@@ -140,7 +140,7 @@ def write_llms_txt(pages) -> None:
     sections = {
         "Main pages": ["index.html", "fr/index.html", "faq.html", "fr/faq.html", "pricing.html", "fr/tarifs.html",
                        "how-it-works.html", "fr/comment-ca-marche.html", "integrations.html", "fr/integrations.html",
-                       "about.html", "fr/a-propos.html"],
+                       "about.html", "fr/a-propos.html", "security-gdpr.html", "fr/securite-rgpd.html"],
         "Features": ["features/index.html", "fr/fonctionnalites/index.html"]
                     + [f"{p}/{m}/index.html" for m in ("textiq", "voiceiq", "visualiq", "predictiq")
                        for p in ("features", "fr/fonctionnalites")],
