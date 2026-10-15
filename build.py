@@ -24,7 +24,7 @@ LANGS = ["en", "fr"]                                # published languages; "en" 
 HIDDEN_LANGS = ["de", "es", "pt-br"]               # kept in the repo, not published: redirected to English
 HREFLANG = {"en": "en", "fr": "fr", "de": "de", "es": "es", "pt-br": "pt-BR"}
 NAMES = {"en": "English", "fr": "Français", "de": "Deutsch", "es": "Español", "pt-br": "Português (Brasil)"}
-PUBLISHED = ["index.html", "faq.html", "pricing.html", "how-it-works.html", "merci.html", "thank-you.html", "privacy.html", "consent.js",
+PUBLISHED = ["index.html", "faq.html", "pricing.html", "how-it-works.html", "features", "merci.html", "thank-you.html", "privacy.html", "consent.js",
              "robots.txt", "blog", "images", "fr"]
 
 CODES = {"en": "EN", "fr": "FR", "de": "DE", "es": "ES", "pt-br": "PT"}
@@ -140,6 +140,9 @@ def write_llms_txt(pages) -> None:
     sections = {
         "Main pages": ["index.html", "fr/index.html", "faq.html", "fr/faq.html", "pricing.html", "fr/tarifs.html",
                        "how-it-works.html", "fr/comment-ca-marche.html"],
+        "Features": ["features/index.html", "fr/fonctionnalites/index.html"]
+                    + [f"{p}/{m}/index.html" for m in ("textiq", "voiceiq", "visualiq", "predictiq")
+                       for p in ("features", "fr/fonctionnalites")],
         "Blog (English)": ["blog/index.html"] + sorted(r for r in by_rel if r.startswith("blog/") and r != "blog/index.html"),
         "Blog (français)": ["fr/blog/index.html"] + sorted(r for r in by_rel if r.startswith("fr/blog/") and r != "fr/blog/index.html"),
         "Legal": ["privacy.html", "fr/confidentialite.html"],
