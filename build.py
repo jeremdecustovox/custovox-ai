@@ -24,7 +24,7 @@ LANGS = ["en", "fr"]                                # published languages; "en" 
 HIDDEN_LANGS = ["de", "es", "pt-br"]               # kept in the repo, not published: redirected to English
 HREFLANG = {"en": "en", "fr": "fr", "de": "de", "es": "es", "pt-br": "pt-BR"}
 NAMES = {"en": "English", "fr": "Français", "de": "Deutsch", "es": "Español", "pt-br": "Português (Brasil)"}
-PUBLISHED = ["index.html", "faq.html", "merci.html", "thank-you.html", "privacy.html", "consent.js",
+PUBLISHED = ["index.html", "faq.html", "pricing.html", "how-it-works.html", "merci.html", "thank-you.html", "privacy.html", "consent.js",
              "robots.txt", "blog", "images", "fr"]
 
 CODES = {"en": "EN", "fr": "FR", "de": "DE", "es": "ES", "pt-br": "PT"}
@@ -33,7 +33,7 @@ SWITCH_CSS = """<style>
 .lang-switch a{font-size:12px;font-weight:600;letter-spacing:.04em;color:#94A3B8;text-decoration:none;padding:2px 0;border-bottom:2px solid transparent;transition:color .15s;}
 .lang-switch a:hover{color:#0D2B6B;}
 .lang-switch a.active{color:#0D2B6B;border-bottom-color:#00C48C;}
-@media(max-width:600px){nav:has(.lang-switch){flex-wrap:wrap;row-gap:.6rem;}.lang-switch{margin-left:0;}}
+@media(max-width:600px){nav:has(.lang-switch){flex-wrap:wrap;row-gap:.6rem;}.nav-links{flex-wrap:wrap;row-gap:.5rem;}.lang-switch{margin-left:0;}}
 </style>
 """
 
@@ -120,7 +120,7 @@ def page_info(page: Path):
     html = page.read_text(encoding="utf-8")
     title = re.search(r"<title>(.*?)</title>", html, re.S)
     desc = re.search(r'<meta name="description" content="([^"]*)"', html)
-    title = re.sub(r"\s*[—|-]\s*CustoVox\.ai\s*$", "", title.group(1).strip()) if title else page.stem
+    title = re.sub(r"(?i)\s*[—|-]\s*custovox\.ai\s*$", "", title.group(1).strip()) if title else page.stem
     return title, (desc.group(1).strip() if desc else "")
 
 
@@ -138,7 +138,8 @@ def write_llms_txt(pages) -> None:
         return f"- [{title}]({SITE}{url_of(rel)})" + (f": {desc}" if desc else "")
 
     sections = {
-        "Main pages": ["index.html", "fr/index.html", "faq.html", "fr/faq.html"],
+        "Main pages": ["index.html", "fr/index.html", "faq.html", "fr/faq.html", "pricing.html", "fr/tarifs.html",
+                       "how-it-works.html", "fr/comment-ca-marche.html"],
         "Blog (English)": ["blog/index.html"] + sorted(r for r in by_rel if r.startswith("blog/") and r != "blog/index.html"),
         "Blog (français)": ["fr/blog/index.html"] + sorted(r for r in by_rel if r.startswith("fr/blog/") and r != "fr/blog/index.html"),
         "Legal": ["privacy.html", "fr/confidentialite.html"],

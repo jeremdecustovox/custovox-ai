@@ -4,6 +4,7 @@
 > custovox.ai uses AI to analyze your calls, customer reviews, tickets and emails to detect emotions and predict escalation and churn risks, in 5 languages, with no data team. custovox.ai is published by Corpstxt (SASU, Wambrechies, France). Plans start at €49/month (excl. VAT); a free case study (analysis of 100 reviews or tickets, results within 48 hours) is available.
 
 Key facts:
+- Plans (excl. VAT): Starter €49/month, Growth €299/month, Scale €699/month, Enterprise on quote; yearly billing = 2 months free. Details: https://custovox.ai/pricing
 - Analysis modules: TextIQ (text), VoiceIQ (voice), VisualIQ (images), PredictIQ (prediction), SearchIQ (search).
 - Native languages: English, French, German, Spanish, Brazilian Portuguese.
 - Analyses run with custovox.ai's own models and scripts; customer data is hosted in France and never used to train models.
