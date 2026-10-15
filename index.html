@@ -92,6 +92,17 @@
   }
   .hero-desc strong { color: var(--navy); }
 
+  .hero-sub { font-size: 16px; color: var(--gray-600); max-width: 720px; margin-top: -0.5rem; }
+  .hero-cont { padding-top: 2rem; }
+
+  .stats { background: var(--gray-50); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200); padding: 2.5rem 1.25rem; }
+  .stats-grid { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 1rem; }
+  @media (min-width: 760px) { .stats-grid { grid-template-columns: repeat(3, 1fr); } }
+  .stat { background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; padding: 1.5rem; }
+  .stat-value { display: block; font-size: 32px; font-weight: 800; color: var(--navy); line-height: 1.15; font-variant-numeric: tabular-nums; }
+  .stat-label { display: block; font-size: 15px; font-weight: 700; color: var(--teal-dark); margin: .35rem 0 .6rem; }
+  .stat-note { font-size: 13px; color: var(--gray-600); line-height: 1.6; }
+
   /* TRANSITION */
   .intro { text-align: center; padding: 2rem 1.5rem 1.5rem; max-width: 720px; margin: 0 auto; }
   .intro h2 { font-size: clamp(22px, 3vw, 28px); font-weight: 700; margin-bottom: 1rem; }
@@ -414,6 +425,8 @@
     <a href="/features/" class="nav-link">Features</a>
     <a href="/pricing" class="nav-link">Pricing</a>
     <a href="/how-it-works" class="nav-link">How it works</a>
+    <a href="/integrations" class="nav-link">Integrations</a>
+    <a href="/about" class="nav-link">About</a>
     <div class="lang">
       <a href="/" hreflang="en" title="English" class="active" aria-current="true">EN</a>
       <a href="/fr/" hreflang="fr" title="Français">FR</a>
@@ -444,7 +457,20 @@
 
 <!-- HERO -->
 <section class="hero">
-  <h1>The AI models used by Google,<br>Amazon, Meta, Uber &amp; Airbnb —<br><span class="accent">now for your business.</span></h1>
+  <h1>The same analysis techniques as the data teams of the world's largest tech companies —<br><span class="accent">now accessible to yours.</span></h1>
+  <p class="hero-sub">Companies that analyze their customer feedback reduce customer loss by 15 to 30%.</p>
+</section>
+
+<!-- FIGURES -->
+<section class="stats" aria-label="custovox.ai in figures">
+  <div class="stats-grid">
+    <div class="stat"><span class="stat-value" data-count="483724">483,724</span><span class="stat-label">customer conversations analyzed</span><p class="stat-note">and growing every week</p></div>
+    <div class="stat"><span class="stat-value">R² = 0.848</span><span class="stat-label">model reliability score</span><p class="stat-note">84.8% of customer satisfaction variations are correctly explained by our model. Validated on test data independent from the training corpus.</p></div>
+    <div class="stat"><span class="stat-value">Anti-overfitting</span><span class="stat-label">quality process</span><p class="stat-note">Every model is tested on data it has never seen — to guarantee real-world reliability, not just statistical performance.</p></div>
+  </div>
+</section>
+
+<section class="hero hero-cont">
   <p class="hero-quote">What if you <strong>knew</strong> exactly <strong>why</strong> customers leave — <strong>before</strong> they do?</p>
   <p class="hero-desc">
     Detect <strong>emotions</strong>, anticipate <strong>escalation risks</strong>, predict <strong>churn</strong>, and surface <strong>satisfaction drivers</strong>, <strong>pain points</strong>, <strong>unmet needs</strong> and <strong>product gaps</strong> — from any call, review, ticket or email. In any language. From €49/month.
@@ -606,6 +632,10 @@
     <label class="consent">
       <input type="checkbox" id="study-newsletter">
       <span>Keep me informed about custovox.ai news (optional, one-click unsubscribe).</span>
+    </label>
+    <label class="consent">
+      <input type="checkbox" id="study-retention">
+      <span>I agree to allow custovox.ai to retain my analyzed data over time, so I can track the evolution of my customer indicators from one analysis to the next (optional — see <a href="/privacy#retention" target="_blank">privacy policy</a>).</span>
     </label>
 
     <button type="submit" class="contact-submit" id="studySubmit">Get my free case study →</button>
@@ -831,7 +861,7 @@ function showSector(sector) {
     $('studySubmit').disabled = true;
     post({ app: 'custovox-lead', email: email, industry: $('study-industry').value, volume: $('study-volume').value,
            lang: document.documentElement.lang, page: location.pathname, consent: true,
-           newsletter: $('study-newsletter').checked, website: $('study-website').value })
+           newsletter: $('study-newsletter').checked, retention: $('study-retention').checked, website: $('study-website').value })
       .then(function () { $('studyForm').hidden = true; $('studySuccess').hidden = false; })
       .catch(function () { $('studySubmit').disabled = false; $('studyFailed').hidden = false; });
   });
@@ -848,6 +878,27 @@ function showSector(sector) {
       .then(function () { location.href = '/thank-you.html'; })
       .catch(function () { $('contactSubmit').disabled = false; $('contactFailed').hidden = false; });
   });
+})();
+</script>
+
+<script>
+/* Count-up of the first figure when it scrolls into view. */
+(function () {
+  var el = document.querySelector('[data-count]');
+  if (!el || !('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var target = +el.getAttribute('data-count'), final = el.textContent, fmt = new Intl.NumberFormat(document.documentElement.lang);
+  el.textContent = fmt.format(0);
+  new IntersectionObserver(function (entries, obs) {
+    if (!entries[0].isIntersecting) return;
+    obs.disconnect();
+    var start = null;
+    requestAnimationFrame(function step(ts) {
+      if (start === null) start = ts;
+      var p = Math.min((ts - start) / 2000, 1), eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = p < 1 ? fmt.format(Math.round(target * eased)) : final;
+      if (p < 1) requestAnimationFrame(step);
+    });
+  }, { threshold: 0.4 }).observe(el);
 })();
 </script>
 </body>
