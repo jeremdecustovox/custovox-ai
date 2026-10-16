@@ -1,28 +1,33 @@
 POST 1 — EN
-Jour : Mardi
-Heure : 8h30
+Jour : Mardi 20 octobre 2026
+Heure : 8h30 (Paris)
 Format : Texte seul (pas d'image)
+Prérequis : custovox-sentiment 1.0.3 et custovox-emotion 1.0.0 en ligne sur PyPI
 Texte :
 
-**We just published custovox-sentiment on PyPI.**
+**We just published two MCP servers on PyPI: custovox-sentiment and custovox-emotion.**
 
-A Model Context Protocol (MCP) server that runs
-multilingual customer sentiment analysis
+Two Model Context Protocol (MCP) servers that run
+customer sentiment and emotion analysis
 directly inside Claude Desktop, Cursor,
 or any MCP-compatible client.
 
-3 lines to install:
+1 line each to install:
 pip install custovox-sentiment
+pip install custovox-emotion
 
-What it does:
-→ Sentiment analysis (positive / negative / neutral)
-→ 6 emotion detection (joy, frustration, anger,
-   disappointment, surprise, satisfaction)
-→ 5 native languages: EN, FR, DE, ES, PT-BR
-→ No translation layer — models trained
-   natively on each language
+What they do:
+→ custovox-sentiment: 5-level sentiment
+   (very negative → very positive)
+   in EN, FR, DE, ES, PT-BR — no translation layer
+→ custovox-emotion: 7 emotions
+   (joy, anger, fear, sadness, surprise, disgust, neutral)
+   on English customer text
+→ Batch mode: up to 50 texts per call
+→ Runs on your machine — your customer text
+   is never sent anywhere
 
-Validated on 83,724 real customer conversations
+Validated on 483,724 real customer conversations
 (R² = 0.848).
 
 Built for teams that want to ask their customer data
@@ -33,15 +38,16 @@ a question — and get an answer in seconds.
 
 Premier commentaire à poster manuellement
 juste après publication :
-"→ GitHub : [lien repo]
- → PyPI : [lien package]
+"→ GitHub : https://github.com/jeremdecustovox/custovox-ai
+ → PyPI : https://pypi.org/project/custovox-sentiment/
+   · https://pypi.org/project/custovox-emotion/
  → custovox.ai"
 
 ---
 
 POST 2 — FR
-Jour : Vendredi
-Heure : 8h30
+Jour : Vendredi 23 octobre 2026
+Heure : 8h30 (Paris)
 Format : Texte + image /images/linkedin_cover_post2_fr.png
 Texte :
 
