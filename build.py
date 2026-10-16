@@ -15,6 +15,7 @@ import json
 import re
 import shutil
 import sys
+from html import unescape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -24,7 +25,7 @@ LANGS = ["en", "fr"]                                # published languages; "en" 
 HIDDEN_LANGS = ["de", "es", "pt-br"]               # kept in the repo, not published: redirected to English
 HREFLANG = {"en": "en", "fr": "fr", "de": "de", "es": "es", "pt-br": "pt-BR"}
 NAMES = {"en": "English", "fr": "Français", "de": "Deutsch", "es": "Español", "pt-br": "Português (Brasil)"}
-PUBLISHED = ["index.html", "faq.html", "pricing.html", "how-it-works.html", "features", "integrations.html", "about.html", "security-gdpr.html", "merci.html", "thank-you.html", "privacy.html", "consent.js",
+PUBLISHED = ["index.html", "faq.html", "pricing.html", "how-it-works.html", "features", "integrations.html", "about.html", "security-gdpr.html", "solutions", "merci.html", "thank-you.html", "privacy.html", "consent.js",
              "robots.txt", "blog", "images", "fr"]
 
 CODES = {"en": "EN", "fr": "FR", "de": "DE", "es": "ES", "pt-br": "PT"}
@@ -121,7 +122,7 @@ def page_info(page: Path):
     title = re.search(r"<title>(.*?)</title>", html, re.S)
     desc = re.search(r'<meta name="description" content="([^"]*)"', html)
     title = re.sub(r"(?i)\s*[—|-]\s*custovox\.ai\s*$", "", title.group(1).strip()) if title else page.stem
-    return title, (desc.group(1).strip() if desc else "")
+    return unescape(title), (unescape(desc.group(1).strip()) if desc else "")
 
 
 def write_llms_txt(pages) -> None:
@@ -141,6 +142,7 @@ def write_llms_txt(pages) -> None:
         "Main pages": ["index.html", "fr/index.html", "faq.html", "fr/faq.html", "pricing.html", "fr/tarifs.html",
                        "how-it-works.html", "fr/comment-ca-marche.html", "integrations.html", "fr/integrations.html",
                        "about.html", "fr/a-propos.html", "security-gdpr.html", "fr/securite-rgpd.html"],
+        "Solutions": ["solutions/retail.html", "fr/solutions/retail.html"],
         "Features": ["features/index.html", "fr/fonctionnalites/index.html"]
                     + [f"{p}/{m}/index.html" for m in ("textiq", "voiceiq", "visualiq", "predictiq")
                        for p in ("features", "fr/fonctionnalites")],

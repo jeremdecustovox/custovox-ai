@@ -130,6 +130,16 @@
   .checks li:last-child { border-bottom: 0; }
   .checks li::before { content: "✓"; position: absolute; left: 0; color: var(--teal-dark); font-weight: 800; }
   .cta-final .sub { color: rgba(255,255,255,.75); margin: 0 auto 1.5rem; }
+  /* NAV SOLUTIONS DROPDOWN */
+  .nav-dd { position: relative; }
+  .nav-dd summary { list-style: none; cursor: pointer; }
+  .nav-dd summary::-webkit-details-marker { display: none; }
+  .nav-dd summary::after { content: "▾"; font-size: 11px; margin-left: 4px; }
+  .nav-dd-menu { display: none; position: absolute; top: 100%; left: -10px; z-index: 30; min-width: 210px; padding: 6px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; box-shadow: 0 10px 30px rgba(13,43,107,.12); }
+  .nav-dd[open] .nav-dd-menu, .nav-dd:hover .nav-dd-menu { display: block; }
+  .nav-dd-menu a { display: block; padding: 8px 10px; border-radius: 6px; color: #0D2B6B; text-decoration: none; font-size: 14px; font-weight: 500; white-space: nowrap; }
+  .nav-dd-menu a:hover, .nav-dd-menu a[aria-current="page"] { background: #F8FAFC; color: #009E72; }
+
 </style>
 </head>
 <body>
@@ -142,6 +152,7 @@
     <a href="/fr/blog/" class="nav-link">Blog</a>
     <a href="/fr/faq" class="nav-link">FAQ</a>
     <a href="/fr/fonctionnalites/" class="nav-link">Fonctionnalités</a>
+    <details class="nav-dd"><summary class="nav-link">Solutions</summary><div class="nav-dd-menu"><a href="/fr/solutions/retail">Retail &amp; E-commerce</a></div></details>
     <a href="/fr/tarifs" class="nav-link">Tarifs</a>
     <a href="/fr/comment-ca-marche" class="nav-link">Comment ça marche</a>
     <a href="/fr/integrations" class="nav-link">Intégrations</a>
