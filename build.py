@@ -143,7 +143,8 @@ def write_llms_txt(pages) -> None:
                        "how-it-works.html", "fr/comment-ca-marche.html", "integrations.html", "fr/integrations.html",
                        "about.html", "fr/a-propos.html", "security-gdpr.html", "fr/securite-rgpd.html"],
         "Solutions": ["solutions/retail.html", "fr/solutions/retail.html",
-                      "solutions/hospitality.html", "fr/solutions/hospitality.html"],
+                      "solutions/hospitality.html", "fr/solutions/hospitality.html",
+                      "solutions/call-centers.html", "fr/solutions/call-centers.html"],
         "Features": ["features/index.html", "fr/fonctionnalites/index.html"]
                     + [f"{p}/{m}/index.html" for m in ("textiq", "voiceiq", "visualiq", "predictiq")
                        for p in ("features", "fr/fonctionnalites")],
