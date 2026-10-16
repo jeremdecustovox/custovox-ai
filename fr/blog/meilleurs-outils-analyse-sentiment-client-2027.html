@@ -112,6 +112,18 @@ tr:nth-child(even){background:var(--gray-50)}
 .btn-secondary{background:transparent;color:white;border:1.5px solid rgba(255,255,255,.4);font-size:14px;font-weight:600;padding:12px 24px;border-radius:8px;text-decoration:none}
 footer{text-align:center;padding:2rem;color:var(--gray-400);font-size:13px;border-top:1px solid var(--gray-200)}
 .faq-item h3{margin:0 0 .75rem}
+  /* NAV SOLUTIONS DROPDOWN */
+  .nav-dd { position: relative; }
+  .nav-dd summary { list-style: none; cursor: pointer; }
+  .nav-dd summary::-webkit-details-marker { display: none; }
+  .nav-dd summary::after { content: "▾"; font-size: 11px; margin-left: 4px; }
+  .nav-dd-menu { display: none; position: absolute; top: 100%; left: -10px; z-index: 30; min-width: 210px; padding: 6px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; box-shadow: 0 10px 30px rgba(13,43,107,.12); }
+  .nav-dd[open] .nav-dd-menu, .nav-dd:hover .nav-dd-menu { display: block; }
+  .nav-dd-menu a { display: block; padding: 8px 10px; border-radius: 6px; color: #0D2B6B; text-decoration: none; font-size: 14px; font-weight: 500; white-space: nowrap; }
+  .nav-dd-menu a:hover, .nav-dd-menu a[aria-current="page"] { background: #F8FAFC; color: #009E72; }
+
+  .nav-links .nav-dd summary { font-size: 14px; color: #475569; }
+  .nav-links .nav-dd summary:hover { color: #0D2B6B; }
 </style>
 </head>
 <body>
@@ -121,7 +133,7 @@ footer{text-align:center;padding:2rem;color:var(--gray-400);font-size:13px;borde
     <a href="/fr/" aria-label="Accueil" title="Accueil" style="display:inline-flex;align-items:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h5v-6h4v6h5V9.5"/></svg></a>
     <a href="/fr/blog/">Blog</a>
     <a href="/fr/faq">FAQ</a>
-    <a href="/fr/fonctionnalites/">Fonctionnalités</a>
+    <a href="/fr/fonctionnalites/">Fonctionnalités</a><details class="nav-dd"><summary>Solutions</summary><div class="nav-dd-menu"><a href="/fr/solutions/retail">Retail &amp; E-commerce</a></div></details>
     <a href="/fr/tarifs">Tarifs</a>
     <a href="/fr/comment-ca-marche">Comment ça marche</a>
     <a href="/fr/integrations">Intégrations</a>
