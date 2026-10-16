@@ -281,6 +281,13 @@
   @keyframes cvx-slide { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: none; } }
   html.cvx-locked { overflow: hidden; }
   @media (prefers-reduced-motion: reduce) { .cvx-panel, .cvx-nav.is-open .cvx-menu { animation: none !important; } }
+  /* Mobile: language link visible in the bar, next to the burger (not repeated inside the menu) */
+  .cvx-lang-m { display: none; }
+  @media (max-width: 899px) {
+    .cvx-lang-m { display: inline-flex; align-items: center; justify-content: center; margin-left: auto; margin-right: 6px; height: 32px; padding: 0 10px; border: 1.5px solid #E2E8F0; border-radius: 99px; font-size: 13px; font-weight: 700; letter-spacing: .04em; color: #0D2B6B; text-decoration: none; }
+    .cvx-lang-m:hover { border-color: #00C48C; color: #009E72; }
+    .cvx-items > li:has(> .cvx-lang) { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -288,6 +295,7 @@
 <nav class="cvx-nav" id="cvx-nav" aria-label="Main">
   <div class="cvx-bar">
     <a href="/" class="cvx-logo">custovox<span>.ai</span></a>
+    <a href="/fr/blog/analyse-nlp-avis-g2" class="cvx-lang-m" hreflang="fr" lang="fr" title="Français">FR</a>
     <button type="button" class="cvx-burger" aria-expanded="false" aria-controls="cvx-menu" aria-label="Menu"><span></span></button>
     <div class="cvx-menu" id="cvx-menu">
     <ul class="cvx-items">
