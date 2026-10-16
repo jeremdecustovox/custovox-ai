@@ -1,0 +1,80 @@
+POST 1 — EN
+Jour : Mardi
+Heure : 8h30
+Format : Texte seul (pas d'image)
+Texte :
+
+**We just published custovox-sentiment on PyPI.**
+
+A Model Context Protocol (MCP) server that runs
+multilingual customer sentiment analysis
+directly inside Claude Desktop, Cursor,
+or any MCP-compatible client.
+
+3 lines to install:
+pip install custovox-sentiment
+
+What it does:
+→ Sentiment analysis (positive / negative / neutral)
+→ 6 emotion detection (joy, frustration, anger,
+   disappointment, surprise, satisfaction)
+→ 5 native languages: EN, FR, DE, ES, PT-BR
+→ No translation layer — models trained
+   natively on each language
+
+Validated on 83,724 real customer conversations
+(R² = 0.848).
+
+Built for teams that want to ask their customer data
+a question — and get an answer in seconds.
+
+#MCP #ModelContextProtocol #NLP #SentimentAnalysis
+#ClaudeAI #OpenSource #CustomerIntelligence #PyPI
+
+Premier commentaire à poster manuellement
+juste après publication :
+"→ GitHub : [lien repo]
+ → PyPI : [lien package]
+ → custovox.ai"
+
+---
+
+POST 2 — FR
+Jour : Vendredi
+Heure : 8h30
+Format : Texte + image /images/linkedin_cover_post2_fr.png
+Texte :
+
+**Et si vous pouviez interroger vos données clients
+comme vous interrogez ChatGPT ?**
+
+"Quels sont les 3 principaux irritants
+de nos clients ce mois-ci ?"
+
+"Quel magasin a le plus de signaux
+de frustration cette semaine ?"
+
+"Quels clients risquent de ne pas renouveler
+dans les 30 prochains jours ?"
+
+C'est exactement ce que nous permettons
+depuis vos outils IA existants.
+
+Pas de dashboard supplémentaire.
+Pas d'équipe data.
+Pas de configuration complexe.
+
+Vos avis, tickets et appels clients
+deviennent une base de données
+que vous interrogez en langage naturel.
+
+À partir de 49 €/mois.
+Étude de cas gratuite en 48h → custovox.ai
+
+#IntelligenceClient #IA #NLP #VoixDuClient
+#SatisfactionClient #Retail #CallCenter #SaaS
+
+Premier commentaire à poster manuellement
+juste après publication :
+"→ Étude de cas gratuite : custovox.ai
+ → Sans carte bancaire · Résultat en 48h"
