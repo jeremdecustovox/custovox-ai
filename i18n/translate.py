@@ -50,15 +50,15 @@ def localize_links(html: str, lang: str, slugs: dict) -> str:
     return html
 
 
-NAV_LANG_LINK = re.compile(r'<a href="[^"]*" class="cvx-top cvx-lang"[^>]*>[^<]*</a>')
+NAV_LANG_LINK = re.compile(r'<a href="[^"]*" class="(cvx-top cvx-lang|cvx-lang-m)"[^>]*>[^<]*</a>')
 
 
 def english_link(html: str, page: Path) -> str:
-    """The site nav's language link (class cvx-lang) points back to the English source page."""
+    """The site nav's language links (menu: cvx-lang, mobile bar: cvx-lang-m) point back to the English source page."""
     rel = page.relative_to(ROOT).as_posix()
     url = "/" + (rel[:-len("index.html")] if rel.endswith("index.html") else rel[:-len(".html")])
-    link = f'<a href="{url}" class="cvx-top cvx-lang" hreflang="en" lang="en" title="English">EN</a>'
-    return NAV_LANG_LINK.sub(lambda m: link, html, count=1)
+    return NAV_LANG_LINK.sub(
+        lambda m: f'<a href="{url}" class="{m.group(1)}" hreflang="en" lang="en" title="English">EN</a>', html)
 
 
 def pages():
