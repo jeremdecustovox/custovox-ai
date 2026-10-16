@@ -25,7 +25,7 @@ LANGS = ["en", "fr"]                                # published languages; "en" 
 HIDDEN_LANGS = ["de", "es", "pt-br"]               # kept in the repo, not published: redirected to English
 HREFLANG = {"en": "en", "fr": "fr", "de": "de", "es": "es", "pt-br": "pt-BR"}
 NAMES = {"en": "English", "fr": "Français", "de": "Deutsch", "es": "Español", "pt-br": "Português (Brasil)"}
-PUBLISHED = ["index.html", "faq.html", "pricing.html", "how-it-works.html", "features", "integrations.html", "about.html", "security-gdpr.html", "solutions", "merci.html", "thank-you.html", "privacy.html", "consent.js",
+PUBLISHED = ["index.html", "faq.html", "pricing.html", "how-it-works.html", "features", "integrations.html", "about.html", "security-gdpr.html", "solutions", "merci.html", "thank-you.html", "privacy.html", "consent.js", "favicon.ico",
              "robots.txt", "blog", "images", "fr"]
 
 CODES = {"en": "EN", "fr": "FR", "de": "DE", "es": "ES", "pt-br": "PT"}
