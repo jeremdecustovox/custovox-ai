@@ -131,41 +131,143 @@
   .form-note a { color: var(--gray-600); }
   .form-msg { font-size: 14px; text-align: center; color: #B42318; }
   .form-ok { font-size: 15px; font-weight: 700; color: var(--teal-dark); text-align: center; }
-  /* NAV SOLUTIONS DROPDOWN */
-  .nav-dd { position: relative; }
-  .nav-dd summary { list-style: none; cursor: pointer; }
-  .nav-dd summary::-webkit-details-marker { display: none; }
-  .nav-dd summary::after { content: "▾"; font-size: 11px; margin-left: 4px; }
-  .nav-dd-menu { display: none; position: absolute; top: 100%; left: -10px; z-index: 30; min-width: 210px; padding: 6px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; box-shadow: 0 10px 30px rgba(13,43,107,.12); }
-  .nav-dd[open] .nav-dd-menu, .nav-dd:hover .nav-dd-menu { display: block; }
-  .nav-dd-menu a { display: block; padding: 8px 10px; border-radius: 6px; color: #0D2B6B; text-decoration: none; font-size: 14px; font-weight: 500; white-space: nowrap; }
-  .nav-dd-menu a:hover, .nav-dd-menu a[aria-current="page"] { background: #F8FAFC; color: #009E72; }
-
+</style>
+<style id="cvx-nav-css">
+  /* SITE NAV: grouped dropdowns (same block on every page) */
+  .cvx-nav { position: relative; top: auto; z-index: 50; display: block; width: auto; max-width: none; margin: 0; padding: 0; border: 0; box-shadow: none; background: #FFFFFF; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.4; }
+  .cvx-bar { max-width: 1080px; margin: 0 auto; padding: .9rem 2rem; display: flex; align-items: center; gap: 1.5rem; }
+  .cvx-logo { font-size: 22px; font-weight: 700; color: #00C48C; text-decoration: none; letter-spacing: -.3px; white-space: nowrap; }
+  .cvx-logo span { color: #0D2B6B; }
+  .cvx-menu { flex: 1; display: flex; align-items: center; gap: 1.25rem; }
+  .cvx-items { flex: 1; display: flex; justify-content: center; align-items: center; gap: .25rem; list-style: none; margin: 0; padding: 0; }
+  .cvx-items > li { position: relative; margin: 0; padding: 0; }
+  .cvx-top { display: inline-flex; align-items: center; gap: 6px; background: none; border: 0; border-radius: 6px; font: inherit; font-size: 15px; font-weight: 600; color: #0D2B6B; padding: 8px 12px; cursor: pointer; text-decoration: none; }
+  .cvx-top:hover { color: #009E72; }
+  .cvx-top.is-active { color: #009E72; box-shadow: inset 0 -2px 0 #00C48C; border-radius: 0; }
+  .cvx-dd > .cvx-top::after { content: ""; width: 6px; height: 6px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .15s; }
+  .cvx-dd.is-open > .cvx-top::after { transform: translateY(1px) rotate(-135deg); }
+  .cvx-panel { display: none; position: absolute; top: calc(100% + 6px); left: 50%; transform: translateX(-50%); z-index: 60; min-width: 230px; margin: 0; padding: 6px; list-style: none; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 8px; box-shadow: 0 8px 24px rgba(13,43,107,.10); }
+  .cvx-panel::before { content: ""; position: absolute; left: 0; right: 0; top: -8px; height: 8px; }
+  .cvx-panel li { margin: 0; padding: 0; }
+  .cvx-panel a { display: block; padding: 9px 12px; border-radius: 6px; color: #0D2B6B; text-decoration: none; font-size: 14px; font-weight: 500; white-space: nowrap; }
+  .cvx-panel a:hover { background: #F8FAFC; color: #009E72; }
+  .cvx-panel a.is-current { color: #009E72; font-weight: 700; box-shadow: inset 3px 0 0 #00C48C; background: #F8FAFC; }
+  .cvx-soon { display: block; padding: 2px 12px 8px; font-size: 12px; color: #94A3B8; white-space: nowrap; }
+  .cvx-dd.is-open > .cvx-panel { display: block; animation: cvx-fade .15s ease-out; }
+  @media (hover: hover) and (min-width: 900px) { .cvx-dd:hover > .cvx-panel { display: block; animation: cvx-fade .15s ease-out; } }
+  @keyframes cvx-fade { from { opacity: 0; } to { opacity: 1; } }
+  .cvx-lang { font-size: 13px; font-weight: 700; letter-spacing: .04em; color: #94A3B8; }
+  .cvx-lang:hover { color: #0D2B6B; }
+  .cvx-cta { background: #0D2B6B; color: #FFFFFF; padding: 10px 18px; border-radius: 7px; font-size: 14px; font-weight: 700; text-decoration: none; white-space: nowrap; transition: background .15s; }
+  .cvx-cta:hover { background: #163b8a; }
+  .cvx-burger { display: none; width: 44px; height: 44px; margin-right: -10px; align-items: center; justify-content: center; background: none; border: 0; border-radius: 8px; cursor: pointer; color: #0D2B6B; }
+  .cvx-burger span, .cvx-burger span::before, .cvx-burger span::after { display: block; width: 22px; height: 2px; border-radius: 2px; background: currentColor; transition: transform .15s, background .15s; }
+  .cvx-burger span { position: relative; }
+  .cvx-burger span::before, .cvx-burger span::after { content: ""; position: absolute; left: 0; }
+  .cvx-burger span::before { top: -7px; }
+  .cvx-burger span::after { top: 7px; }
+  .cvx-nav.is-open .cvx-burger span { background: transparent; }
+  .cvx-nav.is-open .cvx-burger span::before { transform: translateY(7px) rotate(45deg); }
+  .cvx-nav.is-open .cvx-burger span::after { transform: translateY(-7px) rotate(-45deg); }
+  .cvx-nav a:focus-visible, .cvx-nav button:focus-visible { outline: 2px solid #00C48C; outline-offset: 2px; }
+  @media (max-width: 899px) {
+    .cvx-bar { justify-content: space-between; padding: .75rem 1.25rem; }
+    .cvx-burger { display: inline-flex; }
+    .cvx-menu { display: none; }
+    .cvx-nav.is-open .cvx-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 101; max-width: none; background: #FFFFFF; border-bottom: 1px solid #E2E8F0; }
+    .cvx-nav.is-open .cvx-menu { display: flex; flex-direction: column; align-items: stretch; gap: 0; position: fixed; left: 0; right: 0; bottom: 0; top: 64px; z-index: 100; overflow-y: auto; background: #FFFFFF; padding: .5rem 1.25rem 1.5rem; animation: cvx-slide .2s ease-out; }
+    .cvx-items { flex: none; flex-direction: column; align-items: stretch; gap: 0; }
+    .cvx-items > li { border-bottom: 1px solid #F1F5F9; }
+    .cvx-top { width: 100%; justify-content: space-between; padding: 14px 2px; font-size: 17px; }
+    .cvx-top.is-active { box-shadow: none; }
+    .cvx-panel { position: static; transform: none; min-width: 0; padding: 0 0 10px; border: 0; box-shadow: none; }
+    .cvx-panel::before { display: none; }
+    .cvx-panel a { padding: 10px 12px; font-size: 16px; white-space: normal; }
+    .cvx-soon { white-space: normal; }
+    .cvx-lang { justify-content: flex-start; font-size: 15px; }
+    .cvx-cta { display: block; margin-top: 1.5rem; padding: 14px 18px; text-align: center; font-size: 16px; background: #00C48C; color: #0D2B6B; }
+    .cvx-cta:hover { background: #12d79c; }
+  }
+  @keyframes cvx-slide { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: none; } }
+  html.cvx-locked { overflow: hidden; }
+  @media (prefers-reduced-motion: reduce) { .cvx-panel, .cvx-nav.is-open .cvx-menu { animation: none !important; } }
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="nav-links">
-    <a href="/" class="nav-home" aria-label="Home" title="Home">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-5h4v5"/></svg>
-    </a>
-    <a href="/blog/" class="nav-link">Blog</a>
-    <a href="/faq" class="nav-link">FAQ</a>
-    <a href="/features/" class="nav-link">Features</a>
-    <details class="nav-dd"><summary class="nav-link">Solutions</summary><div class="nav-dd-menu"><a href="/solutions/retail">Retail &amp; E-commerce</a></div></details>
-    <a href="/pricing" class="nav-link">Pricing</a>
-    <a href="/how-it-works" class="nav-link">How it works</a>
-    <a href="/integrations" class="nav-link">Integrations</a>
-    <a href="/about" class="nav-link" aria-current="page">About</a>
-    <a href="/security-gdpr" class="nav-link">Security</a>
-    <div class="lang">
-      <a href="/about" hreflang="en" title="English" class="active" aria-current="true">EN</a>
-      <a href="/fr/a-propos" hreflang="fr" title="Français">FR</a>
+<nav class="cvx-nav" id="cvx-nav" aria-label="Main">
+  <div class="cvx-bar">
+    <a href="/" class="cvx-logo">custovox<span>.ai</span></a>
+    <button type="button" class="cvx-burger" aria-expanded="false" aria-controls="cvx-menu" aria-label="Menu"><span></span></button>
+    <div class="cvx-menu" id="cvx-menu">
+    <ul class="cvx-items">
+      <li class="cvx-dd">
+        <button type="button" class="cvx-top" aria-expanded="false" aria-controls="cvx-product">Product</button>
+        <ul class="cvx-panel" id="cvx-product">
+          <li><a href="/how-it-works">How it works</a></li>
+          <li><a href="/features/">Features</a></li>
+          <li><a href="/integrations">Integrations</a></li>
+        </ul>
+      </li>
+      <li class="cvx-dd">
+        <button type="button" class="cvx-top" aria-expanded="false" aria-controls="cvx-solutions">Solutions</button>
+        <ul class="cvx-panel" id="cvx-solutions">
+          <li><a href="/solutions/retail">Retail &amp; E-commerce</a></li>
+          <li><span class="cvx-soon">More industries coming soon</span></li>
+        </ul>
+      </li>
+      <li><a href="/pricing" class="cvx-top">Pricing</a></li>
+      <li class="cvx-dd">
+        <button type="button" class="cvx-top is-active" aria-expanded="false" aria-controls="cvx-resources">Resources</button>
+        <ul class="cvx-panel" id="cvx-resources">
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/security-gdpr">Security &amp; GDPR</a></li>
+          <li><a href="/about" class="is-current" aria-current="page">About</a></li>
+        </ul>
+      </li>
+      <li><a href="/fr/a-propos" class="cvx-top cvx-lang" hreflang="fr" lang="fr" title="Français">FR</a></li>
+    </ul>
+    <a href="/#audit" class="cvx-cta">Free case study</a>
     </div>
   </div>
-  <a href="/#audit" class="nav-cta">Your free case study</a>
 </nav>
+<script>
+/* Site nav: dropdowns open on hover (desktop) or click/tap; burger menu below 900px. */
+(function () {
+  var nav = document.getElementById('cvx-nav');
+  if (!nav) return;
+  var bar = nav.querySelector('.cvx-bar'), menu = nav.querySelector('.cvx-menu'), burger = nav.querySelector('.cvx-burger');
+  var dds = Array.prototype.slice.call(nav.querySelectorAll('.cvx-dd'));
+  var desktop = window.matchMedia('(min-width: 900px)');
+  function setDd(dd, open) { dd.classList.toggle('is-open', open); dd.querySelector('.cvx-top').setAttribute('aria-expanded', open); }
+  function closeAll(except) { dds.forEach(function (d) { if (d !== except) setDd(d, false); }); }
+  function setMenu(open) {
+    if (open) { var h = bar.offsetHeight; nav.style.minHeight = h + 'px'; menu.style.top = h + 'px'; }
+    else { nav.style.minHeight = ''; menu.style.top = ''; }
+    nav.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', open);
+    document.documentElement.classList.toggle('cvx-locked', open);
+  }
+  dds.forEach(function (dd) {
+    dd.querySelector('.cvx-top').addEventListener('click', function () {
+      var open = !dd.classList.contains('is-open');
+      if (desktop.matches) closeAll(dd);
+      setDd(dd, open);
+    });
+  });
+  burger.addEventListener('click', function () { setMenu(!nav.classList.contains('is-open')); });
+  menu.addEventListener('click', function (ev) { if (ev.target.closest('a') && !desktop.matches) setMenu(false); });
+  document.addEventListener('click', function (ev) { if (desktop.matches && !nav.contains(ev.target)) closeAll(); });
+  document.addEventListener('keydown', function (ev) {
+    if (ev.key !== 'Escape') return;
+    closeAll();
+    if (nav.classList.contains('is-open')) { setMenu(false); burger.focus(); }
+  });
+  var reset = function () { setMenu(false); closeAll(); };
+  if (desktop.addEventListener) desktop.addEventListener('change', reset); else desktop.addListener(reset);
+})();
+</script>
 
 <header class="hero">
   <h1>Built from a simple frustration</h1>
