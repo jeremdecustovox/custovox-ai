@@ -101,7 +101,9 @@
 
   .stats { background: var(--gray-50); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200); padding: 2.5rem 1.25rem; }
   .stats-grid { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 1rem; }
-  @media (min-width: 760px) { .stats-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 640px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .stats-grid { grid-template-columns: repeat(4, 1fr); } .stats-grid .stat-value { font-size: 26px; } }
+  .stat-badge { display: inline-block; vertical-align: middle; margin-left: 6px; font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--teal-dark); background: #E0FAF4; border-radius: 99px; padding: 3px 9px; line-height: 1.3; }
   .stat { background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; padding: 1.5rem; }
   .stat-value { display: block; font-size: 32px; font-weight: 800; color: var(--navy); line-height: 1.15; font-variant-numeric: tabular-nums; }
   .stat-label { display: block; font-size: 15px; font-weight: 700; color: var(--teal-dark); margin: .35rem 0 .6rem; }
@@ -589,6 +591,7 @@
     <div class="stat"><span class="stat-value" data-count="483724">483,724</span><span class="stat-label">customer conversations analyzed</span><p class="stat-note">and growing every week</p></div>
     <div class="stat"><span class="stat-value">R² = 0.848</span><span class="stat-label">model reliability score</span><p class="stat-note">84.8% of customer satisfaction variations are correctly explained by our model. Validated on test data independent from the training corpus.</p></div>
     <div class="stat"><span class="stat-value">Anti-overfitting</span><span class="stat-label">quality process</span><p class="stat-note">Every model is tested on data it has never seen — to guarantee real-world reliability, not just statistical performance.</p></div>
+    <div class="stat"><span class="stat-value">100,000+ <span class="stat-badge">Any volume</span></span><span class="stat-label">reviews and photos processed per batch</span><p class="stat-note">Hotels, retail chains, call centers — no volume cap. Every signal analyzed with the same precision.</p></div>
   </div>
 </section>
 
