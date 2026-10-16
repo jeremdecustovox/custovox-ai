@@ -105,7 +105,7 @@ def add_language_links(page: Path) -> None:
         alternates.append(f'<link rel="alternate" hreflang="x-default" href="{SITE}{url_of(en_rest)}">')
 
     html = page.read_text(encoding="utf-8")
-    if 'class="lang"' in html:   # hand-written page with its own language switcher
+    if 'class="lang"' in html or "cvx-lang" in html:   # page with its own language switcher (site nav)
         links = []
     switch = '<div class="lang-switch" aria-label="Language">' + "".join(links) + "</div>"
     if links:

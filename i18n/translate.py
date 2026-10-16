@@ -50,6 +50,17 @@ def localize_links(html: str, lang: str, slugs: dict) -> str:
     return html
 
 
+NAV_LANG_LINK = re.compile(r'<a href="[^"]*" class="cvx-top cvx-lang"[^>]*>[^<]*</a>')
+
+
+def english_link(html: str, page: Path) -> str:
+    """The site nav's language link (class cvx-lang) points back to the English source page."""
+    rel = page.relative_to(ROOT).as_posix()
+    url = "/" + (rel[:-len("index.html")] if rel.endswith("index.html") else rel[:-len(".html")])
+    link = f'<a href="{url}" class="cvx-top cvx-lang" hreflang="en" lang="en" title="English">EN</a>'
+    return NAV_LANG_LINK.sub(lambda m: link, html, count=1)
+
+
 def pages():
     yield ROOT / "index.html"
     yield from sorted((ROOT / "blog").glob("*.html"))
@@ -109,7 +120,7 @@ def main():
                 continue
             out.parent.mkdir(parents=True, exist_ok=True)
             html = translate(page.read_text(encoding="utf-8"), lang, words, missing)
-            out.write_text(localize_links(html, lang, slugs), encoding="utf-8")
+            out.write_text(english_link(localize_links(html, lang, slugs), page), encoding="utf-8")
             if missing:
                 print(f"[{lang}] {page.relative_to(ROOT)}: {len(missing)} untranslated")
                 for m in sorted(missing):
