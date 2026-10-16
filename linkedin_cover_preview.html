@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<title>LinkedIn cover — post 2 FR</title>
+<!--
+  Source of images/linkedin_cover_post2_fr.png (1200 x 627).
+  Regenerate:
+    chrome --headless=new --hide-scrollbars --force-device-scale-factor=1 --window-size=1200,627
+           --screenshot=images/linkedin_cover_post2_fr.png linkedin_cover_preview.html
+  or open this file in a browser and take a 1200 x 627 screenshot.
+  The logo is the site's SVG logo (index.html) in its light version: images/logo.png has an
+  opaque white background and a black icon, which do not work on the navy background.
+-->
+<style>
+  :root { --navy: #0D2B6B; --teal: #00C48C; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1200px; height: 627px; overflow: hidden; background: var(--navy); }
+  body { display: flex; align-items: center; justify-content: center; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; color: #FFFFFF; }
+  .block { max-width: 900px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .logo { display: flex; align-items: center; gap: 12px; height: 48px; margin-bottom: 32px; }
+  .logo svg { display: block; height: 48px; width: auto; }
+  .logo-word { font-size: 42px; font-weight: 700; color: var(--teal); letter-spacing: -0.5px; line-height: 1; }
+  h1 { font-size: 48px; font-weight: 800; line-height: 1.2; color: #FFFFFF; }
+  .sub { margin-top: 24px; font-size: 22px; font-weight: 400; color: rgba(255,255,255,0.7); line-height: 1.4; }
+  .badge { margin-top: 36px; background: var(--teal); color: var(--navy); font-size: 16px; font-weight: 700; padding: 10px 24px; border-radius: 99px; }
+</style>
+</head>
+<body>
+  <div class="block">
+    <div class="logo" role="img" aria-label="custovox.ai">
+      <svg width="54" height="48" viewBox="0 0 54 48" fill="none" aria-hidden="true">
+        <path d="M8 3h38a5 5 0 0 1 5 5v24a5 5 0 0 1-5 5H20l-10 8v-8H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5z" stroke="#FFFFFF" stroke-width="3.5" stroke-linejoin="round"/>
+        <g stroke="#FFFFFF" stroke-width="3" stroke-linecap="round">
+          <line x1="14" y1="17" x2="14" y2="23"/>
+          <line x1="20" y1="12" x2="20" y2="28"/>
+          <line x1="26" y1="9" x2="26" y2="31"/>
+          <line x1="32" y1="13" x2="32" y2="27"/>
+          <line x1="38" y1="16" x2="38" y2="24"/>
+        </g>
+      </svg>
+      <span class="logo-word">custovox.ai</span>
+    </div>
+    <h1>Et si vous pouviez interroger vos données clients comme vous interrogez ChatGPT&nbsp;?</h1>
+    <p class="sub">Vos avis, tickets et appels clients — analysés automatiquement.</p>
+    <span class="badge">custovox.ai — À partir de 49&nbsp;€/mois</span>
+  </div>
+</body>
+</html>
