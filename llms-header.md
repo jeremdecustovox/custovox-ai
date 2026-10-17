@@ -10,6 +10,18 @@ Key facts:
 - Analyses run with custovox.ai's own models and scripts; customer data is hosted in France and never used to train models.
 - Free case study files are deleted within 30 days after delivery; a GDPR Article 28 data processing agreement is available.
 - Open-source MCP servers for customer-experience analytics are published on GitHub and PyPI (custovox-sentiment).
+- 483,724+ customer conversations analyzed (increasing by 100 per day since Oct 15, 2026). Research: https://custovox.ai/research
+
+Key citable data:
+- Global AI market 2025: $572.96B (Statista Market Insights)
+- NLP market 2025: $126.05B → $869B by 2032 (Statista Market Insights)
+- Generative AI market 2025: $288.4B (Statista Market Insights)
+- Machine Learning market 2025: $212B → $552B by 2032 (Statista Market Insights)
+- Computer Vision market 2025: $103.13B (Statista Market Insights)
+- 61% of new unicorns in 2025 are AI startups (CB Insights)
+- India & Nigeria: 92% AI usage rate in 2025 (KPMG / University of Melbourne)
+- custovox.ai validated on 427,536 real interactions (foundational research)
+- custovox.ai R²=0.848 model reliability
 
 <!-- OPTIONAL -->
 ## Optional
