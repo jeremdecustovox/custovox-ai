@@ -1,0 +1,1025 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//custovox.ai//blog linkedin planning//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:custovox.ai blog + LinkedIn
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:blog10-a-1-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261021T081500
+DTEND;TZID=Europe/Paris:20261021T083000
+SUMMARY:🚀 PUBLIER blog FR — L'IA en chiffres : état du marché mondi
+ al en 2025
+DESCRIPTION:Vérifier que la page est en ligne après déploiement Netlify
+  (rebuild automatique de 6h00).\nURL : https://custovox.ai/fr/blog/marche
+ -ia-mondial-2025-chiffres-cles
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚀 PUBLIER blog FR — L'IA en chiffres : état du marché m
+ ondial en 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-b-1-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261021T090000
+DTEND;TZID=Europe/Paris:20261021T091500
+SUMMARY:📢 POSTER LinkedIn FR — L'IA en chiffres : état du marché mo
+ ndial en 2025
+DESCRIPTION:Copier le post depuis linkedin_planning_blog_articles.txt (ou 
+ vérifier qu'il est parti via Buffer).\n⚠️ Après publication : poste
+ r le lien en premier commentaire immédiatement.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn FR — L'IA en chiffres : état du march
+ é mondial en 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-c-1-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261021T090500
+DTEND;TZID=Europe/Paris:20261021T092000
+SUMMARY:💬 COMMENTER lien — L'IA en chiffres : état du marché mondia
+ l en 2025
+DESCRIPTION:Poster en commentaire :\n→ Lire l'article :\nhttps://custovo
+ x.ai/fr/blog/marche-ia-mondial-2025-chiffres-cles
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — L'IA en chiffres : état du marché mo
+ ndial en 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-a-1-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261021T171500
+DTEND;TZID=Europe/Paris:20261021T173000
+SUMMARY:🚀 PUBLIER blog EN — AI by the numbers: global market overview
+  2025
+DESCRIPTION:Vérifier que la page est en ligne après déploiement Netlify
+  (rebuild automatique de 6h00).\nURL : https://custovox.ai/blog/ai-market
+ -2025-key-figures
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚀 PUBLIER blog EN — AI by the numbers: global market over
+ view 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-b-1-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261021T200000
+DTEND;TZID=Europe/Paris:20261021T201500
+SUMMARY:📢 POSTER LinkedIn EN — AI by the numbers: global market overv
+ iew 2025
+DESCRIPTION:Copier le post depuis linkedin_planning_blog_articles.txt (ou 
+ vérifier qu'il est parti via Buffer).\n⚠️ Après publication : poste
+ r le lien en premier commentaire immédiatement.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn EN — AI by the numbers: global market o
+ verview 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-c-1-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261021T200500
+DTEND;TZID=Europe/Paris:20261021T202000
+SUMMARY:💬 COMMENTER lien — AI by the numbers: global market overview 
+ 2025
+DESCRIPTION:Poster en commentaire :\n→ Read the article :\nhttps://custo
+ vox.ai/blog/ai-market-2025-key-figures
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — AI by the numbers: global market overv
+ iew 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-a-2-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261022T113500
+DTEND;TZID=Europe/Paris:20261022T115000
+SUMMARY:🚀 PUBLIER blog FR — L'IA générative : un marché de 288 mil
+ liards en 2025
+DESCRIPTION:Vérifier que la page est en ligne après déploiement Netlify
+  (rebuild automatique de 6h00).\nURL : https://custovox.ai/fr/blog/ia-gen
+ erative-288-milliards-2025
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚀 PUBLIER blog FR — L'IA générative : un marché de 288
+  milliards en 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-b-2-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261022T122000
+DTEND;TZID=Europe/Paris:20261022T123500
+SUMMARY:📢 POSTER LinkedIn FR — L'IA générative : un marché de 288 
+ milliards en 2025
+DESCRIPTION:Copier le post depuis linkedin_planning_blog_articles.txt (ou 
+ vérifier qu'il est parti via Buffer).\n⚠️ Après publication : poste
+ r le lien en premier commentaire immédiatement.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn FR — L'IA générative : un marché de 
+ 288 milliards en 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-c-2-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261022T122500
+DTEND;TZID=Europe/Paris:20261022T124000
+SUMMARY:💬 COMMENTER lien — L'IA générative : un marché de 288 mill
+ iards en 2025
+DESCRIPTION:Poster en commentaire :\n→ Lire l'article :\nhttps://custovo
+ x.ai/fr/blog/ia-generative-288-milliards-2025
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — L'IA générative : un marché de 288 
+ milliards en 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-a-2-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261022T121500
+DTEND;TZID=Europe/Paris:20261022T123000
+SUMMARY:🚀 PUBLIER blog EN — Generative AI: a $288 billion market in 2
+ 025
+DESCRIPTION:Vérifier que la page est en ligne après déploiement Netlify
+  (rebuild automatique de 6h00).\nURL : https://custovox.ai/blog/generativ
+ e-ai-288-billion-2025
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚀 PUBLIER blog EN — Generative AI: a $288 billion market 
+ in 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-b-2-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261022T130000
+DTEND;TZID=Europe/Paris:20261022T131500
+SUMMARY:📢 POSTER LinkedIn EN — Generative AI: a $288 billion market i
+ n 2025
+DESCRIPTION:Copier le post depuis linkedin_planning_blog_articles.txt (ou 
+ vérifier qu'il est parti via Buffer).\n⚠️ Après publication : poste
+ r le lien en premier commentaire immédiatement.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn EN — Generative AI: a $288 billion mark
+ et in 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-c-2-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261022T130500
+DTEND;TZID=Europe/Paris:20261022T132000
+SUMMARY:💬 COMMENTER lien — Generative AI: a $288 billion market in 20
+ 25
+DESCRIPTION:Poster en commentaire :\n→ Read the article :\nhttps://custo
+ vox.ai/blog/generative-ai-288-billion-2025
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Generative AI: a $288 billion market i
+ n 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-a-3-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261023T081500
+DTEND;TZID=Europe/Paris:20261023T083000
+SUMMARY:🚀 PUBLIER blog FR — IA générative en Europe : en retard sur
+  les États-Unis\, mais en forte accélération
+DESCRIPTION:Vérifier que la page est en ligne après déploiement Netlify
+  (rebuild automatique de 6h00).\nURL : https://custovox.ai/fr/blog/ia-gen
+ erative-europe-retard-acceleration
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚀 PUBLIER blog FR — IA générative en Europe : en retard
+  sur les États-Unis\, mais en forte accélération
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-b-3-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261023T110000
+DTEND;TZID=Europe/Paris:20261023T111500
+SUMMARY:📢 POSTER LinkedIn FR — IA générative en Europe : en retard 
+ sur les États-Unis\, mais en forte accélération
+DESCRIPTION:Copier le post depuis linkedin_planning_blog_articles.txt (ou 
+ vérifier qu'il est parti via Buffer).\n⚠️ Après publication : poste
+ r le lien en premier commentaire immédiatement.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn FR — IA générative en Europe : en ret
+ ard sur les États-Unis\, mais en forte accélération
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-c-3-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261023T110500
+DTEND;TZID=Europe/Paris:20261023T112000
+SUMMARY:💬 COMMENTER lien — IA générative en Europe : en retard sur 
+ les États-Unis\, mais en forte accélération
+DESCRIPTION:Poster en commentaire :\n→ Lire l'article :\nhttps://custovo
+ x.ai/fr/blog/ia-generative-europe-retard-acceleration
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — IA générative en Europe : en retard 
+ sur les États-Unis\, mais en forte accélération
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-a-3-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261023T171500
+DTEND;TZID=Europe/Paris:20261023T173000
+SUMMARY:🚀 PUBLIER blog EN — Generative AI in Europe: behind the US\, 
+ but accelerating fast
+DESCRIPTION:Vérifier que la page est en ligne après déploiement Netlify
+  (rebuild automatique de 6h00).\nURL : https://custovox.ai/blog/generativ
+ e-ai-europe-behind-accelerating
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚀 PUBLIER blog EN — Generative AI in Europe: behind the U
+ S\, but accelerating fast
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-b-3-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261023T180000
+DTEND;TZID=Europe/Paris:20261023T181500
+SUMMARY:📢 POSTER LinkedIn EN — Generative AI in Europe: behind the US
+ \, but accelerating fast
+DESCRIPTION:Copier le post depuis linkedin_planning_blog_articles.txt (ou 
+ vérifier qu'il est parti via Buffer).\n⚠️ Après publication : poste
+ r le lien en premier commentaire immédiatement.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn EN — Generative AI in Europe: behind th
+ e US\, but accelerating fast
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-c-3-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261023T180500
+DTEND;TZID=Europe/Paris:20261023T182000
+SUMMARY:💬 COMMENTER lien — Generative AI in Europe: behind the US\, b
+ ut accelerating fast
+DESCRIPTION:Poster en commentaire :\n→ Read the article :\nhttps://custo
+ vox.ai/blog/generative-ai-europe-behind-accelerating
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Generative AI in Europe: behind the US
+ \, but accelerating fast
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-a-4-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261024T113500
+DTEND;TZID=Europe/Paris:20261024T115000
+SUMMARY:🚀 PUBLIER blog FR — 61% des nouvelles licornes mondiales sont
+  des startups IA en 2025
+DESCRIPTION:Vérifier que la page est en ligne après déploiement Netlify
+  (rebuild automatique de 6h00).\nURL : https://custovox.ai/fr/blog/61-pou
+ rcent-licornes-mondiales-startups-ia
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚀 PUBLIER blog FR — 61% des nouvelles licornes mondiales 
+ sont des startups IA en 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-b-4-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261024T122000
+DTEND;TZID=Europe/Paris:20261024T123500
+SUMMARY:📢 POSTER LinkedIn FR — 61% des nouvelles licornes mondiales s
+ ont des startups IA en 2025
+DESCRIPTION:Copier le post depuis linkedin_planning_blog_articles.txt (ou 
+ vérifier qu'il est parti via Buffer).\n⚠️ Après publication : poste
+ r le lien en premier commentaire immédiatement.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn FR — 61% des nouvelles licornes mondial
+ es sont des startups IA en 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-c-4-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261024T122500
+DTEND;TZID=Europe/Paris:20261024T124000
+SUMMARY:💬 COMMENTER lien — 61% des nouvelles licornes mondiales sont 
+ des startups IA en 2025
+DESCRIPTION:Poster en commentaire :\n→ Lire l'article :\nhttps://custovo
+ x.ai/fr/blog/61-pourcent-licornes-mondiales-startups-ia
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — 61% des nouvelles licornes mondiales s
+ ont des startups IA en 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-a-4-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261024T121500
+DTEND;TZID=Europe/Paris:20261024T123000
+SUMMARY:🚀 PUBLIER blog EN — 61% of new global unicorns are AI startup
+ s in 2025
+DESCRIPTION:Vérifier que la page est en ligne après déploiement Netlify
+  (rebuild automatique de 6h00).\nURL : https://custovox.ai/blog/61-percen
+ t-unicorns-ai-startups-2025
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚀 PUBLIER blog EN — 61% of new global unicorns are AI sta
+ rtups in 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-b-4-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261024T130000
+DTEND;TZID=Europe/Paris:20261024T131500
+SUMMARY:📢 POSTER LinkedIn EN — 61% of new global unicorns are AI star
+ tups in 2025
+DESCRIPTION:Copier le post depuis linkedin_planning_blog_articles.txt (ou 
+ vérifier qu'il est parti via Buffer).\n⚠️ Après publication : poste
+ r le lien en premier commentaire immédiatement.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn EN — 61% of new global unicorns are AI 
+ startups in 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-c-4-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261024T130500
+DTEND;TZID=Europe/Paris:20261024T132000
+SUMMARY:💬 COMMENTER lien — 61% of new global unicorns are AI startups
+  in 2025
+DESCRIPTION:Poster en commentaire :\n→ Read the article :\nhttps://custo
+ vox.ai/blog/61-percent-unicorns-ai-startups-2025
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — 61% of new global unicorns are AI star
+ tups in 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-a-5-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261028T081500
+DTEND;TZID=Europe/Paris:20261028T083000
+SUMMARY:🚀 PUBLIER blog FR — Machine learning : le segment dominant de
+  l'IA d'ici 2032
+DESCRIPTION:Vérifier que la page est en ligne après déploiement Netlify
+  (rebuild automatique de 6h00).\nURL : https://custovox.ai/fr/blog/machin
+ e-learning-segment-dominant-ia-2032
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚀 PUBLIER blog FR — Machine learning : le segment dominan
+ t de l'IA d'ici 2032
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-b-5-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261028T090000
+DTEND;TZID=Europe/Paris:20261028T091500
+SUMMARY:📢 POSTER LinkedIn FR — Machine learning : le segment dominant
+  de l'IA d'ici 2032
+DESCRIPTION:Copier le post depuis linkedin_planning_blog_articles.txt (ou 
+ vérifier qu'il est parti via Buffer).\n⚠️ Après publication : poste
+ r le lien en premier commentaire immédiatement.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn FR — Machine learning : le segment domi
+ nant de l'IA d'ici 2032
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-c-5-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261028T090500
+DTEND;TZID=Europe/Paris:20261028T092000
+SUMMARY:💬 COMMENTER lien — Machine learning : le segment dominant de 
+ l'IA d'ici 2032
+DESCRIPTION:Poster en commentaire :\n→ Lire l'article :\nhttps://custovo
+ x.ai/fr/blog/machine-learning-segment-dominant-ia-2032
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Machine learning : le segment dominant
+  de l'IA d'ici 2032
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-a-5-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261028T171500
+DTEND;TZID=Europe/Paris:20261028T173000
+SUMMARY:🚀 PUBLIER blog EN — Machine learning: the dominant AI segment
+  by 2032
+DESCRIPTION:Vérifier que la page est en ligne après déploiement Netlify
+  (rebuild automatique de 6h00).\nURL : https://custovox.ai/blog/machine-l
+ earning-dominant-ai-segment-2032
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚀 PUBLIER blog EN — Machine learning: the dominant AI seg
+ ment by 2032
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-b-5-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261028T200000
+DTEND;TZID=Europe/Paris:20261028T201500
+SUMMARY:📢 POSTER LinkedIn EN — Machine learning: the dominant AI segm
+ ent by 2032
+DESCRIPTION:Copier le post depuis linkedin_planning_blog_articles.txt (ou 
+ vérifier qu'il est parti via Buffer).\n⚠️ Après publication : poste
+ r le lien en premier commentaire immédiatement.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn EN — Machine learning: the dominant AI 
+ segment by 2032
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-c-5-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261028T200500
+DTEND;TZID=Europe/Paris:20261028T202000
+SUMMARY:💬 COMMENTER lien — Machine learning: the dominant AI segment 
+ by 2032
+DESCRIPTION:Poster en commentaire :\n→ Read the article :\nhttps://custo
+ vox.ai/blog/machine-learning-dominant-ai-segment-2032
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Machine learning: the dominant AI segm
+ ent by 2032
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-a-6-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261029T113500
+DTEND;TZID=Europe/Paris:20261029T115000
+SUMMARY:🚀 PUBLIER blog FR — Assistants vocaux et enceintes connectée
+ s : les chiffres clés en 2025
+DESCRIPTION:Vérifier que la page est en ligne après déploiement Netlify
+  (rebuild automatique de 6h00).\nURL : https://custovox.ai/fr/blog/assist
+ ants-vocaux-enceintes-connectees-chiffres-2025
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚀 PUBLIER blog FR — Assistants vocaux et enceintes connec
+ tées : les chiffres clés en 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-b-6-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261029T122000
+DTEND;TZID=Europe/Paris:20261029T123500
+SUMMARY:📢 POSTER LinkedIn FR — Assistants vocaux et enceintes connect
+ ées : les chiffres clés en 2025
+DESCRIPTION:Copier le post depuis linkedin_planning_blog_articles.txt (ou 
+ vérifier qu'il est parti via Buffer).\n⚠️ Après publication : poste
+ r le lien en premier commentaire immédiatement.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn FR — Assistants vocaux et enceintes con
+ nectées : les chiffres clés en 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-c-6-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261029T122500
+DTEND;TZID=Europe/Paris:20261029T124000
+SUMMARY:💬 COMMENTER lien — Assistants vocaux et enceintes connectées
+  : les chiffres clés en 2025
+DESCRIPTION:Poster en commentaire :\n→ Lire l'article :\nhttps://custovo
+ x.ai/fr/blog/assistants-vocaux-enceintes-connectees-chiffres-2025
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Assistants vocaux et enceintes connect
+ ées : les chiffres clés en 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-a-6-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261029T121500
+DTEND;TZID=Europe/Paris:20261029T123000
+SUMMARY:🚀 PUBLIER blog EN — Voice assistants and smart speakers: key 
+ figures in 2025
+DESCRIPTION:Vérifier que la page est en ligne après déploiement Netlify
+  (rebuild automatique de 6h00).\nURL : https://custovox.ai/blog/voice-ass
+ istants-smart-speakers-2025-data
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚀 PUBLIER blog EN — Voice assistants and smart speakers: 
+ key figures in 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-b-6-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261029T130000
+DTEND;TZID=Europe/Paris:20261029T131500
+SUMMARY:📢 POSTER LinkedIn EN — Voice assistants and smart speakers: k
+ ey figures in 2025
+DESCRIPTION:Copier le post depuis linkedin_planning_blog_articles.txt (ou 
+ vérifier qu'il est parti via Buffer).\n⚠️ Après publication : poste
+ r le lien en premier commentaire immédiatement.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn EN — Voice assistants and smart speaker
+ s: key figures in 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-c-6-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261029T130500
+DTEND;TZID=Europe/Paris:20261029T132000
+SUMMARY:💬 COMMENTER lien — Voice assistants and smart speakers: key f
+ igures in 2025
+DESCRIPTION:Poster en commentaire :\n→ Read the article :\nhttps://custo
+ vox.ai/blog/voice-assistants-smart-speakers-2025-data
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Voice assistants and smart speakers: k
+ ey figures in 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-a-7-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261030T081500
+DTEND;TZID=Europe/Paris:20261030T083000
+SUMMARY:🚀 PUBLIER blog FR — L'IA va-t-elle changer les compétences d
+ e vos équipes ? Ce que disent les dirigeants en 2025
+DESCRIPTION:Vérifier que la page est en ligne après déploiement Netlify
+  (rebuild automatique de 6h00).\nURL : https://custovox.ai/fr/blog/ia-com
+ petences-equipes-dirigeants-2025
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚀 PUBLIER blog FR — L'IA va-t-elle changer les compétenc
+ es de vos équipes ? Ce que disent les dirigeants en 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-b-7-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261030T090000
+DTEND;TZID=Europe/Paris:20261030T091500
+SUMMARY:📢 POSTER LinkedIn FR — L'IA va-t-elle changer les compétence
+ s de vos équipes ? Ce que disent les dirigeants en 2025
+DESCRIPTION:Copier le post depuis linkedin_planning_blog_articles.txt (ou 
+ vérifier qu'il est parti via Buffer).\n⚠️ Après publication : poste
+ r le lien en premier commentaire immédiatement.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn FR — L'IA va-t-elle changer les compét
+ ences de vos équipes ? Ce que disent les dirigeants en 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-c-7-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261030T090500
+DTEND;TZID=Europe/Paris:20261030T092000
+SUMMARY:💬 COMMENTER lien — L'IA va-t-elle changer les compétences de
+  vos équipes ? Ce que disent les dirigeants en 2025
+DESCRIPTION:Poster en commentaire :\n→ Lire l'article :\nhttps://custovo
+ x.ai/fr/blog/ia-competences-equipes-dirigeants-2025
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — L'IA va-t-elle changer les compétence
+ s de vos équipes ? Ce que disent les dirigeants en 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-a-7-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261030T171500
+DTEND;TZID=Europe/Paris:20261030T173000
+SUMMARY:🚀 PUBLIER blog EN — Will AI change your team's skills? What l
+ eaders say in 2025
+DESCRIPTION:Vérifier que la page est en ligne après déploiement Netlify
+  (rebuild automatique de 6h00).\nURL : https://custovox.ai/blog/ai-skills
+ -workforce-leaders-2025
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚀 PUBLIER blog EN — Will AI change your team's skills? Wh
+ at leaders say in 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-b-7-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261030T180000
+DTEND;TZID=Europe/Paris:20261030T181500
+SUMMARY:📢 POSTER LinkedIn EN — Will AI change your team's skills? Wha
+ t leaders say in 2025
+DESCRIPTION:Copier le post depuis linkedin_planning_blog_articles.txt (ou 
+ vérifier qu'il est parti via Buffer).\n⚠️ Après publication : poste
+ r le lien en premier commentaire immédiatement.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn EN — Will AI change your team's skills?
+  What leaders say in 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-c-7-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261030T180500
+DTEND;TZID=Europe/Paris:20261030T182000
+SUMMARY:💬 COMMENTER lien — Will AI change your team's skills? What le
+ aders say in 2025
+DESCRIPTION:Poster en commentaire :\n→ Read the article :\nhttps://custo
+ vox.ai/blog/ai-skills-workforce-leaders-2025
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Will AI change your team's skills? Wha
+ t leaders say in 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-a-8-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261031T113500
+DTEND;TZID=Europe/Paris:20261031T115000
+SUMMARY:🚀 PUBLIER blog FR — NLP : de 126 milliards à 869 milliards e
+ n 7 ans — la croissance la plus rapide de l'IA
+DESCRIPTION:Vérifier que la page est en ligne après déploiement Netlify
+  (rebuild automatique de 6h00).\nURL : https://custovox.ai/fr/blog/nlp-12
+ 6-milliards-868-milliards-2032
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚀 PUBLIER blog FR — NLP : de 126 milliards à 869 milliar
+ ds en 7 ans — la croissance la plus rapide de l'IA
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-b-8-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261031T122000
+DTEND;TZID=Europe/Paris:20261031T123500
+SUMMARY:📢 POSTER LinkedIn FR — NLP : de 126 milliards à 869 milliard
+ s en 7 ans — la croissance la plus rapide de l'IA
+DESCRIPTION:Copier le post depuis linkedin_planning_blog_articles.txt (ou 
+ vérifier qu'il est parti via Buffer).\n⚠️ Après publication : poste
+ r le lien en premier commentaire immédiatement.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn FR — NLP : de 126 milliards à 869 mill
+ iards en 7 ans — la croissance la plus rapide de l'IA
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-c-8-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261031T122500
+DTEND;TZID=Europe/Paris:20261031T124000
+SUMMARY:💬 COMMENTER lien — NLP : de 126 milliards à 869 milliards en
+  7 ans — la croissance la plus rapide de l'IA
+DESCRIPTION:Poster en commentaire :\n→ Lire l'article :\nhttps://custovo
+ x.ai/fr/blog/nlp-126-milliards-868-milliards-2032
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — NLP : de 126 milliards à 869 milliard
+ s en 7 ans — la croissance la plus rapide de l'IA
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-a-8-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261031T121500
+DTEND;TZID=Europe/Paris:20261031T123000
+SUMMARY:🚀 PUBLIER blog EN — NLP: from $126 billion to $869 billion in
+  7 years — AI's fastest-growing segment
+DESCRIPTION:Vérifier que la page est en ligne après déploiement Netlify
+  (rebuild automatique de 6h00).\nURL : https://custovox.ai/blog/nlp-marke
+ t-126-billion-to-869-billion-2032
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚀 PUBLIER blog EN — NLP: from $126 billion to $869 billio
+ n in 7 years — AI's fastest-growing segment
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-b-8-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261031T130000
+DTEND;TZID=Europe/Paris:20261031T131500
+SUMMARY:📢 POSTER LinkedIn EN — NLP: from $126 billion to $869 billion
+  in 7 years — AI's fastest-growing segment
+DESCRIPTION:Copier le post depuis linkedin_planning_blog_articles.txt (ou 
+ vérifier qu'il est parti via Buffer).\n⚠️ Après publication : poste
+ r le lien en premier commentaire immédiatement.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn EN — NLP: from $126 billion to $869 bil
+ lion in 7 years — AI's fastest-growing segment
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-c-8-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261031T130500
+DTEND;TZID=Europe/Paris:20261031T132000
+SUMMARY:💬 COMMENTER lien — NLP: from $126 billion to $869 billion in 
+ 7 years — AI's fastest-growing segment
+DESCRIPTION:Poster en commentaire :\n→ Read the article :\nhttps://custo
+ vox.ai/blog/nlp-market-126-billion-to-869-billion-2032
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — NLP: from $126 billion to $869 billion
+  in 7 years — AI's fastest-growing segment
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-a-9-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261104T081500
+DTEND;TZID=Europe/Paris:20261104T083000
+SUMMARY:🚀 PUBLIER blog FR — L'IA en Chine : un marché alternatif qui
+  explose en 2025
+DESCRIPTION:Vérifier que la page est en ligne après déploiement Netlify
+  (rebuild automatique de 6h00).\nURL : https://custovox.ai/fr/blog/ia-chi
+ ne-marche-generatif-2025
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚀 PUBLIER blog FR — L'IA en Chine : un marché alternatif
+  qui explose en 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-b-9-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261104T090000
+DTEND;TZID=Europe/Paris:20261104T091500
+SUMMARY:📢 POSTER LinkedIn FR — L'IA en Chine : un marché alternatif 
+ qui explose en 2025
+DESCRIPTION:Copier le post depuis linkedin_planning_blog_articles.txt (ou 
+ vérifier qu'il est parti via Buffer).\n⚠️ Après publication : poste
+ r le lien en premier commentaire immédiatement.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn FR — L'IA en Chine : un marché alterna
+ tif qui explose en 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-c-9-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261104T090500
+DTEND;TZID=Europe/Paris:20261104T092000
+SUMMARY:💬 COMMENTER lien — L'IA en Chine : un marché alternatif qui 
+ explose en 2025
+DESCRIPTION:Poster en commentaire :\n→ Lire l'article :\nhttps://custovo
+ x.ai/fr/blog/ia-chine-marche-generatif-2025
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — L'IA en Chine : un marché alternatif 
+ qui explose en 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-a-9-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261104T171500
+DTEND;TZID=Europe/Paris:20261104T173000
+SUMMARY:🚀 PUBLIER blog EN — AI in China: an alternative market explod
+ ing in 2025
+DESCRIPTION:Vérifier que la page est en ligne après déploiement Netlify
+  (rebuild automatique de 6h00).\nURL : https://custovox.ai/blog/ai-china-
+ generative-market-2025
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚀 PUBLIER blog EN — AI in China: an alternative market ex
+ ploding in 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-b-9-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261104T200000
+DTEND;TZID=Europe/Paris:20261104T201500
+SUMMARY:📢 POSTER LinkedIn EN — AI in China: an alternative market exp
+ loding in 2025
+DESCRIPTION:Copier le post depuis linkedin_planning_blog_articles.txt (ou 
+ vérifier qu'il est parti via Buffer).\n⚠️ Après publication : poste
+ r le lien en premier commentaire immédiatement.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn EN — AI in China: an alternative market
+  exploding in 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-c-9-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261104T200500
+DTEND;TZID=Europe/Paris:20261104T202000
+SUMMARY:💬 COMMENTER lien — AI in China: an alternative market explodi
+ ng in 2025
+DESCRIPTION:Poster en commentaire :\n→ Read the article :\nhttps://custo
+ vox.ai/blog/ai-china-generative-market-2025
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — AI in China: an alternative market exp
+ loding in 2025
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-a-10-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261105T113500
+DTEND;TZID=Europe/Paris:20261105T115000
+SUMMARY:🚀 PUBLIER blog FR — Computer vision : 103 milliards en 2025 e
+ t ses applications dans l'analyse client
+DESCRIPTION:Vérifier que la page est en ligne après déploiement Netlify
+  (rebuild automatique de 6h00).\nURL : https://custovox.ai/fr/blog/comput
+ er-vision-analyse-visuelle-103-milliards
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚀 PUBLIER blog FR — Computer vision : 103 milliards en 20
+ 25 et ses applications dans l'analyse client
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-b-10-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261105T122000
+DTEND;TZID=Europe/Paris:20261105T123500
+SUMMARY:📢 POSTER LinkedIn FR — Computer vision : 103 milliards en 202
+ 5 et ses applications dans l'analyse client
+DESCRIPTION:Copier le post depuis linkedin_planning_blog_articles.txt (ou 
+ vérifier qu'il est parti via Buffer).\n⚠️ Après publication : poste
+ r le lien en premier commentaire immédiatement.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn FR — Computer vision : 103 milliards en
+  2025 et ses applications dans l'analyse client
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-c-10-fr@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261105T122500
+DTEND;TZID=Europe/Paris:20261105T124000
+SUMMARY:💬 COMMENTER lien — Computer vision : 103 milliards en 2025 et
+  ses applications dans l'analyse client
+DESCRIPTION:Poster en commentaire :\n→ Lire l'article :\nhttps://custovo
+ x.ai/fr/blog/computer-vision-analyse-visuelle-103-milliards
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Computer vision : 103 milliards en 202
+ 5 et ses applications dans l'analyse client
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-a-10-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261105T121500
+DTEND;TZID=Europe/Paris:20261105T123000
+SUMMARY:🚀 PUBLIER blog EN — Computer vision: $103 billion in 2025 and
+  its customer analysis applications
+DESCRIPTION:Vérifier que la page est en ligne après déploiement Netlify
+  (rebuild automatique de 6h00).\nURL : https://custovox.ai/blog/computer-
+ vision-103-billion-visual-analysis-2025
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚀 PUBLIER blog EN — Computer vision: $103 billion in 2025
+  and its customer analysis applications
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-b-10-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261105T130000
+DTEND;TZID=Europe/Paris:20261105T131500
+SUMMARY:📢 POSTER LinkedIn EN — Computer vision: $103 billion in 2025 
+ and its customer analysis applications
+DESCRIPTION:Copier le post depuis linkedin_planning_blog_articles.txt (ou 
+ vérifier qu'il est parti via Buffer).\n⚠️ Après publication : poste
+ r le lien en premier commentaire immédiatement.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn EN — Computer vision: $103 billion in 2
+ 025 and its customer analysis applications
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:blog10-c-10-en@custovox.ai
+DTSTAMP:20261017T080000Z
+DTSTART;TZID=Europe/Paris:20261105T130500
+DTEND;TZID=Europe/Paris:20261105T132000
+SUMMARY:💬 COMMENTER lien — Computer vision: $103 billion in 2025 and 
+ its customer analysis applications
+DESCRIPTION:Poster en commentaire :\n→ Read the article :\nhttps://custo
+ vox.ai/blog/computer-vision-103-billion-visual-analysis-2025
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Computer vision: $103 billion in 2025 
+ and its customer analysis applications
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
