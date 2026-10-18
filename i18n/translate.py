@@ -99,9 +99,13 @@ def translate(html: str, lang: str, words: dict, missing: set) -> str:
     html = re.sub(r'href="/%s' % NOT_PAGES, 'href="/%s/' % lang, html)
     html = re.sub(r"https://custovox\.ai/%s" % NOT_PAGES, "https://custovox.ai/%s/" % lang, html)
     html = re.sub(r'("inLanguage":\s*")[^"]*(")', r"\g<1>%s\2" % LANGS[lang], html)
-    # Blog covers exist per language: custovox_ai_<name>_en.<ext> (EN) / custovox_ai_<name>.<ext> (FR).
+    # Blog covers exist per language: custovox_ai_<name>_en.<ext> (EN) and either
+    # custovox_ai_<name>_fr.<ext> (Nov 2026 batch onwards) or custovox_ai_<name>.<ext> (FR).
     if lang == "fr":
-        html = re.sub(r"(/images/custovox_ai_\w+?)_en\.(png|webp)", r"\1.\2", html)
+        def fr_cover(m):
+            fr_name = f"{m.group(1)}_fr.{m.group(2)}"
+            return fr_name if (ROOT / fr_name.lstrip("/")).exists() else f"{m.group(1)}.{m.group(2)}"
+        html = re.sub(r"(/images/custovox_ai_\w+?)_en\.(png|webp)", fr_cover, html)
     return html
 
 

@@ -22,6 +22,12 @@ Key citable data:
 - India & Nigeria: 92% AI usage rate in 2025 (KPMG / University of Melbourne)
 - custovox.ai validated on 427,536 real interactions (foundational research)
 - custovox.ai R²=0.848 model reliability
+- Customer retention: hospitality 55%, retail 63%, media 84% (CustomerGauge / MIT CISR, 2018 data)
+- 40% of US customers stopped buying after poor service (2020)
+- 61% of US e-commerce companies use AI for customer service (OnePoll / Storyblok, 2025)
+- Online retail ACSI: 78 (2000) → 79 (2026)
+- 12% of call centers don't track customer satisfaction (CTI Forum / Liveops)
+- AI customer service market China: 1.6 → 18.1 billion yuan, 2019-2027e (LeadLeo / Frost & Sullivan)
 
 <!-- OPTIONAL -->
 ## Optional

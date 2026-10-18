@@ -1022,4 +1022,919 @@ DESCRIPTION:💬 COMMENTER lien — Computer vision: $103 billion in 2025
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:nd26-a-1@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261106T061500
+DTEND;TZID=Europe/Paris:20261106T063000
+SUMMARY:✅ VÉRIFIER article en ligne FR+EN — Fidélisation par secteur
+DESCRIPTION:FR : https://custovox.ai/fr/blog/taux-retention-client-par-sec
+ teur\nEN : https://custovox.ai/blog/customer-retention-rate-by-industry
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✅ VÉRIFIER article en ligne FR+EN — Fidélisation par sec
+ teur
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-b-1@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261106T083000
+DTEND;TZID=Europe/Paris:20261106T084500
+SUMMARY:📢 POSTER LinkedIn FR — Fidélisation par secteur
+DESCRIPTION:Image à joindre : custovox_ai_retention_secteurs_fr.png\nText
+ e : linkedin_planning_blog_articles.txt (post 1\, lot novembre-décembre)
+ . Normalement programmé dans Buffer : vérifier qu'il est parti.\n⚠️
+  Ensuite : poster le lien en premier commentaire.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn FR — Fidélisation par secteur
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-c-1@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261106T083500
+DTEND;TZID=Europe/Paris:20261106T085000
+SUMMARY:💬 COMMENTER lien — Fidélisation par secteur
+DESCRIPTION:Poster en commentaire :\nhttps://custovox.ai/fr/blog/taux-rete
+ ntion-client-par-secteur
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Fidélisation par secteur
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-a-2@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261109T061500
+DTEND;TZID=Europe/Paris:20261109T063000
+SUMMARY:✅ VÉRIFIER article en ligne FR+EN — Clients perdus par secteu
+ r
+DESCRIPTION:FR : https://custovox.ai/fr/blog/clients-perdus-mauvais-servic
+ e-par-secteur\nEN : https://custovox.ai/blog/customers-lost-poor-service-
+ by-industry
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✅ VÉRIFIER article en ligne FR+EN — Clients perdus par se
+ cteur
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-b-2@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261109T173000
+DTEND;TZID=Europe/Paris:20261109T174500
+SUMMARY:📢 POSTER LinkedIn EN — Customers lost by industry
+DESCRIPTION:Image à joindre : custovox_ai_clients_perdus_service_en.png\n
+ Texte : linkedin_planning_blog_articles.txt (post 2\, lot novembre-décem
+ bre). Normalement programmé dans Buffer : vérifier qu'il est parti.\n
+ ⚠️ Ensuite : poster le lien en premier commentaire.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn EN — Customers lost by industry
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-c-2@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261109T173500
+DTEND;TZID=Europe/Paris:20261109T175000
+SUMMARY:💬 COMMENTER lien — Customers lost by industry
+DESCRIPTION:Poster en commentaire :\nhttps://custovox.ai/blog/customers-lo
+ st-poor-service-by-industry
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Customers lost by industry
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-a-3@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261110T061500
+DTEND;TZID=Europe/Paris:20261110T063000
+SUMMARY:✅ VÉRIFIER article en ligne FR+EN — 40 % des clients partent
+DESCRIPTION:FR : https://custovox.ai/fr/blog/40-pourcent-clients-partent-a
+ pres-mauvais-service\nEN : https://custovox.ai/blog/40-percent-customers-
+ leave-after-poor-service
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✅ VÉRIFIER article en ligne FR+EN — 40 % des clients part
+ ent
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-b-3@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261110T115000
+DTEND;TZID=Europe/Paris:20261110T120500
+SUMMARY:📢 POSTER LinkedIn FR — 40 % des clients partent
+DESCRIPTION:Image à joindre : custovox_ai_40_pourcent_mauvais_service_fr.
+ png\nTexte : linkedin_planning_blog_articles.txt (post 3\, lot novembre-d
+ écembre). Normalement programmé dans Buffer : vérifier qu'il est parti
+ .\n⚠️ Ensuite : poster le lien en premier commentaire.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn FR — 40 % des clients partent
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-c-3@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261110T115500
+DTEND;TZID=Europe/Paris:20261110T121000
+SUMMARY:💬 COMMENTER lien — 40 % des clients partent
+DESCRIPTION:Poster en commentaire :\nhttps://custovox.ai/fr/blog/40-pource
+ nt-clients-partent-apres-mauvais-service
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — 40 % des clients partent
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-a-4@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261112T061500
+DTEND;TZID=Europe/Paris:20261112T063000
+SUMMARY:✅ VÉRIFIER article en ligne FR+EN — IA et e-commerce
+DESCRIPTION:FR : https://custovox.ai/fr/blog/ia-e-commerce-service-client-
+ premier-usage\nEN : https://custovox.ai/blog/ai-ecommerce-customer-servic
+ e-top-use
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✅ VÉRIFIER article en ligne FR+EN — IA et e-commerce
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-b-4@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261112T123000
+DTEND;TZID=Europe/Paris:20261112T124500
+SUMMARY:📢 POSTER LinkedIn EN — AI in e-commerce
+DESCRIPTION:Image à joindre : custovox_ai_ia_ecommerce_service_client_en.
+ png\nTexte : linkedin_planning_blog_articles.txt (post 4\, lot novembre-d
+ écembre). Normalement programmé dans Buffer : vérifier qu'il est parti
+ .\n⚠️ Ensuite : poster le lien en premier commentaire.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn EN — AI in e-commerce
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-c-4@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261112T123500
+DTEND;TZID=Europe/Paris:20261112T125000
+SUMMARY:💬 COMMENTER lien — AI in e-commerce
+DESCRIPTION:Poster en commentaire :\nhttps://custovox.ai/blog/ai-ecommerce
+ -customer-service-top-use
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — AI in e-commerce
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-a-5@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261113T061500
+DTEND;TZID=Europe/Paris:20261113T063000
+SUMMARY:✅ VÉRIFIER article en ligne FR+EN — Machine learning par rég
+ ion
+DESCRIPTION:FR : https://custovox.ai/fr/blog/machine-learning-europe-par-r
+ egion-2031\nEN : https://custovox.ai/blog/machine-learning-market-by-regi
+ on-2031
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✅ VÉRIFIER article en ligne FR+EN — Machine learning par 
+ région
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-b-5@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261113T083000
+DTEND;TZID=Europe/Paris:20261113T084500
+SUMMARY:📢 POSTER LinkedIn FR — Machine learning par région
+DESCRIPTION:Image à joindre : aucune (post sans image)\nTexte : linkedin_
+ planning_blog_articles.txt (post 5\, lot novembre-décembre). Normalement
+  programmé dans Buffer : vérifier qu'il est parti.\n⚠️ Ensuite : po
+ ster le lien en premier commentaire.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn FR — Machine learning par région
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-c-5@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261113T083500
+DTEND;TZID=Europe/Paris:20261113T085000
+SUMMARY:💬 COMMENTER lien — Machine learning par région
+DESCRIPTION:Poster en commentaire :\nhttps://custovox.ai/fr/blog/machine-l
+ earning-europe-par-region-2031
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Machine learning par région
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-a-6@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261116T061500
+DTEND;TZID=Europe/Paris:20261116T063000
+SUMMARY:✅ VÉRIFIER article en ligne FR+EN — Satisfaction e-commerce
+DESCRIPTION:FR : https://custovox.ai/fr/blog/satisfaction-client-e-commerc
+ e-acsi-2000-2026\nEN : https://custovox.ai/blog/online-retail-customer-sa
+ tisfaction-acsi-2000-2026
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✅ VÉRIFIER article en ligne FR+EN — Satisfaction e-commer
+ ce
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-b-6@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261116T173000
+DTEND;TZID=Europe/Paris:20261116T174500
+SUMMARY:📢 POSTER LinkedIn EN — Online retail satisfaction
+DESCRIPTION:Image à joindre : custovox_ai_acsi_ecommerce_en.png\nTexte : 
+ linkedin_planning_blog_articles.txt (post 6\, lot novembre-décembre). No
+ rmalement programmé dans Buffer : vérifier qu'il est parti.\n⚠️ Ens
+ uite : poster le lien en premier commentaire.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn EN — Online retail satisfaction
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-c-6@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261116T173500
+DTEND;TZID=Europe/Paris:20261116T175000
+SUMMARY:💬 COMMENTER lien — Online retail satisfaction
+DESCRIPTION:Poster en commentaire :\nhttps://custovox.ai/blog/online-retai
+ l-customer-satisfaction-acsi-2000-2026
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Online retail satisfaction
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-a-7@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261117T061500
+DTEND;TZID=Europe/Paris:20261117T063000
+SUMMARY:✅ VÉRIFIER article en ligne FR+EN — Clients qui reviennent
+DESCRIPTION:FR : https://custovox.ai/fr/blog/hotellerie-clients-qui-revien
+ nent\nEN : https://custovox.ai/blog/hotel-returning-guests-loyalty
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✅ VÉRIFIER article en ligne FR+EN — Clients qui reviennen
+ t
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-b-7@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261117T115000
+DTEND;TZID=Europe/Paris:20261117T120500
+SUMMARY:📢 POSTER LinkedIn FR — Clients qui reviennent
+DESCRIPTION:Image à joindre : custovox_ai_hotellerie_clients_reviennent_f
+ r.png\nTexte : linkedin_planning_blog_articles.txt (post 7\, lot novembre
+ -décembre). Normalement programmé dans Buffer : vérifier qu'il est par
+ ti.\n⚠️ Ensuite : poster le lien en premier commentaire.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn FR — Clients qui reviennent
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-c-7@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261117T115500
+DTEND;TZID=Europe/Paris:20261117T121000
+SUMMARY:💬 COMMENTER lien — Clients qui reviennent
+DESCRIPTION:Poster en commentaire :\nhttps://custovox.ai/fr/blog/hotelleri
+ e-clients-qui-reviennent
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Clients qui reviennent
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-a-8@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261119T061500
+DTEND;TZID=Europe/Paris:20261119T063000
+SUMMARY:✅ VÉRIFIER article en ligne FR+EN — Mesure de la satisfaction
+DESCRIPTION:FR : https://custovox.ai/fr/blog/centres-appels-mesure-satisfa
+ ction-client\nEN : https://custovox.ai/blog/call-centers-measuring-custom
+ er-satisfaction
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✅ VÉRIFIER article en ligne FR+EN — Mesure de la satisfac
+ tion
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-b-8@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261119T123000
+DTEND;TZID=Europe/Paris:20261119T124500
+SUMMARY:📢 POSTER LinkedIn EN — Measuring satisfaction
+DESCRIPTION:Image à joindre : custovox_ai_centres_appels_satisfaction_en.
+ png\nTexte : linkedin_planning_blog_articles.txt (post 8\, lot novembre-d
+ écembre). Normalement programmé dans Buffer : vérifier qu'il est parti
+ .\n⚠️ Ensuite : poster le lien en premier commentaire.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn EN — Measuring satisfaction
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-c-8@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261119T123500
+DTEND;TZID=Europe/Paris:20261119T125000
+SUMMARY:💬 COMMENTER lien — Measuring satisfaction
+DESCRIPTION:Poster en commentaire :\nhttps://custovox.ai/blog/call-centers
+ -measuring-customer-satisfaction
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Measuring satisfaction
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-a-9@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261120T061500
+DTEND;TZID=Europe/Paris:20261120T063000
+SUMMARY:✅ VÉRIFIER article en ligne FR+EN — Satisfaction des agents
+DESCRIPTION:FR : https://custovox.ai/fr/blog/satisfaction-agents-centre-ap
+ pels\nEN : https://custovox.ai/blog/call-center-agent-job-satisfaction
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✅ VÉRIFIER article en ligne FR+EN — Satisfaction des agen
+ ts
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-b-9@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261120T083000
+DTEND;TZID=Europe/Paris:20261120T084500
+SUMMARY:📢 POSTER LinkedIn FR — Satisfaction des agents
+DESCRIPTION:Image à joindre : custovox_ai_satisfaction_agents_fr.png\nTex
+ te : linkedin_planning_blog_articles.txt (post 9\, lot novembre-décembre
+ ). Normalement programmé dans Buffer : vérifier qu'il est parti.\n⚠
+ ️ Ensuite : poster le lien en premier commentaire.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn FR — Satisfaction des agents
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-c-9@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261120T083500
+DTEND;TZID=Europe/Paris:20261120T085000
+SUMMARY:💬 COMMENTER lien — Satisfaction des agents
+DESCRIPTION:Poster en commentaire :\nhttps://custovox.ai/fr/blog/satisfact
+ ion-agents-centre-appels
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Satisfaction des agents
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-a-10@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261123T061500
+DTEND;TZID=Europe/Paris:20261123T063000
+SUMMARY:✅ VÉRIFIER article en ligne FR+EN — Le téléphone\, canal pr
+ éféré
+DESCRIPTION:FR : https://custovox.ai/fr/blog/telephone-canal-prefere-servi
+ ce-client\nEN : https://custovox.ai/blog/phone-preferred-customer-service
+ -channel
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✅ VÉRIFIER article en ligne FR+EN — Le téléphone\, cana
+ l préféré
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-b-10@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261123T173000
+DTEND;TZID=Europe/Paris:20261123T174500
+SUMMARY:📢 POSTER LinkedIn EN — Phone\, the preferred channel
+DESCRIPTION:Image à joindre : aucune (post sans image)\nTexte : linkedin_
+ planning_blog_articles.txt (post 10\, lot novembre-décembre). Normalemen
+ t programmé dans Buffer : vérifier qu'il est parti.\n⚠️ Ensuite : p
+ oster le lien en premier commentaire.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn EN — Phone\, the preferred channel
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-c-10@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261123T173500
+DTEND;TZID=Europe/Paris:20261123T175000
+SUMMARY:💬 COMMENTER lien — Phone\, the preferred channel
+DESCRIPTION:Poster en commentaire :\nhttps://custovox.ai/blog/phone-prefer
+ red-customer-service-channel
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Phone\, the preferred channel
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-a-11@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261124T061500
+DTEND;TZID=Europe/Paris:20261124T063000
+SUMMARY:✅ VÉRIFIER article en ligne FR+EN — Hôtellerie et IA
+DESCRIPTION:FR : https://custovox.ai/fr/blog/hotellerie-intelligence-artif
+ icielle-usages\nEN : https://custovox.ai/blog/hotels-artificial-intellige
+ nce-uses
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✅ VÉRIFIER article en ligne FR+EN — Hôtellerie et IA
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-b-11@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261124T115000
+DTEND;TZID=Europe/Paris:20261124T120500
+SUMMARY:📢 POSTER LinkedIn FR — Hôtellerie et IA
+DESCRIPTION:Image à joindre : custovox_ai_hotellerie_ia_usages_fr.png\nTe
+ xte : linkedin_planning_blog_articles.txt (post 11\, lot novembre-décemb
+ re). Normalement programmé dans Buffer : vérifier qu'il est parti.\n⚠
+ ️ Ensuite : poster le lien en premier commentaire.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn FR — Hôtellerie et IA
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-c-11@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261124T115500
+DTEND;TZID=Europe/Paris:20261124T121000
+SUMMARY:💬 COMMENTER lien — Hôtellerie et IA
+DESCRIPTION:Poster en commentaire :\nhttps://custovox.ai/fr/blog/hotelleri
+ e-intelligence-artificielle-usages
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Hôtellerie et IA
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-a-12@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261126T061500
+DTEND;TZID=Europe/Paris:20261126T063000
+SUMMARY:✅ VÉRIFIER article en ligne FR+EN — IA et service client en C
+ hine
+DESCRIPTION:FR : https://custovox.ai/fr/blog/ia-service-client-chine-march
+ e-2027\nEN : https://custovox.ai/blog/ai-customer-service-market-china-20
+ 27
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✅ VÉRIFIER article en ligne FR+EN — IA et service client 
+ en Chine
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-b-12@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261126T123000
+DTEND;TZID=Europe/Paris:20261126T124500
+SUMMARY:📢 POSTER LinkedIn EN — AI customer service in China
+DESCRIPTION:Image à joindre : custovox_ai_ia_service_client_chine_en.png\
+ nTexte : linkedin_planning_blog_articles.txt (post 12\, lot novembre-déc
+ embre). Normalement programmé dans Buffer : vérifier qu'il est parti.\n
+ ⚠️ Ensuite : poster le lien en premier commentaire.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn EN — AI customer service in China
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-c-12@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261126T123500
+DTEND;TZID=Europe/Paris:20261126T125000
+SUMMARY:💬 COMMENTER lien — AI customer service in China
+DESCRIPTION:Poster en commentaire :\nhttps://custovox.ai/blog/ai-customer-
+ service-market-china-2027
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — AI customer service in China
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-a-13@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261127T061500
+DTEND;TZID=Europe/Paris:20261127T063000
+SUMMARY:✅ VÉRIFIER article en ligne FR+EN — Les agents face à l'IA
+DESCRIPTION:FR : https://custovox.ai/fr/blog/agents-centre-appels-face-a-i
+ a\nEN : https://custovox.ai/blog/call-center-agents-and-ai
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✅ VÉRIFIER article en ligne FR+EN — Les agents face à l'
+ IA
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-b-13@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261127T083000
+DTEND;TZID=Europe/Paris:20261127T084500
+SUMMARY:📢 POSTER LinkedIn FR — Les agents face à l'IA
+DESCRIPTION:Image à joindre : custovox_ai_agents_face_ia_fr.png\nTexte : 
+ linkedin_planning_blog_articles.txt (post 13\, lot novembre-décembre). N
+ ormalement programmé dans Buffer : vérifier qu'il est parti.\n⚠️ En
+ suite : poster le lien en premier commentaire.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn FR — Les agents face à l'IA
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-c-13@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261127T083500
+DTEND;TZID=Europe/Paris:20261127T085000
+SUMMARY:💬 COMMENTER lien — Les agents face à l'IA
+DESCRIPTION:Poster en commentaire :\nhttps://custovox.ai/fr/blog/agents-ce
+ ntre-appels-face-a-ia
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Les agents face à l'IA
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-a-14@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261130T061500
+DTEND;TZID=Europe/Paris:20261130T063000
+SUMMARY:✅ VÉRIFIER article en ligne FR+EN — Le retour sur investissem
+ ent de l'IA
+DESCRIPTION:FR : https://custovox.ai/fr/blog/retour-investissement-ia-entr
+ eprises\nEN : https://custovox.ai/blog/ai-return-on-investment-companies
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✅ VÉRIFIER article en ligne FR+EN — Le retour sur investi
+ ssement de l'IA
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-b-14@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261130T173000
+DTEND;TZID=Europe/Paris:20261130T174500
+SUMMARY:📢 POSTER LinkedIn EN — AI return on investment
+DESCRIPTION:Image à joindre : custovox_ai_roi_ia_entreprises_en.png\nText
+ e : linkedin_planning_blog_articles.txt (post 14\, lot novembre-décembre
+ ). Normalement programmé dans Buffer : vérifier qu'il est parti.\n⚠
+ ️ Ensuite : poster le lien en premier commentaire.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn EN — AI return on investment
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-c-14@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261130T173500
+DTEND;TZID=Europe/Paris:20261130T175000
+SUMMARY:💬 COMMENTER lien — AI return on investment
+DESCRIPTION:Poster en commentaire :\nhttps://custovox.ai/blog/ai-return-on
+ -investment-companies
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — AI return on investment
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-a-15@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261201T061500
+DTEND;TZID=Europe/Paris:20261201T063000
+SUMMARY:✅ VÉRIFIER article en ligne FR+EN — Retail et IA
+DESCRIPTION:FR : https://custovox.ai/fr/blog/retail-ia-generative-revenus\
+ nEN : https://custovox.ai/blog/retail-generative-ai-revenue
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✅ VÉRIFIER article en ligne FR+EN — Retail et IA
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-b-15@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261201T115000
+DTEND;TZID=Europe/Paris:20261201T120500
+SUMMARY:📢 POSTER LinkedIn FR — Retail et IA
+DESCRIPTION:Image à joindre : aucune (post sans image)\nTexte : linkedin_
+ planning_blog_articles.txt (post 15\, lot novembre-décembre). Normalemen
+ t programmé dans Buffer : vérifier qu'il est parti.\n⚠️ Ensuite : p
+ oster le lien en premier commentaire.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn FR — Retail et IA
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-c-15@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261201T115500
+DTEND;TZID=Europe/Paris:20261201T121000
+SUMMARY:💬 COMMENTER lien — Retail et IA
+DESCRIPTION:Poster en commentaire :\nhttps://custovox.ai/fr/blog/retail-ia
+ -generative-revenus
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Retail et IA
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-a-16@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261203T061500
+DTEND;TZID=Europe/Paris:20261203T063000
+SUMMARY:✅ VÉRIFIER article en ligne FR+EN — Les acheteurs et l'IA
+DESCRIPTION:FR : https://custovox.ai/fr/blog/consommateurs-assistants-ia-a
+ chat\nEN : https://custovox.ai/blog/shoppers-ai-shopping-assistants
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✅ VÉRIFIER article en ligne FR+EN — Les acheteurs et l'IA
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-b-16@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261203T123000
+DTEND;TZID=Europe/Paris:20261203T124500
+SUMMARY:📢 POSTER LinkedIn EN — Shoppers and AI
+DESCRIPTION:Image à joindre : custovox_ai_assistants_ia_achat_en.png\nTex
+ te : linkedin_planning_blog_articles.txt (post 16\, lot novembre-décembr
+ e). Normalement programmé dans Buffer : vérifier qu'il est parti.\n⚠
+ ️ Ensuite : poster le lien en premier commentaire.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn EN — Shoppers and AI
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-c-16@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261203T123500
+DTEND;TZID=Europe/Paris:20261203T125000
+SUMMARY:💬 COMMENTER lien — Shoppers and AI
+DESCRIPTION:Poster en commentaire :\nhttps://custovox.ai/blog/shoppers-ai-
+ shopping-assistants
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Shoppers and AI
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-a-17@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261204T061500
+DTEND;TZID=Europe/Paris:20261204T063000
+SUMMARY:✅ VÉRIFIER article en ligne FR+EN — Réservations en ligne et
+  avis
+DESCRIPTION:FR : https://custovox.ai/fr/blog/hotellerie-reservations-en-li
+ gne-avis-clients\nEN : https://custovox.ai/blog/hotel-online-bookings-gue
+ st-reviews
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✅ VÉRIFIER article en ligne FR+EN — Réservations en lign
+ e et avis
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-b-17@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261204T083000
+DTEND;TZID=Europe/Paris:20261204T084500
+SUMMARY:📢 POSTER LinkedIn FR — Réservations en ligne et avis
+DESCRIPTION:Image à joindre : custovox_ai_hotellerie_reservations_en_lign
+ e_fr.png\nTexte : linkedin_planning_blog_articles.txt (post 17\, lot nove
+ mbre-décembre). Normalement programmé dans Buffer : vérifier qu'il est
+  parti.\n⚠️ Ensuite : poster le lien en premier commentaire.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn FR — Réservations en ligne et avis
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-c-17@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261204T083500
+DTEND;TZID=Europe/Paris:20261204T085000
+SUMMARY:💬 COMMENTER lien — Réservations en ligne et avis
+DESCRIPTION:Poster en commentaire :\nhttps://custovox.ai/fr/blog/hotelleri
+ e-reservations-en-ligne-avis-clients
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Réservations en ligne et avis
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-a-18@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261207T061500
+DTEND;TZID=Europe/Paris:20261207T063000
+SUMMARY:✅ VÉRIFIER article en ligne FR+EN — Chatbots et contact humai
+ n
+DESCRIPTION:FR : https://custovox.ai/fr/blog/chatbots-clients-veulent-un-h
+ umain\nEN : https://custovox.ai/blog/chatbots-customers-want-a-human
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✅ VÉRIFIER article en ligne FR+EN — Chatbots et contact h
+ umain
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-b-18@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261207T173000
+DTEND;TZID=Europe/Paris:20261207T174500
+SUMMARY:📢 POSTER LinkedIn EN — Chatbots and human contact
+DESCRIPTION:Image à joindre : custovox_ai_chatbots_humain_en.png\nTexte :
+  linkedin_planning_blog_articles.txt (post 18\, lot novembre-décembre). 
+ Normalement programmé dans Buffer : vérifier qu'il est parti.\n⚠️ E
+ nsuite : poster le lien en premier commentaire.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn EN — Chatbots and human contact
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-c-18@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261207T173500
+DTEND;TZID=Europe/Paris:20261207T175000
+SUMMARY:💬 COMMENTER lien — Chatbots and human contact
+DESCRIPTION:Poster en commentaire :\nhttps://custovox.ai/blog/chatbots-cus
+ tomers-want-a-human
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Chatbots and human contact
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-a-19@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261208T061500
+DTEND;TZID=Europe/Paris:20261208T063000
+SUMMARY:✅ VÉRIFIER article en ligne FR+EN — Le libre-service client
+DESCRIPTION:FR : https://custovox.ai/fr/blog/libre-service-client-attentes
+ \nEN : https://custovox.ai/blog/customer-self-service-expectations
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✅ VÉRIFIER article en ligne FR+EN — Le libre-service clie
+ nt
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-b-19@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261208T115000
+DTEND;TZID=Europe/Paris:20261208T120500
+SUMMARY:📢 POSTER LinkedIn FR — Le libre-service client
+DESCRIPTION:Image à joindre : custovox_ai_libre_service_client_fr.png\nTe
+ xte : linkedin_planning_blog_articles.txt (post 19\, lot novembre-décemb
+ re). Normalement programmé dans Buffer : vérifier qu'il est parti.\n⚠
+ ️ Ensuite : poster le lien en premier commentaire.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn FR — Le libre-service client
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-c-19@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261208T115500
+DTEND;TZID=Europe/Paris:20261208T121000
+SUMMARY:💬 COMMENTER lien — Le libre-service client
+DESCRIPTION:Poster en commentaire :\nhttps://custovox.ai/fr/blog/libre-ser
+ vice-client-attentes
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Le libre-service client
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-a-20@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261210T061500
+DTEND;TZID=Europe/Paris:20261210T063000
+SUMMARY:✅ VÉRIFIER article en ligne FR+EN — Voix mobile et service cl
+ ient
+DESCRIPTION:FR : https://custovox.ai/fr/blog/voix-mobile-baisse-appels-ser
+ vice-client\nEN : https://custovox.ai/blog/mobile-voice-decline-customer-
+ calls
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✅ VÉRIFIER article en ligne FR+EN — Voix mobile et servic
+ e client
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-b-20@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261210T123000
+DTEND;TZID=Europe/Paris:20261210T124500
+SUMMARY:📢 POSTER LinkedIn EN — Mobile voice and customer calls
+DESCRIPTION:Image à joindre : custovox_ai_voix_mobile_appels_en.png\nText
+ e : linkedin_planning_blog_articles.txt (post 20\, lot novembre-décembre
+ ). Normalement programmé dans Buffer : vérifier qu'il est parti.\n⚠
+ ️ Ensuite : poster le lien en premier commentaire.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:📢 POSTER LinkedIn EN — Mobile voice and customer calls
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nd26-c-20@custovox.ai
+DTSTAMP:20261018T120000Z
+DTSTART;TZID=Europe/Paris:20261210T123500
+DTEND;TZID=Europe/Paris:20261210T125000
+SUMMARY:💬 COMMENTER lien — Mobile voice and customer calls
+DESCRIPTION:Poster en commentaire :\nhttps://custovox.ai/blog/mobile-voice
+ -decline-customer-calls
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:💬 COMMENTER lien — Mobile voice and customer calls
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
 END:VCALENDAR

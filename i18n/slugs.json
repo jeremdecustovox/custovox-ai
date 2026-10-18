@@ -67,5 +67,65 @@
  },
  "9-psychological-profiles-customer-voice-of-customer": {
   "fr": "9-profils-psychologiques-clients-voix-du-client"
+ },
+ "customer-retention-rate-by-industry": {
+  "fr": "taux-retention-client-par-secteur"
+ },
+ "customers-lost-poor-service-by-industry": {
+  "fr": "clients-perdus-mauvais-service-par-secteur"
+ },
+ "40-percent-customers-leave-after-poor-service": {
+  "fr": "40-pourcent-clients-partent-apres-mauvais-service"
+ },
+ "ai-ecommerce-customer-service-top-use": {
+  "fr": "ia-e-commerce-service-client-premier-usage"
+ },
+ "machine-learning-market-by-region-2031": {
+  "fr": "machine-learning-europe-par-region-2031"
+ },
+ "online-retail-customer-satisfaction-acsi-2000-2026": {
+  "fr": "satisfaction-client-e-commerce-acsi-2000-2026"
+ },
+ "hotel-returning-guests-loyalty": {
+  "fr": "hotellerie-clients-qui-reviennent"
+ },
+ "call-centers-measuring-customer-satisfaction": {
+  "fr": "centres-appels-mesure-satisfaction-client"
+ },
+ "call-center-agent-job-satisfaction": {
+  "fr": "satisfaction-agents-centre-appels"
+ },
+ "phone-preferred-customer-service-channel": {
+  "fr": "telephone-canal-prefere-service-client"
+ },
+ "hotels-artificial-intelligence-uses": {
+  "fr": "hotellerie-intelligence-artificielle-usages"
+ },
+ "ai-customer-service-market-china-2027": {
+  "fr": "ia-service-client-chine-marche-2027"
+ },
+ "call-center-agents-and-ai": {
+  "fr": "agents-centre-appels-face-a-ia"
+ },
+ "ai-return-on-investment-companies": {
+  "fr": "retour-investissement-ia-entreprises"
+ },
+ "retail-generative-ai-revenue": {
+  "fr": "retail-ia-generative-revenus"
+ },
+ "shoppers-ai-shopping-assistants": {
+  "fr": "consommateurs-assistants-ia-achat"
+ },
+ "hotel-online-bookings-guest-reviews": {
+  "fr": "hotellerie-reservations-en-ligne-avis-clients"
+ },
+ "chatbots-customers-want-a-human": {
+  "fr": "chatbots-clients-veulent-un-humain"
+ },
+ "customer-self-service-expectations": {
+  "fr": "libre-service-client-attentes"
+ },
+ "mobile-voice-decline-customer-calls": {
+  "fr": "voix-mobile-baisse-appels-service-client"
  }
 }

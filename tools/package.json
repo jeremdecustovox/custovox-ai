@@ -1,0 +1,9 @@
+{
+  "name": "custovox-tools",
+  "private": true,
+  "description": "Build helpers (blog cover generation). Not published.",
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "sharp": "^0.33.5"
+  }
+}

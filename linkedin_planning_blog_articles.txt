@@ -485,3 +485,791 @@ RAPPEL : poster le lien en 1er commentaire
 Read the article : https://custovox.ai/blog/9-psychological-profiles-customer-voice-of-customer
 
 ═══════════════════════════════════════════
+
+═══════════════════════════════════════════
+LOT NOVEMBRE-DÉCEMBRE 2026 — 20 articles, 1 post par jour, langue alternée
+Articles en ligne au rebuild de 6h00 le jour du post (FR + EN).
+═══════════════════════════════════════════
+
+POST 1 — FR — 6 nov 08h30
+IMAGE : custovox_ai_retention_secteurs_fr.png
+TEXTE :
+𝟱𝟱 % : 𝗰'𝗲𝘀𝘁 𝗹𝗮 𝗽𝗮𝗿𝘁 𝗱𝗲 𝗰𝗹𝗶𝗲𝗻𝘁𝘀 𝗾𝘂𝗲 𝗹'𝗵𝗼̂𝘁𝗲𝗹𝗹𝗲𝗿𝗶𝗲, 𝗹𝗲 𝘃𝗼𝘆𝗮𝗴𝗲 𝗲𝘁 𝗹𝗮 𝗿𝗲𝘀𝘁𝗮𝘂𝗿𝗮𝘁𝗶𝗼𝗻 𝗴𝗮𝗿𝗱𝗲𝗻𝘁 𝗱'𝘂𝗻𝗲 𝗮𝗻𝗻𝗲́𝗲 𝘀𝘂𝗿 𝗹'𝗮𝘂𝘁𝗿𝗲.
+
+Les médias en gardent 84 %.
+Le commerce de détail, 63 %.
+
+Le paradoxe :
+les secteurs qui parlent le plus à leurs clients
+sont ceux qui les retiennent le moins.
+
+Séjours, repas, passages en caisse, avis en ligne, réclamations.
+Ces clients s'expriment beaucoup.
+Et souvent, ils disent pourquoi ils ne reviendront pas.
+
+Le problème n'est pas le manque d'information.
+C'est qu'elle est dispersée entre plateformes d'avis, tickets et appels.
+Et que personne n'a le temps de tout lire.
+
+Un taux de rétention dit combien de clients partent.
+Leurs mots disent pourquoi.
+
+Dans votre entreprise, qui lit tous les avis ?
+
+Source : CustomerGauge, NPS Benchmarks, MIT CISR, via Statista (2025), données 2018
+
+→ Lien en commentaire
+
+#ExperienceClient #Fidelisation #Hotellerie #Retail #CustovoxAI
+---
+RAPPEL COMMENTAIRE : poster le lien en 1er commentaire
+Lire l'article : https://custovox.ai/fr/blog/taux-retention-client-par-secteur
+
+═══════════════════════════════════════════
+
+POST 2 — EN — 9 nov 17h30
+IMAGE : custovox_ai_clients_perdus_service_en.png
+TEXTE :
+𝟮𝟱% 𝗼𝗳 𝗰𝗮𝗯𝗹𝗲 𝗰𝘂𝘀𝘁𝗼𝗺𝗲𝗿𝘀 𝗹𝗲𝗮𝘃𝗲 𝗯𝗲𝗰𝗮𝘂𝘀𝗲 𝗼𝗳 𝗽𝗼𝗼𝗿 𝗰𝘂𝘀𝘁𝗼𝗺𝗲𝗿 𝘀𝗲𝗿𝘃𝗶𝗰𝗲.
+
+Same for financial services: 25%.
+General retail: 24%.
+Online retail: 22%.
+
+The reason for leaving is rarely a mystery.
+It is written in tickets.
+Said on the phone.
+Repeated in follow-up emails.
+
+"Third call about the same problem."
+"Nobody called me back."
+"I'll go elsewhere."
+
+These sentences exist in every company's tools.
+What is missing is the time to read them at scale.
+
+A manager sees a handful of difficult cases each week.
+Not the thousands of conversations where frustration slowly builds.
+
+So the departure looks like a surprise.
+When it had been announced, often several times.
+
+How many of your customers told you before they left?
+
+Source: Statista, Customer service in the U.S. dossier (2025), US data 2020
+
+→ Full article in comments
+
+#CustomerExperience #CustomerService #CallCenter #CustomerRetention #CustovoxAI
+---
+RAPPEL COMMENTAIRE : poster le lien en 1er commentaire
+Read the article: https://custovox.ai/blog/customers-lost-poor-service-by-industry
+
+═══════════════════════════════════════════
+
+POST 3 — FR — 10 nov 11h50
+IMAGE : custovox_ai_40_pourcent_mauvais_service_fr.png
+TEXTE :
+𝟰𝟬 % 𝗱𝗲𝘀 𝗰𝗹𝗶𝗲𝗻𝘁𝘀 𝗼𝗻𝘁 𝗰𝗲𝘀𝘀𝗲́ 𝗱'𝗮𝗰𝗵𝗲𝘁𝗲𝗿 𝗮̀ 𝘂𝗻𝗲 𝗲𝗻𝘁𝗿𝗲𝗽𝗿𝗶𝘀𝗲 𝗮𝗽𝗿𝗲̀𝘀 𝘂𝗻 𝗺𝗮𝘂𝘃𝗮𝗶𝘀 𝘀𝗲𝗿𝘃𝗶𝗰𝗲.
+
+Ce n'est pas une intention.
+C'est un comportement déclaré.
+
+Trois autres chiffres du même dossier :
+→ 66 % jugent le service client très important dans le choix d'une marque (2018)
+→ 56 % ont des attentes plus élevées qu'un an avant (2018)
+→ 58 % ont contacté un service client le mois dernier (2020)
+
+Les clients contactent souvent.
+Ils attendent toujours plus.
+Et ils partent s'ils sont déçus.
+
+Le problème : une note de satisfaction résume tout en un chiffre.
+Elle ne dit pas si le client a déjà eu trois contacts décevants ce trimestre.
+
+C'est l'accumulation qui fait partir.
+Et elle se lit dans les mots des clients bien avant la résiliation.
+
+Source : Statista, dossier Customer service in the U.S. (2025), données 2018 et 2020
+
+→ Lien en commentaire
+
+#ServiceClient #ExperienceClient #RelationClient #VoixDuClient #CustovoxAI
+---
+RAPPEL COMMENTAIRE : poster le lien en 1er commentaire
+Lire l'article : https://custovox.ai/fr/blog/40-pourcent-clients-partent-apres-mauvais-service
+
+═══════════════════════════════════════════
+
+POST 4 — EN — 12 nov 12h30
+IMAGE : custovox_ai_ia_ecommerce_service_client_en.png
+TEXTE :
+𝟲𝟭% 𝗼𝗳 𝗨𝗦 𝗲-𝗰𝗼𝗺𝗺𝗲𝗿𝗰𝗲 𝗰𝗼𝗺𝗽𝗮𝗻𝗶𝗲𝘀 𝘂𝘀𝗲 𝗔𝗜 𝗳𝗼𝗿 𝗰𝘂𝘀𝘁𝗼𝗺𝗲𝗿 𝘀𝗲𝗿𝘃𝗶𝗰𝗲.
+
+It is the #1 use case in 2025.
+Ahead of marketing analysis (60%).
+Far ahead of content creation (40%).
+
+Chatbots. Suggested replies. Automatic routing.
+Most of it is about answering faster.
+
+Useful.
+But it only covers half of the conversation.
+
+The other half is what customers say back.
+Their questions.
+Their complaints.
+Their comments after talking to a bot.
+
+That is where the real reasons for satisfaction and dissatisfaction are.
+And where you see when automation failed.
+
+A company that automates answers without reading the replies
+saves time.
+But does not know if it is losing customers along the way.
+
+AI answers your customers.
+Who reads their answers?
+
+Source: OnePoll, Storyblok, via Statista (2026), US data 2025
+
+→ Full article in comments
+
+#AI #Ecommerce #CustomerService #CustomerExperience #CustovoxAI
+---
+RAPPEL COMMENTAIRE : poster le lien en 1er commentaire
+Read the article: https://custovox.ai/blog/ai-ecommerce-customer-service-top-use
+
+═══════════════════════════════════════════
+
+POST 5 — FR — 13 nov 08h30
+IMAGE : SANS IMAGE
+TEXTE :
+×𝟱,𝟯 : 𝗰'𝗲𝘀𝘁 𝗹𝗮 𝗰𝗿𝗼𝗶𝘀𝘀𝗮𝗻𝗰𝗲 𝗽𝗿𝗲́𝘃𝘂𝗲 𝗱𝘂 𝗺𝗮𝗿𝗰𝗵𝗲́ 𝗱𝘂 𝗺𝗮𝗰𝗵𝗶𝗻𝗲 𝗹𝗲𝗮𝗿𝗻𝗶𝗻𝗴 𝗲𝗻 𝗘𝘂𝗿𝗼𝗽𝗲 𝗲𝗻𝘁𝗿𝗲 𝟮𝟬𝟮𝟱 𝗲𝘁 𝟮𝟬𝟯𝟭.
+
+De 24,8 à 131,7 milliards de dollars.
+
+L'Asie atteindrait 209,5 milliards.
+L'Amérique du Nord, 187,3 milliards.
+
+L'Europe ne prend pas de retard en vitesse.
+Elle progresse au même rythme que les autres régions.
+Mais elle part de plus bas.
+
+Conséquence pratique :
+une grande partie des outils disponibles
+sera conçue et hébergée hors d'Europe.
+
+Or les données qui les alimentent sont sensibles.
+Conversations clients.
+Réclamations.
+Enregistrements d'appels.
+
+Le lieu d'hébergement n'est pas un détail juridique.
+C'est un critère de choix, au même titre que la performance ou le prix.
+
+Où sont traitées les conversations de vos clients ?
+
+Source : Statista Market Insights (2026), prévisions par région
+
+→ Lien en commentaire
+
+#MachineLearning #IA #RGPD #SouveraineteNumerique #CustovoxAI
+---
+RAPPEL COMMENTAIRE : poster le lien en 1er commentaire
+Lire l'article : https://custovox.ai/fr/blog/machine-learning-europe-par-region-2031
+
+═══════════════════════════════════════════
+
+POST 6 — EN — 16 nov 17h30
+IMAGE : custovox_ai_acsi_ecommerce_en.png
+TEXTE :
+𝟳𝟴 𝗼𝘂𝘁 𝗼𝗳 𝟭𝟬𝟬 𝗶𝗻 𝟮𝟬𝟬𝟬.
+79 out of 100 in 2026.
+
+That is the US online retail customer satisfaction score (ACSI).
+26 years. Next-day delivery. One-click payment. Free returns.
+And satisfaction has barely moved.
+
+Peak: 84 in 2003.
+Lowest: 77 in 2001 and 2021.
+
+Every improvement quickly becomes the new normal.
+What delighted customers yesterday merely meets expectations today.
+
+And a score has a limit:
+it measures a level, not a cause.
+
+79/100 does not tell you whether customers complain about delivery,
+return fees, product quality or reaching support.
+
+Their reviews, tickets and calls do.
+
+To break the plateau, doing better in general is not enough.
+You need to know exactly what still disappoints.
+
+Source: ACSI, via Statista (2026)
+
+→ Full article in comments
+
+#CustomerSatisfaction #Ecommerce #Retail #CustomerExperience #CustovoxAI
+---
+RAPPEL COMMENTAIRE : poster le lien en 1er commentaire
+Read the article: https://custovox.ai/blog/online-retail-customer-satisfaction-acsi-2000-2026
+
+═══════════════════════════════════════════
+
+POST 7 — FR — 17 nov 11h50
+IMAGE : custovox_ai_hotellerie_clients_reviennent_fr.png
+TEXTE :
+𝟴 % : 𝘀𝗲𝘂𝗹𝘀 𝟴 % 𝗱𝗲𝘀 𝗵𝗼̂𝘁𝗲𝗹𝗶𝗲𝗿𝘀 𝘃𝗼𝗶𝗲𝗻𝘁 𝗿𝗲𝘃𝗲𝗻𝗶𝗿 𝗽𝗹𝘂𝘀 𝗱𝗲𝘀 𝘁𝗿𝗼𝗶𝘀 𝗾𝘂𝗮𝗿𝘁𝘀 𝗱𝗲 𝗹𝗲𝘂𝗿𝘀 𝗰𝗹𝗶𝗲𝗻𝘁𝘀.
+
+C'était le résultat d'une enquête Tripadvisor / Ipsos menée en 2014 auprès de 14 083 hôteliers.
+→ 38 % voient revenir au plus 25 % de leurs clients
+→ 35 % entre 26 et 50 %
+→ 17 % entre 51 et 75 %
+
+Les données sont anciennes.
+Le constat, lui, reste d'actualité :
+le retour du client est l'exception.
+
+Pourquoi ne reviennent-ils pas ?
+Une chambre bruyante.
+Un accueil distant.
+Un petit-déjeuner décevant.
+
+Ces détails, les clients les écrivent.
+Dans les avis.
+Dans les questionnaires.
+Dans les emails après le séjour.
+
+Lus un par un, ils se perdent.
+Lus ensemble, ils deviennent un plan d'action.
+
+Source : Tripadvisor, Ipsos, via Statista (2014)
+
+→ Lien en commentaire
+
+#Hotellerie #Fidelisation #AvisClients #ExperienceClient #CustovoxAI
+---
+RAPPEL COMMENTAIRE : poster le lien en 1er commentaire
+Lire l'article : https://custovox.ai/fr/blog/hotellerie-clients-qui-reviennent
+
+═══════════════════════════════════════════
+
+POST 8 — EN — 19 nov 12h30
+IMAGE : custovox_ai_centres_appels_satisfaction_en.png
+TEXTE :
+𝟭𝟮% 𝗼𝗳 𝗰𝗮𝗹𝗹 𝗰𝗲𝗻𝘁𝗲𝗿𝘀 𝗱𝗼𝗻'𝘁 𝘁𝗿𝗮𝗰𝗸 𝗰𝘂𝘀𝘁𝗼𝗺𝗲𝗿 𝘀𝗮𝘁𝗶𝘀𝗳𝗮𝗰𝘁𝗶𝗼𝗻 𝗮𝘁 𝗮𝗹𝗹.
+
+48% track it channel by channel.
+Only 40% have an integrated view across all channels.
+
+So 60% cannot answer a simple question:
+how did this customer's full journey go?
+
+Customers do not think in channels.
+They email.
+Follow up by chat.
+End up calling.
+
+Each channel, taken alone, looks fine.
+The chat rating is good because the agent was friendly.
+The two unanswered emails before that? Invisible.
+
+Repetition.
+Waiting between contacts.
+Explaining the problem again.
+
+These pain points sit between channels.
+And they are often what makes customers leave.
+
+The data to see them already exists:
+recordings, chat logs, emails, tickets.
+
+It just needs to be read together.
+
+Source: CTI Forum, Liveops, via Statista (2025)
+
+→ Full article in comments
+
+#CallCenter #CustomerSatisfaction #ContactCenter #CustomerExperience #CustovoxAI
+---
+RAPPEL COMMENTAIRE : poster le lien en 1er commentaire
+Read the article: https://custovox.ai/blog/call-centers-measuring-customer-satisfaction
+
+═══════════════════════════════════════════
+
+POST 9 — FR — 20 nov 08h30
+IMAGE : custovox_ai_satisfaction_agents_fr.png
+TEXTE :
+𝟲𝟮 % : 𝗰'𝗲𝘀𝘁 𝗹𝗮 𝗽𝗮𝗿𝘁 𝗱𝗲𝘀 𝗮𝗴𝗲𝗻𝘁𝘀 𝗱𝗲 𝗰𝗲𝗻𝘁𝗿𝗲𝘀 𝗱'𝗮𝗽𝗽𝗲𝗹𝘀 𝘀𝗮𝘁𝗶𝘀𝗳𝗮𝗶𝘁𝘀 𝗱𝗲 𝗹𝗲𝘂𝗿 𝘁𝗿𝗮𝘃𝗮𝗶𝗹, 𝘀𝗲𝗹𝗼𝗻 𝘂𝗻𝗲 𝗲𝗻𝗾𝘂𝗲̂𝘁𝗲 𝗮𝗺𝗲́𝗿𝗶𝗰𝗮𝗶𝗻𝗲 𝗱𝗲 𝟮𝟬𝟭𝟳.
+
+Autrement dit, près de 4 sur 10 ne l'étaient pas.
+70 % des hommes satisfaits.
+61 % des femmes.
+
+Le nombre de conseillers clientèle aux États-Unis :
+2,92 millions au pic de 2019.
+Environ 2,6 millions en 2025.
+
+Moins d'agents.
+Des demandes simples automatisées.
+Et donc davantage d'appels complexes ou tendus pour ceux qui restent.
+
+Un agent épuisé ne peut pas offrir une expérience remarquable.
+Même avec le meilleur script.
+
+Réduire les motifs d'appel répétitifs soulage à la fois le client et l'agent.
+
+Comprendre les conversations pour aider les équipes.
+Pas pour les surveiller.
+
+Source : Aspect, Conversion Research, via Statista (2025) ; dossier Call centers in the U.S. (2026)
+
+→ Lien en commentaire
+
+#CentreDAppels #ExperienceAgent #ServiceClient #RelationClient #CustovoxAI
+---
+RAPPEL COMMENTAIRE : poster le lien en 1er commentaire
+Lire l'article : https://custovox.ai/fr/blog/satisfaction-agents-centre-appels
+
+═══════════════════════════════════════════
+
+POST 10 — EN — 23 nov 17h30
+IMAGE : SANS IMAGE
+TEXTE :
+𝟱𝟰% 𝗼𝗳 𝗔𝗺𝗲𝗿𝗶𝗰𝗮𝗻𝘀 𝘀𝘁𝗶𝗹𝗹 𝗽𝗿𝗲𝗳𝗲𝗿 𝘁𝗵𝗲 𝗽𝗵𝗼𝗻𝗲 𝘁𝗼 𝘀𝗼𝗹𝘃𝗲 𝗮 𝗰𝘂𝘀𝘁𝗼𝗺𝗲𝗿 𝘀𝗲𝗿𝘃𝗶𝗰𝗲 𝗽𝗿𝗼𝗯𝗹𝗲𝗺.
+
+That was in 2022.
+Chat, messaging, bots, social media… and the phone still comes first.
+
+Other data points from the same dossiers:
+→ 51% said the phone gives the fastest resolution (2017)
+→ 43% preferred voice channels, +9 points vs 2018 (2020)
+→ Baby boomers prefer live calls; Gen Z, Gen X and millennials prefer email (2024)
+
+Here is the paradox:
+the most preferred channel is the least analyzed.
+
+Emails and tickets are easy to read. They are already text.
+Calls are recorded, then forgotten.
+A supervisor listens to a few each week.
+The rest disappear.
+
+Yet a call holds the exact reason for contact,
+the customer's words,
+their tone.
+
+Who listens to your calls?
+
+Source: Statista, Customer service in the U.S. and Call centers in the U.S. dossiers
+
+→ Full article in comments
+
+#CustomerService #CallCenter #VoiceOfCustomer #CustomerExperience #CustovoxAI
+---
+RAPPEL COMMENTAIRE : poster le lien en 1er commentaire
+Read the article: https://custovox.ai/blog/phone-preferred-customer-service-channel
+
+═══════════════════════════════════════════
+
+POST 11 — FR — 24 nov 11h50
+IMAGE : custovox_ai_hotellerie_ia_usages_fr.png
+TEXTE :
+𝟰𝟰 % 𝗱𝗲𝘀 𝗰𝗵𝗮𝗶̂𝗻𝗲𝘀 𝗵𝗼̂𝘁𝗲𝗹𝗶𝗲̀𝗿𝗲𝘀 𝗮𝘂𝘁𝗼𝗺𝗮𝘁𝗶𝘀𝗲𝗻𝘁 𝗱𝗲́𝗷𝗮̀ 𝗹𝗲𝘂𝗿 𝗰𝗼𝗺𝗺𝘂𝗻𝗶𝗰𝗮𝘁𝗶𝗼𝗻 𝗰𝗹𝗶𝗲𝗻𝘁.
+
+C'est l'usage de l'IA le plus répandu dans l'hôtellerie en 2025.
+→ 42 % utilisent chatbots et assistants virtuels
+→ 34 % des assistants IA
+→ 62 % y voient le domaine le plus innovant pour les deux prochaines années
+
+Les hôtels parlent donc davantage à leurs clients.
+Avant, pendant et après le séjour.
+
+Mais chaque message automatique appelle une réponse.
+Une demande particulière.
+Une remarque sur la chambre.
+Un agacement pendant le séjour.
+Un avis après le départ.
+
+Si personne ne les lit,
+l'hôtel parle beaucoup
+mais n'apprend rien.
+
+L'IA donne aux hôtels les moyens de parler à chaque client.
+Elle peut aussi leur donner les moyens d'écouter chacun d'eux.
+
+C'est cette seconde moitié qui fait revenir.
+
+Source : Statista, dossier Hotels (2026), enquête 2025
+
+→ Lien en commentaire
+
+#Hotellerie #IA #RelationClient #ExperienceClient #CustovoxAI
+---
+RAPPEL COMMENTAIRE : poster le lien en 1er commentaire
+Lire l'article : https://custovox.ai/fr/blog/hotellerie-intelligence-artificielle-usages
+
+═══════════════════════════════════════════
+
+POST 12 — EN — 26 nov 12h30
+IMAGE : custovox_ai_ia_service_client_chine_en.png
+TEXTE :
+×𝟭𝟭: 𝗖𝗵𝗶𝗻𝗮'𝘀 𝗔𝗜 𝗰𝘂𝘀𝘁𝗼𝗺𝗲𝗿 𝘀𝗲𝗿𝘃𝗶𝗰𝗲 𝗺𝗮𝗿𝗸𝗲𝘁 𝗶𝘀 𝗲𝘅𝗽𝗲𝗰𝘁𝗲𝗱 𝘁𝗼 𝗴𝗿𝗼𝘄 𝗳𝗿𝗼𝗺 𝟭.𝟲 𝘁𝗼 𝟭𝟴.𝟭 𝗯𝗶𝗹𝗹𝗶𝗼𝗻 𝘆𝘂𝗮𝗻 𝗯𝗲𝘁𝘄𝗲𝗲𝗻 𝟮𝟬𝟭𝟵 𝗮𝗻𝗱 𝟮𝟬𝟮𝟳.
+
+Figures from 2023 onwards are estimates.
+But the most telling number is elsewhere.
+
+Software is about 80% of the market.
+In 2019: 1.28 of 1.60 billion yuan.
+In 2027 (est.): 14.50 of 18.13 billion.
+
+Hardware and services stay small.
+
+The value is not in contact center equipment.
+It is in software that understands, sorts and analyzes customer conversations.
+
+There are two kinds of customer service software:
+→ software that answers
+→ software that understands
+
+The second is where the value builds up.
+
+For European companies, the lesson is not to copy the model.
+It is to invest in understanding customers,
+with data hosted in Europe.
+
+Source: LeadLeo, Frost & Sullivan, Eastmoney.com, via Statista (2026)
+
+→ Full article in comments
+
+#AI #CustomerService #China #CustomerExperience #CustovoxAI
+---
+RAPPEL COMMENTAIRE : poster le lien en 1er commentaire
+Read the article: https://custovox.ai/blog/ai-customer-service-market-china-2027
+
+═══════════════════════════════════════════
+
+POST 13 — FR — 27 nov 08h30
+IMAGE : custovox_ai_agents_face_ia_fr.png
+TEXTE :
+𝟰𝟬 % 𝗱𝗲𝘀 𝗮𝗴𝗲𝗻𝘁𝘀 𝗱𝗲 𝗰𝗲𝗻𝘁𝗿𝗲𝘀 𝗱𝗲 𝗰𝗼𝗻𝘁𝗮𝗰𝘁 𝘁𝗿𝗼𝘂𝘃𝗲𝗻𝘁 𝗾𝘂𝗲 𝗹'𝗜𝗔 𝗮 𝗿𝗲𝗻𝗱𝘂 𝗹𝗲𝘂𝗿 𝘁𝗿𝗮𝘃𝗮𝗶𝗹 𝗽𝗹𝘂𝘀 𝗳𝗮𝗰𝗶𝗹𝗲.
+
+Enquête menée fin 2022 - début 2023 auprès de 3 366 agents américains.
+
+Mais tout dépend de l'usage.
+
+Quand l'IA aide sur l'information client :
+→ 40 % trouvent le travail plus facile
+→ la majorité voit un meilleur service client
+
+Quand l'IA sert à surveiller :
+→ la majorité trouve le travail plus stressant
+
+Pour la formation :
+→ plus de 30 % trouvent le travail plus stressant
+
+Ce n'est pas la technologie qui pose problème.
+C'est l'intention.
+
+Un outil qui aide est accueilli.
+Un outil qui note est subi.
+
+Et un agent stressé ne délivre pas une bonne expérience client.
+
+Analyser les conversations pour comprendre les clients.
+Pas pour surveiller les agents.
+
+Source : Statista, dossier Call centers in the U.S. (2026)
+
+→ Lien en commentaire
+
+#CentreDAppels #IA #ExperienceAgent #ServiceClient #CustovoxAI
+---
+RAPPEL COMMENTAIRE : poster le lien en 1er commentaire
+Lire l'article : https://custovox.ai/fr/blog/agents-centre-appels-face-a-ia
+
+═══════════════════════════════════════════
+
+POST 14 — EN — 30 nov 17h30
+IMAGE : custovox_ai_roi_ia_entreprises_en.png
+TEXTE :
+𝗢𝗻𝗹𝘆 𝟯𝟵% 𝗼𝗳 𝗨𝗦 𝗲-𝗰𝗼𝗺𝗺𝗲𝗿𝗰𝗲 𝗰𝗼𝗺𝗽𝗮𝗻𝗶𝗲𝘀 𝗿𝗮𝘁𝗲 𝘁𝗵𝗲 𝗥𝗢𝗜 𝗼𝗳 𝗔𝗜 𝗮𝘀 𝘃𝗲𝗿𝘆 𝗴𝗼𝗼𝗱.
+
+May 2025 survey:
+→ Very good: 39%
+→ Good: 56%
+→ Poor: 2%
+→ Not sure: 2%
+
+So 95% see a positive return.
+But only a minority see a real step change.
+
+Part of the reason: maturity.
+In 2024, 47% of consumer goods and retail companies were still piloting generative AI.
+Only 5% used it fully.
+
+The projects that pay off most share three traits:
+→ a precise, measurable problem
+→ data the company already has
+→ results business teams can use right away
+
+Customer feedback analysis ticks all three.
+The data exists: reviews, tickets, emails, calls.
+The question is clear: why are customers unhappy?
+
+The richest data source in your company may be the one you already own.
+
+Source: Statista, AI in U.S. e-commerce dossier (2026)
+
+→ Full article in comments
+
+#AI #ROI #Ecommerce #CustomerExperience #CustovoxAI
+---
+RAPPEL COMMENTAIRE : poster le lien en 1er commentaire
+Read the article: https://custovox.ai/blog/ai-return-on-investment-companies
+
+═══════════════════════════════════════════
+
+POST 15 — FR — 1 déc 11h50
+IMAGE : SANS IMAGE
+TEXTE :
+𝟯𝟲 % 𝗱𝗲𝘀 𝗲𝗻𝘀𝗲𝗶𝗴𝗻𝗲𝘀 𝗼𝗻𝘁 𝘃𝘂 𝗹'𝗜𝗔 𝗮𝘂𝗴𝗺𝗲𝗻𝘁𝗲𝗿 𝗹𝗲𝘂𝗿 𝗰𝗵𝗶𝗳𝗳𝗿𝗲 𝗱'𝗮𝗳𝗳𝗮𝗶𝗿𝗲𝘀 𝗮𝗻𝗻𝘂𝗲𝗹 𝗱'𝗮𝘂 𝗺𝗼𝗶𝗻𝘀 𝟭𝟬 %.
+
+Données 2024 :
+→ plus de 20 % : 13 % des enseignes
+→ 10 à 20 % : 23 %
+→ 5 à 9 % : 18 %
+→ moins de 5 % : 21 %
+→ aucun impact : 25 %
+
+95 % des distributeurs voient l'IA générative comme un tournant.
+Mais un quart n'en voit encore aucun effet sur ses ventes.
+
+Ce qui fait la différence ?
+Pas le budget.
+Le lien entre l'IA et des décisions concrètes.
+
+Quels produits mettre en avant.
+Quels problèmes de livraison régler.
+Quels irritants supprimer.
+
+Et une source de chiffre d'affaires est souvent oubliée :
+ce que disent les clients.
+Avis produits, questions avant achat, réclamations après livraison.
+
+Ils disent ce qui freine vos ventes.
+
+Source : Statista, dossier AI in the retail industry (2026)
+
+→ Lien en commentaire
+
+#Retail #IA #Commerce #ExperienceClient #CustovoxAI
+---
+RAPPEL COMMENTAIRE : poster le lien en 1er commentaire
+Lire l'article : https://custovox.ai/fr/blog/retail-ia-generative-revenus
+
+═══════════════════════════════════════════
+
+POST 16 — EN — 3 déc 12h30
+IMAGE : custovox_ai_assistants_ia_achat_en.png
+TEXTE :
+𝗔𝗹𝗺𝗼𝘀𝘁 𝟲𝟬% 𝗼𝗳 𝗚𝗲𝗻 𝗭 𝗵𝗮𝘃𝗲 𝗮𝗹𝗿𝗲𝗮𝗱𝘆 𝘀𝗵𝗼𝗽𝗽𝗲𝗱 𝘄𝗶𝘁𝗵 𝗮𝗻 𝗔𝗜 𝗮𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁 𝗼𝗿 𝗖𝗵𝗮𝘁𝗚𝗣𝗧.
+
+48% of millennials too (2025).
+
+AI is becoming part of how people buy.
+But adoption does not mean trust.
+
+→ Over 60% find AI useful for recommendations
+→ About 45% want no AI interaction while shopping
+→ More than half worry about how AI handles their data
+→ 28% trust no company with it (2025)
+→ 60% of baby boomers avoid sharing personal data (2024)
+
+Customers see the value.
+They want to keep control.
+And they increasingly ask where their data goes.
+
+For companies, that applies to internal tools too.
+When you analyze customer reviews, tickets or calls,
+you handle personal data.
+
+Where it is hosted, and whether it trains someone else's models,
+is part of the promise you make to customers.
+
+Source: Statista, AI and XR in e-commerce and AI in U.S. e-commerce dossiers (2026)
+
+→ Full article in comments
+
+#AI #Ecommerce #DataPrivacy #CustomerTrust #CustovoxAI
+---
+RAPPEL COMMENTAIRE : poster le lien en 1er commentaire
+Read the article: https://custovox.ai/blog/shoppers-ai-shopping-assistants
+
+═══════════════════════════════════════════
+
+POST 17 — FR — 4 déc 08h30
+IMAGE : custovox_ai_hotellerie_reservations_en_ligne_fr.png
+TEXTE :
+𝟳𝟳 % 𝗱𝘂 𝗰𝗵𝗶𝗳𝗳𝗿𝗲 𝗱'𝗮𝗳𝗳𝗮𝗶𝗿𝗲𝘀 𝗵𝗼̂𝘁𝗲𝗹𝗶𝗲𝗿 𝗺𝗼𝗻𝗱𝗶𝗮𝗹 𝘀𝗲 𝗳𝗮𝗶𝘁 𝗱𝗲́𝘀𝗼𝗿𝗺𝗮𝗶𝘀 𝗲𝗻 𝗹𝗶𝗴𝗻𝗲.
+
+C'était 66 % en 2017.
+Plus de 80 % sont attendus d'ici 2030.
+
+Avant de réserver, le client lit.
+Les photos.
+Les prix.
+Et surtout les avis.
+
+55 % des voyageurs de loisirs placent le rapport qualité-prix en premier (fin 2024).
+Mais le rapport qualité-prix ne se juge pas sur le prix seul.
+Il se juge sur ce que les autres clients racontent.
+
+Deux hôtels au même tarif ne se valent pas
+si l'un accumule les remarques sur le bruit
+et l'autre les compliments sur l'accueil.
+
+Vos avis sont votre vitrine.
+Et une mine d'informations sur ce qui fait monter ou baisser votre note.
+
+Les suivez-vous comme un indicateur de gestion ?
+
+Source : Statista, dossier Hotels (2026), données 2024
+
+→ Lien en commentaire
+
+#Hotellerie #AvisClients #ReputationEnLigne #Tourisme #CustovoxAI
+---
+RAPPEL COMMENTAIRE : poster le lien en 1er commentaire
+Lire l'article : https://custovox.ai/fr/blog/hotellerie-reservations-en-ligne-avis-clients
+
+═══════════════════════════════════════════
+
+POST 18 — EN — 7 déc 17h30
+IMAGE : custovox_ai_chatbots_humain_en.png
+TEXTE :
+𝟱𝟭% 𝗼𝗳 𝗰𝘂𝘀𝘁𝗼𝗺𝗲𝗿𝘀 𝗱𝗶𝘀𝗹𝗶𝗸𝗲 𝗰𝗵𝗮𝘁𝗯𝗼𝘁𝘀 𝗯𝗲𝗰𝗮𝘂𝘀𝗲 𝘁𝗵𝗲𝘆 𝗸𝗲𝗲𝗽 𝘁𝗵𝗲𝗺 𝗳𝗿𝗼𝗺 𝗮 𝗿𝗲𝗮𝗹 𝗽𝗲𝗿𝘀𝗼𝗻.
+
+That was in 2018.
+The bots have improved since.
+The need has not changed.
+
+In 2022, 61% said chatting with an agent was the easiest customer service channel.
+Only 23% chose video.
+
+People like chat.
+They want a person behind it.
+
+Bots still help for simple tasks (2024):
+→ almost half used them to book appointments
+→ about 47% to place orders
+→ 46% to report an issue
+
+And in 2025, 32% of furniture shoppers felt a chatbot informed them as well as an associate.
+Two thirds still did not.
+
+A chatbot does not end the conversation.
+It records part of it.
+
+Where customers give up.
+When they ask for a human.
+What they could not solve.
+
+That is data about your customers.
+Is anyone reading it?
+
+Source: Statista, Customer service in the U.S., AI and XR in e-commerce, AI in U.S. e-commerce dossiers
+
+→ Full article in comments
+
+#Chatbots #CustomerService #CustomerExperience #AI #CustovoxAI
+---
+RAPPEL COMMENTAIRE : poster le lien en 1er commentaire
+Read the article: https://custovox.ai/blog/chatbots-customers-want-a-human
+
+═══════════════════════════════════════════
+
+POST 19 — FR — 8 déc 11h50
+IMAGE : custovox_ai_libre_service_client_fr.png
+TEXTE :
+𝟴𝟴 % 𝗱𝗲𝘀 𝗰𝗹𝗶𝗲𝗻𝘁𝘀 𝗮𝘁𝘁𝗲𝗻𝗱𝗲𝗻𝘁 𝘂𝗻 𝗲𝘀𝗽𝗮𝗰𝗲 𝗱'𝗮𝗶𝗱𝗲 𝗲𝗻 𝗹𝗶𝗴𝗻𝗲.
+
+C'était déjà le cas en 2018 aux États-Unis.
+Ce n'est plus un bonus, c'est un minimum.
+
+Autres chiffres du même dossier :
+→ 49 % commencent leur démarche en ligne (2017)
+→ 18 % : le plus frustrant est de ne pas pouvoir résoudre seuls (2018)
+→ 13 % citent l'information désorganisée comme premier problème (2018)
+
+Le cercle vicieux :
+le client cherche, ne trouve pas, s'agace,
+puis appelle, déjà irrité.
+
+Le volume de contacts monte.
+Les délais s'allongent.
+Et personne ne sait ce qui manque dans la FAQ.
+
+Pourtant la réponse est là.
+Dans les tickets.
+
+Chaque question posée au service client
+indique une information absente, introuvable ou peu claire.
+
+Les questions qui reviennent le plus
+désignent exactement quoi écrire.
+
+Source : Statista, dossier Customer service in the U.S. (2025)
+
+→ Lien en commentaire
+
+#ServiceClient #SelfService #FAQ #ExperienceClient #CustovoxAI
+---
+RAPPEL COMMENTAIRE : poster le lien en 1er commentaire
+Lire l'article : https://custovox.ai/fr/blog/libre-service-client-attentes
+
+═══════════════════════════════════════════
+
+POST 20 — EN — 10 déc 12h30
+IMAGE : custovox_ai_voix_mobile_appels_en.png
+TEXTE :
+𝗠𝗼𝗯𝗶𝗹𝗲 𝘃𝗼𝗶𝗰𝗲 𝗿𝗲𝘃𝗲𝗻𝘂𝗲 𝗶𝘀 𝗳𝗮𝗹𝗹𝗶𝗻𝗴 𝟮.𝟳𝟮% 𝗮 𝘆𝗲𝗮𝗿 (𝟮𝟬𝟮𝟯-𝟮𝟬𝟮𝟴 𝗳𝗼𝗿𝗲𝗰𝗮𝘀𝘁).
+
+From $396.6B in 2016
+to $264.4B in 2022
+to about $224.6B in 2028.
+
+People call less.
+Routine conversations moved to messaging.
+
+So which calls remain?
+
+The ones where writing is not enough.
+A complex situation.
+An urgent problem.
+A worry. A dispute.
+
+For customer service, every call now carries higher stakes.
+The customer who picks up the phone has often tried something else first.
+
+And it is still a key channel:
+54% of Americans prefer the phone to solve a customer service problem (2022).
+
+Yet most calls are recorded and never listened to again.
+
+Fewer calls.
+More important calls.
+Rarely understood.
+
+Source: Statista Market Insights (2023), Mobile Voice
+
+→ Full article in comments
+
+#CustomerService #CallCenter #VoiceOfCustomer #CustomerExperience #CustovoxAI
+---
+RAPPEL COMMENTAIRE : poster le lien en 1er commentaire
+Read the article: https://custovox.ai/blog/mobile-voice-decline-customer-calls
+
+═══════════════════════════════════════════

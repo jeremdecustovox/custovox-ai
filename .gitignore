@@ -216,3 +216,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Statista PDFs used only to check figures: never published
+_sources/
+tools/node_modules/
