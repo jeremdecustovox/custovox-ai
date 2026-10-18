@@ -133,8 +133,6 @@ TEXTE :
 𝟲𝟭% 𝗱𝗲𝘀 𝗻𝗼𝘂𝘃𝗲𝗹𝗹𝗲𝘀 𝗹𝗶𝗰𝗼𝗿𝗻𝗲𝘀 𝗺𝗼𝗻𝗱𝗶𝗮𝗹𝗲𝘀 𝘀𝗼𝗻𝘁 𝗱𝗲𝘀 𝘀𝘁𝗮𝗿𝘁𝘂𝗽𝘀 𝗜𝗔 𝗲𝗻 𝟮𝟬𝟮𝟱.
 1 sur 5 est un agent IA.
 
-Il y a 5 ans, ce chiffre était sous 10%.
-
 La valeur économique se concentre désormais dans les outils qui lisent, comprennent et agissent sur les données.
 Pas dans la collecte. Dans l'analyse.
 
@@ -152,8 +150,6 @@ IMAGE : custovox_ai_61_pourcent_licornes_ia_2025_en.png
 TEXTE :
 𝟲𝟭% 𝗼𝗳 𝗻𝗲𝘄 𝗴𝗹𝗼𝗯𝗮𝗹 𝘂𝗻𝗶𝗰𝗼𝗿𝗻𝘀 𝗮𝗿𝗲 𝗔𝗜 𝘀𝘁𝗮𝗿𝘁𝘂𝗽𝘀 𝗶𝗻 𝟮𝟬𝟮𝟱.
 1 in 5 is an AI agent.
-
-5 years ago, that number was below 10%.
 
 Economic value is now concentrating in tools that read, understand and act on data.
 Not in data collection. In data analysis.
@@ -215,7 +211,7 @@ TEXTE :
 Vos clients parlent à des IA tous les jours.
 
 Et pendant ce temps, votre call center analyse 5 appels par semaine sur 200.
-Soit 1% de vos appels.
+Soit 2,5 % de vos appels.
 
 L'analyse automatique des appels n'est plus une option technologique.
 C'est une réponse à une attente client qui a déjà changé.
@@ -236,7 +232,7 @@ TEXTE :
 
 Your customers talk to AI every day at home.
 
-Meanwhile, your call center reviews 5 calls per week out of 200. That's 1%.
+Meanwhile, your call center reviews 5 calls per week out of 200. That's 2.5%.
 
 Automatic call analysis is no longer a technology option.
 It's a response to a customer expectation that has already shifted.
@@ -409,5 +405,83 @@ Automatic visual analysis applies today to every photo your customers send you.
 ---
 RAPPEL : poster le lien en 1er commentaire
 Read the article : https://custovox.ai/blog/computer-vision-103-billion-visual-analysis-2025
+
+═══════════════════════════════════════════
+
+POST 11 FR — 27 oct 08h30  (article « 9 profils psychologiques », en ligne le 24/10)
+IMAGE : SANS IMAGE
+TEXTE :
+𝗟𝗲 𝗳𝗿𝘂𝘀𝘁𝗿𝗲́, 𝗹𝗲 𝗽𝗿𝘂𝗱𝗲𝗻𝘁, 𝗹𝗲 𝘀𝗰𝗲𝗽𝘁𝗶𝗾𝘂𝗲, 𝗹'𝗮𝘀𝗽𝗶𝗿𝗮𝘁𝗶𝗼𝗻𝗻𝗲𝗹, 𝗹𝗲 𝘀𝗲𝗻𝘀𝗶𝗯𝗹𝗲 𝗮𝘂 𝘀𝘁𝗮𝘁𝘂𝘁 𝘀𝗼𝗰𝗶𝗮𝗹...
+
+Les meilleurs media buyers savent qu'une même offre parle à 9 profils psychologiques différents, pour des raisons différentes.
+
+Mais voilà la question que personne ne pose :
+
+Une fois qu'ils ont acheté —
+lesquels restent ?
+Lesquels ouvrent un ticket SAV 3 semaines plus tard ?
+Lesquels mentionnent un concurrent dans leur prochain avis Google ?
+
+Votre pixel ne le sait pas.
+Votre CRM non plus.
+
+Vos verbatims clients, si.
+
+Le frustré l'écrit dans son ticket :
+'c'est la troisième fois que je signale ça'.
+
+Le sceptique l'écrit dans son avis :
+'ne ressemble pas à ce qui était promis'.
+
+Le silencieux ne l'écrit pas.
+Il disparaît. Et son score de départ monte pendant 6 semaines.
+
+La boucle d'apprentissage marketing n'est complète que quand elle inclut ce que vos clients disent après avoir acheté.
+
+→ Lien en commentaire
+
+#Marketing #VoixDuClient #NLP #MediaBuyer #CustovoxAI
+---
+RAPPEL : poster le lien en 1er commentaire
+Lire l'article : https://custovox.ai/fr/blog/9-profils-psychologiques-clients-voix-du-client
+
+═══════════════════════════════════════════
+
+POST 11 EN — 27 oct 17h30  (article « 9 profils psychologiques », en ligne le 24/10)
+IMAGE : SANS IMAGE
+TEXTE :
+𝗧𝗵𝗲 𝗳𝗿𝘂𝘀𝘁𝗿𝗮𝘁𝗲𝗱 𝗯𝘂𝘆𝗲𝗿. 𝗧𝗵𝗲 𝗰𝗮𝘂𝘁𝗶𝗼𝘂𝘀 𝗼𝗻𝗲. 𝗧𝗵𝗲 𝘀𝗸𝗲𝗽𝘁𝗶𝗰. 𝗧𝗵𝗲 𝗮𝘀𝗽𝗶𝗿𝗮𝘁𝗶𝗼𝗻𝗮𝗹. 𝗧𝗵𝗲 𝘀𝘁𝗮𝘁𝘂𝘀-𝗰𝗼𝗻𝘀𝗰𝗶𝗼𝘂𝘀.
+
+The best media buyers know that one offer speaks to 9 different psychological profiles, for 9 different reasons.
+
+But here's the question nobody asks:
+
+Once they've purchased —
+which ones stay?
+Which ones open a support ticket 3 weeks later?
+Which ones mention a competitor in their next Google review?
+
+Your pixel doesn't know.
+Your CRM doesn't either.
+
+Your customer verbatims do.
+
+The frustrated buyer writes it in their ticket:
+'this is the third time I'm reporting this.'
+
+The skeptic writes it in their review:
+'doesn't match what was promised.'
+
+The silent one writes nothing.
+They just disappear. And their departure score climbs for 6 weeks undetected.
+
+The marketing learning loop is only complete when it includes what your customers say after they've purchased.
+
+→ Full article in comments
+
+#Marketing #CustomerVoice #NLP #MediaBuyer #CustovoxAI
+---
+RAPPEL : poster le lien en 1er commentaire
+Read the article : https://custovox.ai/blog/9-psychological-profiles-customer-voice-of-customer
 
 ═══════════════════════════════════════════
