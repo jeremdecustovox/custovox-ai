@@ -1,0 +1,322 @@
+[
+ {
+  "file": "custovox_ai_retention_secteurs_fr",
+  "big": "55 %",
+  "bigColor": "teal",
+  "sub": "des clients de l'hôtellerie restent fidèles. Les médias : 84 %.",
+  "hook": "Les clients qui partent le disent souvent avant.",
+  "source": "Source : CustomerGauge, NPS Benchmarks, MIT CISR, via Statista (2025) — données 2018"
+ },
+ {
+  "file": "custovox_ai_retention_secteurs_en",
+  "big": "55%",
+  "bigColor": "teal",
+  "sub": "of hospitality customers stay loyal. Media: 84%.",
+  "hook": "Customers who leave usually say so first.",
+  "source": "Source: CustomerGauge, NPS Benchmarks, MIT CISR, via Statista (2025) — 2018 data"
+ },
+ {
+  "file": "custovox_ai_clients_perdus_service_fr",
+  "big": "25 %",
+  "bigColor": "teal",
+  "sub": "des clients du câble partent à cause du service client",
+  "hook": "La raison est écrite dans les tickets.",
+  "source": "Source : Statista (2025), dossier Customer service in the U.S. — États-Unis, 2020"
+ },
+ {
+  "file": "custovox_ai_clients_perdus_service_en",
+  "big": "25%",
+  "bigColor": "teal",
+  "sub": "of cable customers leave because of customer service",
+  "hook": "The reason is written in the tickets.",
+  "source": "Source: Statista (2025), Customer service in the U.S. dossier — United States, 2020"
+ },
+ {
+  "file": "custovox_ai_40_pourcent_mauvais_service_fr",
+  "big": "40 %",
+  "bigColor": "teal",
+  "sub": "des clients cessent d'acheter après un mauvais service",
+  "hook": "Et 58 % ont contacté un service client le mois dernier.",
+  "source": "Source : Statista (2025), dossier Customer service in the U.S. — États-Unis, 2020"
+ },
+ {
+  "file": "custovox_ai_40_pourcent_mauvais_service_en",
+  "big": "40%",
+  "bigColor": "teal",
+  "sub": "of customers stop buying after poor service",
+  "hook": "And 58% contacted customer service last month.",
+  "source": "Source: Statista (2025), Customer service in the U.S. dossier — United States, 2020"
+ },
+ {
+  "file": "custovox_ai_ia_ecommerce_service_client_fr",
+  "big": "61 %",
+  "bigColor": "teal",
+  "sub": "des entreprises e-commerce utilisent l'IA pour le service client",
+  "hook": "L'IA répond aux clients. Qui lit leurs réponses ?",
+  "source": "Source : OnePoll, Storyblok, via Statista (2026) — États-Unis, 2025"
+ },
+ {
+  "file": "custovox_ai_ia_ecommerce_service_client_en",
+  "big": "61%",
+  "bigColor": "teal",
+  "sub": "of e-commerce companies use AI for customer service",
+  "hook": "AI answers customers. Who reads their answers?",
+  "source": "Source: OnePoll, Storyblok, via Statista (2026) — United States, 2025"
+ },
+ {
+  "file": "custovox_ai_ml_europe_2031_fr",
+  "big": "×5,3",
+  "bigColor": "teal",
+  "sub": "le machine learning en Europe d'ici 2031",
+  "hook": "De 24,8 Md$ en 2025 à 131,7 Md$ en 2031.",
+  "source": "Source : Statista Market Insights (2026) — prévisions par région"
+ },
+ {
+  "file": "custovox_ai_ml_europe_2031_en",
+  "big": "×5.3",
+  "bigColor": "teal",
+  "sub": "machine learning in Europe by 2031",
+  "hook": "From $24.8B in 2025 to $131.7B in 2031.",
+  "source": "Source: Statista Market Insights (2026) — forecasts by region"
+ },
+ {
+  "file": "custovox_ai_acsi_ecommerce_fr",
+  "big": "79/100",
+  "bigColor": "white",
+  "sub": "satisfaction e-commerce en 2026 — 78 en 2000",
+  "hook": "Un score qui stagne. Les mots des clients disent pourquoi.",
+  "source": "Source : ACSI, via Statista (2026) — États-Unis, 2000-2026"
+ },
+ {
+  "file": "custovox_ai_acsi_ecommerce_en",
+  "big": "79/100",
+  "bigColor": "white",
+  "sub": "online retail satisfaction in 2026 — 78 in 2000",
+  "hook": "A flat score. Customers' words explain why.",
+  "source": "Source: ACSI, via Statista (2026) — United States, 2000-2026"
+ },
+ {
+  "file": "custovox_ai_hotellerie_clients_reviennent_fr",
+  "big": "8 %",
+  "bigColor": "teal",
+  "sub": "des hôteliers voient revenir plus des trois quarts de leurs clients",
+  "hook": "Enquête 2014. La fidélité se joue dans les avis.",
+  "source": "Source : Tripadvisor, Ipsos, via Statista (2014) — 14 083 hôteliers"
+ },
+ {
+  "file": "custovox_ai_hotellerie_clients_reviennent_en",
+  "big": "8%",
+  "bigColor": "teal",
+  "sub": "of hoteliers see more than three quarters of guests return",
+  "hook": "2014 survey. Loyalty is decided in reviews.",
+  "source": "Source: Tripadvisor, Ipsos, via Statista (2014) — 14,083 hoteliers"
+ },
+ {
+  "file": "custovox_ai_centres_appels_satisfaction_fr",
+  "big": "60 %",
+  "bigColor": "teal",
+  "sub": "des centres d'appels n'ont pas de vue unifiée de la satisfaction",
+  "hook": "48 % mesurent canal par canal. 12 % ne mesurent rien.",
+  "source": "Source : CTI Forum, Liveops, via Statista (2025)"
+ },
+ {
+  "file": "custovox_ai_centres_appels_satisfaction_en",
+  "big": "60%",
+  "bigColor": "teal",
+  "sub": "of call centers lack a unified view of customer satisfaction",
+  "hook": "48% track channel by channel. 12% track nothing.",
+  "source": "Source: CTI Forum, Liveops, via Statista (2025)"
+ },
+ {
+  "file": "custovox_ai_satisfaction_agents_fr",
+  "big": "62 %",
+  "bigColor": "teal",
+  "sub": "des agents de centres d'appels satisfaits de leur travail",
+  "hook": "Expérience agent = expérience client.",
+  "source": "Source : Aspect, Conversion Research, via Statista (2025) — États-Unis, enquête 2017"
+ },
+ {
+  "file": "custovox_ai_satisfaction_agents_en",
+  "big": "62%",
+  "bigColor": "teal",
+  "sub": "of call center agents are satisfied with their job",
+  "hook": "Agent experience = customer experience.",
+  "source": "Source: Aspect, Conversion Research, via Statista (2025) — United States, 2017 survey"
+ },
+ {
+  "file": "custovox_ai_telephone_canal_prefere_fr",
+  "big": "54 %",
+  "bigColor": "teal",
+  "sub": "préfèrent appeler pour résoudre un problème",
+  "hook": "Le canal le plus utilisé. Le moins analysé.",
+  "source": "Source : Statista (2025), dossier Customer service in the U.S. — États-Unis, 2022"
+ },
+ {
+  "file": "custovox_ai_telephone_canal_prefere_en",
+  "big": "54%",
+  "bigColor": "teal",
+  "sub": "prefer calling to solve a customer service problem",
+  "hook": "The most used channel. The least analyzed.",
+  "source": "Source: Statista (2025), Customer service in the U.S. dossier — United States, 2022"
+ },
+ {
+  "file": "custovox_ai_hotellerie_ia_usages_fr",
+  "big": "44 %",
+  "bigColor": "teal",
+  "sub": "des chaînes hôtelières automatisent leur communication client",
+  "hook": "L'hôtel parle davantage. Écoute-t-il mieux ?",
+  "source": "Source : Statista (2026), dossier Hotels — enquête 2025"
+ },
+ {
+  "file": "custovox_ai_hotellerie_ia_usages_en",
+  "big": "44%",
+  "bigColor": "teal",
+  "sub": "of hotel chains automate guest communication",
+  "hook": "Hotels talk more. Do they listen better?",
+  "source": "Source: Statista (2026), Hotels dossier — 2025 survey"
+ },
+ {
+  "file": "custovox_ai_ia_service_client_chine_fr",
+  "big": "×11",
+  "bigColor": "teal",
+  "sub": "le marché de l'IA pour le service client en Chine, 2019-2027",
+  "hook": "80 % de la valeur est dans le logiciel.",
+  "source": "Source : LeadLeo, Frost & Sullivan, Eastmoney.com, via Statista (2026) — estimations dès 2023"
+ },
+ {
+  "file": "custovox_ai_ia_service_client_chine_en",
+  "big": "×11",
+  "bigColor": "teal",
+  "sub": "China's AI customer service market, 2019-2027",
+  "hook": "80% of the value is in software.",
+  "source": "Source: LeadLeo, Frost & Sullivan, Eastmoney.com, via Statista (2026) — estimates from 2023"
+ },
+ {
+  "file": "custovox_ai_agents_face_ia_fr",
+  "big": "40 %",
+  "bigColor": "teal",
+  "sub": "des agents trouvent que l'IA rend leur travail plus facile",
+  "hook": "Mais la surveillance par l'IA stresse la majorité.",
+  "source": "Source : Statista (2026), dossier Call centers in the U.S. — enquête 2023"
+ },
+ {
+  "file": "custovox_ai_agents_face_ia_en",
+  "big": "40%",
+  "bigColor": "teal",
+  "sub": "of agents say AI made their work easier",
+  "hook": "But AI monitoring stresses the majority.",
+  "source": "Source: Statista (2026), Call centers in the U.S. dossier — 2023 survey"
+ },
+ {
+  "file": "custovox_ai_roi_ia_entreprises_fr",
+  "big": "40 %",
+  "bigColor": "teal",
+  "sub": "des entreprises jugent très bon le retour sur investissement de l'IA",
+  "hook": "La valeur vient des usages ciblés sur vos propres données.",
+  "source": "Source : Statista (2026), dossier AI in U.S. e-commerce — mai 2025"
+ },
+ {
+  "file": "custovox_ai_roi_ia_entreprises_en",
+  "big": "40%",
+  "bigColor": "teal",
+  "sub": "of companies rate the ROI of AI as very good",
+  "hook": "Value comes from targeted uses of your own data.",
+  "source": "Source: Statista (2026), AI in U.S. e-commerce dossier — May 2025"
+ },
+ {
+  "file": "custovox_ai_retail_ia_revenus_fr",
+  "big": "36 %",
+  "bigColor": "teal",
+  "sub": "des enseignes gagnent au moins 10 % de chiffre d'affaires grâce à l'IA",
+  "hook": "Et 25 % n'en voient encore aucun effet.",
+  "source": "Source : Statista (2026), dossier AI in the retail industry — données 2024"
+ },
+ {
+  "file": "custovox_ai_retail_ia_revenus_en",
+  "big": "36%",
+  "bigColor": "teal",
+  "sub": "of retailers gain at least 10% revenue from AI",
+  "hook": "And 25% still see no effect.",
+  "source": "Source: Statista (2026), AI in the retail industry dossier — 2024 data"
+ },
+ {
+  "file": "custovox_ai_assistants_ia_achat_fr",
+  "big": "60 %",
+  "bigColor": "teal",
+  "sub": "de la Gen Z achète déjà avec un assistant IA",
+  "hook": "Mais 28 % ne font confiance à aucune entreprise pour leurs données.",
+  "source": "Source : Statista (2026), dossiers AI and XR in e-commerce ; AI in U.S. e-commerce — 2025"
+ },
+ {
+  "file": "custovox_ai_assistants_ia_achat_en",
+  "big": "60%",
+  "bigColor": "teal",
+  "sub": "of Gen Z already shop with an AI assistant",
+  "hook": "But 28% trust no company with their data.",
+  "source": "Source: Statista (2026), AI and XR in e-commerce; AI in U.S. e-commerce dossiers — 2025"
+ },
+ {
+  "file": "custovox_ai_hotellerie_reservations_en_ligne_fr",
+  "big": "77 %",
+  "bigColor": "teal",
+  "sub": "du chiffre d'affaires hôtelier mondial se fait en ligne",
+  "hook": "Vos avis clients sont votre vitrine.",
+  "source": "Source : Statista (2026), dossier Hotels — données 2024"
+ },
+ {
+  "file": "custovox_ai_hotellerie_reservations_en_ligne_en",
+  "big": "77%",
+  "bigColor": "teal",
+  "sub": "of worldwide hotel revenue comes from online channels",
+  "hook": "Your guest reviews are your shop window.",
+  "source": "Source: Statista (2026), Hotels dossier — 2024 data"
+ },
+ {
+  "file": "custovox_ai_chatbots_humain_fr",
+  "big": "51 %",
+  "bigColor": "teal",
+  "sub": "reprochent aux chatbots de les empêcher de joindre un humain",
+  "hook": "Le chatbot n'est pas la fin de la conversation.",
+  "source": "Source : Statista (2025), dossier Customer service in the U.S. — États-Unis, 2018"
+ },
+ {
+  "file": "custovox_ai_chatbots_humain_en",
+  "big": "51%",
+  "bigColor": "teal",
+  "sub": "dislike chatbots for keeping them from a real person",
+  "hook": "A chatbot is not the end of the conversation.",
+  "source": "Source: Statista (2025), Customer service in the U.S. dossier — United States, 2018"
+ },
+ {
+  "file": "custovox_ai_libre_service_client_fr",
+  "big": "88 %",
+  "bigColor": "teal",
+  "sub": "des clients attendent un espace d'aide en ligne",
+  "hook": "Vos tickets disent ce qui manque dans votre FAQ.",
+  "source": "Source : Statista (2025), dossier Customer service in the U.S. — États-Unis, 2018"
+ },
+ {
+  "file": "custovox_ai_libre_service_client_en",
+  "big": "88%",
+  "bigColor": "teal",
+  "sub": "of customers expect an online self-service portal",
+  "hook": "Your tickets show what your FAQ is missing.",
+  "source": "Source: Statista (2025), Customer service in the U.S. dossier — United States, 2018"
+ },
+ {
+  "file": "custovox_ai_voix_mobile_appels_fr",
+  "big": "-2,7 %/an",
+  "bigColor": "white",
+  "sub": "pour la voix mobile entre 2023 et 2028",
+  "hook": "On appelle moins, mais quand c'est important.",
+  "source": "Source : Statista Market Insights (2023), Mobile Voice — prévisions"
+ },
+ {
+  "file": "custovox_ai_voix_mobile_appels_en",
+  "big": "-2.7%/yr",
+  "bigColor": "white",
+  "sub": "for mobile voice between 2023 and 2028",
+  "hook": "People call less, but they call when it matters.",
+  "source": "Source: Statista Market Insights (2023), Mobile Voice — forecasts"
+ }
+]
