@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "custovox-sentiment"
-version = "1.0.2"
+version = "1.0.3"
 description = "Multilingual customer sentiment analysis MCP server. EN/FR/DE/ES/PT-BR native models. By custovox.ai"
 readme = "README.md"
 license = {text = "MIT"}
@@ -29,7 +29,7 @@ classifiers = [
 ]
 requires-python = ">=3.10"
 dependencies = [
-    "mcp>=1.0.0",
+    "mcp>=1.0.0,<2",
     "transformers>=4.40.0",
     "torch>=2.0.0",
 ]
@@ -40,7 +40,12 @@ Repository = "https://github.com/jeremdecustovox/custovox-ai"
 Documentation = "https://custovox.ai"
 
 [project.scripts]
-custovox-sentiment = "server:mcp.run"
+custovox-sentiment = "custovox_sentiment.server:mcp.run"
 
+# Installed as custovox_sentiment/server.py so it does not overwrite the
+# top-level server.py of the other custovox MCP packages.
 [tool.hatch.build.targets.wheel]
-include = ["server.py"]
+bypass-selection = true
+
+[tool.hatch.build.targets.wheel.force-include]
+"server.py" = "custovox_sentiment/server.py"

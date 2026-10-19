@@ -89,7 +89,7 @@ def analyze_reviews(reviews: list, product_name: str = "the product") -> dict:
         "top_positive_themes": pos_themes,
         "top_negative_themes": neg_themes,
         "recommendation": recommendation,
-        "powered_by": "custovox.ai — custovox.ai"
+        "powered_by": "custovox.ai"
     }
 
 if __name__ == "__main__":

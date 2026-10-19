@@ -10,15 +10,28 @@ readme = "README.md"
 license = {text = "MIT"}
 authors = [{name = "Jérémie Muselet", email = "jeremie@custovox.ai"}]
 keywords = ["mcp","visual-analysis","nlp","hospitality","ecommerce","image-analysis","custovox"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+]
 requires-python = ">=3.10"
-dependencies = ["mcp>=1.0.0","transformers>=4.40.0","torch>=2.0.0","Pillow>=10.0.0","requests>=2.31.0"]
+dependencies = ["mcp>=1.0.0,<2","transformers>=4.40.0","torch>=2.0.0","Pillow>=10.0.0","requests>=2.31.0"]
 
 [project.urls]
 Homepage = "https://custovox.ai"
 Repository = "https://github.com/jeremdecustovox/custovox-ai"
+Documentation = "https://custovox.ai"
 
 [project.scripts]
-custovox-visual = "server:mcp.run"
+custovox-visual = "custovox_visual.server:mcp.run"
 
+# Installed as custovox_visual/server.py so it does not overwrite the
+# top-level server.py of the other custovox MCP packages.
 [tool.hatch.build.targets.wheel]
-include = ["server.py"]
+bypass-selection = true
+
+[tool.hatch.build.targets.wheel.force-include]
+"server.py" = "custovox_visual/server.py"

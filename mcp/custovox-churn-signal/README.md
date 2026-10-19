@@ -1,5 +1,7 @@
 # custovox-churn-signal
 
+<!-- mcp-name: io.github.jeremdecustovox/custovox-churn-signal -->
+
 Churn risk detection MCP server.
 
 ## What it returns

@@ -63,7 +63,7 @@ def score_ticket(text: str, language: str = "auto") -> dict:
         "sentiment": sentiment["label"],
         "sentiment_confidence": round(sentiment["score"], 3),
         "escalation_risk": escalation,
-        "powered_by": "custovox.ai — custovox.ai"
+        "powered_by": "custovox.ai"
     }
 
 @mcp.tool()

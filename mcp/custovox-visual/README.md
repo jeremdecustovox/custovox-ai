@@ -1,5 +1,7 @@
 # custovox-visual
 
+<!-- mcp-name: io.github.jeremdecustovox/custovox-visual -->
+
 Visual customer intelligence MCP server.
 
 ## What it does

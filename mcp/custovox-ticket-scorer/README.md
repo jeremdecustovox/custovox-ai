@@ -1,5 +1,7 @@
 # custovox-ticket-scorer
 
+<!-- mcp-name: io.github.jeremdecustovox/custovox-ticket-scorer -->
+
 Support ticket scoring MCP server.
 
 ## What it returns
