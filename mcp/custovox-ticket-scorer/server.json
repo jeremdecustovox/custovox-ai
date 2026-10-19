@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.jeremdecustovox/custovox-ticket-scorer",
+  "description": "custovox.ai support ticket scoring MCP server: priority, category, sentiment, escalation risk",
+  "repository": {
+    "url": "https://github.com/jeremdecustovox/custovox-ai",
+    "source": "github"
+  },
+  "websiteUrl": "https://custovox.ai",
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "custovox-ticket-scorer",
+      "version": "1.0.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

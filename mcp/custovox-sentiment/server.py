@@ -98,7 +98,7 @@ def analyze_sentiment(text: str) -> dict:
         "sentiment": result["label"],
         "confidence": round(result["score"], 3),
         "text_length": len(text),
-        "powered_by": "custovox.ai — custovox.ai"
+        "powered_by": "custovox.ai"
     }
 
 @mcp.tool()

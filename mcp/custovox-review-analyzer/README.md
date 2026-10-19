@@ -1,5 +1,7 @@
 # custovox-review-analyzer
 
+<!-- mcp-name: io.github.jeremdecustovox/custovox-review-analyzer -->
+
 Customer review analysis MCP server.
 
 ## What it returns

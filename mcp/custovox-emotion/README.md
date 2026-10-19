@@ -1,5 +1,7 @@
 # custovox-emotion
 
+<!-- mcp-name: io.github.jeremdecustovox/custovox-emotion -->
+
 6-emotion detection MCP server for customer text.
 
 ## Emotions detected

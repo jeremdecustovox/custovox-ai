@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.jeremdecustovox/custovox-churn-signal",
+  "description": "custovox.ai churn risk detection MCP server: 0-100 score from customer message sequences",
+  "repository": {
+    "url": "https://github.com/jeremdecustovox/custovox-ai",
+    "source": "github"
+  },
+  "websiteUrl": "https://custovox.ai",
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "custovox-churn-signal",
+      "version": "1.0.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
