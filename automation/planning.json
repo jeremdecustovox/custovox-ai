@@ -335,6 +335,279 @@
    "type": "blog",
    "title": "Voix mobile et service client (FR + EN)",
    "link": "https://custovox.ai/fr/blog/voix-mobile-baisse-appels-service-client"
+  },
+  {
+   "id": "li-2026-10-22-1300-en",
+   "date": "2026-10-22 13:00",
+   "type": "linkedin",
+   "title": "In 2019, generative AI was a $1.4B market. (EN)",
+   "link": "https://custovox.ai/blog/generative-ai-288-billion-2025"
+  },
+  {
+   "id": "li-2026-10-23-1100-fr",
+   "date": "2026-10-23 11:00",
+   "type": "linkedin",
+   "title": "L'Europe représente 7,8% du marché mondial de l'IA généra… (FR)",
+   "link": "https://custovox.ai/fr/blog/ia-generative-europe-retard-acceleration"
+  },
+  {
+   "id": "li-2026-10-23-1800-en",
+   "date": "2026-10-23 18:00",
+   "type": "linkedin",
+   "title": "Europe = 7.8% of the global generative AI market. (EN)",
+   "link": "https://custovox.ai/blog/generative-ai-europe-behind-accelerating"
+  },
+  {
+   "id": "li-2026-10-24-1220-fr",
+   "date": "2026-10-24 12:20",
+   "type": "linkedin",
+   "title": "61% des nouvelles licornes mondiales sont des startups IA… (FR)",
+   "link": "https://custovox.ai/fr/blog/61-pourcent-licornes-mondiales-startups-ia"
+  },
+  {
+   "id": "li-2026-10-24-1300-en",
+   "date": "2026-10-24 13:00",
+   "type": "linkedin",
+   "title": "61% of new global unicorns are AI startups in 2025. (EN)",
+   "link": "https://custovox.ai/blog/61-percent-unicorns-ai-startups-2025"
+  },
+  {
+   "id": "li-2026-10-27-0830-fr",
+   "date": "2026-10-27 08:30",
+   "type": "linkedin",
+   "title": "Le frustré, le prudent, le sceptique, l'aspirationnel, le… (FR)",
+   "link": "https://custovox.ai/fr/blog/9-profils-psychologiques-clients-voix-du-client"
+  },
+  {
+   "id": "li-2026-10-27-1730-en",
+   "date": "2026-10-27 17:30",
+   "type": "linkedin",
+   "title": "The frustrated buyer. The cautious one. The skeptic. The … (EN)",
+   "link": "https://custovox.ai/blog/9-psychological-profiles-customer-voice-of-customer"
+  },
+  {
+   "id": "li-2026-10-28-0900-fr",
+   "date": "2026-10-28 09:00",
+   "type": "linkedin",
+   "title": "Le Machine Learning atteindra 552 milliards de dollars en… (FR)",
+   "link": "https://custovox.ai/fr/blog/machine-learning-segment-dominant-ia-2032"
+  },
+  {
+   "id": "li-2026-10-28-2000-en",
+   "date": "2026-10-28 20:00",
+   "type": "linkedin",
+   "title": "Machine learning will reach $552B by 2032. (EN)",
+   "link": "https://custovox.ai/blog/machine-learning-dominant-ai-segment-2032"
+  },
+  {
+   "id": "li-2026-10-29-1220-fr",
+   "date": "2026-10-29 12:20",
+   "type": "linkedin",
+   "title": "254 millions d'enceintes connectées vendues en 2025. (FR)",
+   "link": "https://custovox.ai/fr/blog/assistants-vocaux-enceintes-connectees-chiffres-2025"
+  },
+  {
+   "id": "li-2026-10-29-1300-en",
+   "date": "2026-10-29 13:00",
+   "type": "linkedin",
+   "title": "254 million smart speakers sold in 2025. (EN)",
+   "link": "https://custovox.ai/blog/voice-assistants-smart-speakers-2025-data"
+  },
+  {
+   "id": "li-2026-10-30-0900-fr",
+   "date": "2026-10-30 09:00",
+   "type": "linkedin",
+   "title": "53% des dirigeants IA forment leurs équipes à l'IA en 202… (FR)",
+   "link": "https://custovox.ai/fr/blog/ia-competences-equipes-dirigeants-2025"
+  },
+  {
+   "id": "li-2026-10-30-1800-en",
+   "date": "2026-10-30 18:00",
+   "type": "linkedin",
+   "title": "53% of AI leaders train their workforce in 2025. (EN)",
+   "link": "https://custovox.ai/blog/ai-skills-workforce-leaders-2025"
+  },
+  {
+   "id": "li-2026-10-31-1220-fr",
+   "date": "2026-10-31 12:20",
+   "type": "linkedin",
+   "title": "126 milliards en 2025. (FR)",
+   "link": "https://custovox.ai/fr/blog/nlp-126-milliards-868-milliards-2032"
+  },
+  {
+   "id": "li-2026-10-31-1300-en",
+   "date": "2026-10-31 13:00",
+   "type": "linkedin",
+   "title": "$126 billion in 2025. (EN)",
+   "link": "https://custovox.ai/blog/nlp-market-126-billion-to-869-billion-2032"
+  },
+  {
+   "id": "li-2026-11-04-0900-fr",
+   "date": "2026-11-04 09:00",
+   "type": "linkedin",
+   "title": "+13% d'adoption de l'IA dans les organisations chinoises … (FR)",
+   "link": "https://custovox.ai/fr/blog/ia-chine-marche-generatif-2025"
+  },
+  {
+   "id": "li-2026-11-04-2000-en",
+   "date": "2026-11-04 20:00",
+   "type": "linkedin",
+   "title": "+13% AI adoption in Chinese organizations in a single yea… (EN)",
+   "link": "https://custovox.ai/blog/ai-china-generative-market-2025"
+  },
+  {
+   "id": "li-2026-11-05-1220-fr",
+   "date": "2026-11-05 12:20",
+   "type": "linkedin",
+   "title": "103 milliards de dollars. (FR)",
+   "link": "https://custovox.ai/fr/blog/computer-vision-analyse-visuelle-103-milliards"
+  },
+  {
+   "id": "li-2026-11-05-1300-en",
+   "date": "2026-11-05 13:00",
+   "type": "linkedin",
+   "title": "$103 billion. That's the Computer Vision market in 2025. (EN)",
+   "link": "https://custovox.ai/blog/computer-vision-103-billion-visual-analysis-2025"
+  },
+  {
+   "id": "li-2026-11-06-0830-fr",
+   "date": "2026-11-06 08:30",
+   "type": "linkedin",
+   "title": "55 % : c'est la part de clients que l'hôtellerie, le voya… (FR)",
+   "link": "https://custovox.ai/fr/blog/taux-retention-client-par-secteur"
+  },
+  {
+   "id": "li-2026-11-09-1730-en",
+   "date": "2026-11-09 17:30",
+   "type": "linkedin",
+   "title": "25% of cable customers leave because of poor customer ser… (EN)",
+   "link": "https://custovox.ai/blog/customers-lost-poor-service-by-industry"
+  },
+  {
+   "id": "li-2026-11-10-1150-fr",
+   "date": "2026-11-10 11:50",
+   "type": "linkedin",
+   "title": "40 % des clients ont cessé d'acheter à une entreprise apr… (FR)",
+   "link": "https://custovox.ai/fr/blog/40-pourcent-clients-partent-apres-mauvais-service"
+  },
+  {
+   "id": "li-2026-11-12-1230-en",
+   "date": "2026-11-12 12:30",
+   "type": "linkedin",
+   "title": "61% of US e-commerce companies use AI for customer servic… (EN)",
+   "link": "https://custovox.ai/blog/ai-ecommerce-customer-service-top-use"
+  },
+  {
+   "id": "li-2026-11-13-0830-fr",
+   "date": "2026-11-13 08:30",
+   "type": "linkedin",
+   "title": "×5,3 : c'est la croissance prévue du marché du machine le… (FR)",
+   "link": "https://custovox.ai/fr/blog/machine-learning-europe-par-region-2031"
+  },
+  {
+   "id": "li-2026-11-16-1730-en",
+   "date": "2026-11-16 17:30",
+   "type": "linkedin",
+   "title": "78 out of 100 in 2000. (EN)",
+   "link": "https://custovox.ai/blog/online-retail-customer-satisfaction-acsi-2000-2026"
+  },
+  {
+   "id": "li-2026-11-17-1150-fr",
+   "date": "2026-11-17 11:50",
+   "type": "linkedin",
+   "title": "8 % : seuls 8 % des hôteliers voient revenir plus des tro… (FR)",
+   "link": "https://custovox.ai/fr/blog/hotellerie-clients-qui-reviennent"
+  },
+  {
+   "id": "li-2026-11-19-1230-en",
+   "date": "2026-11-19 12:30",
+   "type": "linkedin",
+   "title": "12% of call centers don't track customer satisfaction at … (EN)",
+   "link": "https://custovox.ai/blog/call-centers-measuring-customer-satisfaction"
+  },
+  {
+   "id": "li-2026-11-20-0830-fr",
+   "date": "2026-11-20 08:30",
+   "type": "linkedin",
+   "title": "62 % : c'est la part des agents de centres d'appels satis… (FR)",
+   "link": "https://custovox.ai/fr/blog/satisfaction-agents-centre-appels"
+  },
+  {
+   "id": "li-2026-11-23-1730-en",
+   "date": "2026-11-23 17:30",
+   "type": "linkedin",
+   "title": "54% of Americans still prefer the phone to solve a custom… (EN)",
+   "link": "https://custovox.ai/blog/phone-preferred-customer-service-channel"
+  },
+  {
+   "id": "li-2026-11-24-1150-fr",
+   "date": "2026-11-24 11:50",
+   "type": "linkedin",
+   "title": "44 % des chaînes hôtelières automatisent déjà leur commun… (FR)",
+   "link": "https://custovox.ai/fr/blog/hotellerie-intelligence-artificielle-usages"
+  },
+  {
+   "id": "li-2026-11-26-1230-en",
+   "date": "2026-11-26 12:30",
+   "type": "linkedin",
+   "title": "×11: China's AI customer service market is expected to gr… (EN)",
+   "link": "https://custovox.ai/blog/ai-customer-service-market-china-2027"
+  },
+  {
+   "id": "li-2026-11-27-0830-fr",
+   "date": "2026-11-27 08:30",
+   "type": "linkedin",
+   "title": "40 % des agents de centres de contact trouvent que l'IA a… (FR)",
+   "link": "https://custovox.ai/fr/blog/agents-centre-appels-face-a-ia"
+  },
+  {
+   "id": "li-2026-11-30-1730-en",
+   "date": "2026-11-30 17:30",
+   "type": "linkedin",
+   "title": "Only 39% of US e-commerce companies rate the ROI of AI as… (EN)",
+   "link": "https://custovox.ai/blog/ai-return-on-investment-companies"
+  },
+  {
+   "id": "li-2026-12-01-1150-fr",
+   "date": "2026-12-01 11:50",
+   "type": "linkedin",
+   "title": "36 % des enseignes ont vu l'IA augmenter leur chiffre d'a… (FR)",
+   "link": "https://custovox.ai/fr/blog/retail-ia-generative-revenus"
+  },
+  {
+   "id": "li-2026-12-03-1230-en",
+   "date": "2026-12-03 12:30",
+   "type": "linkedin",
+   "title": "Almost 60% of Gen Z have already shopped with an AI assis… (EN)",
+   "link": "https://custovox.ai/blog/shoppers-ai-shopping-assistants"
+  },
+  {
+   "id": "li-2026-12-04-0830-fr",
+   "date": "2026-12-04 08:30",
+   "type": "linkedin",
+   "title": "77 % du chiffre d'affaires hôtelier mondial se fait désor… (FR)",
+   "link": "https://custovox.ai/fr/blog/hotellerie-reservations-en-ligne-avis-clients"
+  },
+  {
+   "id": "li-2026-12-07-1730-en",
+   "date": "2026-12-07 17:30",
+   "type": "linkedin",
+   "title": "51% of customers dislike chatbots because they keep them … (EN)",
+   "link": "https://custovox.ai/blog/chatbots-customers-want-a-human"
+  },
+  {
+   "id": "li-2026-12-08-1150-fr",
+   "date": "2026-12-08 11:50",
+   "type": "linkedin",
+   "title": "88 % des clients attendent un espace d'aide en ligne. (FR)",
+   "link": "https://custovox.ai/fr/blog/libre-service-client-attentes"
+  },
+  {
+   "id": "li-2026-12-10-1230-en",
+   "date": "2026-12-10 12:30",
+   "type": "linkedin",
+   "title": "Mobile voice revenue is falling 2.72% a year (2023-2028 f… (EN)",
+   "link": "https://custovox.ai/blog/mobile-voice-decline-customer-calls"
   }
  ],
  "tasks": [
