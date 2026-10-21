@@ -62,8 +62,12 @@ function syncCalendar() {
 
   // Old weekly series from a previous version of this script.
   Object.keys(created).filter(id => id.indexOf('weekly-') === 0).forEach(id => {
-    const series = cal.getEventSeriesById(created[id]);
-    if (series) series.deleteEventSeries();
+    try {
+      const series = cal.getEventSeriesById(created[id]);
+      if (series) series.deleteEventSeries();
+    } catch (e) {
+      // already deleted by hand: nothing to clean up
+    }
     delete created[id];
   });
 
