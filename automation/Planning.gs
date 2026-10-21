@@ -76,7 +76,8 @@ function syncCalendar() {
     let title, description;
     if (item.type === 'linkedin') {
       title = '📣 LinkedIn publié : ajouter le lien en commentaire — ' + item.title;
-      description = 'Le post est publié automatiquement par Buffer à 18h.\n\n' +
+      description = 'Le post est publié automatiquement par Buffer à ' +
+        Utilities.formatDate(parse_(item.date), TZ, "H'h'mm") + ' (vérifiez qu\'il est bien parti).\n\n' +
         'Ajoutez ce premier commentaire sous le post :\n' + item.link;
     } else if (item.type === 'linkedin-fr') {
       title = '✍️ Post LinkedIn FR à publier + lien en commentaire — ' + item.title;
