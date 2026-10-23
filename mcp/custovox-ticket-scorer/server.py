@@ -19,20 +19,29 @@ classifier = pipeline(
 print("Models loaded.", file=sys.stderr)
 
 PRIORITY_LABELS = ["urgent", "normal", "low priority"]
-CATEGORY_LABELS = ["billing issue", "technical problem", "delivery issue", 
-                   "product defect", "account access", "refund request", 
-                   "general inquiry", "feature request"]
+# Category returned -> description given to the zero-shot model (descriptions classify much better).
+CATEGORIES = {
+    "billing issue": "a billing or payment problem",
+    "technical problem": "a technical bug or error",
+    "delivery issue": "a delivery or shipping problem",
+    "product defect": "a defective or broken product",
+    "account access": "logging in or accessing an account",
+    "refund request": "a request for a refund",
+    "general inquiry": "a general question",
+    "feature request": "a suggestion for a new feature or improvement",
+}
+CATEGORY_BY_DESCRIPTION = {v: k for k, v in CATEGORIES.items()}
 
 @mcp.tool()
-def score_ticket(text: str, language: str = "auto") -> dict:
+def score_ticket(text: str) -> dict:
     """
-    Score a support ticket: priority + category + sentiment.
-    Multilingual: EN, FR, DE, ES, PT-BR.
-    
+    Score a support ticket: priority + category + sentiment + escalation risk.
+    Sentiment is multilingual (EN, FR, DE, ES, PT-BR). Priority and category use an
+    English zero-shot model: most accurate on English tickets.
+
     Args:
         text: Support ticket content
-        language: Language hint (auto-detected if not provided)
-    
+
     Returns:
         priority: urgent / normal / low priority
         category: ticket category
@@ -42,7 +51,9 @@ def score_ticket(text: str, language: str = "auto") -> dict:
     """
     sentiment = sentiment_model(text[:512], truncation=True)[0]
     priority_result = classifier(text[:512], PRIORITY_LABELS)
-    category_result = classifier(text[:512], CATEGORY_LABELS)
+    category_result = classifier(text[:512], list(CATEGORIES.values()),
+                                 hypothesis_template="This support ticket is about {}.")
+    category_result["labels"] = [CATEGORY_BY_DESCRIPTION[label] for label in category_result["labels"]]
     
     # Escalation risk based on sentiment + priority
     is_negative = sentiment["label"] in ["Negative", "Very Negative"]
