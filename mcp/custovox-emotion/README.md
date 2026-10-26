@@ -17,5 +17,5 @@ pip install custovox-emotion
 - Market research emotional analysis
 
 ## Need more?
-**custovox.ai** — Voice + Text + Image customer intelligence. From €49/month.
+**custovox.ai** — Voice + Text + Image customer intelligence. From $89/month.
 https://custovox.ai

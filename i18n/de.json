@@ -15,7 +15,7 @@
  "churn": "Churn",
  ", and surface": "voraus und machen Sie",
  "satisfaction drivers,\n    pain points, unmet needs and product gaps": "Zufriedenheitstreiber, Pain Points, unerfüllte Bedürfnisse und Produktlücken",
- "— from any call,\n    review, ticket or email. In any language. From €49/month.": "sichtbar — aus jedem Anruf, jeder Bewertung, jedem Ticket oder jeder E-Mail. In jeder Sprache. Ab 49 €/Monat.",
+ "— from any call,\n    review, ticket or email. In any language. From $89/month.": "sichtbar — aus jedem Anruf, jeder Bewertung, jedem Ticket oder jeder E-Mail. In jeder Sprache. Ab 89 €/Monat.",
  "Escalation Detection": "Eskalationserkennung",
  "Voice + Text + Image": "Sprache + Text + Bild",
  "NLP": "NLP",
@@ -261,7 +261,7 @@
  "Requires manual training data preparation. Best results come from substantial labeled datasets. Not plug-and-play out of the box.": "Erfordert manuelle Vorbereitung der Trainingsdaten. Die besten Ergebnisse liefern umfangreiche gelabelte Datensätze. Nicht sofort einsatzbereit.",
  "5. custovox.ai — Multilingual customer intelligence": "5. custovox.ai — Mehrsprachige Customer Intelligence",
  "Growth-stage companies that need enterprise-level NLP without the enterprise cost, complexity or implementation timeline.": "Wachsende Unternehmen, die NLP auf Enterprise-Niveau brauchen — ohne Enterprise-Kosten, -Komplexität oder -Implementierungsdauer.",
- "custovox.ai analyzes customer conversations across voice, text and image simultaneously — in five native languages (EN/FR/DE/ES/PT-BR) without translation. The PEACE™ algorithm predicts escalation before it happens. Live in 48 hours, no data team required, from €49/month.": "custovox.ai analysiert Kundengespräche in Sprache, Text und Bild gleichzeitig — in fünf nativen Sprachen (EN/FR/DE/ES/PT-BR), ohne Übersetzung. Der PEACE™-Algorithmus sagt Eskalationen voraus, bevor sie eintreten. In 48 Stunden einsatzbereit, ohne Datenteam, ab 49 €/Monat.",
+ "custovox.ai analyzes customer conversations across voice, text and image simultaneously — in five native languages (EN/FR/DE/ES/PT-BR) without translation. The PEACE™ algorithm predicts escalation before it happens. Live in 48 hours, no data team required, from $89/month.": "custovox.ai analysiert Kundengespräche in Sprache, Text und Bild gleichzeitig — in fünf nativen Sprachen (EN/FR/DE/ES/PT-BR), ohne Übersetzung. Der PEACE™-Algorithmus sagt Eskalationen voraus, bevor sie eintreten. In 48 Stunden einsatzbereit, ohne Datenteam, ab 89 €/Monat.",
  "Newer to market. Building the case study library. But validated on 83,724 real customer conversations — with academic rigor most platforms don't have.": "Neuer auf dem Markt. Die Fallstudien-Bibliothek entsteht gerade. Aber validiert an 83.724 echten Kundengesprächen — mit einer wissenschaftlichen Gründlichkeit, die die meisten Plattformen nicht haben.",
  "Side-by-Side Comparison": "Direkter Vergleich",
  "custovox.ai starter": "custovox.ai Einstiegspreis",
@@ -386,5 +386,6 @@
  "How AI Can Now Read All Your Customer Data — Without a Data Team": "Wie KI jetzt alle Ihre Kundendaten lesen kann — ganz ohne Datenteam",
  "How AI Can Now Read All Your Customer Data — Without a Data Team — custovox.ai": "Wie KI jetzt alle Ihre Kundendaten lesen kann — ganz ohne Datenteam — custovox.ai",
  "A few years ago, getting AI to analyze your customer conversations required a data science team, months of integration work, and a six-figure budget. Something changed in 2026 that makes all of that unnecessary.": "Noch vor wenigen Jahren brauchte man für die KI-Analyse von Kundengesprächen ein Data-Science-Team, monatelange Integrationsarbeit und ein sechsstelliges Budget. 2026 hat sich etwas verändert, das all das überflüssig macht.",
- "Your free case study": "Ihre kostenlose Fallstudie"
+ "Your free case study": "Ihre kostenlose Fallstudie",
+  "$89/mo": "89 €/Monat"
 }

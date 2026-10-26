@@ -39,6 +39,6 @@ This MCP is the free tier of custovox.ai.
 - Churn prediction
 - Full dashboard + reports
 
-**From €49/month — no credit card to start.**
+**From $89/month — no credit card to start.**
 
 👉 [custovox.ai](https://custovox.ai)
