@@ -15,5 +15,5 @@ Customer review analysis MCP server.
 pip install custovox-review-analyzer
 
 ## Need more?
-**custovox.ai** — Full customer intelligence platform. From €49/month.
+**custovox.ai** — Full customer intelligence platform. From $89/month.
 https://custovox.ai

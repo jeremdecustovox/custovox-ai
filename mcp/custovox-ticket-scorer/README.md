@@ -20,5 +20,5 @@ pip install custovox-ticket-scorer
 The models (about 2 GB) are downloaded from Hugging Face on first start and run on your machine.
 
 ## Need more?
-**custovox.ai** — Full customer intelligence platform. From €49/month.
+**custovox.ai** — Full customer intelligence platform. From $89/month.
 https://custovox.ai

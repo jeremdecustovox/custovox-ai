@@ -15,5 +15,5 @@ Churn risk detection MCP server.
 pip install custovox-churn-signal
 
 ## Need more?
-**custovox.ai** — Full customer intelligence platform. From €49/month.
+**custovox.ai** — Full customer intelligence platform. From $89/month.
 https://custovox.ai
