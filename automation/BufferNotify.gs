@@ -1,9 +1,10 @@
 /**
- * CustoVox - email when a scheduled Buffer post goes live on LinkedIn.
+ * CustoVox - email when a scheduled Buffer post goes live on LinkedIn, with the first comment
+ * to add (the link of the planning.json item at the same time, see Planning.gs).
  *
  * Setup (once):
  * 1. Project Settings > Script Properties > add BUFFER_TOKEN = your Buffer API token.
- * 2. Run `setupBufferNotify` and accept the permissions.
+ * 2. Run `setupPlanning` (Planning.gs), which also creates this 15-minute check.
  */
 
 const NOTIFY_EMAIL = 'jeremie@custovox.ai';
@@ -52,11 +53,15 @@ function checkBufferPosts() {
   data.data.posts.edges.map(e => e.node).forEach(p => {
     const key = p.id + ':' + p.status;
     if (done[key]) return;
+    if (Date.now() - new Date(p.sentAt || p.dueAt).getTime() > 24 * 3600e3) {
+      done[key] = 'old';   // first run: don't email posts published long ago
+      return;
+    }
     const firstLine = (p.text || '').split('\n')[0];
     const when = Utilities.formatDate(new Date(p.sentAt || p.dueAt), tz, "dd/MM/yyyy 'à' HH:mm");
     let subject, body;
     if (p.status === 'sent') {
-      const comment = COMMENTS[p.id] || DEFAULT_COMMENT;
+      const comment = plannedComment_(p.dueAt) || COMMENTS[p.id] || DEFAULT_COMMENT;
       subject = '✅ Post LinkedIn publié : ' + firstLine.slice(0, 60);
       body = [
         'Votre post LinkedIn a été publié le ' + when + ' (heure de Paris).',
