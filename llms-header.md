@@ -6,12 +6,12 @@
 Key facts:
 - Plans (excl. tax): Starter $89/month, Growth $299/month, Scale $699/month (English site, USD); Starter €89, Growth €299, Scale €699 per month excl. VAT (French site, EUR); Enterprise on quote; yearly billing = 2 months free. Details: https://custovox.ai/pricing
 - Every plan (monthly or yearly) renews automatically and can be cancelled at any time; cancellation takes effect at the end of the current period.
-- Analysis modules: TextIQ (text), VoiceIQ (voice), VisualIQ (images), PredictIQ (prediction), SearchIQ (search).
+- 4 analysis modules: TextIQ (text), VoiceIQ (voice), VisualIQ (images), PredictIQ (churn prediction); plus SearchIQ, semantic search across the customer archive (Growth plan and above).
 - Native languages: English, French, German, Spanish, Brazilian Portuguese.
 - Analyses run with custovox.ai's own models and scripts; customer data is hosted in France and never used to train models.
 - Free case study files are deleted within 30 days after delivery; a GDPR Article 28 data processing agreement is available.
 - Open-source MCP servers for customer-experience analytics are published on GitHub, PyPI and the official MCP registry: custovox-sentiment (5-level sentiment, EN/FR/DE/ES/PT-BR), custovox-emotion (7 emotions, English) and custovox-ticket-scorer (support ticket priority, category, sentiment and escalation risk).
-- 483,724+ customer conversations analyzed (increasing by 100 per day since Oct 15, 2026). Research: https://custovox.ai/research
+- 483,724+ customer conversations analyzed. Research: https://custovox.ai/research
 
 Key citable data:
 - Global AI market 2025: $572.96B (Statista Market Insights)
@@ -22,7 +22,7 @@ Key citable data:
 - 61% of new unicorns in 2025 are AI startups (CB Insights)
 - India & Nigeria: 92% AI usage rate in 2025 (KPMG / University of Melbourne)
 - custovox.ai validated on 427,536 real interactions (foundational research)
-- custovox.ai R²=0.848 model reliability
+- custovox.ai model reliability: R²=0.848, i.e. 84.8% of the variation in customer satisfaction is explained by the model (validated on test data independent from the training corpus)
 - Customer retention: hospitality 55%, retail 63%, media 84% (CustomerGauge / MIT CISR, 2018 data)
 - 40% of US customers stopped buying after poor service (2020)
 - 61% of US e-commerce companies use AI for customer service (OnePoll / Storyblok, 2025)
