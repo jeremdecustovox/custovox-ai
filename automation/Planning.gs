@@ -11,7 +11,8 @@
  *  - "📰 Article en ligne" once the planned blog article answers on custovox.ai
  *    (or a warning if it is still missing 3 hours after its time);
  *  - "✍️ Post LinkedIn FR à publier" for the posts that are not in Buffer;
- *  - "⚠️ Plus de post LinkedIn planifié" when nothing is planned on LinkedIn anymore.
+ *  - "🗓️ Récap" every day at 17:00 (`dailyRecap`): done today, tonight, tomorrow, planning horizon;
+ *  - "⚠️ Attention : prévoir LinkedIn / article de blog" once, 7 days before the planning runs out.
  * The "✅ Post LinkedIn publié" email (with the first comment to add) is sent by
  * checkBufferPosts in BufferNotify.gs.
  *
@@ -41,16 +42,16 @@ function loadPlanning_() {
 }
 
 const GAP_KINDS = {
-  linkedin: { label: 'LinkedIn', calendar: false, todo: 'Préparez de nouveaux posts et programmez-les dans Buffer.\n' +
+  linkedin: { label: 'LinkedIn', calendar: false, email: true, todo: 'Préparez de nouveaux posts et programmez-les dans Buffer.\n' +
     'Dans Claude Code : « prépare les posts LinkedIn des prochaines semaines et programme-les dans Buffer ».' },
-  mcp: { label: 'MCP', calendar: true, todo: 'Choisissez le prochain serveur MCP à publier sur PyPI et ajoutez son rappel.\n' +
+  mcp: { label: 'MCP', calendar: true, email: false, todo: 'Choisissez le prochain serveur MCP à publier sur PyPI et ajoutez son rappel.\n' +
     'Dans Claude Code : « planifie les prochains MCP à publier ».' },
-  blog: { label: 'article de blog', calendar: true, todo: 'Préparez les prochains articles de blog.\n' +
+  blog: { label: 'article de blog', calendar: true, email: true, todo: 'Préparez les prochains articles de blog.\n' +
     'Dans Claude Code : « prépare les prochains articles de blog ».' }
 };
 
 function setupPlanning() {
-  const handlers = ['dailyBlogBuild', 'syncCalendar', 'notifyPlanned', 'checkBufferPosts'];
+  const handlers = ['dailyBlogBuild', 'syncCalendar', 'notifyPlanned', 'checkBufferPosts', 'dailyRecap'];
   ScriptApp.getProjectTriggers()
     .filter(t => handlers.indexOf(t.getHandlerFunction()) !== -1)
     .forEach(t => ScriptApp.deleteTrigger(t));
@@ -58,6 +59,7 @@ function setupPlanning() {
   ScriptApp.newTrigger('syncCalendar').timeBased().everyDays(1).atHour(7).inTimezone(TZ).create();
   ScriptApp.newTrigger('notifyPlanned').timeBased().everyMinutes(15).create();
   ScriptApp.newTrigger('checkBufferPosts').timeBased().everyMinutes(15).create();
+  ScriptApp.newTrigger('dailyRecap').timeBased().everyDays(1).atHour(17).inTimezone(TZ).create();
   removeReminders_();
   syncCalendar();
 }
@@ -158,6 +160,74 @@ function notifyPlanned() {
   props.setProperty('PLANNING_NOTIFIED', JSON.stringify(done));
 }
 
+/**
+ * 17:00 recap email: what went out today (with the first comments to add), what is still due
+ * tonight and tomorrow, and how far LinkedIn and the blog are planned.
+ */
+function dailyRecap() {
+  const data = loadPlanning_();
+  const PLANNING = data.planning || [];
+  const now = new Date();
+  const day = d => Utilities.formatDate(d, TZ, 'yyyy-MM-dd');
+  const hour = d => Utilities.formatDate(d, TZ, "HH'h'mm");
+  const today = day(now);
+  const tomorrow = day(new Date(now.getTime() + 864e5));
+  const on = date => PLANNING.filter(p => p.date.indexOf(date) === 0).sort((a, b) => a.date < b.date ? -1 : 1);
+  const label = { blog: '📰 Article', linkedin: '📣 Post LinkedIn (Buffer)', 'linkedin-fr': '✍️ Post LinkedIn à publier vous-même' };
+  const line = p => '  - ' + hour(parse_(p.date)) + ' · ' + label[p.type] + ' : ' + p.title +
+    (p.type === 'blog' ? '\n      ' : '\n      Premier commentaire : ') + p.link;
+
+  let sent = [];
+  try {
+    sent = bufferQuery_('{ posts(input:{organizationId:"' + BUFFER_ORG_ID + '", filter:{channelIds:["' +
+      BUFFER_CHANNEL_ID + '"], status:[sent]}}){ edges{ node{ text sentAt dueAt externalLink } } } }')
+      .posts.edges.map(e => e.node).filter(p => day(new Date(p.sentAt || p.dueAt)) === today);
+  } catch (e) {
+    console.warn('Buffer: ' + e.message);
+  }
+
+  const done = on(today).filter(p => parse_(p.date) <= now && p.type !== 'linkedin');
+  const tonight = on(today).filter(p => parse_(p.date) > now);
+  const body = ['Récapitulatif custovox.ai du ' + Utilities.formatDate(now, TZ, 'dd/MM/yyyy'), '', '— FAIT AUJOURD\'HUI —'];
+  sent.forEach(p => body.push('  - ' + hour(new Date(p.sentAt || p.dueAt)) + ' · 📣 Post LinkedIn publié : ' +
+    plain_((p.text || '').split('\n')[0]).slice(0, 80) +
+    '\n      Premier commentaire : ' + (plannedComment_(p.dueAt) || DEFAULT_COMMENT) +
+    (p.externalLink ? '\n      Le post : ' + p.externalLink : '')));
+  done.forEach(p => body.push(line(p)));
+  if (!sent.length && !done.length) body.push('  Rien de publié aujourd\'hui.');
+
+  body.push('', '— À VENIR CE SOIR —');
+  body.push.apply(body, tonight.length ? tonight.map(line) : ['  Rien.']);
+  body.push('', '— DEMAIN —');
+  const next = on(tomorrow);
+  const pypi = (data.tasks || []).filter(t => t.id.indexOf('pypi-') === 0 && t.date.indexOf(tomorrow) === 0);
+  body.push.apply(body, next.map(line).concat(pypi.map(t => '  - ' + hour(parse_(t.date)) + ' · ' + t.title)));
+  if (!next.length && !pypi.length) body.push('  Rien de prévu.');
+
+  body.push('', '— PLANNING —');
+  [['LinkedIn', p => p.type.indexOf('linkedin') === 0], ['Blog', p => p.type === 'blog']].forEach(([name, keep]) => {
+    const future = PLANNING.filter(keep).map(p => parse_(p.date)).filter(d => d > now);
+    if (!future.length) { body.push('  ⚠️ ' + name + ' : plus rien de planifié — à prévoir.'); return; }
+    const last = new Date(Math.max.apply(null, future));
+    const days = Math.ceil((last - now) / 864e5);
+    body.push('  ' + (days <= ALERT_DAYS_BEFORE ? '⚠️ ' : '') + name + ' : ' + future.length + ' à venir, dernier le ' +
+      Utilities.formatDate(last, TZ, 'dd/MM/yyyy') + ' (dans ' + days + ' jours)' + (days <= ALERT_DAYS_BEFORE ? ' — à prévoir.' : ''));
+  });
+
+  MailApp.sendEmail(NOTIFY_EMAIL, '🗓️ Récap custovox.ai du ' + Utilities.formatDate(now, TZ, 'dd/MM'), body.join('\n'));
+}
+
+/** Turns the Unicode bold letters used on LinkedIn back into plain text. */
+function plain_(text) {
+  return Array.from(text).map(ch => {
+    const c = ch.codePointAt(0);
+    if (c >= 0x1D5D4 && c <= 0x1D5ED) return String.fromCharCode(65 + c - 0x1D5D4);
+    if (c >= 0x1D5EE && c <= 0x1D607) return String.fromCharCode(97 + c - 0x1D5EE);
+    if (c >= 0x1D7EC && c <= 0x1D7F5) return String.fromCharCode(48 + c - 0x1D7EC);
+    return ch;
+  }).join('');
+}
+
 /** First comment of a Buffer post: the link of the planning.json LinkedIn item at the same minute. */
 function plannedComment_(dueAt) {
   const minute = Math.round(new Date(dueAt).getTime() / 60000);
@@ -174,39 +244,40 @@ function gapAlerts_(cal, datesByKind) {
   const tomorrow9 = parse_(Utilities.formatDate(new Date(now.getTime() + 864e5), TZ, 'yyyy-MM-dd') + ' 09:00');
 
   Object.keys(GAP_KINDS).forEach(kind => {
+    const k = GAP_KINDS[kind];
     const future = datesByKind[kind].filter(d => d > now);
     const last = future.length ? new Date(Math.max.apply(null, future)) : null;
     const lastKey = last ? Utilities.formatDate(last, TZ, 'yyyy-MM-dd') : 'none';
-    if (alerts[kind] && alerts[kind].last === lastKey) return;   // already alerted for this date
-
-    if (alerts[kind] && alerts[kind].eventId) {
-      try {
-        const old = cal.getEventById(alerts[kind].eventId);
-        if (old) old.deleteEvent();
-      } catch (e) {
-        // already deleted by hand
-      }
-    }
-    const k = GAP_KINDS[kind];
     const description = (last
       ? 'Dernier ' + k.label + ' planifié le ' + Utilities.formatDate(last, TZ, 'dd/MM/yyyy') + '. Rien n\'est prévu après.\n\n'
       : 'Aucun ' + k.label + ' n\'est planifié.\n\n') + k.todo;
 
-    if (!k.calendar) {
-      // Email only when the planning is about to run out (or already has).
-      if (last && last.getTime() - now.getTime() > ALERT_DAYS_BEFORE * 864e5) return;
-      MailApp.sendEmail(NOTIFY_EMAIL, '⚠️ Attention : prévoir ' + k.label, description);
+    if (!alerts[kind] || alerts[kind].last !== lastKey) {   // new last date: new alert
+      if (alerts[kind] && alerts[kind].eventId) {
+        try {
+          const old = cal.getEventById(alerts[kind].eventId);
+          if (old) old.deleteEvent();
+        } catch (e) {
+          // already deleted by hand
+        }
+      }
       alerts[kind] = { last: lastKey };
-      return;
+      if (k.calendar) {
+        let when = tomorrow9;
+        if (last) {
+          const before = parse_(Utilities.formatDate(new Date(last.getTime() - ALERT_DAYS_BEFORE * 864e5), TZ, 'yyyy-MM-dd') + ' 09:00');
+          if (before > when) when = before;
+        }
+        const event = createEvent_(cal, '⚠️ Attention : prévoir ' + k.label, when, 30, description);
+        event.addPopupReminder(60 * 24);
+        alerts[kind].eventId = event.getId();
+      }
     }
-    let when = tomorrow9;
-    if (last) {
-      const before = parse_(Utilities.formatDate(new Date(last.getTime() - ALERT_DAYS_BEFORE * 864e5), TZ, 'yyyy-MM-dd') + ' 09:00');
-      if (before > when) when = before;
+    // Email once, when the planning is about to run out (or already has).
+    if (k.email && !alerts[kind].emailed && (!last || last.getTime() - now.getTime() <= ALERT_DAYS_BEFORE * 864e5)) {
+      MailApp.sendEmail(NOTIFY_EMAIL, '⚠️ Attention : prévoir ' + k.label, description);
+      alerts[kind].emailed = true;
     }
-    const event = createEvent_(cal, '⚠️ Attention : prévoir ' + k.label, when, 30, description);
-    event.addPopupReminder(60 * 24);
-    alerts[kind] = { last: lastKey, eventId: event.getId() };
   });
   props.setProperty('GAP_ALERTS', JSON.stringify(alerts));
 }
