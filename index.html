@@ -1027,13 +1027,11 @@ function showSector(sector) {
 </script>
 
 <script>
-/* Conversations analyzed: 483,724 on 2026-10-15, +100 per calendar day since; counted up when it scrolls into view. */
+/* Conversations analyzed: the fixed figure in data-count (update it by hand), counted up when it scrolls into view. */
 (function () {
   var el = document.querySelector('[data-count]');
   if (!el) return;
-  var refDate = new Date('2026-10-15'), today = new Date();
-  var diffDays = Math.max(0, Math.floor((today - refDate) / (1000 * 60 * 60 * 24)));
-  var target = 483724 + diffDays * 100;
+  var target = Number(el.getAttribute('data-count'));
   var fmt = new Intl.NumberFormat(document.documentElement.lang === 'fr' ? 'fr-FR' : 'en-US');
   var final = fmt.format(target);
   el.textContent = final;
