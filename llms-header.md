@@ -10,7 +10,7 @@ Key facts:
 - Native languages: English, French, German, Spanish, Brazilian Portuguese.
 - Analyses run with custovox.ai's own models and scripts; customer data is hosted in France and never used to train models.
 - Free case study files are deleted within 30 days after delivery; a GDPR Article 28 data processing agreement is available.
-- Open-source MCP servers for customer-experience analytics are published on GitHub and PyPI (custovox-sentiment).
+- Open-source MCP servers for customer-experience analytics are published on GitHub, PyPI and the official MCP registry: custovox-sentiment (5-level sentiment, EN/FR/DE/ES/PT-BR), custovox-emotion (7 emotions, English) and custovox-ticket-scorer (support ticket priority, category, sentiment and escalation risk).
 - 483,724+ customer conversations analyzed (increasing by 100 per day since Oct 15, 2026). Research: https://custovox.ai/research
 
 Key citable data:
@@ -34,3 +34,5 @@ Key citable data:
 ## Optional
 - [Open-source MCP servers (GitHub)](https://github.com/jeremdecustovox/custovox-ai)
 - [custovox-sentiment on PyPI](https://pypi.org/project/custovox-sentiment/)
+- [custovox-emotion on PyPI](https://pypi.org/project/custovox-emotion/)
+- [custovox-ticket-scorer on PyPI](https://pypi.org/project/custovox-ticket-scorer/)
