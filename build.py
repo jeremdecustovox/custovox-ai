@@ -25,6 +25,7 @@ LANGS = ["en", "fr"]                                # published languages; "en" 
 HIDDEN_LANGS = ["de", "es", "pt-br"]               # kept in the repo, not published: redirected to English
 HREFLANG = {"en": "en", "fr": "fr", "de": "de", "es": "es", "pt-br": "pt-BR"}
 NAMES = {"en": "English", "fr": "Français", "de": "Deutsch", "es": "Español", "pt-br": "Português (Brasil)"}
+# Keep in sync with the `ignore` path list in netlify.toml (a push touching none of these skips the deploy).
 PUBLISHED = ["index.html", "faq.html", "pricing.html", "how-it-works.html", "features", "integrations.html", "about.html", "security-gdpr.html", "research.html", "solutions", "merci.html", "thank-you.html", "privacy.html", "consent.js", "favicon.ico",
              "robots.txt", "blog", "images", "fr"]
 
