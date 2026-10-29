@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "custovox-review-analyzer"
 version = "1.0.0"
-description = "Customer review analysis MCP: sentiment breakdown, key themes, actionable insights. Multilingual. By custovox.ai"
+description = "Customer review analysis MCP: sentiment breakdown, summaries of positive and negative reviews. Multilingual sentiment. By custovox.ai"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [{name = "Jérémie Muselet", email = "jeremie@custovox.ai"}]

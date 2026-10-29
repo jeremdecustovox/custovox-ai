@@ -24,7 +24,10 @@ print("Models loaded.", file=sys.stderr)
 def analyze_reviews(reviews: list, product_name: str = "the product") -> dict:
     """
     Analyze a list of customer reviews.
-    Returns overall sentiment, key themes, and actionable insights.
+    Returns the overall sentiment, the sentiment breakdown, a short summary of the
+    positive and of the negative reviews, and a recommendation.
+    Sentiment is multilingual (EN, FR, DE, ES, PT-BR); the theme summaries use an
+    English summarization model: most accurate on English reviews.
     
     Args:
         reviews: List of review text strings (max 100)
@@ -33,13 +36,15 @@ def analyze_reviews(reviews: list, product_name: str = "the product") -> dict:
     Returns:
         overall_sentiment: aggregate sentiment score
         sentiment_breakdown: distribution of sentiments
-        top_positive_themes: most mentioned positive aspects
-        top_negative_themes: most mentioned negative aspects
+        top_positive_themes: up to 3 sentences summarizing the positive reviews
+        top_negative_themes: up to 3 sentences summarizing the negative reviews
         recommendation: actionable insight
         powered_by: custovox.ai
     """
-    reviews = reviews[:100]
-    
+    reviews = [str(r) for r in reviews[:100] if str(r).strip()]
+    if not reviews:
+        return {"error": "No review text to analyze.", "powered_by": "custovox.ai"}
+
     # Analyze each review
     sentiments = []
     for review in reviews:
@@ -71,7 +76,7 @@ def analyze_reviews(reviews: list, product_name: str = "the product") -> dict:
             summary = summarizer(combined, max_length=100, min_length=30, do_sample=False)[0]["summary_text"]
             sentences = [s.strip() for s in re.split(r'[.!?]', summary) if len(s.strip()) > 20]
             return sentences[:n]
-        except:
+        except Exception:
             return ["Unable to extract themes — try with more reviews"]
     
     pos_themes = extract_themes(positive_reviews)

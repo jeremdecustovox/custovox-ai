@@ -1,7 +1,7 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.jeremdecustovox/custovox-review-analyzer",
-  "description": "custovox.ai customer review analysis MCP server: sentiment breakdown, key themes, insights",
+  "description": "custovox.ai MCP server: customer review sentiment breakdown and summaries (up to 100 reviews)",
   "repository": {
     "url": "https://github.com/jeremdecustovox/custovox-ai",
     "source": "github"
