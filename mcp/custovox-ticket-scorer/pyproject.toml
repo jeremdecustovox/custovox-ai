@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "custovox-ticket-scorer"
-version = "1.0.0"
+version = "1.0.1"
 description = "Support ticket scoring MCP: priority + category + sentiment + escalation risk. Multilingual sentiment. By custovox.ai"
 readme = "README.md"
 license = {text = "MIT"}
