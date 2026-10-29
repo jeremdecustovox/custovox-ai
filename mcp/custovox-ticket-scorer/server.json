@@ -7,12 +7,12 @@
     "source": "github"
   },
   "websiteUrl": "https://custovox.ai",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "packages": [
     {
       "registryType": "pypi",
       "identifier": "custovox-ticket-scorer",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "transport": {
         "type": "stdio"
       }
