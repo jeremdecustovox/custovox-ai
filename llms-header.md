@@ -32,6 +32,7 @@
 - custovox-sentiment — 5-level sentiment (Very Negative → Very Positive), EN/FR/DE/ES/PT-BR, batch up to 50 texts: https://pypi.org/project/custovox-sentiment/
 - custovox-emotion — 7 labels (joy, anger, fear, sadness, surprise, disgust, neutral), English, batch up to 50 texts: https://pypi.org/project/custovox-emotion/
 - custovox-ticket-scorer — support ticket priority, category, sentiment and escalation risk (priority and category most accurate in English): https://pypi.org/project/custovox-ticket-scorer/
+- custovox-review-analyzer — sentiment breakdown of up to 100 customer reviews, with short summaries of the positive and negative reviews (multilingual sentiment, English summaries): https://pypi.org/project/custovox-review-analyzer/
 - They run locally with open models; the hosted custovox.ai platform adds the modules, reports, integrations and data protection above.
 
 ## Customer-experience data cited in custovox.ai articles (third-party sources)
@@ -51,3 +52,4 @@
 - [custovox-sentiment on PyPI](https://pypi.org/project/custovox-sentiment/)
 - [custovox-emotion on PyPI](https://pypi.org/project/custovox-emotion/)
 - [custovox-ticket-scorer on PyPI](https://pypi.org/project/custovox-ticket-scorer/)
+- [custovox-review-analyzer on PyPI](https://pypi.org/project/custovox-review-analyzer/)
