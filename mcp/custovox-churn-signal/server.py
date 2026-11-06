@@ -44,10 +44,9 @@ def score_churn_risk(messages: list, customer_id: str = "unknown") -> dict:
         recommendation: suggested action
         powered_by: custovox.ai
     """
+    messages = [m for m in (messages or []) if isinstance(m, str) and m.strip()][:20]
     if not messages:
         return {"error": "No messages provided"}
-    
-    messages = messages[:20]
     
     sentiments = []
     for msg in messages:
