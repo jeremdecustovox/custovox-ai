@@ -1,0 +1,153 @@
+Publier à la main dans l'éditeur d'articles LinkedIn, image de couverture = celle du blog. Premier commentaire : lien vers l'article de blog.
+
+Publication : vendredi 13 novembre 2026 — FR 11h50, EN 12h30 (heure de Paris)
+Image de couverture FR : https://raw.githubusercontent.com/jeremdecustovox/custovox-ai/main/images/custovox_ai_ia_generative_france_48_pourcent.png
+Image de couverture EN : https://raw.githubusercontent.com/jeremdecustovox/custovox-ai/main/images/custovox_ai_ia_generative_france_48_pourcent_en.png
+Premier commentaire FR : https://custovox.ai/fr/blog/ia-generative-france-48-pourcent-conversations-clients
+Premier commentaire EN : https://custovox.ai/blog/generative-ai-france-48-percent-customer-conversations
+
+═══════════════════════════════════════════
+VERSION FR — vendredi 13 nov 11h50
+═══════════════════════════════════════════
+
+TITRE :
+L'IA pour parler aux clients… et pour les écouter ?
+
+TEXTE :
+En 2025, 48 % des personnes interrogées en France déclarent utiliser l'IA générative.
+
+Ce chiffre vient de l'ARCEP et du CRÉDOC. Il dit une chose simple : l'IA n'est plus un sujet d'experts. C'est un outil du quotidien pour près d'une personne sur deux.
+
+Et ces personnes sont aussi vos clients.
+
+48 % : l'IA générative est entrée dans le quotidien
+
+42 % des personnes interrogées l'utilisent dans leur vie privée. 30 % pour leur travail ou leurs études.
+
+Chez les plus jeunes, l'usage est massif. 85 % des 18-24 ans. 73 % des 25-39 ans, soit +35 points par rapport à 2023.
+
+Ce qu'ils en font ? D'abord chercher de l'information. C'est l'usage principal, cité par près de la moitié des utilisateurs (CESI / Ipsos 2025).
+
+Vos clients savent donc ce qu'une IA sait faire. Ils savent aussi ce qu'elle rate. Ils ont des attentes. Et ils ont un avis.
+
+La confiance dépend de l'usage
+
+C'est le chiffre le plus intéressant.
+
+Parmi les personnes qui ont déjà utilisé l'IA, près de 75 % lui font une confiance élevée ou modérée. Parmi celles qui ne l'ont jamais utilisée : 26 % (ARCEP / CRÉDOC 2024).
+
+L'écart est énorme. La confiance ne se décrète pas. Elle se construit à l'usage.
+
+Les craintes, elles, restent fortes. Plus de 60 % des personnes interrogées jugent l'IA menaçante pour l'emploi. Les utilisateurs citent d'abord la désinformation comme risque, puis la dépendance humaine et la baisse des capacités de réflexion, à 44 % chacune (CESI / Ipsos 2025).
+
+Autrement dit : vos clients n'ont pas tous le même rapport à l'IA. Certains l'adoptent. D'autres s'en méfient. Les deux écrivent à votre service client.
+
+Les entreprises s'en servent surtout pour parler
+
+Et côté entreprises ?
+
+Dans le commerce en ligne, 30 % des grands distributeurs utilisent l'IA générative pour créer du contenu personnalisé (Association de l'Économie Numérique, 2024). Des e-mails, des fiches produit, des messages adaptés à chaque client.
+
+La même source le reconnaît : l'impact de ces usages reste difficile à mesurer.
+
+C'est logique. On produit plus de messages. On ne sait pas toujours comment ils sont reçus.
+
+Les outils pour lire existent pourtant. Selon les projections de Statista Market Insights, le marché du NLP (analyse automatique du langage) en France pèse 1,77 Md$ en 2025 et devrait atteindre ≈ 11,7 Md$ en 2032 (calcul custovox.ai à partir des données Statista). Et c'est ce que les entreprises demandent : l'analyse d'information est le premier usage que les clients attendent des startups IA françaises (France Digitale, 2024).
+
+Notre lecture : écouter, c'est lire les conversations
+
+Ce qui suit est notre interprétation, pas un chiffre.
+
+Générer un message personnalisé, c'est parler au client. Cela ne dit pas ce qu'il en a pensé.
+
+La réponse existe pourtant déjà. Dans ses avis. Dans ses tickets. Dans ses e-mails. Dans ses appels.
+
+C'est là qu'un client dit qu'il n'a pas compris une offre. Qu'il hésite à rester. Qu'il compare avec un concurrent. Qu'il est satisfait, aussi.
+
+Mesurer l'impact d'un contenu commence par lire ce que les clients répondent.
+
+Et puisque vos clients ont des rapports très différents à l'IA, l'analyse de leurs messages doit rester transparente et vérifiable. Un humain qui valide. Des verbatims cités. Des données hébergées en France, qui ne servent pas à entraîner des modèles. C'est ainsi que nous travaillons chez custovox.ai.
+
+L'IA peut aider à parler aux clients. Elle peut aussi aider à les écouter. Le second usage est moins visible. Il est peut-être le plus utile.
+
+Et vous : dans votre entreprise, l'IA sert-elle surtout à parler à vos clients, ou aussi à les écouter ?
+
+Sources : ARCEP / CRÉDOC (2024, 2025) ; CESI / Ipsos (2025) ; Association de l'Économie Numérique (2024) ; France Digitale (2024) ; Statista Market Insights (projections).
+
+#IA #IAGenerative #ExperienceClient #VoixDuClient #CustovoxAI
+---
+RAPPEL COMMENTAIRE : poster le lien en 1er commentaire
+Lire l'article : https://custovox.ai/fr/blog/ia-generative-france-48-pourcent-conversations-clients
+
+═══════════════════════════════════════════
+VERSION EN — vendredi 13 nov 12h30
+═══════════════════════════════════════════
+
+TITLE:
+AI to talk to customers… and to listen to them?
+
+TEXT:
+In 2025, 48% of people surveyed in France say they use generative AI.
+
+The figure comes from ARCEP and CRÉDOC. It says something simple: AI is no longer an experts' topic. It is an everyday tool for nearly one person in two.
+
+And those people are also your customers.
+
+48%: generative AI has entered everyday life
+
+42% of respondents use it in their private life. 30% for work or studies.
+
+Among younger people, use is massive. 85% of 18-24 year-olds. 73% of 25-39 year-olds, up 35 points from 2023.
+
+What do they do with it? First, search for information. It is the main use, cited by nearly half of users (CESI / Ipsos 2025).
+
+So your customers know what AI can do. They also know what it gets wrong. They have expectations. And they have opinions.
+
+Trust depends on use
+
+This is the most interesting figure.
+
+Among people who have already used AI, nearly 75% have high or moderate trust in it. Among those who have never used it: 26% (ARCEP / CRÉDOC 2024).
+
+The gap is huge. Trust cannot be decreed. It is built through use.
+
+Concerns remain strong. More than 60% of respondents see AI as a threat to jobs. Users first cite disinformation as a risk, then human dependence and reduced thinking skills, at 44% each (CESI / Ipsos 2025).
+
+In other words: your customers do not all have the same relationship with AI. Some embrace it. Others are wary. Both write to your customer service.
+
+Companies mostly use it to talk
+
+And companies?
+
+In online retail, 30% of large retailers use generative AI to create personalized content (Association de l'Économie Numérique, 2024). Emails, product pages, messages tailored to each customer.
+
+The same source admits it: the impact of these uses remains hard to measure.
+
+That makes sense. Companies produce more messages. They do not always know how those messages land.
+
+Yet the tools to read do exist. According to Statista Market Insights projections, the NLP (automated language analysis) market in France is worth $1.77B in 2025 and is expected to reach ≈ $11.7B in 2032 (custovox.ai calculation based on Statista data). And it is what companies ask for: information analysis is the first use clients expect from French AI startups (France Digitale, 2024).
+
+Our reading: listening means reading the conversations
+
+What follows is our interpretation, not a statistic.
+
+Generating a personalized message is talking to the customer. It does not tell you what they thought of it.
+
+Yet the answer already exists. In their reviews. In their tickets. In their emails. In their calls.
+
+That is where a customer says they did not understand an offer. That they are hesitating to stay. That they are comparing you with a competitor. That they are satisfied, too.
+
+Measuring the impact of content starts with reading what customers reply.
+
+And since your customers have very different relationships with AI, analyzing their messages must stay transparent and verifiable. A human who validates. Quoted verbatims. Data hosted in France, never used to train models. That is how we work at custovox.ai.
+
+AI can help you talk to customers. It can also help you listen to them. The second use is less visible. It may be the most useful one.
+
+What about you: in your company, is AI mostly used to talk to your customers, or also to listen to them?
+
+Sources: ARCEP / CRÉDOC (2024, 2025); CESI / Ipsos (2025); Association de l'Économie Numérique (2024); France Digitale (2024); Statista Market Insights (projections).
+
+#AI #GenerativeAI #CustomerExperience #CustomerVoice #CustovoxAI
+---
+RAPPEL COMMENTAIRE : poster le lien en 1er commentaire
+Read the article: https://custovox.ai/blog/generative-ai-france-48-percent-customer-conversations

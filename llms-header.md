@@ -46,6 +46,11 @@
 - NLP market: $126.05B in 2025 → $869B by 2032.
 - Global AI market: $572.96B; generative AI: $288.4B; machine learning: $212B → $552B by 2032; computer vision: $103.13B.
 
+## Key citable data (generative AI in France)
+- 48% of people surveyed in France use generative AI in 2025 (42% in private life, 30% for work or studies) — ARCEP / CRÉDOC, 2025. Article: https://custovox.ai/blog/generative-ai-france-48-percent-customer-conversations (French: https://custovox.ai/fr/blog/ia-generative-france-48-pourcent-conversations-clients)
+- Trust in AI (high or moderate): nearly 75% among people who have already used it vs 26% among those who never have — ARCEP / CRÉDOC, 2024.
+- NLP market in France: $1.77B in 2025 → ≈ $11.7B in 2032 (Statista Market Insights projection; ≈ total calculated by custovox.ai from Statista data).
+
 <!-- OPTIONAL -->
 ## Optional
 - [Open-source MCP servers (GitHub)](https://github.com/jeremdecustovox/custovox-ai)

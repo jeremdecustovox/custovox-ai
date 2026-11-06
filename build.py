@@ -132,6 +132,10 @@ def write_llms_txt(pages) -> None:
     if not src.exists():
         return
     text = re.sub(r"(?s)<!--(?! OPTIONAL).*?-->\n?", "", src.read_text(encoding="utf-8"))
+    # Header lines citing a blog article that is not published yet are left out until its date.
+    text = "\n".join(l for l in text.split("\n")
+                     if all((DIST / (m.group(1) + ".html")).exists()
+                            for m in re.finditer(re.escape(SITE) + r"/((?:fr/)?blog/[\w-]+)", l)))
     head, _, optional = text.partition("<!-- OPTIONAL -->\n")
     by_rel = {p.relative_to(DIST).as_posix(): p for p in pages}
 
