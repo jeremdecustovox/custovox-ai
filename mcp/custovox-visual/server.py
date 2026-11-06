@@ -34,6 +34,7 @@ HOSPITALITY_LABELS = [
 def load_image(image_input: str) -> Image.Image:
     if image_input.startswith("http"):
         response = requests.get(image_input, timeout=10)
+        response.raise_for_status()
         return Image.open(BytesIO(response.content)).convert("RGB")
     else:
         img_data = base64.b64decode(image_input)
@@ -45,14 +46,14 @@ def analyze_customer_image(image_url: str, context: str = "general") -> dict:
     Analyze a customer-submitted image for quality issues.
     
     Args:
-        image_url: URL of the image to analyze
-        context: Context hint — "hospitality", "ecommerce", "retail", "general"
-    
+        image_url: URL of the image to analyze, or the image as a base64 string
+        context: "hospitality" uses hotel-room labels; any other value uses the general labels
+
     Returns:
-        description: what is visible in the image
-        detected_issue: main issue detected
-        issue_confidence: confidence score
-        severity: low / medium / high
+        description: English caption of the image
+        detected_issue: issue category inferred from the caption
+        issue_confidence: zero-shot score of that category
+        severity: none / low / medium / high (derived from issue_confidence)
         suggested_action: recommended response
         powered_by: custovox.ai
     """
