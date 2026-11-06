@@ -690,6 +690,47 @@
    "buffer": true,
    "text": "𝗠𝗼𝗯𝗶𝗹𝗲 𝘃𝗼𝗶𝗰𝗲 𝗿𝗲𝘃𝗲𝗻𝘂𝗲 𝗶𝘀 𝗳𝗮𝗹𝗹𝗶𝗻𝗴 𝟮.𝟳𝟮% 𝗮 𝘆𝗲𝗮𝗿 (𝟮𝟬𝟮𝟯-𝟮𝟬𝟮𝟴 𝗳𝗼𝗿𝗲𝗰𝗮𝘀𝘁).\n\nFrom $396.6B in 2016\nto $264.4B in 2022\nto about $224.6B in 2028.\n\nPeople call less.\nRoutine conversations moved to messaging.\n\nSo which calls remain?\n\nThe ones where writing is not enough.\nA complex situation.\nAn urgent problem.\nA worry. A dispute.\n\nFor customer service, every call now carries higher stakes.\nThe customer who picks up the phone has often tried something else first.\n\nAnd it is still a key channel:\n54% of Americans prefer the phone to solve a customer service problem (2022).\n\nYet most calls are recorded and never listened to again.\n\nFewer calls.\nMore important calls.\nRarely understood.\n\nSource: Statista Market Insights (2023), Mobile Voice\n\n→ Full article in comments\n\n#CustomerService #CallCenter #VoiceOfCustomer #CustomerExperience #CustovoxAI",
    "image": "https://raw.githubusercontent.com/jeremdecustovox/custovox-ai/main/images/custovox_ai_voix_mobile_appels_en.png"
+  },
+  {
+   "id": "blog-2026-11-12-ia-france",
+   "date": "2026-11-12 06:15",
+   "type": "blog",
+   "title": "48 % des Français interrogés utilisent l'IA générative (FR + EN)",
+   "link": "https://custovox.ai/fr/blog/ia-generative-france-48-pourcent-conversations-clients"
+  },
+  {
+   "id": "li-2026-11-12-0900-fr",
+   "date": "2026-11-12 09:00",
+   "type": "linkedin",
+   "title": "48 % des personnes interrogées en France utilisent… (FR)",
+   "link": "https://custovox.ai/fr/blog/ia-generative-france-48-pourcent-conversations-clients",
+   "buffer": true,
+   "text": "48 % des personnes interrogées en France utilisent\nl'IA générative en 2025. 85 % chez les 18-24 ans.\n\nMais la confiance dépend de l'usage : près de 75 %\nchez ceux qui l'ont déjà essayée, 26 % chez les autres.\n\nEt côté entreprises ? 30 % des grands distributeurs\nen ligne l'utilisent pour créer du contenu personnalisé.\n\nL'IA pour parler aux clients, d'accord.\nEt pour les écouter ?\n\n→ Lien en commentaire\n\n#IA #IAGenerative #ExperienceClient\n#VoixDuClient #CustovoxAI",
+   "image": "https://raw.githubusercontent.com/jeremdecustovox/custovox-ai/main/images/custovox_ai_ia_generative_france_48_pourcent.png"
+  },
+  {
+   "id": "li-2026-11-12-1800-en",
+   "date": "2026-11-12 18:00",
+   "type": "linkedin",
+   "title": "48% of people surveyed in France use generative AI… (EN)",
+   "link": "https://custovox.ai/blog/generative-ai-france-48-percent-customer-conversations",
+   "buffer": true,
+   "text": "48% of people surveyed in France use generative AI\nin 2025. 85% among 18-24 year-olds.\n\nBut trust depends on usage: nearly 75% among those\nwho have tried it, 26% among those who haven't.\n\nAnd in business? 30% of large online retailers use it\nto create personalized content.\n\nAI to talk to customers, fine.\nWhat about listening to them?\n\n→ Full article in comments\n\n#AI #GenerativeAI #CustomerExperience\n#CustomerVoice #CustovoxAI",
+   "image": "https://raw.githubusercontent.com/jeremdecustovox/custovox-ai/main/images/custovox_ai_ia_generative_france_48_pourcent_en.png"
+  },
+  {
+   "id": "li-2026-11-13-1150-article-fr",
+   "date": "2026-11-13 11:50",
+   "type": "linkedin-fr",
+   "title": "Article LinkedIn « L'IA pour parler aux clients… et pour les écouter ? » (FR, texte dans linkedin_article_ia_france.txt)",
+   "link": "https://custovox.ai/fr/blog/ia-generative-france-48-pourcent-conversations-clients"
+  },
+  {
+   "id": "li-2026-11-13-1230-article-en",
+   "date": "2026-11-13 12:30",
+   "type": "linkedin-fr",
+   "title": "Article LinkedIn « AI to talk to customers… and to listen to them? » (EN, texte dans linkedin_article_ia_france.txt)",
+   "link": "https://custovox.ai/blog/generative-ai-france-48-percent-customer-conversations"
   }
  ],
  "tasks": [

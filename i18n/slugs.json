@@ -127,5 +127,8 @@
  },
  "mobile-voice-decline-customer-calls": {
   "fr": "voix-mobile-baisse-appels-service-client"
+ },
+ "generative-ai-france-48-percent-customer-conversations": {
+  "fr": "ia-generative-france-48-pourcent-conversations-clients"
  }
 }

@@ -1,0 +1,177 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//custovox.ai//IA France 48//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:ia-france-48-1-20261112T081500@custovox.ai
+DTSTAMP:20261106T120000Z
+DTSTART;TZID=Europe/Paris:20261112T081500
+DTEND;TZID=Europe/Paris:20261112T083000
+SUMMARY:Vérifier l'article de blog FR en ligne
+DESCRIPTION:L'article FR est en ligne depuis le rebuild de 6h00 (heure aff
+ ichée : 8h30). Vérifier : https://custovox.ai/fr/blog/ia-generative-fran
+ ce-48-pourcent-conversations-clients
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Vérifier l'article de blog FR en ligne
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ia-france-48-2-20261112T084500@custovox.ai
+DTSTAMP:20261106T120000Z
+DTSTART;TZID=Europe/Paris:20261112T084500
+DTEND;TZID=Europe/Paris:20261112T090000
+SUMMARY:Post teaser LinkedIn FR (Buffer 9h00) — vérifier
+DESCRIPTION:Buffer publie le teaser FR à 9h00. Vérifier qu'il est bien p
+ rogrammé.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Post teaser LinkedIn FR (Buffer 9h00) — vérifier
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ia-france-48-3-20261112T090500@custovox.ai
+DTSTAMP:20261106T120000Z
+DTSTART;TZID=Europe/Paris:20261112T090500
+DTEND;TZID=Europe/Paris:20261112T092000
+SUMMARY:Commentaire lien — teaser FR
+DESCRIPTION:Ajouter en 1er commentaire sous le teaser FR : https://custovo
+ x.ai/fr/blog/ia-generative-france-48-pourcent-conversations-clients
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Commentaire lien — teaser FR
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ia-france-48-4-20261112T171500@custovox.ai
+DTSTAMP:20261106T120000Z
+DTSTART;TZID=Europe/Paris:20261112T171500
+DTEND;TZID=Europe/Paris:20261112T173000
+SUMMARY:Vérifier l'article de blog EN en ligne
+DESCRIPTION:L'article EN est en ligne depuis le rebuild de 6h00 (heure aff
+ ichée : 17h30). Vérifier : https://custovox.ai/blog/generative-ai-france
+ -48-percent-customer-conversations
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Vérifier l'article de blog EN en ligne
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ia-france-48-5-20261112T174500@custovox.ai
+DTSTAMP:20261106T120000Z
+DTSTART;TZID=Europe/Paris:20261112T174500
+DTEND;TZID=Europe/Paris:20261112T180000
+SUMMARY:Post teaser LinkedIn EN (Buffer 18h00) — vérifier
+DESCRIPTION:Buffer publie le teaser EN à 18h00. Vérifier qu'il est bien 
+ programmé.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Post teaser LinkedIn EN (Buffer 18h00) — vérifier
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ia-france-48-6-20261112T180500@custovox.ai
+DTSTAMP:20261106T120000Z
+DTSTART;TZID=Europe/Paris:20261112T180500
+DTEND;TZID=Europe/Paris:20261112T182000
+SUMMARY:Commentaire lien — teaser EN
+DESCRIPTION:Ajouter en 1er commentaire sous le teaser EN : https://custovo
+ x.ai/blog/generative-ai-france-48-percent-customer-conversations
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Commentaire lien — teaser EN
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ia-france-48-7-20261113T113500@custovox.ai
+DTSTAMP:20261106T120000Z
+DTSTART;TZID=Europe/Paris:20261113T113500
+DTEND;TZID=Europe/Paris:20261113T115000
+SUMMARY:Article LinkedIn FR à publier (11h50)
+DESCRIPTION:Publier à la main dans l'éditeur d'articles LinkedIn (texte 
+ : linkedin_article_ia_france.txt\, version FR \; image de couverture = cel
+ le du blog).
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Article LinkedIn FR à publier (11h50)
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ia-france-48-8-20261113T115500@custovox.ai
+DTSTAMP:20261106T120000Z
+DTSTART;TZID=Europe/Paris:20261113T115500
+DTEND;TZID=Europe/Paris:20261113T121000
+SUMMARY:Commentaire lien — article LinkedIn FR
+DESCRIPTION:Ajouter en 1er commentaire : https://custovox.ai/fr/blog/ia-ge
+ nerative-france-48-pourcent-conversations-clients
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Commentaire lien — article LinkedIn FR
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ia-france-48-9-20261113T121500@custovox.ai
+DTSTAMP:20261106T120000Z
+DTSTART;TZID=Europe/Paris:20261113T121500
+DTEND;TZID=Europe/Paris:20261113T123000
+SUMMARY:Article LinkedIn EN à publier (12h30)
+DESCRIPTION:Publier à la main dans l'éditeur d'articles LinkedIn (texte 
+ : linkedin_article_ia_france.txt\, version EN \; image de couverture = cel
+ le du blog).
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Article LinkedIn EN à publier (12h30)
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ia-france-48-10-20261113T123500@custovox.ai
+DTSTAMP:20261106T120000Z
+DTSTART;TZID=Europe/Paris:20261113T123500
+DTEND;TZID=Europe/Paris:20261113T125000
+SUMMARY:Commentaire lien — article LinkedIn EN
+DESCRIPTION:Ajouter en 1er commentaire : https://custovox.ai/blog/generati
+ ve-ai-france-48-percent-customer-conversations
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Commentaire lien — article LinkedIn EN
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
