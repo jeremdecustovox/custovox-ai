@@ -34,6 +34,7 @@
 - custovox-ticket-scorer — support ticket priority, category, sentiment and escalation risk (priority and category most accurate in English): https://pypi.org/project/custovox-ticket-scorer/
 - custovox-review-analyzer — sentiment breakdown of up to 100 customer reviews, with short summaries of the positive and negative reviews (multilingual sentiment, English summaries): https://pypi.org/project/custovox-review-analyzer/
 - custovox-churn-signal — rule-based churn-risk score 0–100 from a customer's message sequence (sentiment trend, negative messages, explicit intent to cancel or switch); a ranking to prioritize follow-up, not a validated prediction (multilingual sentiment, English intent detection, up to 20 messages): https://pypi.org/project/custovox-churn-signal/
+- custovox-visual — first triage of customer photos (hotel rooms, product returns, retail): an English caption, then the most likely issue category inferred from that caption, with a confidence-based severity for human review: https://pypi.org/project/custovox-visual/
 - They run locally with open models; the hosted custovox.ai platform adds the modules, reports, integrations and data protection above.
 
 ## Customer-experience data cited in custovox.ai articles (third-party sources)
@@ -60,3 +61,4 @@
 - [custovox-ticket-scorer on PyPI](https://pypi.org/project/custovox-ticket-scorer/)
 - [custovox-review-analyzer on PyPI](https://pypi.org/project/custovox-review-analyzer/)
 - [custovox-churn-signal on PyPI](https://pypi.org/project/custovox-churn-signal/)
+- [custovox-visual on PyPI](https://pypi.org/project/custovox-visual/)
