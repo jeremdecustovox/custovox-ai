@@ -1,5 +1,7 @@
 # custovox-visual
 
+[![jeremdecustovox/custovox-ai MCP server](https://glama.ai/mcp/servers/jeremdecustovox/custovox-ai/badges/score.svg)](https://glama.ai/mcp/servers/jeremdecustovox/custovox-ai)
+
 <!-- mcp-name: io.github.jeremdecustovox/custovox-visual -->
 
 MCP server for a first triage of customer-submitted photos (hotel rooms, product returns, retail, support tickets).

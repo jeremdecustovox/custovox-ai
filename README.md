@@ -1,5 +1,7 @@
 # custovox.ai — open-source customer-intelligence MCP servers
 
+[![jeremdecustovox/custovox-ai MCP server](https://glama.ai/mcp/servers/jeremdecustovox/custovox-ai/badges/score.svg)](https://glama.ai/mcp/servers/jeremdecustovox/custovox-ai)
+
 Free MCP servers that let Claude (or any MCP client) read what customers say: sentiment, emotions, support tickets, reviews, churn signals, photos and calls. They run on your machine with open models.
 
 Built by [CustoVox.ai](https://custovox.ai).

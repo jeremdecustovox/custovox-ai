@@ -1,5 +1,7 @@
 # custovox-sentiment
 
+[![jeremdecustovox/custovox-ai MCP server](https://glama.ai/mcp/servers/jeremdecustovox/custovox-ai/badges/score.svg)](https://glama.ai/mcp/servers/jeremdecustovox/custovox-ai)
+
 <!-- mcp-name: io.github.jeremdecustovox/custovox-sentiment -->
 
 MCP server that rates the sentiment of customer text (reviews, tickets, emails, chat messages) on 5 levels: Very Negative, Negative, Neutral, Positive, Very Positive.

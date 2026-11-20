@@ -1,5 +1,7 @@
 # custovox-review-analyzer
 
+[![jeremdecustovox/custovox-ai MCP server](https://glama.ai/mcp/servers/jeremdecustovox/custovox-ai/badges/score.svg)](https://glama.ai/mcp/servers/jeremdecustovox/custovox-ai)
+
 <!-- mcp-name: io.github.jeremdecustovox/custovox-review-analyzer -->
 
 MCP server that analyzes a batch of customer reviews: overall sentiment, breakdown, and short summaries of what positive and negative reviews say.

@@ -1,5 +1,7 @@
 # custovox-churn-signal
 
+[![jeremdecustovox/custovox-ai MCP server](https://glama.ai/mcp/servers/jeremdecustovox/custovox-ai/badges/score.svg)](https://glama.ai/mcp/servers/jeremdecustovox/custovox-ai)
+
 <!-- mcp-name: io.github.jeremdecustovox/custovox-churn-signal -->
 
 MCP server that scores the churn risk of a customer from the sequence of their messages (tickets, emails, chats), oldest first.

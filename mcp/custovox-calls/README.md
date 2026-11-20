@@ -1,5 +1,7 @@
 # custovox-calls
 
+[![jeremdecustovox/custovox-ai MCP server](https://glama.ai/mcp/servers/jeremdecustovox/custovox-ai/badges/score.svg)](https://glama.ai/mcp/servers/jeremdecustovox/custovox-ai)
+
 <!-- mcp-name: io.github.jeremdecustovox/custovox-calls -->
 
 An MCP server that lets Claude analyze customer-service calls: sentiment, contact reasons, complaints, churn threats and agent promises, then suggest follow-up actions. Everything runs on your machine.

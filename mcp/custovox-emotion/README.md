@@ -1,5 +1,7 @@
 # custovox-emotion
 
+[![jeremdecustovox/custovox-ai MCP server](https://glama.ai/mcp/servers/jeremdecustovox/custovox-ai/badges/score.svg)](https://glama.ai/mcp/servers/jeremdecustovox/custovox-ai)
+
 <!-- mcp-name: io.github.jeremdecustovox/custovox-emotion -->
 
 MCP server that detects the emotion in English customer text, among 7 labels: joy, anger, fear, sadness, surprise, disgust, neutral.

@@ -1,5 +1,7 @@
 # custovox-ticket-scorer
 
+[![jeremdecustovox/custovox-ai MCP server](https://glama.ai/mcp/servers/jeremdecustovox/custovox-ai/badges/score.svg)](https://glama.ai/mcp/servers/jeremdecustovox/custovox-ai)
+
 <!-- mcp-name: io.github.jeremdecustovox/custovox-ticket-scorer -->
 
 MCP server that scores support tickets: priority, category, sentiment and escalation risk, to decide which ticket to handle first.
