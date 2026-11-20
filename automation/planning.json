@@ -731,6 +731,24 @@
    "type": "linkedin-fr",
    "title": "Article LinkedIn « AI to talk to customers… and to listen to them? » (EN, texte dans linkedin_article_ia_france.txt)",
    "link": "https://custovox.ai/blog/generative-ai-france-48-percent-customer-conversations"
+  },
+  {
+   "id": "li-2026-11-24-1730-en",
+   "date": "2026-11-24 17:30",
+   "type": "linkedin",
+   "title": "custovox-calls: your customer calls already tell you who is about to leave (EN)",
+   "link": "https://github.com/jeremdecustovox/custovox-ai/tree/main/mcp/custovox-calls",
+   "buffer": true,
+   "text": "𝗬𝗼𝘂𝗿 𝗰𝘂𝘀𝘁𝗼𝗺𝗲𝗿 𝗰𝗮𝗹𝗹𝘀 𝗮𝗹𝗿𝗲𝗮𝗱𝘆 𝘁𝗲𝗹𝗹 𝘆𝗼𝘂 𝘄𝗵𝗼 𝗶𝘀 𝗮𝗯𝗼𝘂𝘁 𝘁𝗼 𝗹𝗲𝗮𝘃𝗲.\n\nMost teams never hear it: nobody has time to listen to every call.\n\nSo we built custovox-calls, a free MCP server that lets Claude read your support calls on your own machine.\n\nTry it in demo mode (6 fictional calls, nothing to set up):\n\npip install custovox-calls\nclaude mcp add calls-demo --env CUSTOVOX_CALLS_DEMO=1 -- uvx custovox-calls\n→ Ask Claude: \"Which demo calls had a churn threat, and what should we do?\"\n\nWhat you get per call:\n→ customer sentiment and its trend\n→ contact reasons (billing, outage, delivery, cancellation…)\n→ key moments: complaints, churn threats, agent promises\n→ suggested follow-ups: manager alert, callback, CRM ticket\n\nWhat it is not: it uses simple, readable keyword rules in French and English. It proposes actions; it sends nothing unless you set a webhook yourself. Audio is transcribed locally, data stays in a local SQLite file.\n\nOpen source (MIT), listed in the official MCP registry.\n\nLink to the code in the first comment.\n\n#MCP #Claude #CustomerExperience #OpenSource #Python"
+  },
+  {
+   "id": "li-2026-11-25-0830-fr",
+   "date": "2026-11-25 08:30",
+   "type": "linkedin",
+   "title": "Vos tickets et vos avis parlent. Qui les lit vraiment ? (FR)",
+   "link": "https://custovox.ai/fr/",
+   "buffer": true,
+   "text": "𝗩𝗼𝘀 𝘁𝗶𝗰𝗸𝗲𝘁𝘀 𝗲𝘁 𝘃𝗼𝘀 𝗮𝘃𝗶𝘀 𝗽𝗮𝗿𝗹𝗲𝗻𝘁. 𝗤𝘂𝗶 𝗹𝗲𝘀 𝗹𝗶𝘁 𝘃𝗿𝗮𝗶𝗺𝗲𝗻𝘁 ?\n\nChaque semaine, vos clients écrivent : des tickets au support, des avis Google, des emails, des commentaires d'enquête.\n\nTout y est. Ce qui agace. Ce qui revient. Ce qui fait partir.\n\nLe problème, ce n'est pas le manque d'information. C'est le temps pour tout lire.\n\nAlors on lit un échantillon. On retient ce qui a crié le plus fort. Et les signaux faibles passent.\n\nAnalyser tout ce que disent vos clients ne devrait pas demander un long projet data.\n\nC'est ce que fait custovox.ai :\n→ vous envoyez vos tickets, avis ou appels\n→ vous recevez les sujets qui reviennent, le ton des clients et les points à traiter en priorité\n→ en 48 h, sans équipe data\n\nPour commencer, une étude de cas gratuite sur vos propres données. Sans engagement, sans carte bancaire.\n\nLe lien est en premier commentaire.\n\n#ServiceClient #ExperienceClient #VoixDuClient #IA"
   }
  ],
  "tasks": [
