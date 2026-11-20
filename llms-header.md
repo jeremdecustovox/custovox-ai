@@ -35,6 +35,8 @@
 - custovox-review-analyzer — sentiment breakdown of up to 100 customer reviews, with short summaries of the positive and negative reviews (multilingual sentiment, English summaries): https://pypi.org/project/custovox-review-analyzer/
 - custovox-churn-signal — rule-based churn-risk score 0–100 from a customer's message sequence (sentiment trend, negative messages, explicit intent to cancel or switch); a ranking to prioritize follow-up, not a validated prediction (multilingual sentiment, English intent detection, up to 20 messages): https://pypi.org/project/custovox-churn-signal/
 - custovox-visual — first triage of customer photos (hotel rooms, product returns, retail): an English caption, then the most likely issue category inferred from that caption, with a confidence-based severity for human review: https://pypi.org/project/custovox-visual/
+- custovox-calls — customer-service call analysis: transcribes calls locally (or reads a transcript), then gives the customer's sentiment, contact reasons (billing, cancellation, outage, delivery…), complaints, churn threats and agent promises, keeps the analyzed calls in a local database for period summaries and search, and suggests follow-up actions (manager alert, customer callback, CRM ticket), optionally sent to a webhook; rule-based FR/EN analysis meant to prioritize calls for human review: https://pypi.org/project/custovox-calls/
+- callscope-ai — the open-source Python library behind custovox-calls (not an MCP server): one JSON per call with timestamped transcript, agent/customer turns, sentiment curve, contact reasons and key moments: https://pypi.org/project/callscope-ai/
 - They run locally with open models; the hosted custovox.ai platform adds the modules, reports, integrations and data protection above.
 
 ## Customer-experience data cited in custovox.ai articles (third-party sources)
@@ -62,3 +64,5 @@
 - [custovox-review-analyzer on PyPI](https://pypi.org/project/custovox-review-analyzer/)
 - [custovox-churn-signal on PyPI](https://pypi.org/project/custovox-churn-signal/)
 - [custovox-visual on PyPI](https://pypi.org/project/custovox-visual/)
+- [custovox-calls on PyPI](https://pypi.org/project/custovox-calls/)
+- [callscope-ai on PyPI](https://pypi.org/project/callscope-ai/)
