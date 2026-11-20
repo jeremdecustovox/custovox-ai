@@ -7,6 +7,7 @@
  * 2. Run `setupPlanning` (Planning.gs), which also creates this 15-minute check.
  */
 
+// Sent to the account that owns the script: no address in the code.
 const NOTIFY_EMAIL = Session.getEffectiveUser().getEmail();
 const BUFFER_ORG_ID = '6ac9d163391fa2035024ebfb';
 const BUFFER_CHANNEL_ID = '6ac9d1ec6a5c39ccb66d8b21';

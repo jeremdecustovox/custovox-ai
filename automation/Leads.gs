@@ -8,6 +8,7 @@
  */
 
 const LEADS_SHEET = 'Leads';
+// Sent to the account that owns the script: no address in the code.
 const NOTIFY_LEADS_TO = Session.getEffectiveUser().getEmail();
 const LEAD_HEADERS = ['date', 'email', 'industry', 'conversations / month', 'language', 'page',
   'consent', 'newsletter', 'status', 'notes', 'data retention'];
