@@ -76,7 +76,7 @@ print("Model loaded.", file=sys.stderr)
 def analyze_sentiment(text: str) -> dict:
     """
     Analyze sentiment of customer text.
-    Supports EN, FR, DE, ES, PT-BR natively.
+    One multilingual model (EN, FR, DE, ES, PT among others); reads the first 512 characters.
 
     Args:
         text: Customer text to analyze (review,

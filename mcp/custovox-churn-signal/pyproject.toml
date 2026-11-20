@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "custovox-churn-signal"
-version = "1.0.0"
+version = "1.0.1"
 description = "Churn risk detection MCP: score 0-100 from customer message sequences. Detects degradation patterns. By custovox.ai"
 readme = "README.md"
 license = {text = "MIT"}

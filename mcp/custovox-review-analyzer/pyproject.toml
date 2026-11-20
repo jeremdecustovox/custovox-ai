@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "custovox-review-analyzer"
-version = "1.0.0"
+version = "1.0.1"
 description = "Customer review analysis MCP: sentiment breakdown, summaries of positive and negative reviews. Multilingual sentiment. By custovox.ai"
 readme = "README.md"
 license = {text = "MIT"}

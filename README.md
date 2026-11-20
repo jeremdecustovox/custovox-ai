@@ -1,60 +1,44 @@
-# custovox.ai — Customer Intelligence MCPs
+# custovox.ai — open-source customer-intelligence MCP servers
 
-> Listen deeper. Act faster.
+Free MCP servers that let Claude (or any MCP client) read what customers say: sentiment, emotions, support tickets, reviews, churn signals, photos and calls. They run on your machine with open models.
 
-NLP-powered MCP servers for business teams. Detect emotions, escalation risks and churn signals from customer calls, reviews, tickets and images.
+Built by [CustoVox.ai](https://custovox.ai).
 
-Built for **retail**, **e-commerce**, **SaaS** and **marketing agencies**.
+## MCP servers
 
----
+| Server | What it does | Languages | PyPI |
+|---|---|---|---|
+| [custovox-sentiment](mcp/custovox-sentiment) | 5-level sentiment of customer text, batch up to 50 | One multilingual model (EN, FR, DE, ES, PT among others) | [custovox-sentiment](https://pypi.org/project/custovox-sentiment/) |
+| [custovox-emotion](mcp/custovox-emotion) | 7 emotions (joy, anger, fear, sadness, surprise, disgust, neutral) | English only | [custovox-emotion](https://pypi.org/project/custovox-emotion/) |
+| [custovox-ticket-scorer](mcp/custovox-ticket-scorer) | Ticket priority, category, sentiment and escalation risk | Sentiment multilingual; priority and category best in English | [custovox-ticket-scorer](https://pypi.org/project/custovox-ticket-scorer/) |
+| [custovox-review-analyzer](mcp/custovox-review-analyzer) | Sentiment breakdown and summaries of up to 100 reviews | Sentiment multilingual; summaries best in English | [custovox-review-analyzer](https://pypi.org/project/custovox-review-analyzer/) |
+| [custovox-churn-signal](mcp/custovox-churn-signal) | Rule-based churn-risk score 0–100 from a customer's messages | Sentiment multilingual; intent detection best in English | [custovox-churn-signal](https://pypi.org/project/custovox-churn-signal/) |
+| [custovox-visual](mcp/custovox-visual) | First triage of customer photos (rooms, returns, retail) | English captions | [custovox-visual](https://pypi.org/project/custovox-visual/) |
+| [custovox-calls](mcp/custovox-calls) | Call analysis: sentiment, contact reasons, churn threats, follow-up actions; demo mode | Simple rules, French and English | [custovox-calls](https://pypi.org/project/custovox-calls/) |
 
-## What is custovox.ai?
+All seven are listed in the [official MCP registry](https://registry.modelcontextprotocol.io) under `io.github.jeremdecustovox/`.
 
-custovox.ai turns customer conversations into actionable business intelligence — using the same AI models used by Google, Amazon, Meta, Uber and Airbnb. Now accessible to any business.
+## Library
 
+| Package | What it does | PyPI |
+|---|---|---|
+| [callscope-ai](mcp/callscope-ai) | Python library behind custovox-calls (not an MCP server): one JSON per call with transcript, agent/customer turns, sentiment curve, contact reasons and key moments | [callscope-ai](https://pypi.org/project/callscope-ai/) |
 
----
+## Quick start
 
-## MCP Servers
+```bash
+claude mcp add custovox-calls-demo --env CUSTOVOX_CALLS_DEMO=1 -- uvx custovox-calls
+# Then ask Claude: "Which demo calls had a churn threat, and what should we do?"
+```
 
-| Server | Description | Status |
-|--------|-------------|--------|
-| `custovox-sentiment` | Multilingual sentiment (EN/FR/DE/ES/PT-BR) | Coming soon |
-| `custovox-emotion` | 6-emotion detection from customer text | Coming soon |
-| `custovox-ticket-scorer` | Priority + sentiment for support tickets | Coming soon |
-| `custovox-review-analyzer` | NLP analysis of Google, G2 & Trustpilot | Coming soon |
-| `custovox-churn-signal` | Churn risk from conversation sequences | Coming soon |
-| `custovox-visual` | Image analysis for hospitality & retail | Coming soon |
+Each server's README has its own quick start, tools and limits.
 
----
+## Limits
 
-## Use Cases
+These servers are meant to sort and prioritize customer feedback for human review. They use open models and simple, readable rules; several parts work best in English (see each README).
 
-- **Market Research** — Analyze thousands of reviews across markets and languages
-- **Competitive Analysis** — Monitor competitor sentiment automatically
-- **Retail & E-commerce** — Detect product issues from photos and reviews
-- **SaaS** — Predict churn before it happens
-- **Marketing Agencies** — Deliver NLP insights without building your own models
+## More
 
----
+The hosted platform at [custovox.ai](https://custovox.ai) covers 5 languages, voice, text and images, with reports and integrations.
 
-## Supported Languages
-
-English · Français · Deutsch · Español · Português (BR)
-
-Native models — no translation needed.
-
----
-
-
-
-
----
-
-## Links
-
-- Website: https://custovox.ai
-
----
-
-Powered by transformers. MIT License.
+MIT License.

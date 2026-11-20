@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "custovox-emotion"
-version = "1.0.1"
-description = "6-emotion detection MCP server for customer text. Joy, anger, fear, sadness, surprise, disgust. By custovox.ai"
+version = "1.0.2"
+description = "Emotion detection MCP for English customer text: 7 labels (joy, anger, fear, sadness, surprise, disgust, neutral). By custovox.ai"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [{name = "CustoVox.ai"}]

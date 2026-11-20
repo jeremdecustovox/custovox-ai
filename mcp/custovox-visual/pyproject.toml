@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "custovox-visual"
-version = "1.0.0"
+version = "1.0.1"
 description = "Customer photo triage MCP: English caption + likely issue category for hotel room, product return and retail photos. By custovox.ai"
 readme = "README.md"
 license = {text = "MIT"}

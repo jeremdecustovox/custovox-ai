@@ -4,6 +4,15 @@
 
 MCP server for a first triage of customer-submitted photos (hotel rooms, product returns, retail, support tickets).
 
+## Quick start
+```bash
+pip install custovox-visual
+claude mcp add custovox-visual -- uvx custovox-visual
+# Then ask Claude: "Triage this customer photo: https://example.com/room.jpg (context: hospitality)"
+# Returns: description, detected_issue, issue_confidence, severity, suggested_action
+```
+Models are downloaded from Hugging Face on first start, then everything runs locally.
+
 ## What it returns
 One tool, `analyze_customer_image(image_url, context="general")` — `image_url` is an image URL or the image as a base64 string:
 - `description`: an English caption of the image
@@ -18,11 +27,6 @@ One tool, `analyze_customer_image(image_url, context="general")` — `image_url`
 - `severity` reflects how confident the classification is, not how serious the issue is. Use it to sort photos for human review, not as a final verdict.
 - Runs locally; the only network call is downloading the image when you pass a URL. Models are downloaded on first run.
 
-## Installation
-```
-pip install custovox-visual
-```
-
-## Need more?
-**custovox.ai** — Full customer intelligence platform. From $89/month.
-https://custovox.ai
+## About
+Built by [CustoVox.ai](https://custovox.ai). This free server runs on your machine with open models.
+The hosted platform at [custovox.ai](https://custovox.ai) covers 5 languages, voice, text and images, with reports and integrations. From $89/month.

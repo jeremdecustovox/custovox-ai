@@ -29,7 +29,7 @@
 - The G2 review study (200 reviews) found onboarding confusion in 34% of the negative reviews — a share of negative reviews, not of all customers: https://custovox.ai/blog/g2-reviews-nlp-analysis
 
 ## Open-source MCP servers (GitHub, PyPI and the official MCP registry)
-- custovox-sentiment — 5-level sentiment (Very Negative → Very Positive), EN/FR/DE/ES/PT-BR, batch up to 50 texts: https://pypi.org/project/custovox-sentiment/
+- custovox-sentiment — 5-level sentiment (Very Negative → Very Positive) from one multilingual model (English, French, German, Spanish and Portuguese among others), batch up to 50 texts: https://pypi.org/project/custovox-sentiment/
 - custovox-emotion — 7 labels (joy, anger, fear, sadness, surprise, disgust, neutral), English, batch up to 50 texts: https://pypi.org/project/custovox-emotion/
 - custovox-ticket-scorer — support ticket priority, category, sentiment and escalation risk (priority and category most accurate in English): https://pypi.org/project/custovox-ticket-scorer/
 - custovox-review-analyzer — sentiment breakdown of up to 100 customer reviews, with short summaries of the positive and negative reviews (multilingual sentiment, English summaries): https://pypi.org/project/custovox-review-analyzer/

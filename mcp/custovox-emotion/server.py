@@ -18,10 +18,10 @@ print("Model loaded.", file=sys.stderr)
 def detect_emotion(text: str) -> dict:
     """
     Detect the dominant emotion in customer text.
-    Returns all 6 emotions with confidence scores.
+    Returns the score of each of the 7 emotions (English text only).
     
     Emotions: joy, anger, fear, sadness, surprise, disgust, neutral
-    Best for: EN text. Use analyze_sentiment for multilingual.
+    English only. For other languages, use custovox-sentiment.
     
     Args:
         text: Customer text to analyze

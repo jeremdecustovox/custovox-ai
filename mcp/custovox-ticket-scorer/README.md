@@ -2,23 +2,27 @@
 
 <!-- mcp-name: io.github.jeremdecustovox/custovox-ticket-scorer -->
 
-Support ticket scoring MCP server.
+MCP server that scores support tickets: priority, category, sentiment and escalation risk, to decide which ticket to handle first.
 
-## What it returns
-- **Priority**: urgent / normal / low priority
-- **Category**: billing issue, technical problem, delivery issue, product defect, account access, refund request, general inquiry, feature request
-- **Sentiment**: Very Negative → Very Positive, multilingual (EN/FR/DE/ES/PT-BR)
-- **Escalation risk**: low / medium / high (negative sentiment + urgent priority)
-
-Priority and category use an English zero-shot model (facebook/bart-large-mnli): they are most
-accurate on English tickets. Sentiment uses a multilingual model.
-Batch mode: up to 20 tickets per call, sorted by escalation risk.
-
-## Installation
+## Quick start
+```bash
 pip install custovox-ticket-scorer
+claude mcp add custovox-ticket-scorer -- uvx custovox-ticket-scorer
+# Then ask Claude: "Score this ticket: 'I was charged twice and nobody answers my emails.'"
+# Returns: priority, category, sentiment, escalation_risk (+ confidences)
+```
+Models are downloaded from Hugging Face on first start, then everything runs locally.
 
-The models (about 2 GB) are downloaded from Hugging Face on first start and run on your machine.
+## Tools
+- `score_ticket(text)`: `priority` (urgent / normal / low priority), `category` (billing issue, technical problem, delivery issue, product defect, account access, refund request, general inquiry, feature request), `sentiment` (5 levels), `escalation_risk` (low / medium / high), each with a confidence
+- `score_ticket_batch(tickets)`: up to 20 tickets, sorted by escalation risk
 
-## Need more?
-**custovox.ai** — Full customer intelligence platform. From $89/month.
-https://custovox.ai
+## Limits
+- Priority and category come from an English zero-shot model (`facebook/bart-large-mnli`): most accurate on English tickets.
+- Sentiment uses a multilingual model (English, French, German, Spanish, Portuguese among others).
+- Escalation risk is a simple rule: negative sentiment and urgent priority gives high; one of the two gives medium.
+- Each ticket is read up to its first 512 characters. About 2 GB of models are downloaded on first start.
+
+## About
+Built by [CustoVox.ai](https://custovox.ai). This free server runs on your machine with open models.
+The hosted platform at [custovox.ai](https://custovox.ai) covers 5 languages, voice, text and images, with reports and integrations. From $89/month.

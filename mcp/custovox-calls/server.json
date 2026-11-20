@@ -1,0 +1,44 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.jeremdecustovox/custovox-calls",
+  "description": "Analyze customer-service calls locally: sentiment, churn threats, follow-up actions.",
+  "websiteUrl": "https://custovox.ai",
+  "version": "0.1.1",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "custovox-calls",
+      "version": "0.1.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "CUSTOVOX_CALLS_DB",
+          "description": "SQLite file for analyzed calls (default ~/.custovox-calls/calls.db)",
+          "isRequired": false
+        },
+        {
+          "name": "CUSTOVOX_CALLS_DEMO",
+          "description": "Set to 1 for demo mode with 6 fictional calls",
+          "isRequired": false
+        },
+        {
+          "name": "CUSTOVOX_CALLS_WEBHOOK_URL",
+          "description": "Webhook URL that enables send_action (Slack, Zapier, Make, CRM)",
+          "isRequired": false,
+          "isSecret": true
+        },
+        {
+          "name": "CUSTOVOX_CALLS_WHISPER_MODEL",
+          "description": "faster-whisper model size (default small)",
+          "isRequired": false
+        }
+      ]
+    }
+  ],
+  "repository": {
+    "url": "https://github.com/jeremdecustovox/custovox-ai",
+    "source": "github"
+  }
+}

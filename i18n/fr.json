@@ -316,7 +316,7 @@
  "custovox-sentiment": "custovox-sentiment",
  "— multilingual sentiment analysis (EN/FR/DE/ES/PT-BR)": "— analyse de sentiment multilingue (EN/FR/DE/ES/PT-BR)",
  "custovox-emotion": "custovox-emotion",
- "— 6-emotion detection from customer text": "— détection de 6 émotions dans le texte client",
+ "— 7-emotion detection (incl. neutral) in English customer text": "— détection de 7 émotions (dont neutre) dans les textes clients en anglais",
  "custovox-ticket-scorer": "custovox-ticket-scorer",
  "— priority + category + escalation risk per ticket": "— priorité + catégorie + risque d'escalade par ticket",
  "custovox-review-analyzer": "custovox-review-analyzer",

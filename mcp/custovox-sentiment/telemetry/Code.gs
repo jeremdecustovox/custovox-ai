@@ -5,6 +5,7 @@
  * run `setup` once, then deploy as a Web app (Execute as: Me, Access: Anyone).
  */
 
+// Weekly report goes to the account that owns the script: no address in the code.
 const REPORT_EMAIL = Session.getEffectiveUser().getEmail();
 const EVENTS_SHEET = 'Events';
 const REPORTS_SHEET = 'Rapports';

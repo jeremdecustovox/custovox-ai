@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "callscope-ai"
+version = "0.1.1"
+description = "Local call-center call analysis: transcript, speakers, sentiment, contact reasons and key moments in one JSON."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "CustoVox.ai"}]
+dependencies = []
+keywords = ["call-center", "speech", "sentiment", "customer-service", "transcription"]
+classifiers = ["Programming Language :: Python :: 3", "Environment :: Console"]
+
+[project.optional-dependencies]
+whisper = ["faster-whisper>=1.0"]
+test = ["pytest"]
+
+[project.urls]
+Homepage = "https://custovox.ai"
+Repository = "https://github.com/jeremdecustovox/custovox-ai"
+
+[project.scripts]
+callscope = "callscope.cli:main"
+callscope-ai = "callscope.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/callscope"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "README.md", "LICENSE"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

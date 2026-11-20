@@ -1,18 +1,18 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.jeremdecustovox/custovox-emotion",
-  "description": "custovox.ai MCP server: 7-emotion detection in English customer text (batch up to 50)",
+  "description": "Emotion detection for English customer text: 7 labels incl. neutral. By custovox.ai",
   "repository": {
     "url": "https://github.com/jeremdecustovox/custovox-ai",
     "source": "github"
   },
   "websiteUrl": "https://custovox.ai",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "packages": [
     {
       "registryType": "pypi",
       "identifier": "custovox-emotion",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "transport": {
         "type": "stdio"
       }

@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "custovox-calls"
+version = "0.1.1"
+description = "Customer-service call analysis MCP: sentiment, contact reasons, churn threats, follow-up actions. Runs locally. By custovox.ai"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "CustoVox.ai"}]
+dependencies = ["mcp>=1.2,<2", "callscope-ai>=0.1.0"]
+keywords = ["mcp", "call-center", "customer-service", "speech-analytics", "sentiment", "churn", "custovox"]
+classifiers = ["Programming Language :: Python :: 3", "Environment :: Console", "Topic :: Communications :: Telephony"]
+
+[project.optional-dependencies]
+whisper = ["callscope-ai[whisper]>=0.1.0"]
+test = ["pytest"]
+
+[project.urls]
+Homepage = "https://custovox.ai"
+Repository = "https://github.com/jeremdecustovox/custovox-ai"
+
+[project.scripts]
+custovox-calls = "custovox_calls.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/custovox_calls"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "README.md", "LICENSE", "server.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
