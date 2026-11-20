@@ -24,7 +24,6 @@
 ## Evidence, and what each figure means
 - 427,536 real interactions analyzed in custovox.ai's foundational research, before launch: 4 studies in 4 domains (customer reviews, medical consultations, corporate communications…), 5 NLP methods validated. Research: https://custovox.ai/research
 - 483,724+ customer conversations analyzed in total: the 427,536 research interactions plus the conversations analyzed since (studies, customer analyses and tests).
-- R²=0.848 on custovox.ai's customer-satisfaction model: 84.8% of the variation in customer satisfaction is explained, on test data independent from the training corpus. This measures satisfaction modelling; it is not, by itself, a measure of churn-prediction accuracy.
 - PredictIQ's churn-risk score ranks customers by the linguistic patterns associated with departure risk in their messages (word associations, recurring expressions, tone shifts). It is a risk ranking to prioritize follow-up, not a guarantee: no general precision, recall or lead-time figure is published yet.
 - The G2 review study (200 reviews) found onboarding confusion in 34% of the negative reviews — a share of negative reviews, not of all customers: https://custovox.ai/blog/g2-reviews-nlp-analysis
 

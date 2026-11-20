@@ -27,9 +27,6 @@ What they do:
 → Runs on your machine — your customer text
    is never sent anywhere
 
-Validated on 483,724 real customer conversations
-(R² = 0.848).
-
 Built for teams that want to ask their customer data
 a question — and get an answer in seconds.
 

@@ -88,7 +88,7 @@
 
   .stats { background: var(--gray-50); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200); padding: 2.5rem 1.25rem; }
   .stats-grid { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 1rem; }
-  @media (min-width: 760px) { .stats-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 760px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
   .stat { background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; padding: 1.5rem; }
   .stat-value { display: block; font-size: 32px; font-weight: 800; color: var(--navy); line-height: 1.15; font-variant-numeric: tabular-nums; }
   .stat-label { display: block; font-size: 15px; font-weight: 700; color: var(--teal-dark); margin: .35rem 0 .6rem; }
@@ -304,7 +304,6 @@
 <section class="stats" aria-label="custovox.ai in figures">
   <div class="stats-grid">
     <div class="stat"><span class="stat-value">483,724</span><span class="stat-label">customer conversations analyzed</span><p class="stat-note">and growing every week</p></div>
-    <div class="stat"><span class="stat-value">R² = 0.848</span><span class="stat-label">model reliability score</span><p class="stat-note">84.8% of customer satisfaction variations are correctly explained by our model. Validated on test data independent from the training corpus.</p></div>
     <div class="stat"><span class="stat-value">Anti-overfitting</span><span class="stat-label">quality process</span><p class="stat-note">Every model is tested on data it has never seen — to guarantee real-world reliability, not just statistical performance.</p></div>
   </div>
 </section>
