@@ -6,9 +6,9 @@
  * Each valid request becomes a row in the "Exemples de rapport" sheet, and the script emails
  * the link to the (100 % fictional) sample report. No commercial follow-up is sent.
  *
- * Sender: never the personal address of the account that owns the script. Set the Script
- * Property SAMPLE_FROM (Project settings > Script properties) to a CustoVox address that is
- * configured as a "Send mail as" alias of this Gmail account. Until it is set (or if it is not
+ * Sender: set the Script Property SAMPLE_FROM (Project settings > Script properties) to the
+ * CustoVox address to send from: this account's own address, or a "Send mail as" alias of it.
+ * The address is never written in the code. Until it is set (or if it is not
  * a valid alias), nothing is sent: the row is saved with the status "not sent: no sender".
  *
  * Unsubscribe / deletion: every email carries a personal link (doGet ?unsub=<id>) that marks
@@ -70,7 +70,8 @@ function handleSampleReport_(p) {
 function sendSampleReport_(email, firstName, lang, id) {
   const from = PropertiesService.getScriptProperties().getProperty('SAMPLE_FROM');
   if (!from) return 'not sent: no sender';
-  if (GmailApp.getAliases().indexOf(from) === -1) return 'not sent: sender is not a Gmail alias';
+  const own = from === Session.getEffectiveUser().getEmail();   // the account's own address needs no alias
+  if (!own && GmailApp.getAliases().indexOf(from) === -1) return 'not sent: sender is not a Gmail alias';
   const props = PropertiesService.getScriptProperties();
   const today = Utilities.formatDate(new Date(), 'Europe/Paris', 'yyyy-MM-dd');
   const count = props.getProperty('SAMPLE_COUNT_' + today) | 0;
@@ -101,7 +102,7 @@ function sendSampleReport_(email, firstName, lang, id) {
     'CustoVox.ai — https://custovox.ai'
   ];
   GmailApp.sendEmail(email, lang === 'fr' ? 'Votre exemple de rapport custovox.ai' : 'Your custovox.ai sample report',
-    body.join('\n'), { from: from, name: 'CustoVox.ai', replyTo: from });
+    body.join('\n'), own ? { name: 'CustoVox.ai' } : { from: from, name: 'CustoVox.ai', replyTo: from });
   props.setProperty('SAMPLE_COUNT_' + today, String(count + 1));
   return 'sent';
 }
@@ -141,6 +142,7 @@ function setupSampleReport() {
   sampleSheet_();
   const from = PropertiesService.getScriptProperties().getProperty('SAMPLE_FROM');
   Logger.log(!from ? 'SAMPLE_FROM is not set: nothing will be sent.'
-    : GmailApp.getAliases().indexOf(from) === -1 ? 'SAMPLE_FROM is not a "Send mail as" alias of this account.'
+    : from !== Session.getEffectiveUser().getEmail() && GmailApp.getAliases().indexOf(from) === -1
+      ? 'SAMPLE_FROM is not this account nor a "Send mail as" alias of it.'
     : 'Ready: emails will be sent from the CustoVox alias.');
 }
