@@ -43,6 +43,7 @@ French and English keyword lexicons are built in; everything runs on your machin
 
 ## Limits
 
+- Contact reasons cover customer-service calls (billing, cancellation, outage, delivery, technical support, plan change) and, since 0.2.0, short reviews (price, product quality, staff, cleanliness, waiting time). Simple French/English keyword lists: other words and languages are not detected.
 - French and English only: sentiment, contact reasons and key moments come from small keyword lists (`lexicon.py`), whole-word matching.
 - Speaker separation (agent or customer) is a heuristic: stereo channels if given, else turn-taking on silences and greeting phrases.
 - Simple, inspectable baselines to sort calls for human review, not state-of-the-art models.

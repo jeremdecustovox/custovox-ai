@@ -5,4 +5,4 @@
   # that build.py publishes (MCP servers, Apps Script, LinkedIn planning, i18n sources...).
   # Build-hook runs (the 6:00 article publication) always build: INCOMING_HOOK_URL is set.
   # Keep this path list in sync with PUBLISHED in build.py.
-  ignore = 'test -z "$INCOMING_HOOK_URL" && git diff --quiet "$CACHED_COMMIT_REF" "$COMMIT_REF" -- build.py llms-header.md netlify.toml index.html faq.html pricing.html how-it-works.html features integrations.html about.html security-gdpr.html research.html solutions merci.html thank-you.html privacy.html consent.js favicon.ico robots.txt blog images fr'
+  ignore = 'test -z "$INCOMING_HOOK_URL" && git diff --quiet "$CACHED_COMMIT_REF" "$COMMIT_REF" -- build.py llms-header.md netlify.toml index.html faq.html pricing.html how-it-works.html features integrations.html about.html security-gdpr.html research.html solutions merci.html thank-you.html privacy.html demo.html sample-report.html demo-engine.js consent.js favicon.ico robots.txt blog images fr'

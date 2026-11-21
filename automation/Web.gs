@@ -13,10 +13,16 @@ function doPost(e) {
     const p = JSON.parse(e.postData.contents);
     if (p.app === 'custovox-lead') return handleLead_(p);
     if (p.app === 'custovox-contact') return handleContact_(p);
+    if (p.app === 'custovox-sample-report') return handleSampleReport_(p);
     return ContentService.createTextOutput('ignored');
   } catch (err) {
     return ContentService.createTextOutput('error');
   }
+}
+
+/** Unsubscribe links of the sample-report emails (SampleReport.gs). */
+function doGet(e) {
+  return handleUnsubscribe_(String((e && e.parameter && e.parameter.unsub) || ''));
 }
 
 /** Creates the sheets and the Monday 8:00 digest. Run once. */

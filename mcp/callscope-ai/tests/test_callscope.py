@@ -88,3 +88,23 @@ def test_foreign_speaker_labels_do_not_crash():
                    {"start": 2, "end": 3, "text": "J'ai un souci", "speaker": "SPEAKER_01"}])
     assert [s["speaker"] for s in out] == ["agent", "customer"]
     assert out[0]["original_speaker"] == "SPEAKER_00"
+
+
+def _one(text):
+    from callscope import analyze
+    return analyze([{"start": 0, "end": 1, "text": text, "speaker": "customer"}])
+
+
+def test_review_reasons_fr_en():
+    a = _one("Chambre crasseuse et personnel impoli, je ne reviendrai plus.")
+    assert {r["reason"] for r in a["contact_reasons"]} >= {"cleanliness", "staff"}
+    assert [m["type"] for m in a["key_moments"]] == ["churn_threat"]
+    assert a["sentiment"]["customer_mean"] < 0
+    b = _one("Waited 40 minutes, the staff was rude. Never again.")
+    assert {r["reason"] for r in b["contact_reasons"]} >= {"waiting_time", "staff"}
+    assert _one("Lovely hotel, clean and friendly staff.")["sentiment"]["customer_mean"] > 0
+
+
+def test_review_words_avoid_common_false_positives():
+    a = _one("Can't wait to come back, great sale this weekend.")
+    assert a["contact_reasons"] == [] and a["key_moments"] == []
