@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "custovox-churn-signal"
-version = "1.0.1"
+version = "1.0.2"
 description = "Churn risk detection MCP: score 0-100 from customer message sequences. Detects degradation patterns. By custovox.ai"
 readme = "README.md"
 license = {text = "MIT"}
@@ -21,9 +21,9 @@ requires-python = ">=3.10"
 dependencies = ["mcp>=1.0.0,<2","transformers>=4.40.0","torch>=2.0.0"]
 
 [project.urls]
-Homepage = "https://custovox.ai"
+Homepage = "https://custovox.ai/?utm_source=pypi&utm_medium=directory&utm_campaign=devcampagne-2026-11"
 Repository = "https://github.com/jeremdecustovox/custovox-ai"
-Documentation = "https://custovox.ai"
+Documentation = "https://custovox.ai/?utm_source=pypi&utm_medium=directory&utm_campaign=devcampagne-2026-11"
 
 [project.scripts]
 custovox-churn-signal = "custovox_churn_signal.server:mcp.run"

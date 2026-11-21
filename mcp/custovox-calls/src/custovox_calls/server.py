@@ -16,6 +16,7 @@ from typing import Callable
 import callscope
 from mcp.server.fastmcp import FastMCP
 
+from . import __version__
 from . import actions as actions_mod
 from .demo import DEMO_CALLS
 from .store import CallStore
@@ -117,6 +118,7 @@ def _compact(call_id: str, started_at: str, a: dict, n_actions: int) -> dict:
 def build_server(store: CallStore, webhook_url: str | None = None, model_size: str = "small",
                  sender: Callable[..., int] = actions_mod.send_webhook) -> FastMCP:
     mcp = FastMCP("custovox-calls")
+    mcp._mcp_server.version = __version__  # serverInfo.version (FastMCP would report the mcp library version)
 
     @mcp.tool()
     def analyze_call(source: str, call_id: str | None = None, started_at: str | None = None,

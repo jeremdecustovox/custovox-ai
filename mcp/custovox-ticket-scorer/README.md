@@ -26,5 +26,5 @@ Models are downloaded from Hugging Face on first start, then everything runs loc
 - Each ticket is read up to its first 512 characters. About 2 GB of models are downloaded on first start.
 
 ## About
-Built by [CustoVox.ai](https://custovox.ai). This free server runs on your machine with open models.
-The hosted platform at [custovox.ai](https://custovox.ai) covers 5 languages, voice, text and images, with reports and integrations. From $89/month.
+Built by [CustoVox.ai](https://custovox.ai/?utm_source=github&utm_medium=readme&utm_campaign=devcampagne-2026-11). This free server runs on your machine with open models.
+The hosted platform at [custovox.ai](https://custovox.ai/?utm_source=github&utm_medium=readme&utm_campaign=devcampagne-2026-11) covers 5 languages, voice, text and images, with reports and integrations. From $89/month.

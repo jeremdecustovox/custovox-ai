@@ -6,13 +6,13 @@
     "url": "https://github.com/jeremdecustovox/custovox-ai",
     "source": "github"
   },
-  "websiteUrl": "https://custovox.ai",
-  "version": "1.0.1",
+  "websiteUrl": "https://custovox.ai/?utm_source=mcp-registry&utm_medium=directory&utm_campaign=devcampagne-2026-11",
+  "version": "1.0.2",
   "packages": [
     {
       "registryType": "pypi",
       "identifier": "custovox-churn-signal",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "transport": {
         "type": "stdio"
       }

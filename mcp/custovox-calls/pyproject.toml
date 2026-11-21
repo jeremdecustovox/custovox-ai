@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "custovox-calls"
-version = "0.1.1"
+version = "0.1.2"
 description = "Customer-service call analysis MCP: sentiment, contact reasons, churn threats, follow-up actions. Runs locally. By custovox.ai"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -20,7 +20,7 @@ whisper = ["callscope-ai[whisper]>=0.1.0"]
 test = ["pytest"]
 
 [project.urls]
-Homepage = "https://custovox.ai"
+Homepage = "https://custovox.ai/?utm_source=pypi&utm_medium=directory&utm_campaign=devcampagne-2026-11"
 Repository = "https://github.com/jeremdecustovox/custovox-ai"
 
 [project.scripts]

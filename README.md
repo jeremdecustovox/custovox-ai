@@ -4,7 +4,7 @@
 
 Free MCP servers that let Claude (or any MCP client) read what customers say: sentiment, emotions, support tickets, reviews, churn signals, photos and calls. They run on your machine with open models.
 
-Built by [CustoVox.ai](https://custovox.ai).
+Built by [CustoVox.ai](https://custovox.ai/?utm_source=github&utm_medium=readme&utm_campaign=devcampagne-2026-11).
 
 ## MCP servers
 
@@ -41,6 +41,6 @@ These servers are meant to sort and prioritize customer feedback for human revie
 
 ## More
 
-The hosted platform at [custovox.ai](https://custovox.ai) covers 5 languages, voice, text and images, with reports and integrations.
+The hosted platform at [custovox.ai](https://custovox.ai/?utm_source=github&utm_medium=readme&utm_campaign=devcampagne-2026-11) covers 5 languages, voice, text and images, with reports and integrations.
 
 MIT License.

@@ -30,5 +30,5 @@ One tool, `analyze_customer_image(image_url, context="general")` — `image_url`
 - Runs locally; the only network call is downloading the image when you pass a URL. Models are downloaded on first run.
 
 ## About
-Built by [CustoVox.ai](https://custovox.ai). This free server runs on your machine with open models.
-The hosted platform at [custovox.ai](https://custovox.ai) covers 5 languages, voice, text and images, with reports and integrations. From $89/month.
+Built by [CustoVox.ai](https://custovox.ai/?utm_source=github&utm_medium=readme&utm_campaign=devcampagne-2026-11). This free server runs on your machine with open models.
+The hosted platform at [custovox.ai](https://custovox.ai/?utm_source=github&utm_medium=readme&utm_campaign=devcampagne-2026-11) covers 5 languages, voice, text and images, with reports and integrations. From $89/month.

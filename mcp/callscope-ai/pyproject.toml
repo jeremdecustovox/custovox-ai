@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "callscope-ai"
-version = "0.1.1"
+version = "0.1.2"
 description = "Local call-center call analysis: transcript, speakers, sentiment, contact reasons and key moments in one JSON."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -20,7 +20,7 @@ whisper = ["faster-whisper>=1.0"]
 test = ["pytest"]
 
 [project.urls]
-Homepage = "https://custovox.ai"
+Homepage = "https://custovox.ai/?utm_source=pypi&utm_medium=directory&utm_campaign=devcampagne-2026-11"
 Repository = "https://github.com/jeremdecustovox/custovox-ai"
 
 [project.scripts]

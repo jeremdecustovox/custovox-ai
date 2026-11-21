@@ -52,5 +52,5 @@ To use it from Claude, see the MCP server [custovox-calls](https://pypi.org/proj
 MIT licensed. Run tests with `pip install -e ".[test]" && pytest` (no network).
 
 ## About
-Built by [CustoVox.ai](https://custovox.ai). This free tool runs on your machine.
-The hosted platform at [custovox.ai](https://custovox.ai) covers 5 languages, voice, text and images, with reports and integrations. From $89/month.
+Built by [CustoVox.ai](https://custovox.ai/?utm_source=github&utm_medium=readme&utm_campaign=devcampagne-2026-11). This free tool runs on your machine.
+The hosted platform at [custovox.ai](https://custovox.ai/?utm_source=github&utm_medium=readme&utm_campaign=devcampagne-2026-11) covers 5 languages, voice, text and images, with reports and integrations. From $89/month.

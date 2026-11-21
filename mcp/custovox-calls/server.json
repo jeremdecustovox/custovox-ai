@@ -2,13 +2,13 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.jeremdecustovox/custovox-calls",
   "description": "Analyze customer-service calls locally: sentiment, churn threats, follow-up actions.",
-  "websiteUrl": "https://custovox.ai",
-  "version": "0.1.1",
+  "websiteUrl": "https://custovox.ai/?utm_source=mcp-registry&utm_medium=directory&utm_campaign=devcampagne-2026-11",
+  "version": "0.1.2",
   "packages": [
     {
       "registryType": "pypi",
       "identifier": "custovox-calls",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "transport": {
         "type": "stdio"
       },

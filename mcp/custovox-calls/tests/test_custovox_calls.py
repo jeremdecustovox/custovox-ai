@@ -153,3 +153,9 @@ def test_database_file_persists(tmp_path):
     call(srv, "analyze_call", source="demo-2")
     again = create_app({"CUSTOVOX_CALLS_DB": str(db)})
     assert call(again, "get_call_insights")["calls"] == 1
+
+
+def test_server_info_reports_package_version():
+    from custovox_calls import __version__
+    srv = build_server(CallStore())
+    assert srv._mcp_server.create_initialization_options().server_version == __version__
