@@ -146,3 +146,61 @@ function setupSampleReport() {
       ? 'SAMPLE_FROM is not this account nor a "Send mail as" alias of it.'
     : 'Ready: emails will be sent from the CustoVox alias.');
 }
+
+// ---------------------------------------------------------------------------
+// Prospecting blocklist: everyone who asks for the sample report must never get cold email.
+// A daily trigger (no web-app redeploy needed) copies new requesters to the "Blocklist" sheet,
+// same columns as the prospecting blocklist.csv. If the Script Property BLOCKLIST_APOLLO = yes,
+// it also creates them in Apollo with the label DO-NOT-CONTACT (needs APOLLO_API_KEY; Apollo
+// must then be listed as a recipient in the privacy policy).
+// ---------------------------------------------------------------------------
+
+const BLOCKLIST_SHEET = 'Blocklist';
+const BLOCKLIST_HEADERS = ['type', 'valeur', 'nom', 'entreprise', 'motif', 'source', 'ajoute_le', 'statut', 'apollo'];
+
+function syncBlocklist() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  let bl = ss.getSheetByName(BLOCKLIST_SHEET);
+  if (!bl) {
+    bl = ss.insertSheet(BLOCKLIST_SHEET);
+    bl.appendRow(BLOCKLIST_HEADERS);
+    bl.setFrozenRows(1);
+    bl.getRange(1, 1, 1, BLOCKLIST_HEADERS.length).setFontWeight('bold');
+  }
+  const known = new Set(bl.getLastRow() > 1 ? bl.getRange(2, 2, bl.getLastRow() - 1, 1).getValues().map(r => String(r[0]).toLowerCase()) : []);
+  const src = sampleSheet_();
+  if (src.getLastRow() < 2) return;
+  const useApollo = PropertiesService.getScriptProperties().getProperty('BLOCKLIST_APOLLO') === 'yes';
+  const today = Utilities.formatDate(new Date(), 'Europe/Paris', 'yyyy-MM-dd');
+  src.getRange(2, 1, src.getLastRow() - 1, 3).getValues().forEach(r => {
+    const email = String(r[1]).toLowerCase();
+    if (!email || email.indexOf('test+') === 0 || known.has(email)) return;
+    known.add(email);
+    const apollo = useApollo ? apolloDoNotContact_(email, r[2]) : 'off';
+    bl.appendRow(['email', email, r[2] || '', '', 'a demandé l\'exemple de rapport : jamais de prospection',
+      'custovox.ai/demo', today, 'actif', apollo]);
+  });
+}
+
+/** Creates (or deduplicates) the contact in Apollo with the label DO-NOT-CONTACT. */
+function apolloDoNotContact_(email, firstName) {
+  const key = PropertiesService.getScriptProperties().getProperty('APOLLO_API_KEY');
+  if (!key) return 'no key';
+  const res = UrlFetchApp.fetch('https://api.apollo.io/api/v1/contacts', {
+    method: 'post', contentType: 'application/json', muteHttpExceptions: true,
+    headers: { 'X-Api-Key': key, 'Cache-Control': 'no-cache' },
+    payload: JSON.stringify({ email: email, first_name: firstName || undefined,
+      label_names: ['DO-NOT-CONTACT'], run_dedupe: true })
+  });
+  return res.getResponseCode() === 200 ? 'labelled' : 'HTTP ' + res.getResponseCode();
+}
+
+/** Run once: daily blocklist sync at 7:00 (Paris), and a first sync now. */
+function setupBlocklist() {
+  ScriptApp.getProjectTriggers()
+    .filter(t => t.getHandlerFunction() === 'syncBlocklist')
+    .forEach(t => ScriptApp.deleteTrigger(t));
+  ScriptApp.newTrigger('syncBlocklist').timeBased().everyDays(1).atHour(7).inTimezone('Europe/Paris').create();
+  syncBlocklist();
+  Logger.log('Blocklist ready: daily sync at 7:00.');
+}
