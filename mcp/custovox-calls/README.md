@@ -8,6 +8,10 @@ An MCP server that lets Claude analyze customer-service calls: sentiment, contac
 
 Built on [callscope-ai](https://pypi.org/project/callscope-ai/).
 
+![Demo mode: custovox-calls lists the fictional calls with a churn threat and suggests a manager alert, a customer callback and a CRM ticket](https://custovox.ai/images/demo/custovox-calls-demo-en.gif)
+
+*Demo mode, fictional calls. The analysis uses simple French/English keyword rules.*
+
 ## Install
 
 ```bash

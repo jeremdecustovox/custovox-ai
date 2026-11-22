@@ -89,7 +89,8 @@ function sendSampleReport_(email, firstName, lang, id) {
     'sauf si vous avez coché la case « nouvelles de CustoVox ».',
     'Se désinscrire : ' + unsub,
     'Supprimer vos données : privacy@custovox.ai', '',
-    'CustoVox.ai — https://custovox.ai'
+    'CustoVox.ai — https://custovox.ai',
+    'Corpstxt, 238 route de Linselles, 59118 Wambrechies, France'
   ] : [
     hi, '',
     'Here is the sample report you asked for on custovox.ai:',
@@ -99,7 +100,8 @@ function sendSampleReport_(email, firstName, lang, id) {
     'unless you ticked the "news from CustoVox" box.',
     'Unsubscribe: ' + unsub,
     'Delete your data: privacy@custovox.ai', '',
-    'CustoVox.ai — https://custovox.ai'
+    'CustoVox.ai — https://custovox.ai',
+    'Corpstxt, 238 route de Linselles, 59118 Wambrechies, France'
   ];
   GmailApp.sendEmail(email, lang === 'fr' ? 'Votre exemple de rapport custovox.ai' : 'Your custovox.ai sample report',
     body.join('\n'), own ? { name: 'CustoVox.ai' } : { from: from, name: 'CustoVox.ai', replyTo: from });
